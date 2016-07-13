@@ -1,18 +1,18 @@
         <!--页面脚本区域-->
-         <script src="<?php echo $STATIC_DOMAIN ; ?>/activity_template/config.js"></script>
+         <script src="../config.js"></script>
         <!--这里是图片懒加载的脚本-->
-        <script src="<?php echo $STATIC_DOMAIN ; ?>/activity_template/js/lazy.min.js"></script>
+        <script src="../js/lazy.min.js"></script>
         <!--这里是微信分享的脚本-->
         <?php
             if($confs["match_wechatShare"]) {
         ?>
             <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
-            <script src="<?php echo $STATIC_DOMAIN ; ?>/activity_template/js/wechat-share.min.js"></script>
+            <script src="../js/wechat-share.min.js"></script>
         <?php } ?>
         <?php
             if($confs["match_javascripts"]) {
         ?>
-        <script src="<?php echo $STATIC_DOMAIN ; ?>/activity_template/js/app.min.js"></script>
+        <script src="../js/app.min.js"></script>
         <?php } ?>
         <?php
             for( $n = 0 ; $n < sizeof($confs["extra_javascripts"]) ; $n ++ ) {
@@ -22,7 +22,7 @@
         <?php
             if($confs["match_javascripts"]) {
         ?>
-       <script data-main="<?php echo $STATIC_DOMAIN ; ?>/activity_template/js/web.min" src="<?php echo $STATIC_DOMAIN ; ?>/fe_public_library/wkzf/js/require.min.js"></script>
+       <script data-main="../js/web.min" src="/fe_public_library/wkzf/js/require.min.js"></script>
         <?php } ?>
         <!--GA-PC-->
         <script>

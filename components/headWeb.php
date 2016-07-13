@@ -8,7 +8,7 @@
         <meta name="keywords" content="<?php echo $confs["page_keywords"] ; ?>">
         <meta name="description" content="<?php echo $confs["page_description"] ; ?>">
         <!-- 引入stylesheet资源 -->
-        <link rel="stylesheet" href="<?php echo $STATIC_DOMAIN ; ?>/activity_template/css/app.min.css">
+        <link rel="stylesheet" href="../css/app.min.css">
         <?php if( sizeof($confs["extra_stylesheets"]) > 0 ) {
             for($m = 0 ; $m < sizeof($confs["extra_stylesheets"]) ; $m ++ ) {
         ?>
@@ -17,7 +17,7 @@
         <?php
             if($confs["match_stylesheet"]) {
         ?>
-        <link rel="stylesheet" href="<?php echo $STATIC_DOMAIN ; ?>/activity_template/css/<?php echo $router["controller"] ; ?>/<?php echo $router["method"] ; ?>.min.css">
+        <link rel="stylesheet" href="css/web.min.css">
         <?php } ?>
     </head>
     <body>

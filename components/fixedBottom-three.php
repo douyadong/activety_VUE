@@ -9,7 +9,7 @@
 		<input type="text" class="code" id="vertifyCode">
 		<span class="sendCodeBtn" id="sendCodeBtn">获取验证码</span>
 		<span class="sendBtn" id="sendBtn">确定</span>
-		<span class="phoneBtn"><?php echo $confs["phone"]?></span>
+		<span class="phoneBtn"><?php echo "400-365255"?></span>
 	</div>
 </div>
 <!--房产ID-->

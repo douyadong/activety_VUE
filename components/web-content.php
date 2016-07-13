@@ -1,6 +1,13 @@
 <!--web端图片堆砌部分-->
-<?php 
-for( $a = 1 ; $a <=$confs["img_length"] ; $a ++) {
+<?php
+	$dir = 'images/web';	
+	if(is_dir($dir)){
+		if($dh = opendir($dir)){
+			while($file = readdir($dh)){
+				if($file != '..' && $file != '.'){					
+					echo "<img class='lazy' data-src='$dir/$file' />";			
+				}
+			}
+		}
+	}
 ?>
-	<img class="lazy" data-src="../css/images/<?php echo $router["controller"] ; ?>/<?php echo $router["controller"] ; ?>_<?php echo $a ; ?>.jpg" />
-<?php } ?> 

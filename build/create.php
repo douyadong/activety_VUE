@@ -34,7 +34,6 @@
         $extra_stylesheets = isset($_POST["extra_stylesheets"])?$_POST["extra_stylesheets"]:array();
         $extra_javascripts = isset($_POST["extra_javascripts"])?$_POST["extra_javascripts"]:array();
 
-
         $error_array = array();
 
         if(isset($_POST['submit']))
@@ -62,43 +61,33 @@
                     array_push($error_array,"微信分享内容为空");
                 }
             }
+
+
             //生成目录结构
             if(count($error_array)==0){//无错误，生成目录结构
-                if(mkdir($activity_name) && mkdir("$activity_name/less") && mkdir("$activity_name/images") && 
-                    mkdir("$activity_name/jssrc")){
-                        /*
-                            config.php 活动配置
-                                ├── web.php
-                                ├── wap.php
-                                ├── css/
-                                ├── less/ 
-                                ├── jssrc/
-                                ├── js/
-                                └── images/ 特定活动的图片资源
-                                ├── content/ 活动内容图片资源
-                                     └── * 活动以外的图片资源 
-                        */
+                if(mkdir("../$activity_name") && mkdir("../$activity_name/less") && mkdir("../$activity_name/images") && 
+                    mkdir("../$activity_name/jssrc") && mkdir("../$activity_name/images/web") && mkdir("../$activity_name/images/wap")){                        
+                        //生成config.php
+                        require_once('createconfig.php');
 
+                        //生成web.php
+                        require_once('createweb.php');
+                        
+                        //生成wap.php
+                        require_once('createwap.php');
 
+                        echo '<div class="alert alert-success"><h1 class="text-center">生成成功<small><a href="">返回</a></small></h1></div></body></html>';
+                        exit;
                 }else{
                     array_push($error_array,"创建活动目录失败");
                 }
-            }
-
-
-            //echo "<h1 class='text-center'>生成成功</h1>";
-            //echo "$extra_stylesheets";
-            //echo "activity_name:$activity_name<br/>" . "page_title:$page_title<br/>" ."page_description:$page_description<br/>". "page_keywords:$page_keywords<br/>"."estate_id:$estate_Id<br/>estate_name:$estate_name<br/>include_reserve:$include_reserve<br/>match_css:$match_css<br/>match_js:$match_js<br/>wechat_share:$wechat_share<br/>wechat_title:$wechat_title<br/>wechat_content:$wechat_content<br/>";
-            //foreach($extra_stylesheets as $css){
-               //echo "$css";
-            //}            
-        }
-        
+            }        
+        }        
     ?>
     
-
     <div class="container" style="margin-top:20px" >    
         <?php
+            //输出错误信息
             if(count($error_array)>0){
         ?>
             <div class="alert alert-danger">
@@ -190,7 +179,14 @@
                 </div>
             </div>
             <div class="panel panel-default stylesheets">
-                <ul class="list-group">                    
+                <ul class="list-group"> 
+                <?php
+                    foreach($extra_stylesheets as $css){
+                ?>
+                        <li class="list-group-item"><?php echo $css?> <span class="glyphicon glyphicon-remove"></span><input type="hidden" name="extra_javascripts[]" value="<?php echo $css?>"/></li>
+                <?php
+                    }
+                ?>                      
 				</ul>
 				</div>
 
@@ -205,7 +201,14 @@
             		</div>
     			</div>
                 <div class="panel panel-default javascripts">
-                    <ul class="list-group">                        
+                    <ul class="list-group">   
+                        <?php
+                            foreach($extra_javascripts as $js){
+                        ?>
+                            <li class="list-group-item"><?php echo $js?> <span class="glyphicon glyphicon-remove"></span><input type="hidden" name="extra_javascripts[]" value="<?php echo $js?>"/></li>
+                        <?php
+                            }
+                        ?>                     
 					</ul>
 				</div>
 
@@ -219,64 +222,7 @@
 		</script>
 		<script type="text/javascript" src="/fe_public_library/bootstrap/3.3.4/js/bootstrap.min.js">
 		</script>
-        <script type="text/javascript">
-        $(function(){
-            $('.addjs').click(function(){
-                var extra_javascript = $.trim($('#extra_javascript').val());
-                if(extra_javascript){
-                    var extra_javascripts = $.trim($('.javascripts li').text()).split(' ');                                        
-                    for(var js in extra_javascripts){
-                        if($.trim(extra_javascripts[js]) === extra_javascript){
-                            return;
-                        }
-                    }
-
-                    $('.javascripts ul').append($('<li>'+extra_javascript+'</li>').addClass('list-group-item').append(' <span class="glyphicon glyphicon-remove"></span>').append('<input type="hidden" name="extra_javascripts" value="'+extra_javascript+'" />'));
-
-                    $('#extra_javascript').val('');
-                }
-
-            });
-
-            $('.addcss').click(function(){
-                var extra_stylesheet = $.trim($('#extra_stylesheet').val());
-                if(extra_stylesheet){
-                    var extra_stylesheets = $.trim($('.stylesheets li').text()).split(' ');                    
-                    
-                    for(var css in extra_stylesheets){                       
-                        if($.trim(extra_stylesheets[css]) === extra_stylesheet){
-                            return;
-                        }
-                    }
-
-                    $('.stylesheets ul').append($('<li>'+extra_stylesheet+'</li>').addClass('list-group-item').append(' <span class="glyphicon glyphicon-remove"></span>').append('<input type="hidden" value="'+extra_stylesheet+'" name="extra_stylesheets[]"/>'));
-
-                    $('#extra_stylesheet').val('');
-                }
-            });
-
-            $('.stylesheets').delegate('.glyphicon-remove','click',function(){
-                $(this).parent().remove();
-            });
-
-            $('.javascripts').delegate('.glyphicon-remove','click',function(){
-                $(this).parent().remove();
-            });
-
-            $(':input[name=wechat_share]').change(function(){                
-                if(this.checked){
-                    $(this).closest('.form-group').nextAll().find('.form-control').attr('disabled',false);
-                } else{
-                    $(this).closest('.form-group').nextAll().find('.form-control').attr('disabled',true);
-                }
-            });
-
-            $(':input[type=reset]').click(function(){
-                $('[name=wechat_title],[name=wechat_content]').attr('disabled',true);                           
-            });
-
-            $(':input[name=wechat_share]').trigger('change');
-        });
+        <script type="text/javascript" src="create.js">        
         </script>
 	</body>
 </html>
