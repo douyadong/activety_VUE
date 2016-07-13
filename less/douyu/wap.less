@@ -1,0 +1,50 @@
+/*-----------------------------------------------------------------------------------------------------------
+项目名称：斗鱼直播－wap
+页面路径：douyu/wap.php（斗鱼直播wap）
+作者：luwei@lifang.com
+-----------------------------------------------------------------------------------------------------------*/
+
+@import '../rem.less';
+html {
+    background-color: #E4E4E4;
+}
+
+body {
+    background-color: #fff;
+    &>.header {
+        text-align: center;
+        font-size: 1rem;
+        padding: .5rem;
+    }
+    &>.banner {
+        position: relative;
+        input {
+            position: absolute;
+            top: 50%;
+            width: 15%;
+            left: 50%;
+        }
+    }
+    &>.item {
+        border: 1px solid #E4E4E4;
+        &>img {
+            width: 4rem;
+            margin: 1rem;
+        }
+        div {
+            display: inline-block;
+            img {
+                width: 4rem;
+                padding-bottom: .6rem;
+            }
+            span {
+                max-width: 9.2rem;
+                font-size: .7rem;
+                padding-bottom: .25rem;
+                display: block;
+                line-height: 1.2rem;
+                padding: 0;
+            }
+        }
+    }
+}

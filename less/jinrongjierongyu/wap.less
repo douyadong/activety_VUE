@@ -1,0 +1,142 @@
+#yyForm.w-dialog {
+    .w-alertBox {
+        background:#fff;
+        border-radius: 5px;
+        height:auto;
+        padding: 5px 0;
+        .text {
+           color:#4e4e4e;
+           background:#fff;
+           font-weight: normal;
+           margin:10px 0;
+           font-size: 16px;
+        }
+        .btnList{
+            border-top: 1px solid #cfcfcf;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+            display: box;
+            display:block;
+            margin:0;
+            div {
+                -webkit-box-flex: 1;
+                -webkit-flex: 1;
+                box-flex: 1;
+                flex: 1;
+                width:50%;
+                span {
+                    font-size: 16px;
+                    background:#fff;
+                    color:#3e7ed0;
+                    text-align: center;
+                }
+            }
+            div:last-child{
+                border-left: 1px solid #cfcfcf;
+            }
+        }
+        .form {
+            padding: 0 15px;
+            .item {
+                border-bottom: 1px solid #cfcfcf;
+                height:40px;
+                line-height: 40px;
+                span{
+                    color:#999999;
+                    height:40px;
+                    line-height: 40px;
+                    width: 50px;
+                }
+                .inputBox {
+                    height:40px;
+                    line-height: 40px;
+                    .code{
+                        float: left;
+                        width:90px;
+                        height: 38px;
+                        line-height: 38px;
+                    }
+                    span{
+
+                    }
+                    .sendCodeBtn {
+                        background:#4081d6;
+                        color:#fff;
+                        float:right;
+                        height:30px;
+                        line-height: 30px;
+                        border-radius: 5px;
+                        margin-top: 5px;
+                    }
+                    .disabled{
+                        background:#cccccc;
+                    }
+                }
+            }
+            .tipsTxt{
+                color:red;
+                height:auto;
+            }
+        }
+    }
+}
+
+#Success.w-dialog {
+    
+    .successBox {
+        background:#fff;
+        height:170px;
+        border-radius: 5px;
+        overflow: hidden;
+        .text {
+           color:#4e4e4e;
+           background:#fff;
+           font-weight: normal;
+           margin:10px 0;
+           font-size: 16px;
+        }
+        span.closeSuccess {
+            background: #FFF;
+            display: block;
+            font-size: 18px;
+            height: 44px;
+            line-height: 44px;
+            margin:35px auto;
+            text-align: center;
+            width: 100%;
+            border-top: 1px solid #cfcfcf;
+        }
+        .fz14{
+            font-size: 14px;
+            padding:0 20px;
+        }
+    }
+}
+.butbox{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    display: box;
+    position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+    a{
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        box-flex: 1;
+        flex: 1;
+        text-align: center;
+        height:47px;
+        line-height:47px;
+        background:#5988ff;
+        color:#fff;
+        display:block;
+        font-size: 16px;
+        background:#4a87d8;
+    }
+    a.appointmentbtn{
+        background:#5e85e9;
+    }
+}

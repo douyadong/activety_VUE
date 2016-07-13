@@ -1,0 +1,30 @@
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 1. 项目名称：悟空找房活动推广前端MVC框架
+ 2. 文件名称：normalize.less (整个应用的常用的class)
+ 3. 作者：zhaohuagang@lifang.com
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.transparent {
+    background-color: transparent;
+    border: 1px solid transparent;
+    outline: none;
+}
+
+.wk-toast {
+    border-radius: 2px;
+    color: #fff;
+    font-size: 14px;
+    left: 50%;
+    padding: 3px 6px;
+    position: fixed;
+    z-index: 9999;
+    top: 50%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.58);
+    transition: transform 0.25s ease-in-out;
+    transform: translate(-50%, -50%) scaleY(0);
+    word-break: break-all;
+    &.show {
+        transform: translate(-50%, -50%) scaleY(1);
+    }
+}

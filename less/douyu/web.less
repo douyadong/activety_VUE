@@ -1,0 +1,136 @@
+/*-----------------------------------------------------------------------------------------------------------
+项目名称：斗鱼直播－web
+页面路径：douyu/web.php（斗鱼直播web）
+作者：luwei@lifang.com
+-----------------------------------------------------------------------------------------------------------*/
+
+@import '../mixins';
+body {
+    min-width: 1200px;
+    background-color: #fff;
+    &>.container-warp {
+        &>.header {
+            img {
+                margin: 12px 150px;
+                width: 15%;
+            }
+        }
+        &>.content {
+            &>.sec {
+                width: 100%;
+                position: relative;
+                &>input {
+                    position: absolute;
+                }
+                img {
+                    width: 100%;
+                }
+            }
+            &>.sec_desc {
+                &>.play_btn {
+                    top: 55%;
+                    left: 50%;
+                }
+                &>.desc_btn {
+                    top: 20%;
+                    left: 82%;
+                }
+                &>.rule_btn {
+                    top: 42%;
+                    left: 82%;
+                }
+                &>.summary_btn {
+                    top: 62%;
+                    left: 82%;
+                }
+            }
+            &>.sec_rule {
+                display: none;
+                &>.play_btn {
+                    top: 55%;
+                    left: 50%;
+                }
+                &>.desc_btn {
+                    top: 20%;
+                    left: 82%;
+                }
+                &>.rule_btn {
+                    top: 39%;
+                    left: 82%;
+                }
+                &>.summary_btn {
+                    top: 62%;
+                    left: 82%;
+                }
+            }
+            &>.sec_summary {
+                display: none;
+                &>.play_btn {
+                    top: 55%;
+                    left: 50%;
+                }
+                &>.desc_btn {
+                    top: 20%;
+                    left: 82%;
+                }
+                &>.rule_btn {
+                    top: 39%;
+                    left: 82%;
+                }
+                &>.summary_btn {
+                    top: 59%;
+                    left: 82%;
+                }
+            }
+        }
+        &>.footer {
+            font-size: 12px;
+            background-color: #2a2e2f;
+            img {
+                margin: 12px 50px 12px 150px;
+                width: 15%;
+            }
+        }
+    }
+}
+
+#dialog {
+    background-color: #fff;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    width: 300px;
+    margin-left: -150px;
+    z-index: 201;
+    font-size: 12px;
+    .border-radius(10px);
+    &>#dialog-header {
+        padding: 10px 10px 5px 10px;
+        border-bottom: 1px solid #E4E4E4
+    }
+    &>#dialog-content {
+        position: relative;
+        height: 70px;
+        span {
+            position: absolute;
+            text-align: center;
+            left: 50%;
+            margin-top: 10px;
+            margin-left: -105px;
+            width: 210px;
+            line-height: 30px;
+        }
+    }
+    &>#dialog-footer {
+        text-align: center;
+        button {
+            .border-radius(30px);
+            border: 0 none;
+            padding: 5px;
+            margin: 10px;
+            width: 90px;
+            color: #fff;
+            background-color: #4383d2;
+        }
+    }
+}
