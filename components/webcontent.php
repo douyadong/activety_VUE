@@ -2,7 +2,7 @@
 <div class="content">
 	<!--标题图片-->
 	<div class="title">
-		<img class="lazy" data-src="<?php echo "$STATIC_DOMAIN/activity/" . $router["controller"] . "/images/web_title.jpg"?>" id="banner3" />
+		<img src="<?php echo "$STATIC_DOMAIN/activity/" . $router["controller"] . "/images/web_title.jpg"?>" id="banner3" />
 	</div>
 
 	<div class="tools">        
