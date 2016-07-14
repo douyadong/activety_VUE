@@ -1,4 +1,7 @@
 <!--wap端预约的弹窗-->
+<?php
+    if($config['include_reserve']){
+?>
 <div class="w-dialog" id="Success">
     <div class="w-alertBox successBox">
         <p class="text">看房预约</p>
@@ -38,6 +41,9 @@
     </div>
 </div>
 <!--房产ID-->
-<input type="hidden" value="<?php echo $confs["subEstateId"]?>" id="subEstateId"/>
+<input type="hidden" value="<?php echo $config["estate_Id"]?>" id="subEstateId"/>
 <!--房产名称-->
-<input type="hidden" value="<?php echo $confs["subEstateName"]?>" id="subEstateName"/>  
+<input type="hidden" value="<?php echo $config["estate_name"]?>" id="subEstateName"/>  
+<?php
+    }
+?>

@@ -1,3 +1,10 @@
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 1. 项目名称：悟空找房活动推广前端MVC框架
+ 2. 文件名称：smartCity->index.less (智慧城Web)
+ 3. 作者：lifang@lifang.com
+ 4. 更新: tangxuyang@lifang 2016-07-14
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
 #yyForm.w-dialog {
     background: rgba(0, 0, 0, 0.5);
     display: none;
@@ -101,4 +108,65 @@
             }
         }
     }
+}
+
+#Success.w-dialog {
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    height: 100%;
+    left: 0;
+    right: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    .w-alertBox {
+        background: url(../img/source/smartCity/smartM-bg-reserve.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 320px;
+        left: 50%;
+        margin-left: -150px;
+        margin-top: -160px;
+        position: absolute;
+        padding: 10px 0;
+        top: 50%;
+        width: 300px;
+        .alertlogo {
+            margin-bottom: 2px;
+        }
+        .text {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffff00;
+            text-align: center;
+            text-indent: 8px;
+            margin: 20px 0;
+        }
+    }
+    .successBox {
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 192px;
+        position: relative;
+        span.closeSuccess {
+            background: #ffff00;
+            color: #4081D6;
+            display: block;
+            font-size: 18px;
+            height: 44px;
+            line-height: 44px;
+            margin: 122px auto;
+            text-align: center;
+            width: 152px;
+        }
+    }
+}
+
+.fixedBottom {
+    background: #203f6b;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    z-index: 99;
 }

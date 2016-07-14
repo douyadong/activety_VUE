@@ -1,5 +1,3 @@
-<?php
-	$wap_content = <<<wap_content
 	<?php require_once("config.php");?>
 	<?php
 		ob_start();
@@ -15,10 +13,6 @@
 		require_once("../components/wapbody.php");
 		require_once("../components/wapfoot.php");
 		require_once("../components/savefile.php");
-		\$info = ob_get_contents();//得到缓冲区的内容并且赋值给\$info  
-		save_file(\$info);//保存
+		$info = ob_get_contents();//得到缓冲区的内容并且赋值给$info  
+		save_file($info);//保存
 	?>
-wap_content;
-
-	file_put_contents("../$activity_name/wap.php", $wap_content);
-?>

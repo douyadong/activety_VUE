@@ -1,10 +1,12 @@
 <!doctype html>
 <html>
-
+    <?php
+        require_once('../global.php');
+    ?>
 <head>
     <meta charset="utf-8">
     <title>活动生成</title>
-    <link rel="stylesheet" href="/fe_public_library/bootstrap/3.3.4/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="<?php echo $STATIC_DOMAIN?>/fe_public_library/bootstrap/3.3.4/css/bootstrap.min.css" />
     <style type="text/css">
         .javascripts{
             min-height:2.6em;
@@ -18,7 +20,7 @@
 
 <body>
     <?php
-        //读取数据
+        //读取数据        
         $activity_name = isset($_POST["activity_name"])?$_POST["activity_name"]:"";
         $page_title = isset($_POST["page_title"])?$_POST["page_title"]:"";
         $page_description= isset($_POST["page_description"])?$_POST["page_description"]:"";
@@ -33,6 +35,8 @@
         $wechat_content= isset($_POST["wechat_content"])?$_POST["wechat_content"]:"";
         $extra_stylesheets = isset($_POST["extra_stylesheets"])?$_POST["extra_stylesheets"]:array();
         $extra_javascripts = isset($_POST["extra_javascripts"])?$_POST["extra_javascripts"]:array();
+        $hotline = isset($_POST["hotline"])?$_POST["hotline"]:"";
+        $hotline_subnum = isset($_POST["hotline_subnum"])?$_POST["hotline_subnum"]:"";
 
         $error_array = array();
 
@@ -61,7 +65,6 @@
                     array_push($error_array,"微信分享内容为空");
                 }
             }
-
 
             //生成目录结构
             if(count($error_array)==0){//无错误，生成目录结构
@@ -105,35 +108,58 @@
         <?php
             }
         ?>    
+
+        <!--活动元数据表单-->
         <form class="form" action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
             <caption>
                 <h2 class="text-center">活动生成</h2>
             </caption>
+            <!--活动名称即活动目录名称-->
         	<div class="form-group">
                 <label class="control-label" for="activity_name">活动名称</label>
                 <input type="text" class="form-control" id="activity_name" name="activity_name" value="<?php echo $activity_name?>"/>
             </div>
+            <!--页面标题-->
             <div class="form-group">
                 <label class="control-label" for="page_title">页面标题</label>
                 <input type="text" class="form-control" id="page_title" name="page_title" value="<?php echo $page_title?>" />
             </div>
+            <!--页面描述-->
             <div class="form-group">
                 <label class="control-label" for="page_description">页面描述</label>
                 <textarea class="form-control" cols="20" id="page_description" name="page_description" value="<?php echo $page_description?>"></textarea>
             </div>
+            <!--页面关键字-->
             <div class="form-group">
                 <label class="control-label" for="page_keywords">页面关键字</label>
                 <input type="text" class="form-control" id="page_keywords" name="page_keywords" value="<?php echo $page_keywords?>" />
             </div>
+            <!--房产ID-->
             <div class="form-group">
                 <label class="control-label" for="estate_Id">房产ID</label>
                 <input type="text" class="form-control" id="estate_Id" name="estate_Id" value="<?php echo $estate_Id?>"/>
             </div>
+            <!--房产名称-->
             <div class="form-group">
                 <label class="control-label" for="estate_name">房产名称</label>
                 <input type="text" class="form-control" id="estate_name" name="estate_name" value="<?php echo $estate_name?>"/>
             </div>
+            <!--预约热线，包括总机和分级-->
+            <div class="form-group">
+                <label class="control-label" for="hotline">预约热线</label>
+                <div class="input-group">
+                    
+                    <input type="text" class="form-control" id="hotline" name="hotline" value="<?php echo $hotline?>"/>
+                    <span class="input-group-addon">
+                    -
+                    </span>
+                    <span class="input-group-addon" style="width:30%;padding:0;border:0">
+                        <input type="text" class="form-control" id="hotline_subnum" name="hotline_subnum" value="<?php echo $hotline_subnum?>" style="border:0" placeholder="分机号码" />
+                    </span>        
+                </div>                
+            </div>            
             
+            <!--包含预约、匹配路由样式、匹配路由脚本-->
             <div class="form-group">
                 <div class="row">
             		<label class="col-xs-4">
@@ -149,6 +175,7 @@
 					</div>
 			</div>
 
+            <!--微信分享-->
 			<div class="form-group">
 	            <div class="panel panel-default">
 	            	<div class="form-group">                
@@ -168,7 +195,7 @@
             </div>
 
             
-            <!--额外样式表-->
+            <!--额外样式表列表-->
             <div class="form-group">
                 <label class="control-label" for="extra_stylesheet">额外样式表</label>
                 <div class="input-group">
@@ -190,7 +217,7 @@
 				</ul>
 				</div>
 
-				<!--额外脚本 -->
+				<!--额外脚本列表 -->
 				<div class="form-group">
 					<label class="control-label" for="extra_javascript">额外脚本</label>
 					<div class="input-group">    					
@@ -220,7 +247,7 @@
 		</div>
 		<script type="text/javascript" src="../jssrc/jquery-1.11.3.js">
 		</script>
-		<script type="text/javascript" src="/fe_public_library/bootstrap/3.3.4/js/bootstrap.min.js">
+		<script type="text/javascript" src="<?php echo $STATIC_DOMAIN?>/fe_public_library/bootstrap/3.3.4/js/bootstrap.min.js">
 		</script>
         <script type="text/javascript" src="create.js">        
         </script>

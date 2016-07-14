@@ -16,9 +16,7 @@ var reload = browserSync.reload;
 var pathLess=[
 		'less/app.less',
 		'less/wap.less',
-		'less/wap-two.less',
 		'less/web.less',
-		'less/web-two.less',
 		'less/web-three.less',
 		'less/*/*.less',
 		'!less/components/*.less',

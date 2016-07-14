@@ -1,20 +1,3 @@
-<?php
-        /*
-            把额外样式表和脚本文件的列表转换成字符串
-        */
-        $extra_stylesheets_str = count($extra_stylesheets) == 0 ? "" : '"' . implode($extra_stylesheets,'","') . '"';
-        $extra_javascripts_str = count($extra_javascripts) == 0 ? "" : '"' . implode($extra_javascripts,",") . '"';
-
-        /*
-            把匹配路由样式、匹配路由脚本、微信分享和包含预约等bool值转换成字符串。
-            因为php中false输出时是空白。
-        */
-        $match_css_str = $match_css?"true":"false";
-        $match_js_str = $match_js?"true":"false";
-        $wechat_share_str = $wechat_share?"true":"false";
-        $inlcude_reserve_str = $include_reserve?"true":"false";                  
-
-        $config_content = <<<config_content
         <?php require_once('../global.php')?>
         <?php
             /*
@@ -22,56 +5,56 @@
             |额外样式表
             |--------------------------------------------   
             */
-            \$config["extra_stylesheets"] = array($extra_stylesheets_str);
+            $config["extra_stylesheets"] = array("hell.css","hello2.css");
 
             /*
             |--------------------------------------------
             |额外脚本
             |--------------------------------------------   
             */            
-            \$config["extra_javascripts"] = array($extra_javascripts_str);
+            $config["extra_javascripts"] = array();
 
             /*
             |--------------------------------------------
             |页面标题
             |--------------------------------------------   
             */
-            \$config["page_title"] = "$page_title";
+            $config["page_title"] = "title";
 
             /*
             |--------------------------------------------
             |页面描述
             |--------------------------------------------   
             */
-            \$config["page_description"] = "$page_description";
+            $config["page_description"] = "";
 
             /*
             |--------------------------------------------
             |页面关键字
             |--------------------------------------------   
             */
-            \$config["page_keywords"] = "$page_keywords";
+            $config["page_keywords"] = "keywords";
 
             /*
             |--------------------------------------------
             |是否根据路由加载样式表
             |--------------------------------------------   
             */
-            \$config["match_stylesheet"] = $match_css_str;
+            $config["match_stylesheet"] = true;
 
             /*
             |--------------------------------------------
             |是否根据路由加载脚本
             |--------------------------------------------   
             */
-            \$config["match_javascripts"] = $match_js_str;
+            $config["match_javascripts"] = false;
 
             /*
             |--------------------------------------------
             |是否包含预约
             |--------------------------------------------   
             */
-            \$config["include_reserve"] = $inlcude_reserve_str;
+            $config["include_reserve"] = true;
 
             /*
             |--------------------------------------------
@@ -79,8 +62,8 @@
             |房产名称
             |--------------------------------------------   
             */
-            \$config["estate_Id"] = "$estate_Id";
-            \$config["estate_name"] = "$estate_name";
+            $config["estate_Id"] = "estateid";
+            $config["estate_name"] = "estatename";
 
             /*
             |--------------------------------------------
@@ -89,9 +72,9 @@
             |微信分享内容
             |--------------------------------------------   
             */
-            \$config["wechat_share"] = $wechat_share_str;
-            \$config["wechat_title"] = "$wechat_title";
-            \$config["wechat_content"] = "$wechat_content";
+            $config["wechat_share"] = false;
+            $config["wechat_title"] = "";
+            $config["wechat_content"] = "";
 
             /*
             |--------------------------------------------
@@ -99,10 +82,6 @@
             |分机号码
             |--------------------------------------------   
             */
-            \$config["hotline"] = "$hotline";
-            \$config["hotline_subnum"] = "$hotline_subnum";
+            $config["hotline"] = "12522";
+            $config["hotline_subnum"] = "784545445";
         ?>                        
-config_content;
-
-    file_put_contents("../$activity_name/config.php", $config_content);
-?>
