@@ -2,7 +2,7 @@
 <!--web站点全局的预约框-->
 <?php
     if($config["include_reserve"]) {
-        require_once("../components/web-reserve-fixed.php");        
+        require_once("../components/webreservefixed.php");        
     ?>
 <?php  }  ?>
 
