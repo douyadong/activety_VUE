@@ -20,16 +20,9 @@
     with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
 </script>
         <!--这里是图片懒加载的脚本-->
-        <script src="<?php echo $STATIC_DOMAIN?>/activity/js/lazy.min.js"></script>
-        <!--这里是微信分享的脚本-->
-        <?php
-            if($config["wechat_share"]) {
-        ?>
-            <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
-            <script src="<?php echo $STATIC_DOMAIN?>/activity/js/wechat-share.min.js"></script>
-        <?php } ?>
-        <script src="<?php echo $STATIC_DOMAIN?>/activity/js/app.min.js"></script>
-        <script data-main="<?php echo $STATIC_DOMAIN?>/activity/js/web.min.js" src="<?php echo $STATIC_DOMAIN?>/fe_public_library/wkzf/js/require.min.js"></script>
+        <script src="<?php echo $STATIC_DOMAIN?>/activity/public/js/lazy.min.js"></script>
+        <script src="<?php echo $STATIC_DOMAIN?>/activity/public/js/app.min.js"></script>
+        <script data-main="<?php echo $STATIC_DOMAIN?>/activity/public/js/web.min.js" src="<?php echo $STATIC_DOMAIN?>/fe_public_library/wkzf/js/require.min.js"></script>
         <?php
             if($config["match_javascripts"]) {
         ?>
@@ -38,7 +31,7 @@
         <?php
             for( $n = 0 ; $n < sizeof($config["extra_javascripts"]) ; $n ++ ) {
         ?>
-        <script src="<?php echo "$STATIC_DOMAIN/activity/" . $router["controller"] . "/js/" . $config["extra_javascripts"][$n] ; ?>"></script>
+        <script src="<?php echo "$STATIC_DOMAIN/activity/" . $router["controller"] . "/js/" . str_replace('.js','.min.js',$config["extra_javascripts"][$n]); ?>"></script>
         <?php } ?>
         <!--GA-PC-->
         <script>

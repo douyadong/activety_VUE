@@ -1,3 +1,10 @@
+<?php
+/*
+ 1. 项目名称：活动生成页面
+ 2. 页面名称：create.php
+ 3. 作者：tangxuyang@lifang.com
+*/
+?>
 <!doctype html>
 <html>
     <?php
@@ -79,6 +86,8 @@
                         //生成wap.php
                         require_once('createwap.php');
 
+                        require_once('createextraresources.php');               
+
                         echo '<div class="alert alert-success"><h1 class="text-center">生成成功<small><a href="">返回</a></small></h1></div></body></html>';
                         exit;
                 }else{
@@ -116,22 +125,22 @@
             </caption>
             <!--活动名称即活动目录名称-->
         	<div class="form-group">
-                <label class="control-label" for="activity_name">活动名称</label>
+                <label class="control-label" for="activity_name">活动目录(建议英文)</label>
                 <input type="text" class="form-control" id="activity_name" name="activity_name" value="<?php echo $activity_name?>"/>
             </div>
             <!--页面标题-->
             <div class="form-group">
-                <label class="control-label" for="page_title">页面标题</label>
+                <label class="control-label" for="page_title">页面标题(head->title)</label>
                 <input type="text" class="form-control" id="page_title" name="page_title" value="<?php echo $page_title?>" />
             </div>
             <!--页面描述-->
             <div class="form-group">
-                <label class="control-label" for="page_description">页面描述</label>
+                <label class="control-label" for="page_description">页面描述(head->description)</label>
                 <textarea class="form-control" cols="20" id="page_description" name="page_description" value="<?php echo $page_description?>"></textarea>
             </div>
             <!--页面关键字-->
             <div class="form-group">
-                <label class="control-label" for="page_keywords">页面关键字</label>
+                <label class="control-label" for="page_keywords">页面关键字(head->keywords)</label>
                 <input type="text" class="form-control" id="page_keywords" name="page_keywords" value="<?php echo $page_keywords?>" />
             </div>
             <!--房产ID-->
@@ -185,11 +194,11 @@
 	            	</div>	            	
 	            	<div class="form-group">
     	                <label class="control-label">微信分享标题</label>
-    	                <input type="text" class="form-control" name="wechat_title" />
+    	                <input type="text" class="form-control" name="wechat_title" value="<?php echo $wechat_title?>" />
 	               </div>
 	               <div class="form-group">
     	                <label class="control-label">微信分享内容</label>
-    	                <textarea type="text" class="form-control" name="wechat_content"></textarea>
+    	                <textarea type="text" class="form-control" name="wechat_content" value="<?php echo $wechat_content?>"></textarea>
 	               </div>
 	            </div>
             </div>
@@ -210,7 +219,7 @@
                 <?php
                     foreach($extra_stylesheets as $css){
                 ?>
-                        <li class="list-group-item"><?php echo $css?> <span class="glyphicon glyphicon-remove"></span><input type="hidden" name="extra_javascripts[]" value="<?php echo $css?>"/></li>
+                        <li class="list-group-item"><?php echo $css?> <span class="glyphicon glyphicon-remove"></span><input type="hidden" name="extra_stylesheets[]" value="<?php echo $css?>"/></li>
                 <?php
                     }
                 ?>                      
@@ -245,7 +254,7 @@
 				</div>
 			</form>
 		</div>
-		<script type="text/javascript" src="../jssrc/jquery-1.11.3.js">
+		<script type="text/javascript" src="../public/jssrc/jquery-1.11.3.js">
 		</script>
 		<script type="text/javascript" src="<?php echo $STATIC_DOMAIN?>/fe_public_library/bootstrap/3.3.4/js/bootstrap.min.js">
 		</script>

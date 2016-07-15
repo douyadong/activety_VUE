@@ -14,12 +14,12 @@
         <meta name="keywords" content="<?php echo $config["page_keywords"] ; ?>">
         <meta name="description" content="<?php echo $config["page_description"] ; ?>"> 
         <!-- 引入stylesheet资源 -->
-        <link rel="stylesheet" href="<?php echo "$STATIC_DOMAIN"?>/activity/css/app.min.css">
-        <link rel="stylesheet" href="<?php echo "$STATIC_DOMAIN"?>/activity/css/wap.min.css">
+        <link rel="stylesheet" href="<?php echo "$STATIC_DOMAIN"?>/activity/public/css/app.min.css">
+        <link rel="stylesheet" href="<?php echo "$STATIC_DOMAIN"?>/activity/public/css/wap.min.css">
         <?php if( sizeof($config["extra_stylesheets"]) > 0 ) {
             for($m = 0 ; $m < sizeof($config["extra_stylesheets"]) ; $m ++ ) {
         ?>
-        <link rel="stylesheet" href = "<?php echo $STATIC_DOMAIN ; ?>/activity/<?php echo $router["controller"]?>/css/<?php echo $config["extra_stylesheets"][$m] ; ?>">
+        <link rel="stylesheet" href = "<?php echo $STATIC_DOMAIN ; ?>/activity/<?php echo $router["controller"]?>/css/<?php echo str_replace('.css','.min.css',$config["extra_stylesheets"][$m]) ; ?>">
         <?php } } ?>
         <?php
             if($config["match_stylesheet"]) {

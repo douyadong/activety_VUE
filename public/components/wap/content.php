@@ -12,6 +12,6 @@
 		}
 	}
 
-	require_once('wapreservefixed.php');
+	require_once('reservefixed.php');
 ?>
 </div>

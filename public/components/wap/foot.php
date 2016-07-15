@@ -1,20 +1,15 @@
 <!--wap foot-->
         <!--页面脚本区域-->
-         <script src="<?php echo $STATIC_DOMAIN ; ?>/activity/config.js"></script>
+        <script src="<?php echo $STATIC_DOMAIN ; ?>/activity/config.js"></script>
         <!--这里是图片懒加载的脚本-->
-        <script src="<?php echo $STATIC_DOMAIN ; ?>/activity/js/lazy.min.js"></script>
-        <!--这里是微信分享的脚本-->
-        <?php
-            if($config["wechat_share"]) {//根据配置决定是否支持微信分享
-        ?>
-        <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
-        <script src="<?php echo $STATIC_DOMAIN ; ?>/activity/js/wechat-share.min.js"></script>
-        <?php 
-            } 
-        ?>
+        <script src="<?php echo $STATIC_DOMAIN ; ?>/activity/public/js/lazy.min.js"></script>
+        
+        <!--微信分享-->
+        <?php require_once("wechatshare.php") ; ?>
+
         <!--app.min.js wap.min.js-->
-        <script src="<?php echo $STATIC_DOMAIN; ?>/activity/js/app.min.js"></script>
-        <script data-main="<?php echo $STATIC_DOMAIN ; ?>/activity/js/wap.min.js" src="<?php echo $STATIC_DOMAIN ; ?>/fe_public_library/wkzf/js/require.min.js"></script>
+        <script src="<?php echo $STATIC_DOMAIN; ?>/activity/public/js/app.min.js"></script>
+        <script data-main="<?php echo $STATIC_DOMAIN ; ?>/activity/public/js/wap.min.js" src="<?php echo $STATIC_DOMAIN ; ?>/fe_public_library/wkzf/js/require.min.js"></script>
         <?php
             if($config["match_javascripts"]) {
         ?>
@@ -25,7 +20,7 @@
         <?php
             for( $n = 0 ; $n < sizeof($config["extra_javascripts"]) ; $n ++ ) {
         ?>
-        <script src="<?php echo "$STATIC_DOMAIN/activity/" . $router["controller"] . "/js/" . $config["extra_javascripts"][$n] ; ?>"></script>
+        <script src="<?php echo "$STATIC_DOMAIN/activity/" . $router["controller"] . "/js/" . str_replace('.js','.min.js',$config["extra_javascripts"][$n]) ; ?>"></script>
         <?php } ?>
 
         <!--GA-h5-->

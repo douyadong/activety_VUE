@@ -2,7 +2,7 @@
 <div class="header">
 	<div class="brand">
 		<a href="http://www.wkzf.com">
-			<img src="<?php echo $STATIC_DOMAIN?>/activity/images/web_brand.jpg" />
+			<img src="<?php echo $STATIC_DOMAIN?>/activity/public/images/web_brand.jpg" />
 		</a>
 	</div>
 	<div class="banner">
