@@ -15,7 +15,7 @@
         $inlcude_reserve_str = $include_reserve?"true":"false";                  
 
         $config_content = <<<config_content
-        <?php require_once('../global.php')?>
+        <?php require_once('../public/global.php')?>
         <?php
             /*
             |--------------------------------------------------------------
