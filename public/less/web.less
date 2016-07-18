@@ -9,8 +9,13 @@
 @import "./components/webreserve.less"; //预约相关样式
 body {
     background-color: #f5f5f5;
-    padding-bottom: 90px;
+    //padding-bottom: 90px;
 }
+
+body.include-reserve{
+    padding-bottom:90px;
+}
+
 .fixedBottom {
     background-color: #fff;
     .content-wrapper {
@@ -21,10 +26,10 @@ body {
         .label {
             color: #545454;
         }
-        .sendCodeBtn {
+        .send-code-btn {
             color: #545454;
         }
-        .sendBtn {
+        .send-btn {
             background-color: #4081d5!important;
             border-radius: 15px;
             color: #fff;
@@ -33,7 +38,7 @@ body {
             -moz-border-radius: 15px;
             -webkit-border-radius: 15px;
         }
-        .phoneBtn {
+        .phone-btn {
             background-color: #4081d5!important;
             border-radius: 15px;
             color: #fff;
@@ -57,7 +62,7 @@ body {
         .title {
             margin: 0px 15px;
         }
-        .sendCodeBtn {
+        .send-code-btn {
             background-color: #f5f5f5;
             border-radius: 5px;
             color: #4886d9;
@@ -78,17 +83,17 @@ body {
     }
 }
 
-.publicFooter {
+.public-footer {
     background-color: rgb(44, 45, 46);
     width: 100%;
     color: rgb(203, 203, 203);
     font-size: 16px;
     font-family: 微软雅黑;
-    .indexMainFrame {
+    .index-main-frame {
         width: 1024px;
         margin: 0 auto;
         overflow: hidden;
-        .logoPhone {
+        .logo-phone {
             height: 80px;
             border-bottom: 1px solid #4a4a4a;
             overflow: hidden;
@@ -174,12 +179,12 @@ body {
 .bd_weixin_popup{
     height: 327px!important;
 }
-.bannerBox{
+.banner-box{
     display: block;
     width: 100%;
     background-color: #fff;
 }
-.w-alertWin{
+.w-alert-win{
     width: 360px!important;
     height: 207px!important;
     left: 50%!important;

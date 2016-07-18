@@ -142,5 +142,5 @@ function WechatShareController() {
 类的初始化
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 $(document).ready(function() {
-    new WechatShareController;
+    new WechatShareController();
 });

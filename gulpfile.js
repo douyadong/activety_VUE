@@ -15,7 +15,7 @@ var gulpif = require("gulp-if");
 var isTest = gulp.env.env === 'test';
 
 //通用less和活动特定less路径
-var pathLess=[
+var lessPath=[
 		'*/less/**/*.less',		
 		'!public/less/components/*.less',
 		'!public/less/mixins/*.less',
@@ -29,27 +29,23 @@ var pathLess=[
 		'!public/less/variables.less'		
 	],	
 	//活动公共js路径
-	pathJs=[
+	jsPath=[
 		'public/jssrc/wap.js',
 		'public/jssrc/web.js',
 		'public/jssrc/wechat-share.js',
 		'public/jssrc/*/*.js'
-	],
-	//活动js路径
-	activityJs=[
-		'*/jssrc/**/*.js',
-		'!public/jssrc/**/*.js'
-	],
-	//活动controller基类路径
-	pathAppJs=[
-		'public/jssrc/controller.js'
-	],
-	//lazyload路径
-	pathLazyLoadJs=[
+	],	
+	//controller,jquery和jquery.lazyload的路径
+	appJsPath=[
+		'public/jssrc/controller.js',
 		'public/jssrc/jquery-1.11.3.js',
 		'public/jssrc/jquery.lazyload.js',
-		'public/jssrc/lazy.js'
-	];
+	],
+	//活动js路径
+	activityJsPath=[
+		'*/jssrc/**/*.js',
+		'!public/jssrc/**/*.js'
+	]
 
 //清空公共和活动特定的js和css
 gulp.task('clear',function(){
@@ -61,7 +57,7 @@ gulp.task('clear',function(){
 
 //编译less文件
 gulp.task('less',function(){
-	return gulp.src(pathLess)
+	return gulp.src(lessPath)
         .pipe(less())
         .pipe(gulpif(isTest,minifyCss()))
         .pipe(rename(function(filepath) {      
@@ -70,25 +66,17 @@ gulp.task('less',function(){
         }))
         .pipe(gulp.dest('./'));
 })
-//编译app.min.js
+//把Controller,jquery和jquery.lazyload编译成app.min.js
 gulp.task('js-app',function(){
-	return gulp.src(pathAppJs)
+	return gulp.src(appJsPath)
 	.pipe(concat(isTest?'app.min.js':'app.js'))
 	.pipe(gulpif(isTest,uglify()))
 	.pipe(gulp.dest('public/js'))
 })
 
-//编译lazy.min.js
-gulp.task('js-lazyLoad',function(){
-	return gulp.src(pathLazyLoadJs)
-	.pipe(concat(isTest?'lazy.min.js':'lazy.js'))
-	.pipe(gulpif(isTest,uglify()))
-	.pipe(gulp.dest('public/js'))
-})
-
-//编译js
+//编译公用的js，不包含app.min.js
 gulp.task('js',function(){
-	return gulp.src(pathJs)
+	return gulp.src(jsPath)
 	.pipe(gulpif(isTest,rename({suffix:'.min'})))
 	.pipe(gulpif(isTest,uglify()))
 	.pipe(gulp.dest('public/js'))
@@ -96,14 +84,15 @@ gulp.task('js',function(){
 
 //检查js
 gulp.task('jshint',function(){
-	return gulp.src(pathJs)
+	var p = pathJs.concat(pathAppJs,pathLazyLoadJs);	
+	return gulp.src(p)
 	.pipe(jshint())
 	.pipe(jshint.reporter())
-})
+});
+
 //编译活动目录中的js
-gulp.task('activityJs',function(){
-	console.log('istest:'+isTest);
-	return gulp.src(activityJs)
+gulp.task('activityJs',function(){	
+	return gulp.src(activityJsPath)
         .pipe(gulpif(isTest,uglify()))
         .pipe(rename(function(filepath) {      
             filepath.dirname = path.join('/', filepath.dirname.split(path.sep)[0], 'js');
@@ -115,10 +104,9 @@ gulp.task('activityJs',function(){
 //监控文件系统更改
 gulp.task('watch',function(){
 	gulp.watch('less/**/**/**.less',['less']);
-	gulp.watch(pathAppJs,['js-app']);
-	gulp.watch(pathLazyLoadJs,['js-lazyLoad']);
-	gulp.watch(pathJs,['js']);
+	gulp.watch(appJsPath,['js-app']);	
+	gulp.watch(jsPath,['js']);
 })
 
 gulp.task('default',['watch']);
-gulp.task('build',gulpSequence('clear','less','js-app','js-lazyLoad','js','activityJs'));
+gulp.task('build',gulpSequence('clear','less','js-app','js','activityJs'));

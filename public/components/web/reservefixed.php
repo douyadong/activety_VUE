@@ -8,16 +8,16 @@
 		<input type="text" class="tel" id="custMobile" maxlength="11" placeholder="">
 		<span class="label">验证码：</span>
 		<input type="text" class="code" id="vertifyCode">
-		<span class="sendCodeBtn" id="sendCodeBtn">获取验证码</span>
-		<span class="sendBtn" id="sendBtn">确定</span>
-		<span class="phoneBtn"><?php echo $config["hotline"]?></span>
+		<span class="send-code-btn" id="sendCodeBtn">获取验证码</span>
+		<span class="send-btn" id="sendBtn">确定</span>
+		<span class="phone-btn"><?php echo $config["hotline"]?></span>
 	</div>
 </div>
 <!--房产ID-->
 <input type="hidden" value="<?php echo $config["estate_Id"]?>" id="subEstateId"/>
 <!--房产名称-->
 <input type="hidden" value="<?php echo $config["estate_name"]?>" id="subEstateName"/>  
-<div class="w-alertBox">
-	<div class="w-alertBG"></div>
-	<div class="w-alertWin" style="background: url('<?php echo "$STATIC_DOMAIN/activity/public"?>/css/images/<?php echo $router["controller"] ; ?>/<?php echo $router["controller"] ; ?>_success.jpg') no-repeat scroll;"><span id="closeSuccess"></span></div>
+<div class="w-alert-box">
+	<div class="w-alert-bg"></div>
+	<div class="w-alert-win" style="background: url('<?php echo "$CURRENT_STATIC_DOMAIN/public"?>/css/images/<?php echo $router["activity_name"] ; ?>/<?php echo $router["activity_name"] ; ?>_success.jpg') no-repeat scroll;"><span id="closeSuccess"></span></div>
 </div>

@@ -14,9 +14,9 @@
 		require_once("../public/components/web/head.php");
 		require_once("../public/components/web/body.php");
 		require_once("../public/components/web/foot.php");
-		require_once("../public/components/savefile.php");
-		\$info = ob_get_contents();//得到缓冲区的内容并且赋值给\$info  
-		save_file(\$info);//保存
+		require_once("../public/components/save_file.php");
+
+		ob_end_flush();
 	?>
 web_content;
 

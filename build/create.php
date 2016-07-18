@@ -78,15 +78,16 @@
                 if(mkdir("../$activity_name") && mkdir("../$activity_name/less") && mkdir("../$activity_name/images") && 
                     mkdir("../$activity_name/jssrc") && mkdir("../$activity_name/images/web") && mkdir("../$activity_name/images/wap")){                        
                         //生成config.php
-                        require_once('createconfig.php');
+                        require_once('create_config.php');
 
                         //生成web.php
-                        require_once('createweb.php');
+                        require_once('create_web.php');
                         
                         //生成wap.php
-                        require_once('createwap.php');
+                        require_once('create_wap.php');
 
-                        require_once('createextraresources.php');               
+                        //创建活动相关的资源（css和js文件），放在活动目录中
+                        require_once('create_match_resources.php');               
 
                         echo '<div class="alert alert-success"><h1 class="text-center">生成成功<small><a href="">返回</a></small></h1></div></body></html>';
                         exit;

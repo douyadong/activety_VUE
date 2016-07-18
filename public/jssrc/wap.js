@@ -1,6 +1,6 @@
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
  1. 项目名称：悟空找房活动推广前端框架
- 2. 页面名称：smartCity/wap(智慧城wap端)
+ 2. 页面名称：wap.html
  3. 作者：yinqin@lifang.com
  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 function WapController() {
@@ -12,7 +12,7 @@ function WapController() {
      bindEvent
      -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
     this.bindEvent();
-};
+}
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
  绑定事件
  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -33,9 +33,9 @@ WapController.prototype.bindEvent = function() {
                 },
                 'onExceptionInterface': function(data) {
                     //显示出错信息，2000后自动消失
-                    $(".tipsTxt").text(data.message)
+                    $(".tips-txt").text(data.message);
                     setTimeout(function() {
-                        $(".tipsTxt").text("")
+                        $(".tips-txt").text("");
                     }, 2000);
                 }
             });
@@ -62,11 +62,39 @@ WapController.prototype.bindEvent = function() {
             },
             'onExceptionInterface': function(data) {
                 // 出错则在页面上显示出错信息，2000后自动消失
-                $(".tipsTxt").text(data.message);
+                $(".tips-txt").text(data.message);
                 setTimeout(function() {
-                    $(".tipsTxt").text("");
+                    $(".tips-txt").text("");
                 }, 2000);
             }
+        });
+    });
+
+    //关闭成功提示框
+    $("#closeSuccess").click(function() {
+        $("#Success").hide();
+        $("html,body").css({
+            'overflow': '',
+            'height': 'auto'
+        });
+        window.location.reload(); //刷新页面
+    });
+
+    //wap端关闭按钮
+    $("#closeBtn").click(function() {
+        $("#yyForm").hide(); //隐藏预约弹出框
+        $("html,body").css({
+            'overflow': '',
+            'height': 'auto'
+        });
+    });
+
+    //wap端预约按钮
+    $("#yyBtn").click(function() {
+        $("#yyForm").show(); //显示预约弹出框
+        $("html,body").css({
+            'overflow': 'hidden',
+            'height': '100%'
         });
     });
 };
@@ -74,5 +102,5 @@ WapController.prototype.bindEvent = function() {
 类的初始化
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 $(document).ready(function() {
-    new WapController;
+    new WapController();
 });

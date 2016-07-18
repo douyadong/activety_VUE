@@ -3,7 +3,7 @@
 <div class="web-container">
 <?php
 	require_once("header.php");
-	require_once("content.php");
-	require_once("footer.php");
+	require_once("../public/components/web/content.php");
+	require_once("../public/components/web/footer.php");
 ?>
 </div>
