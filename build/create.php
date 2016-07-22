@@ -226,7 +226,7 @@
 	               </div>
 	               <div class="form-group">
     	                <label class="control-label">微信分享内容</label>
-    	                <textarea type="text" class="form-control" name="wechat_content"><?php echo $wechat_content?></textarea>
+    	                <textarea type="text" class="form-control" name="wechat_content"><?php echo $wechat_content?></textarea> 
 	               </div>
 	            </div>
             </div>
