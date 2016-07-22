@@ -6,7 +6,7 @@
 	</div>
 	<!--分享QQ、新浪微博和微信-->
 	<div class="tools">        
-        <div class="time">悟空找房:1小时前</div>
+        <div class="time">悟空找房：1小时前</div>
         <div class="bdsharebuttonbox bdshare-button-style1-16" data-bd-bind="1463745861162">
             <a title="分享到QQ空间" href="#" class="bds_qzone" data-cmd="qzone"></a>    
             <a title="分享到新浪微博" href="#" class="bds_tsina" data-cmd="tsina"></a>    
