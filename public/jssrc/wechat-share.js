@@ -48,7 +48,6 @@ function WechatShareController() {
      监听“分享到朋友圈”按钮点击、自定义分享内容及分享结果接口
     -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
     this.wx_onMenuShareTimeline = function(title, linkUrl, imgUrl) {
-        // alert("wx_onMenuShareTimeline title:" + title + "linkUrl:" + linkUrl + "imgUrl:" + imgUrl);
         wx.onMenuShareTimeline({
             title: title,
             link: linkUrl,
@@ -57,11 +56,9 @@ function WechatShareController() {
 
             },
             success: function(res) {},
-            cancel: function(res) {
-                // alert('已取消');
+            cancel: function(res) {                
             },
-            fail: function(res) {
-                // alert(JSON.stringify(res));
+            fail: function(res) {                
             }
         });
     };

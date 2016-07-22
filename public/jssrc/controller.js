@@ -80,16 +80,8 @@ function Controller() {
                 dataType: apiDataType,
                 jsonpCallback: "callback", //这个配置是在没有真正后端接口前端用自己的 json文件模拟接口的时候为了保持callback参数值一致所做的设置
                 error: function(e) {
-                    //1.如果是手机端，则需要显示在页面上
-                    //2.如果是pc端,直接调用showLog方法
-                    if ($(".tips-txt").size() !== 0) {
-                        $(".tips-txt").text('网络异常');
-                        setTimeout(function() {
-                            $(".tips-txt").text("");
-                        }, 2000);
-                    } else {
-                        classSelf.showLog('网络异常');
-                    }
+                    //子类提供
+                    classSelf.showLog('网络异常');                    
                 },
                 success: function(data) {
                     if (data.status.toString() === "1") {

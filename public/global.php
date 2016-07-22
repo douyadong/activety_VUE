@@ -18,18 +18,20 @@
 
         return "";
     }    
+    //静态资源域名
     $STATIC_DOMAIN = get_stage_domain(array(
         "development"=>"//dev01.fe.wkzf",
         "test"=>"//test01.fe.wkzf",
         "sim"=>"//sim01.fe.wkzf",
         "production"=>"//cdn01.wkzf.com"
-    ));    //静态资源域名   
+    )); 
+    //当前域名      
     $CURRENT_STATIC_DOMAIN =  get_stage_domain(array(
         "development"=>"//devhd.fe.wkzf",
         "test"=>"//testhd.fe.wkzf",
         "sim"=>"//simhd.fe.wkzf",
         "production"=>"//hd.wkzf.com"
-    ));    //当前域名
+    ));    
     //取得当前模板页面的末级目录和文件名不带后缀的
     $uri_components = explode("/", $_SERVER["PHP_SELF"]) ;
     $router = array() ;

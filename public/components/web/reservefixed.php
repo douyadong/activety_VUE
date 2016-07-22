@@ -1,5 +1,5 @@
 <!--web版底部预约信息输入-->
-<div class="fixedBottom">
+<div class="fixed-bottom">
 	<div class="content-wrapper">
 		<span class="title">预约看房</span>
 		<span class="label">姓名：</span> 

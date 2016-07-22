@@ -27,25 +27,49 @@
 
 <body>
     <?php
+        function deldir($dir) {
+            //先删除目录下的文件：
+            $dh=opendir($dir);
+            while ($file=readdir($dh)) {
+                if($file!="." && $file!="..") {
+                  $fullpath=$dir."/".$file;
+                  if(!is_dir($fullpath)) {
+                      unlink($fullpath);
+                  } else {
+                      deldir($fullpath);
+                  }
+                }
+            }   
+     
+            closedir($dh);
+            //删除当前文件夹：
+            if(rmdir($dir)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    ?>
+    <?php
         //读取数据        
-        $activity_name = isset($_POST["activity_name"])?$_POST["activity_name"]:"";
-        $page_title = isset($_POST["page_title"])?$_POST["page_title"]:"";
-        $page_description= isset($_POST["page_description"])?$_POST["page_description"]:"";
-        $page_keywords= isset($_POST["page_keywords"])?$_POST["page_keywords"]:"";
-        $estate_Id= isset($_POST["estate_Id"])?$_POST["estate_Id"]:"";
-        $estate_name= isset($_POST["estate_name"])?$_POST["estate_name"]:"";
-        $include_reserve= isset($_POST["include_reserve"]) ? $_POST["include_reserve"] : false;
-        $match_css=isset($_POST["match_css"])?$_POST["match_css"]:false;
-        $match_js=isset($_POST["match_js"])?$_POST["match_js"]:false;
-        $wechat_share=isset($_POST["wechat_share"])?$_POST["wechat_share"]:false;
-        $wechat_title= isset($_POST["wechat_title"])?$_POST["wechat_title"]:"";
-        $wechat_content= isset($_POST["wechat_content"])?$_POST["wechat_content"]:"";
-        $extra_stylesheets = isset($_POST["extra_stylesheets"])?$_POST["extra_stylesheets"]:array();
-        $extra_javascripts = isset($_POST["extra_javascripts"])?$_POST["extra_javascripts"]:array();
-        $hotline = isset($_POST["hotline"])?$_POST["hotline"]:"";
-        $hotline_subnum = isset($_POST["hotline_subnum"])?$_POST["hotline_subnum"]:"";
+        $activity_name = isset($_POST["activity_name"])?$_POST["activity_name"]:"";//活动目录
+        $page_title = isset($_POST["page_title"])?$_POST["page_title"]:"";//页面title标签内容
+        $page_description= isset($_POST["page_description"])?$_POST["page_description"]:"";//页面description内容
+        $page_keywords= isset($_POST["page_keywords"])?$_POST["page_keywords"]:"";//页面keyword内容
+        $estate_Id= isset($_POST["estate_Id"])?$_POST["estate_Id"]:"";//房产Id
+        $estate_name= isset($_POST["estate_name"])?$_POST["estate_name"]:"";//房产名称
+        $include_reserve= isset($_POST["include_reserve"]) ? $_POST["include_reserve"] : false;//是否包含预约功能
+        $match_css=isset($_POST["match_css"])?$_POST["match_css"]:false;//是否匹配路由样式
+        $match_js=isset($_POST["match_js"])?$_POST["match_js"]:false;//是否匹配路由脚本
+        $wechat_share=isset($_POST["wechat_share"])?$_POST["wechat_share"]:false;//是否有微信分享功能
+        $wechat_title= isset($_POST["wechat_title"])?$_POST["wechat_title"]:"";//微信分享标题
+        $wechat_content= isset($_POST["wechat_content"])?$_POST["wechat_content"]:"";//微信分享内容
+        $extra_stylesheets = isset($_POST["extra_stylesheets"])?$_POST["extra_stylesheets"]:array();//额外样式表文件
+        $extra_javascripts = isset($_POST["extra_javascripts"])?$_POST["extra_javascripts"]:array();//额外脚本文件
+        $hotline = isset($_POST["hotline"])?$_POST["hotline"]:"";//热线电话
+        $hotline_subnum = isset($_POST["hotline_subnum"])?$_POST["hotline_subnum"]:"";//分机号码
 
-        $error_array = array();
+        $error_array = array();//收集错误的数组变量
 
         if(isset($_POST['submit']))
         {
@@ -75,6 +99,9 @@
 
             //生成目录结构
             if(count($error_array)==0){//无错误，生成目录结构
+                if(is_dir("../$activity_name")){
+                    deldir("../$activity_name");
+                }
                 if(mkdir("../$activity_name") && mkdir("../$activity_name/less") && mkdir("../$activity_name/images") && 
                     mkdir("../$activity_name/jssrc") && mkdir("../$activity_name/images/web") && mkdir("../$activity_name/images/wap")){                        
                         //生成config.php

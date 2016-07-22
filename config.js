@@ -1,2 +1,1 @@
-var STAGE_ENVIRONENT = 'development' ;
-
+var STAGE_ENVIRONENT = 'development';
