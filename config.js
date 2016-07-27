@@ -1,1 +1,1 @@
-var STAGE_ENVIRONENT = 'dev';
+var STAGE_ENVIRONENT = 'test';

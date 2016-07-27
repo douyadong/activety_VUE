@@ -131,5 +131,15 @@ function Controller() {
             threshold: 200
         });
     }); 
+
+    //关闭成功提示框
+    $("#closeSuccess").click(function() {
+        $("#Success").hide();
+        $("html,body").css({
+            'overflow': '',
+            'height': 'auto'
+        });
+        window.location.reload(); //刷新页面
+    });
 }
 

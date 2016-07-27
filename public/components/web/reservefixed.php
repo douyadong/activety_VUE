@@ -19,5 +19,5 @@
 <input type="hidden" value="<?php echo $config["estate_name"]?>" id="subEstateName"/>  
 <div class="w-alert-box">
 	<div class="w-alert-bg"></div>
-	<div class="w-alert-win" style="background: url('<?php echo "$CURRENT_STATIC_DOMAIN/public"?>/css/images/<?php echo $router["activity_name"] ; ?>/<?php echo $router["activity_name"] ; ?>_success.jpg') no-repeat scroll;"><span id="closeSuccess"></span></div>
+	<div class="w-alert-win" style="background: url('<?php echo "$CURRENT_STATIC_DOMAIN/public"?>/images/reserve_success.jpg') no-repeat scroll;"><span id="closeSuccess"></span></div>
 </div>

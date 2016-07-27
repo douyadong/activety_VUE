@@ -68,17 +68,7 @@ WapController.prototype.bindEvent = function() {
                 }, 2000);
             }
         });
-    });
-
-    //关闭成功提示框
-    $("#closeSuccess").click(function() {
-        $("#Success").hide();
-        $("html,body").css({
-            'overflow': '',
-            'height': 'auto'
-        });
-        window.location.reload(); //刷新页面
-    });
+    });    
 
     //wap端关闭按钮
     $("#closeBtn").click(function() {
