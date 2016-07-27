@@ -33,7 +33,7 @@ function Controller() {
     if (this.environment === "test") this.apiPrefix = "//10.0.18.79:8134/";
     else if (this.environment === "beta") this.apiPrefix = "//wechat-beta.wkzf.com/";
     else if (this.environment === "sim") this.apiPrefix = "//wechat.sim.wkzf/";
-    else if (this.environment === "production") this.apiPrefix = "//wechat.wkzf.com/";
+    else if (this.environment === "prod") this.apiPrefix = "//wechat.wkzf.com/";
     /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
     系统各个模块API地址
     -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
