@@ -29,11 +29,11 @@ WebController.prototype.bindEvent = function() {
     var classSelf = this;
     //获取验证码方法
     $("#sendCodeBtn").click(function() {
-        if (classSelf.allowed) { //如果allowed为true,则发送请求
+        if (classSelf.allowed) { //如果allowed为true,则发送请求            
             var data = {
-                phoneNum: $('#custMobile').val().trim(),
+                phoneNum: $.trim($('#custMobile').val()),
                 msgSourceType: 3
-            };
+            };            
             classSelf.request(classSelf.apiUrl.wechat.getPhoneVertifyCode, data, {
                 'type': 'GET',
                 'process': function() {
@@ -52,11 +52,11 @@ WebController.prototype.bindEvent = function() {
     //@source：1表示web端  2表示wap端
     $("#sendBtn").click(function() {
         var data = {
-            custName: $('#custName').val().trim(),
-            custMobile: $('#custMobile').val().trim(),
-            subEstateName: $('#subEstateName').val().trim(),
-            subEstateId:$('#subEstateId').val().trim(),
-            vertifyCode: $('#vertifyCode').val().trim(),
+            custName: $.trim($('#custName').val()),
+            custMobile: $.trim($('#custMobile').val()),
+            subEstateName: $.trim($('#subEstateName').val()),
+            subEstateId:$.trim($('#subEstateId').val()),
+            vertifyCode: $.trim($('#vertifyCode').val()),
             source: 1
         };
         classSelf.request(classSelf.apiUrl.wechat.saveData, data, { //发送请求
