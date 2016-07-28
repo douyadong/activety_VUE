@@ -7,13 +7,19 @@
 		if($dh = opendir($dir)){
 			require_once('../public/components/get_extension.php');
 			require_once('../public/components/is_valid_image_extension.php');
+			$arr = array();
 			while($file = readdir($dh)){
 				$extension_name = get_extension($file);
+				
 				//判断是否合法的图片后缀名
-				if($file != '..' && $file != '.' && is_valid_image_extension($extension_name)){					
-					echo "<img class='lazy' data-src='$CURRENT_STATIC_DOMAIN/" . $router["activity_name"] . "/$dir/$file' />";			
-				}
+				if($file != '..' && $file != '.' && is_valid_image_extension($extension_name)){			
+					array_push($arr,$file);									
+				}				
 			}
+			sort($arr);
+			foreach($arr as $key => $val){
+				echo "<img class='lazy' data-src='$CURRENT_STATIC_DOMAIN/" . $router["activity_name"] . "/$dir/$val' />";
+			}			
 		}
 	}
 
