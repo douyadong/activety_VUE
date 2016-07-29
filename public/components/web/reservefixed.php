@@ -10,7 +10,7 @@
 		<input type="text" class="code" id="vertifyCode">
 		<span class="send-code-btn" id="sendCodeBtn">获取验证码</span>
 		<span class="send-btn" id="sendBtn">确定</span>
-		<span class="phone-btn"><?php echo $config["hotline"]?></span>
+		<span class="phone-btn"><?php echo $config["hotline"]?><?php echo empty($config["hotline_subnum"])?"":" 转 " .$config["hotline_subnum"]?></span>
 	</div>
 </div>
 <!--房产ID-->
