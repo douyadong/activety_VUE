@@ -178,12 +178,15 @@ IndexController.prototype.showLog = function(msg, callback) {
         if (!errElm[0]) {
             errElm = $('<div class="wk-toast"></div>').appendTo('body');
         }
-        errElm.html(msg).addClass('show');
+        errElm.css({'margin-left':errElm.width()/2}).html(msg).addClass('show');
+
+
         setTimeout(function() { // 2400后自动消失，将toastStatus标记置为true,并且执行callback函数
+            alert('1313');
             errElm.removeClass('show');
             classSelf.toastStatus = true;
             callback && callback();
-        }, 2400);
+        }, 2000);
     }
 };
 
