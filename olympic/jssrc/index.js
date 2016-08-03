@@ -31,7 +31,7 @@ function IndexController() {
 IndexController.prototype.initDialog = function() {
     var classSelf = this;
     //获取验证码方法
-    $("#sendCodeBtn").click(function() {
+    $("#sendCodeBtn").off('click').click(function() {
         if (classSelf.allowed) { //如果allowed为true,则发送请求
             var data = {
                 phoneNum: $.trim($('#custMobile').val()),
@@ -55,7 +55,7 @@ IndexController.prototype.initDialog = function() {
     });
 
     //保存数据方法
-    $("#sendBtn").click(function() {
+    $("#sendBtn").off('click').click(function() {
         var txtGolden = $.trim($('#txtGolden').val());
         var txtSilver = $.trim($('#txtSilver').val());
         var txtCopper = $.trim($('#txtCopper').val());
@@ -63,7 +63,7 @@ IndexController.prototype.initDialog = function() {
 
         var data = {
             cusName: $.trim($('#custName').val()),
-            cusMobile: $.trim($('#custMobile').val()),
+            cusPhone: $.trim($('#custMobile').val()),
             vertifyCode: $.trim($('#vertifyCode').val()),
             country: country,
             goldMedalCount: txtGolden,
@@ -74,7 +74,7 @@ IndexController.prototype.initDialog = function() {
         classSelf.request(classSelf.apiUrl.olympics.add, data, {
             'type': 'GET',
             'process': function() {
-                window.location.href = classSelf.redirectUrl.olympics.detail + '?userId=' + txtMobile;
+                window.location.href = classSelf.redirectUrl.olympics.detail + '?cusPhone=' + data.cusPhone;
             },
             'onExceptionInterface': function(data) {
                 classSelf.showLog(data.message)
@@ -178,12 +178,11 @@ IndexController.prototype.showLog = function(msg, callback) {
         if (!errElm[0]) {
             errElm = $('<div class="wk-toast"></div>').appendTo('body');
         }
-        errElm.css({'margin-left':errElm.width()/2}).html(msg).addClass('show');
+        errElm.html(msg).addClass('show');
 
 
         setTimeout(function() { // 2400后自动消失，将toastStatus标记置为true,并且执行callback函数
-            alert('1313');
-            errElm.removeClass('show');
+            errElm.remove();
             classSelf.toastStatus = true;
             callback && callback();
         }, 2000);

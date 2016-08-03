@@ -59,7 +59,7 @@ function Controller() {
     -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
     this.redirectUrl={
         "olympics":{
-            "detail":this.staticDomain+'olympic/detail.php'
+            "detail":this.staticDomain+'/olympic/detail.php'
         }
     }
 

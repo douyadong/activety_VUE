@@ -21,11 +21,11 @@ function DetailController() {
 DetailController.prototype.getData = function() {
     var classSelf = this;
 
-    var userId = classSelf.getUrlParam('userId');
+    var userId = classSelf.getUrlParam('cusPhone');
 
     classSelf.request(classSelf.apiUrl.olympics.query, { userId: userId }, {
         "process": function(data) {
-            classSelf.render();
+            classSelf.render(data);
         }
     });
 }
