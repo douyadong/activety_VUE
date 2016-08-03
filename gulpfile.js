@@ -7,6 +7,7 @@ var	uglify = require('gulp-uglify');
 var	concat = require('gulp-concat');
 var jshint = require('gulp-jshint');
 var rename = require('gulp-rename');
+var plumber = require('gulp-plumber');
 var minifyCss = require("gulp-minify-css");
 var gulpSequence = require('gulp-sequence');
 var requirejsOptimize = require('gulp-requirejs-optimize');
@@ -73,6 +74,7 @@ gulp.task('less',function(){
 //把Controller,jquery和jquery.lazyload编译成app.min.js
 gulp.task('js-app',function(){
 	return gulp.src(appJsPath)
+	.pipe(plumber())
 	.pipe(concat(isTest?'app.min.js':'app.js'))
 	.pipe(gulpif(isTest,uglify()))
 	.pipe(gulp.dest('public/js'))
@@ -81,6 +83,7 @@ gulp.task('js-app',function(){
 //编译公用的js，不包含app.min.js
 gulp.task('js',function(){
 	return gulp.src(jsPath)
+	.pipe(plumber())
 	.pipe(gulpif(isTest,rename({suffix:'.min'})))
 	.pipe(gulpif(isTest,uglify()))
 	.pipe(gulp.dest('public/js'))
@@ -97,6 +100,7 @@ gulp.task('jshint',function(){
 //编译活动目录中的js
 gulp.task('activityJs',function(){	
 	return gulp.src(activityJsPath)
+		.pipe(plumber())
         .pipe(gulpif(isTest,uglify()))
         .pipe(rename(function(filepath) {      
             filepath.dirname = path.join('/', filepath.dirname.split(path.sep)[0], 'js');
