@@ -61,7 +61,7 @@ IndexController.prototype.initDialog = function() {
         var txtCopper = $.trim($('#txtCopper').val());
         var country = $('.country-list table').find('td.active img').attr('data-id');
 
-        var data = {
+        var requestData = {
             cusName: $.trim($('#custName').val()),
             cusPhone: $.trim($('#custMobile').val()),
             vertifyCode: $.trim($('#vertifyCode').val()),
@@ -71,13 +71,21 @@ IndexController.prototype.initDialog = function() {
             bronzeMedalCount: txtCopper
         };
 
-        classSelf.request(classSelf.apiUrl.olympics.add, data, {
+        classSelf.request(classSelf.apiUrl.olympics.add, requestData, {
             'type': 'GET',
             'process': function() {
-                window.location.href = classSelf.redirectUrl.olympics.detail + '?cusPhone=' + data.cusPhone;
+                window.location.href = classSelf.redirectUrl.olympics.detail + '?cusPhone=' + requestData.cusPhone;
             },
             'onExceptionInterface': function(data) {
-                classSelf.showLog(data.message)
+                if (data.message == "用户已提交过数据") {
+                    classSelf.showLog(data.message, function() {
+                        window.location.href = classSelf.redirectUrl.olympics.detail + '?cusPhone=' + requestData.cusPhone;
+                    });
+
+                } else {
+                    classSelf.showLog(data.message)
+                }
+
             }
         });
     });
@@ -154,15 +162,18 @@ IndexController.prototype.bindEvent = function() {
 
 
         if (parseInt(txtGolden) > 999) {
-            classSelf.showLog('竞猜数必须是整数！');
+            classSelf.showLog('竞猜数不能超过999！');
+            return;
         }
 
         if (parseInt(txtSilver) > 999) {
-            classSelf.showLog('竞猜数必须是整数！');
+            classSelf.showLog('竞猜数不能超过999！');
+            return;
         }
 
         if (parseInt(txtCopper) > 999) {
-            classSelf.showLog('竞猜数必须是整数！');
+            classSelf.showLog('竞猜数不能超过999！');
+            return;
         }
 
         classSelf.displayDialog();

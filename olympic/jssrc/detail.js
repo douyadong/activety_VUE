@@ -21,11 +21,11 @@ function DetailController() {
 DetailController.prototype.getData = function() {
     var classSelf = this;
 
-    var userId = classSelf.getUrlParam('cusPhone');
+    var cusPhone = classSelf.getUrlParam('cusPhone');
 
-    classSelf.request(classSelf.apiUrl.olympics.query, { userId: userId }, {
+    classSelf.request(classSelf.apiUrl.olympics.query, { cusPhone: cusPhone }, {
         "process": function(data) {
-            classSelf.render(data);
+            classSelf.render(data.data);
         }
     });
 }
@@ -34,10 +34,25 @@ DetailController.prototype.getData = function() {
 DetailController.prototype.render = function(data) {
     var classSelf = this;
 
-    var imgSrc = classSelf.staticDomain + "olympic/images/" + data.id + ".png";
+    var imgSrc = classSelf.staticDomain + "/olympic/images/" + data.country + ".png";
+    var countryName = "";
+
+    if (data.country == "1") {
+        countryName = "中国";
+    } else if (data.country == "2") {
+        countryName = "澳大利亚";
+    } else if (data.country == "3") {
+        countryName = "德国";
+    } else if (data.country == "4") {
+        countryName = "巴西";
+    } else if (data.country == "5") {
+        countryName = "美国";
+    } else if (data.country == "6") {
+        countryName = "英国";
+    }
 
     $('.flag').append('<img src="' + imgSrc + '" alt="">');
-    $('.flag').append('<span>'+data.country+'</span>')
+    $('.flag').append('<span>' + countryName + '</span>')
 
 
     $('.count div:first').find('span').html(data.goldMedalCount);
@@ -63,7 +78,7 @@ DetailController.prototype.showLog = function(msg, callback) {
     }
 };
 
-DetailController.prototype.getUrlParam = function() {
+DetailController.prototype.getUrlParam = function(name) {
     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
     var r = window.location.search.substr(1).match(reg); //匹配目标参数
     if (r != null) return unescape(r[2]);
