@@ -30,8 +30,7 @@
 	<div class="wrapper">
 	    <img src="<?php echo $confs["module_img_path"]; ?>/bg3.jpg" alt="">
 	    <div class="flag">
-	        <img src="<?php echo $confs["module_img_path"]; ?>/1.png" alt="">
-	        <span>中国</span>
+	       
 	    </div>
 	    <div class="count">
 	        <div><img src="<?php echo $confs["module_img_path"]; ?>/golden.png" alt=""><span>1</span></div>

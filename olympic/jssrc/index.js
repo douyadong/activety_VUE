@@ -56,37 +56,25 @@ IndexController.prototype.initDialog = function() {
 
     //保存数据方法
     $("#sendBtn").click(function() {
-        var txtCustName = $.trim($('#custName').val());
-        var txtMobile = $.trim($('#custMobile').val());
-        var txtVertifyCode = $.trim($('#vertifyCode').val());
         var txtGolden = $.trim($('#txtGolden').val());
         var txtSliver = $.trim($('#txtSliver').val());
         var txtCopper = $.trim($('#txtCopper').val());
         var country = $('.country-list table').find('td.active img').attr('data-id');
 
-
-        //先判断用户是否有竞猜
-        var requestData = {};
-
-        requestData.userId = txtMobile;
-
-        classSelf.request(classSelf.apiUrl.olympics.checkExist, requestData, {
+        var data = {
+            custName: $.trim($('#custName').val()),
+            custMobile: $.trim($('#custMobile').val()),
+            vertifyCode: $.trim($('#vertifyCode').val()),
+            country: country,
+            goldMedalCount: txtGolden,
+            silverMedalCount: txtSliver,
+            bronzeMedalCount: txtCopper
+        };
+        
+        classSelf.request(classSelf.apiUrl.olympics.add, data, {
             'type': 'GET',
             'process': function() {
-                //&country=1&goldMedalCount=1&silverMedalCount=1&bronzeMedalCount=1
-                requestData.country = country;
-                requestData.goldMedalCount = txtGolden;
-                requestData.silverMedalCount = txtSliver;
-                requestData.bronzeMedalCount = txtCopper;
-
-                classSelf.request(classSelf.apiUrl.olympics.add,requestData,{
-                    "process":function(){
-                        window.location.href=classSelf.redirectUrl.olympics.detail;
-                    },
-                    "onExceptionInterface":function(data){
-                        classSelf.showLog(data.message);
-                    }
-                });
+                window.location.href = classSelf.redirectUrl.olympics.detail + '?userId=' + txtMobile;
             },
             'onExceptionInterface': function(data) {
                 // 出错则在页面上显示出错信息，2000后自动消失
@@ -95,7 +83,7 @@ IndexController.prototype.initDialog = function() {
                     $(".tips-txt").text("");
                 }, 2000);
             }
-        });        
+        });
     });
 }
 

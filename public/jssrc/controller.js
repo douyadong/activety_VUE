@@ -47,10 +47,9 @@ function Controller() {
         "wechat": {
             "getPhoneVertifyCode": this.apiPrefix + "actOrder/getPhoneVertifyCode.rest", //获取验证码
             "saveData": this.apiPrefix + "actOrder/saveData.rest" //保存提交的数据
-        }
+        },
         "olympics":{
             "query":this.apiPrefix+"actActOlympics/query.rest",
-            "checkExist":this.apiPrefix+"actActOlympics/isExit.rest",
             "add":this.apiPrefix+"actActOlympics/insert.rest"
         }
     };
