@@ -26,25 +26,29 @@ var lessPath=[
 		'!public/less/normalize.less',
 		'!public/less/rem.less',
 		'!public/less/reset.less',
-		'!public/less/variables.less'		
+		'!public/less/variables.less',
+		'!node_modules/**/*.less'		
 	],	
 	//活动公共js路径
 	jsPath=[
 		'public/jssrc/wap.js',
 		'public/jssrc/web.js',
 		'public/jssrc/wechat-share.js',
-		'public/jssrc/*/*.js'
+		'public/jssrc/*/*.js',
+		'!node_modules/**/*.js'
 	],	
 	//controller,jquery和jquery.lazyload的路径
 	appJsPath=[
 		'public/jssrc/controller.js',
 		'public/jssrc/jquery-1.11.3.js',
 		'public/jssrc/jquery.lazyload.js',
+		'!node_modules/**/*.js'
 	],
 	//活动js路径
 	activityJsPath=[
 		'*/jssrc/**/*.js',
-		'!public/jssrc/**/*.js'
+		'!public/jssrc/**/*.js',
+		'!node_modules/**/*.js'
 	]
 
 //清空公共和活动特定的js和css

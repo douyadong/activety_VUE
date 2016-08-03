@@ -22,6 +22,12 @@ function Controller() {
     -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
     //this.environment = "development" ; //环境定义
     this.environment = STAGE_ENVIRONENT;
+
+    this.staticDomain="//devhd.fe.wkzf";
+    if (this.environment === "test") this.apiPrefix = "//testhd.fe.wkzf";
+    else if (this.environment === "sim") this.apiPrefix = "//simhd.fe.wkzf";
+    else if (this.environment === "prod") this.apiPrefix = "//hd.wkzf.com";
+
     /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
     整个应用Ajax请求的时候的数据类型，是json还是jsonp，开发环境用jsonp，其他环境用json
     -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -42,7 +48,22 @@ function Controller() {
             "getPhoneVertifyCode": this.apiPrefix + "actOrder/getPhoneVertifyCode.rest", //获取验证码
             "saveData": this.apiPrefix + "actOrder/saveData.rest" //保存提交的数据
         }
+        "olympics":{
+            "query":this.apiPrefix+"actActOlympics/query.rest",
+            "checkExist":this.apiPrefix+"actActOlympics/isExit.rest",
+            "add":this.apiPrefix+"actActOlympics/insert.rest"
+        }
     };
+
+    /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    跳转URL 配置
+    -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+    this.redirectUrl={
+        "olympics":{
+            "detail":this.staticDomain+'olympic/detail.php'
+        }
+    }
+
     /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
     标记字段
     -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/    
@@ -62,7 +83,6 @@ function Controller() {
     }    
     -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
     this.request = function(apiUrl, data, params) {
-        debugger;
         var classSelf = this;
         var type = (params === null || params.type === null || params.type === undefined) ? "GET" : params.type;
         if (this.environment !== "production") type = "GET"; //只要是jsonp请求，type肯定为GET
