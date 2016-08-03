@@ -33,9 +33,9 @@
 	       
 	    </div>
 	    <div class="count">
-	        <div><img src="<?php echo $confs["module_img_path"]; ?>/golden.png" alt=""><span>1</span></div>
-	        <div><img src="<?php echo $confs["module_img_path"]; ?>/silver.png" alt=""><span>12</span></div>
-	        <div><img src="<?php echo $confs["module_img_path"]; ?>/copper.png" alt=""><span>123</span></div>
+	        <div><img src="<?php echo $confs["module_img_path"]; ?>/golden.png" alt=""><span></span></div>
+	        <div><img src="<?php echo $confs["module_img_path"]; ?>/silver.png" alt=""><span></span></div>
+	        <div><img src="<?php echo $confs["module_img_path"]; ?>/copper.png" alt=""><span></span></div>
 	    </div>    
 	</div>
 	

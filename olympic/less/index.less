@@ -10,6 +10,25 @@ html {
     font-size: 10px;
 }
 
+.wk-toast {
+    border-radius: 2px;
+    color: #fff;
+    font-size: 14px;
+    left: 50%;
+    padding: 10px;
+    position: fixed;
+    z-index: 9999;
+    top: 50%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.58);
+    transition: transform 0.25s ease-in-out;
+    transform: translate(-50%, -50%) scaleY(0);
+    word-break: break-all;
+    &.show {
+        transform: translate(-50%, -50%) scaleY(1);
+    }
+}
+
 .wrapper {
     img {
         width: 100%;
@@ -19,6 +38,9 @@ html {
         position: relative;
         .country-list {
             position: absolute;
+            @media screen and (device-aspect-ratio: 40/71) {
+                top: -25px;
+            }
             top: -15px;
             left: 15px;
             right: 15px;

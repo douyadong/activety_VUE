@@ -46,6 +46,23 @@ DetailController.prototype.render = function(data) {
 
 }
 
+DetailController.prototype.showLog = function(msg, callback) {
+    var classSelf = this;
+    if (classSelf.toastStatus) { //如果页面没有出错提示框，将toastStatus标记置为false，新建添加到body中并显示
+        classSelf.toastStatus = false;
+        var errElm = $('.wk-toast');
+        if (!errElm[0]) {
+            errElm = $('<div class="wk-toast"></div>').appendTo('body');
+        }
+        errElm.html(msg).addClass('show');
+        setTimeout(function() { // 2400后自动消失，将toastStatus标记置为true,并且执行callback函数
+            errElm.removeClass('show');
+            classSelf.toastStatus = true;
+            callback && callback();
+        }, 2400);
+    }
+};
+
 DetailController.prototype.getUrlParam = function() {
     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
     var r = window.location.search.substr(1).match(reg); //匹配目标参数
