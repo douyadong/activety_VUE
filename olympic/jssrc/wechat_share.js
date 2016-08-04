@@ -24,10 +24,8 @@ WeChatShareController.prototype.bindEvents = function() {
     $('.btnJoin').on('click', function() {
 
         if (!/micromessenger/.test(navigator.userAgent.toLowerCase())) {
-            alert('11');
             window.location.href = 'http://wechat.wkzf.com/download.html?redirectUrl=wkzf://external_call/parameter?t=0$bt=22$url=http://hd.wkzf.com/olympic/index.html?isAppDownloadHide=true&actId=1442&relationType=1';
         } else {
-            alert('11');
             $('.overlay_img').show();
         }
     });
