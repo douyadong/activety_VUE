@@ -40,19 +40,19 @@
 	                <tr>
 	                    <td>
 	                        <img src="<?php echo $confs["module_img_path"]; ?>/1.png"  alt="中国" data-id="1">
-	                        <img src="<?php echo $confs["module_img_path"]; ?>/1_active.png"  alt="中国" data-id="1" class="active_img">
+	                        <img src="<?php echo $confs["module_img_path"]; ?>/gou.png"  alt="" class="gou_img">
 	                        <span>中国</span>
 	                    </td>
 	                    <td class="sep"></td>
 	                    <td>
 	                        <img src="<?php echo $confs["module_img_path"]; ?>/2.png"  alt="澳大利亚" data-id="2">
-	                        <img src="<?php echo $confs["module_img_path"]; ?>/2_active.png"  alt="澳大利亚" data-id="2" class="active_img">
+	                        <img src="<?php echo $confs["module_img_path"]; ?>/gou.png"  alt="" class="gou_img">
 	                        <span>澳大利亚</span>
 	                    </td>
 	                    <td class="sep"></td>
 	                    <td>
 	                        <img src="<?php echo $confs["module_img_path"]; ?>/3.png"  alt="德国" data-id="3">
-	                        <img src="<?php echo $confs["module_img_path"]; ?>/3_active.png"  alt="德国" data-id="3" class="active_img">                        
+	                        <img src="<?php echo $confs["module_img_path"]; ?>/gou.png"  alt="" class="gou_img">                       
 	                        <span>德国</span>
 	                    </td>
 	                </tr>
@@ -60,19 +60,19 @@
 	                <tr>
 	                    <td>
 	                        <img src="<?php echo $confs["module_img_path"]; ?>/4.png"  alt="巴西" data-id="4">
-	                        <img src="<?php echo $confs["module_img_path"]; ?>/4_active.png"  alt="巴西" data-id="4" class="active_img">
+	                        <img src="<?php echo $confs["module_img_path"]; ?>/gou.png"  alt="" class="gou_img">
 	                        <span>巴西</span>
 	                    </td>
 	                    <td class="sep"></td>
 	                    <td>
 	                        <img src="<?php echo $confs["module_img_path"]; ?>/5.png"  alt="美国" data-id="5">
-	                        <img src="<?php echo $confs["module_img_path"]; ?>/5_active.png"  alt="美国" data-id="5" class="active_img">
+	                        <img src="<?php echo $confs["module_img_path"]; ?>/gou.png"  alt="" class="gou_img">
 	                        <span>美国</span>
 	                    </td>
 	                    <td class="sep"></td>
 	                    <td>
 	                        <img src="<?php echo $confs["module_img_path"]; ?>/6.png"  alt="英国" data-id="6">
-	                        <img src="<?php echo $confs["module_img_path"]; ?>/6_active.png"  alt="英国" data-id="6" class="active_img">
+	                        <img src="<?php echo $confs["module_img_path"]; ?>/gou.png"  alt="" class="gou_img">
 	                        <span>英国</span>
 	                    </td>
 	                </tr>

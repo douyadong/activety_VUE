@@ -39,14 +39,20 @@ textarea {
                 width: 95%;
                 tr {
                     td {
+                        position: relative;
                         text-align: center;
                         font-size: 12px;
                         img {
                             display: inline;
                             height: 66px;
                             margin-bottom: 5px;
-                            &.active_img {
+                            &.gou_img {
+                                position: absolute;
+                                width: 30px;
+                                height: 25px;
                                 display: none;
+                                bottom: 10px;
+                                right: -10px
                             }
                         }
                         &.sep {
@@ -54,8 +60,7 @@ textarea {
                         }
                         &.active {
                             img {
-                                display: none;
-                                &.active_img {
+                                &.gou_img {
                                     display: inline;
                                 }
                             }
