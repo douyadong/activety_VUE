@@ -24,9 +24,9 @@ function Controller() {
     this.environment = STAGE_ENVIRONENT;
 
     this.staticDomain="//devhd.fe.wkzf";
-    if (this.environment === "test") this.apiPrefix = "//testhd.fe.wkzf";
-    else if (this.environment === "sim") this.apiPrefix = "//simhd.fe.wkzf";
-    else if (this.environment === "prod") this.apiPrefix = "//hd.wkzf.com";
+    if (this.environment === "test") this.staticDomain = "//testhd.fe.wkzf";
+    else if (this.environment === "sim") this.staticDomain = "//simhd.fe.wkzf";
+    else if (this.environment === "prod") this.staticDomain = "//hd.wkzf.com";
 
     /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
     整个应用Ajax请求的时候的数据类型，是json还是jsonp，开发环境用jsonp，其他环境用json
