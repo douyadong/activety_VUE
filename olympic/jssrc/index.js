@@ -151,7 +151,7 @@ IndexController.prototype.bindEvent = function() {
             return;
         }
 
-        if (txtCopper.length == 0 || txtSilver.length == 0 || txtCopper.length == 0) {
+        if (txtGolden.length == 0 || txtSilver.length == 0 || txtCopper.length == 0) {
             classSelf.showLog('金、银、铜都必须猜啦');
             return;
         }
