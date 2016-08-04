@@ -37,7 +37,7 @@ IndexController.prototype.initDialog = function() {
                 phoneNum: $.trim($('#custMobile').val()),
                 msgSourceType: 3
             };
-            classSelf.request(classSelf.apiUrl.wechat.getPhoneVertifyCode, data, {
+            classSelf.request(classSelf.apiUrl.olympics.getPhoneVertifyCode, data, {
                 'type': 'GET',
                 'process': function() {
                     //执行60s倒计时

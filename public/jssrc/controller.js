@@ -49,6 +49,7 @@ function Controller() {
             "saveData": this.apiPrefix + "actOrder/saveData.rest" //保存提交的数据
         },
         "olympics":{
+            "getPhoneVertifyCode":this.apiPrefix + "actActOlympics/getPhoneVertifyCode.rest",
             "query":this.apiPrefix+"actActOlympics/query.rest",
             "add":this.apiPrefix+"actActOlympics/insert.rest"
         }
