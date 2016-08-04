@@ -183,20 +183,34 @@ IndexController.prototype.bindEvent = function() {
 
 IndexController.prototype.showLog = function(msg, callback) {
     var classSelf = this;
+    var u = navigator.userAgent;
+    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+    var isUC = u.indexOf('Linux') > -1;
+
     if (classSelf.toastStatus) { //如果页面没有出错提示框，将toastStatus标记置为false，新建添加到body中并显示
         classSelf.toastStatus = false;
         var errElm = $('.wk-toast');
         if (!errElm[0]) {
             errElm = $('<div class="wk-toast"></div>').appendTo('body');
         }
-        errElm.html(msg).addClass('show');
+        errElm.html(msg).addClass('show');;
+
+        // if (isAndroid && isUC) {
+        //     errElm.css({ 'margin-left': -errElm.width() / 2 });
+        //     setTimeout(function(){
+        //         errElm.addClass('show');
+        //     },1000);
+        // } else {
+        //     errElm.addClass('show');
+        // }
+
 
 
         setTimeout(function() { // 2400后自动消失，将toastStatus标记置为true,并且执行callback函数
             errElm.remove();
             classSelf.toastStatus = true;
             callback && callback();
-        }, 2000);
+        }, 2400);
     }
 };
 
