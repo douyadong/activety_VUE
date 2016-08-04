@@ -26,6 +26,7 @@ WeChatShareController.prototype.bindEvents = function() {
         if (!/micromessenger/.test(navigator.userAgent.toLowerCase())) {
             window.location.href = 'http://wechat.wkzf.com/download.html?redirectUrl=wkzf://external_call/parameter?t=0$bt=22$url=http://hd.wkzf.com/olympic/index.html?isAppDownloadHide=true&actId=1442&relationType=1';
         } else {
+            $(window).scrollTop(0);
             $('.overlay_img').show();
         }
     });
