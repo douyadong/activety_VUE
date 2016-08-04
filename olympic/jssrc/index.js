@@ -73,15 +73,16 @@ IndexController.prototype.initDialog = function() {
 
         classSelf.request(classSelf.apiUrl.olympics.add, requestData, {
             'type': 'GET',
-            'process': function() {
-                window.location.href = classSelf.redirectUrl.olympics.detail + '?cusPhone=' + requestData.cusPhone;
+            'process': function(data) {
+                classSelf.showLog(data.message, function() {
+                    window.location.href = classSelf.redirectUrl.olympics.detail + '?cusPhone=' + requestData.cusPhone;
+                });
             },
             'onExceptionInterface': function(data) {
-                if (data.message == "用户已提交过数据") {
+                if (data.message == "你已经猜过了哦") {
                     classSelf.showLog(data.message, function() {
                         window.location.href = classSelf.redirectUrl.olympics.detail + '?cusPhone=' + requestData.cusPhone;
                     });
-
                 } else {
                     classSelf.showLog(data.message)
                 }
