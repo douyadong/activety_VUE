@@ -6,7 +6,9 @@
 
 @import "../../public/less/mixins.less";
 @import "rem.less";
+
 .wrapper {
+    .clearfix();
     position: relative;
     &>img {
         width: 100%;
@@ -30,7 +32,6 @@
     }
     .count {
         position: absolute;
-        width: 100%;
         top: 12rem;
         text-align: left;
         margin-left: 4.5rem;
