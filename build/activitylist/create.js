@@ -220,8 +220,12 @@ $('#createBtn').click(function(){
         type:'post',
         dataType:'json',
         data:data,
-        success:function(){
-
+        success:function(data){
+            data = eval('('+data+')');
+            if(data.status == 1){
+                alert("成功");
+                location.reload();
+            }
         },
         error:function(){
 

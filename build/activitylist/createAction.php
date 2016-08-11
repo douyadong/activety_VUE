@@ -80,5 +80,5 @@
         array_push($errorArray,"创建活动目录失败");
     }
 
-    echo "hell oworld";
+    echo '{"status":1}';//成功
 ?>
