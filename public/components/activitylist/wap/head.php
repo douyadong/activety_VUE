@@ -13,7 +13,22 @@
         <meta name="keywords" content="<?php echo $config["pageKeywords"] ; ?>">
         <meta name="description" content="<?php echo $config["pageDescripts"] ; ?>"> 
         <!-- 引入stylesheet资源 -->
-        
-		<link rel="stylesheet" href="/public/css/alwap.min.css"/>
+        <?php
+                if(array_key_exists("extraCsses",$config) && count($config["extraCsses"]) > 0){
+                        foreach($config["extraCsses"] as $css)
+        ?>
+        <link rel="stylesheet" href="<?php echo $css;?>"/>        
+        <?php
+
+                }
+        ?>
+	<link rel="stylesheet" href="<?php echo $CURRENT_STATIC_DOMAIN?>/public/css/alwap.min.css"/>
+        <?php
+                if(array_key_exists("matchCss", $config) && $config["matchCss"] == "true"){
+        ?>
+        <link rel="stylesheet" href="<?php echo $CURRENT_STATIC_DOMAIN . '/' . $router["activity_name"];?>/css/wap.min.css"/>
+        <?php
+                }
+        ?>
 	</head>
 	<body>	

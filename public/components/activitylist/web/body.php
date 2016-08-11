@@ -7,18 +7,20 @@
                 foreach($config["sections"] as $section){
             ?>
                 <section>
-                <h3>
-                    <?php echo $section['name']?>
-                    <a href="<?php echo $section['link_web']?>">查看更多></a>
-                </h3>
+                <h2>
+                    <?php echo $section['name']?>                    
+                </h2>
+                <p style="text-align:right;">
+                    <a href="<?php echo $section['webLink']?>" style="margin-right:20px;margin-bottom:10px;">查看更多></a>
+                </p>
                 <?php
                     foreach ($section['estates'] as $item) {
                 ?>
                     <div class="item">
-                    <div class="img" href="<?php echo $item['webLink'] ?>">
-                        <img class='lazy' src="" data-src="<?php echo $CURRENT_STATIC_DOMAIN . '/' . $router['activity_name']; ?>/images/<?php echo $item['webImg']?>"  alt=""/>
+                    <a class="img" href="<?php echo $item['webLink'] ?>">
+                        <img class='lazy' src="" data-src="<?php echo $CURRENT_STATIC_DOMAIN . '/' . $router['activity_name']; ?>/images/web/<?php echo $item['webImg']?>"  alt=""/>
                         <span class="price"><span class="prefix">￥</span><?php echo $item['price']?><span class="subfix">元/m<sup>2</sup></span></span>
-                    </div>
+                    </a>
                     <div class="desc">
                         <div class="estate_name"><?php echo $item['estateName']?></div>
                         <div class="contact">
@@ -66,4 +68,3 @@
 		</div>
 	</div>
 </div>
-

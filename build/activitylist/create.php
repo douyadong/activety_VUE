@@ -51,6 +51,14 @@
             <div class="form-group">
                 <label class="control-label" for="pageKeywords">页面关键字(head->keywords)</label>
                 <input type="text" class="form-control" id="pageKeywords" />
+            </div> 
+            <!--两栏或三栏-->
+            <div class="form-group">
+                <label class="control-label" for="estateLayout">楼盘显示布局</label>
+                <select class="form-control" id="estateLayout" name="estateLayout">
+                    <option value="2">--两栏--</option>
+                    <option value="3">--三栏--</option>
+                </select>                
             </div>            
             <!--微信分享-->
 			<div class="form-group">

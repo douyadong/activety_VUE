@@ -1,6 +1,6 @@
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
  1. 项目名称：活动生成页面脚本
- 2. 页面名称：create.php
+ 2. 页面名称：activitylist->create.php
  3. 作者：tangxuyang@lifang.com
  4. 备注：对api的依赖：jQuery
  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -145,19 +145,20 @@ $('#sections').delegate('.delete','click',function(){
 
 
 $('#createBtn').click(function(){
-    var activityName = $('#activityName').val();
-    var pageTitle = $('#pageTitle').val();
-    var pageDescription = $('#pageDescription').val();
-    var pagekeywords = $('#pageKeywords').val();
-    var wechatShare = $('#wechatShare').prop('checked');
-    var wechatTitle = $('#wechatTitle').val();
-    var wechatContent = $('#wechatContent').val();
-    var extraCsses = [];
-    var extraJses = [];
-    var sections = [];
-    var includeReserve = $('#includeReserve').prop('checked');
-    var matchCss = $('#matchCss').prop('checked');
-    var matchJs = $('#matchJs').prop('checked');
+    var activityName = $('#activityName').val();//活动名称
+    var pageTitle = $('#pageTitle').val();//页面title
+    var pageDescription = $('#pageDescription').val();//描述
+    var pagekeywords = $('#pageKeywords').val();//关键字
+    var wechatShare = $('#wechatShare').prop('checked');//微信分享
+    var wechatTitle = $('#wechatTitle').val();//微信分享title
+    var wechatContent = $('#wechatContent').val();//微信分享内容
+    var extraCsses = [];//额外样式文件
+    var extraJses = [];//额外脚本文件
+    var sections = [];//section集合
+    var includeReserve = $('#includeReserve').prop('checked');//包含预约
+    var matchCss = $('#matchCss').prop('checked');//匹配路由样式
+    var matchJs = $('#matchJs').prop('checked');//匹配路由脚本
+    var estateLayout = $('#estateLayout').val();//楼盘布局
 
     //收集额外样式文件
     $('.stylesheets li').each(function(){
@@ -212,7 +213,8 @@ $('#createBtn').click(function(){
             matchJs: matchJs,
             matchCss: matchCss,
             includeReserve: includeReserve,
-            sections: sections
+            sections: sections,
+            estateLayout:estateLayout
         };
     //发送请求
     $.ajax({
@@ -221,24 +223,27 @@ $('#createBtn').click(function(){
         dataType:'json',
         data:data,
         success:function(data){
-            data = eval('('+data+')');
             if(data.status == 1){
                 alert("成功");
                 location.reload();
+            } else{
+                alert(data.message);
             }
         },
         error:function(){
-
+            alert("生成失败:(");
 
         }
     });
 });
 
+//添加section
 $('#addSectionBtn').click(function(){
     var sectionName = $('#sectionName').val();
     var sectionWebLink = $('#sectionWebLink').val();
     var sectionWapLink = $('#sectionWapLink').val();
     var $section = $('#sectionTemplate').clone().removeClass('hide');
+    $section[0].id = null;
     $('.section-name',$section).text(sectionName);
     $('.section-web-link',$section).text(sectionWebLink);
     $('.section-wap-link',$section).text(sectionWapLink);
@@ -249,10 +254,12 @@ $('#addSectionBtn').click(function(){
     $('#sectionWapLink').val('');
 });
 
+//删除section
 $('#sections').delegate('.delete-section','click',function(){
     $(this).closest('.section').remove();
 });
 
+//展开合并section
 $('#sections').delegate('.collapse-section','click',function(){
     var $section = $(this).closest('.section');
     if($section.data('collapse')){

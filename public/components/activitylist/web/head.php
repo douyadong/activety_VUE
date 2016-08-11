@@ -8,8 +8,33 @@
         <meta name="keywords" content="<?php echo $config["pageKeywords"] ; ?>">
         <meta name="description" content="<?php echo $config["pageDescription"] ; ?>">
         <!-- 引入stylesheet资源 -->
-        
-        <link rel="stylesheet" href="/public/css/alweb.min.css" />
+        <?php
+                if(array_key_exists("extraCsses",$config) && count($config["extraCsses"]) > 0){
+                        foreach($config["extraCsses"] as $css)
+        ?>
+        <link rel="stylesheet" href="<?php echo $css;?>"/>        
+        <?php
+
+                }
+        ?>
+        <?php
+        	if(array_key_exists("estateLayout", $config) && $config["estateLayout"] == "2"){
+        ?>
+        	<link rel="stylesheet" href="<?php echo $CURRENT_STATIC_DOMAIN?>/public/css/alweb-twocolumns.min.css"/>
+        <?php
+        	}else{
+        ?>
+        	<link rel="stylesheet" href="<?php echo $CURRENT_STATIC_DOMAIN?>/public/css/alweb.min.css"/>
+        <?php
+        	}
+        ?>               
+        <?php
+                if(array_key_exists("matchCss", $config) && $config["matchCss"] == "true"){
+        ?>
+        <link rel="stylesheet" href="<?php echo $CURRENT_STATIC_DOMAIN . '/' . $router["activity_name"];?>/css/web.min.css"/>
+        <?php
+                }
+        ?>
 </head>
 
 <body>

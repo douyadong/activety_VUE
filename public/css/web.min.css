@@ -1,1 +1,407 @@
-.fixed-bottom{background:rgba(15,17,69,.6);bottom:0;height:88px;position:fixed;width:100%;text-align:center;z-index:99}.fixed-bottom .content-wrapper{height:40px;padding:24px 0;width:1024px}.fixed-bottom .content-wrapper div,.fixed-bottom .content-wrapper input,.fixed-bottom .content-wrapper span{float:left;display:inline-block}.fixed-bottom .content-wrapper .title{font-size:24px;line-height:40px}.fixed-bottom .content-wrapper .send-code-btn{cursor:pointer;font-size:14px;line-height:40px;margin:0 10px;text-align:center}.fixed-bottom .content-wrapper .label{font-size:18px;line-height:40px}.fixed-bottom .content-wrapper input{margin-right:10px}.fixed-bottom .content-wrapper .code{margin-right:20px}.fixed-bottom .content-wrapper .select{height:24px;margin-top:8px;position:relative;width:161px}.fixed-bottom .content-wrapper .select span{background:url(../images/icon.jpg) top right no-repeat #fff;cursor:pointer;color:#aaa;display:block;height:24px;padding-right:27px;line-height:24px;text-align:center;width:135px}.fixed-bottom .content-wrapper .select span.active{color:#4e4e4e}.fixed-bottom .content-wrapper .select ul{background:#fff;bottom:24px;display:none;left:0;position:absolute;padding:0 6px}.fixed-bottom .content-wrapper .select ul li{border-bottom:2px solid #4081d6;color:#4081d6;cursor:pointer;height:27px;font-size:14px;line-height:27px;text-align:center;width:123px}.fixed-bottom .content-wrapper .select ul li:hover{background:#4081d6;color:#fff}.fixed-bottom .content-wrapper .send-btn{background:#ff0;cursor:pointer;font-size:18px;height:37px;line-height:37px;margin-top:2px;text-align:center}.w-alert-box{display:none}.w-alert-box .w-alert-bg{background:rgba(0,0,0,.4);bottom:0;left:0;right:0;position:fixed;top:0;z-index:9998}.w-alert-box .w-alert-win{height:385px;left:50%;position:fixed;top:50%;margin:-192px 0 0 -300px;z-index:9999;width:600px}.w-alert-box .w-alert-win span{bottom:35px;cursor:pointer;height:87px;left:50%;margin-left:-152px;position:absolute;width:305px}body{background-color:#f5f5f5}body.include-reserve{padding-bottom:90px}.fixed-bottom{background-color:#fff}.fixed-bottom .content-wrapper{margin:0 auto}.fixed-bottom .content-wrapper .label,.fixed-bottom .content-wrapper .send-code-btn,.fixed-bottom .content-wrapper .title{color:#545454}.fixed-bottom .content-wrapper .send-btn{background-color:#4081d5!important;border-radius:15px;color:#fff;margin-left:15px;width:80px;-moz-border-radius:15px;-webkit-border-radius:15px}.fixed-bottom .content-wrapper .phone-btn{background-color:#4081d5!important;border-radius:15px;color:#fff;margin-left:15px;display:inline-block;line-height:37px;height:37px;-moz-border-radius:15px;-webkit-border-radius:15px;cursor:pointer;background-image:url(../images/phone.png);background-repeat:no-repeat;background-position:10px center;padding:0 20px 0 30px;font-size:16px}.fixed-bottom .content-wrapper .code{width:80px}.fixed-bottom .content-wrapper .title{margin:0 15px}.fixed-bottom .content-wrapper .send-code-btn{background-color:#f5f5f5;border-radius:5px;color:#4886d9;width:80px;height:40px;text-decoration:none}.fixed-bottom .content-wrapper input{background-color:#f5f5f5;width:80px;border:0;border-radius:5px;padding:12px 0;margin-top:0;height:auto;-moz-border-radius:5px;-webkit-border-radius:5px}.public-footer{background-color:#2c2d2e;width:100%;color:#cbcbcb;font-size:16px;font-family:微软雅黑}.banner-box,.tools{background-color:#fff}.public-footer .index-main-frame{width:1024px;margin:0 auto;overflow:hidden}.public-footer .index-main-frame .logo-phone{height:80px;border-bottom:1px solid #4a4a4a;overflow:hidden}.public-footer .index-main-frame .logo-phone .logo{float:left;margin-top:20px}.public-footer .index-main-frame .logo-phone .logo img{width:auto}.public-footer .index-main-frame .logo-phone .phone{font-weight:400;float:right;margin-top:35px;margin-right:15px}.public-footer .bottom{height:70px;line-height:70px;font-size:12px;overflow:hidden}.public-footer .bottom span{display:block;float:left}.tools:after{clear:both;content:" ";display:block;font-size:0;height:0;visibility:hidden}.tools>div{display:inline-block;padding:20px 0;float:left;width:50%}.bdshare-button-style1-16>.bds_qzone,.bdshare-button-style1-16>.bds_tsina,.bdshare-button-style1-16>.bds_weixin{background-position:0 0!important;height:34px;width:34px}.tools>div.bdsharebuttonbox{float:right;text-align:right}.tools .bdshare-button-style1-16 .bds_more,.tools .bdshare-button-style1-16 a{float:right}.bdshare-button-style1-16>.bds_weixin{background-image:url(../images/wechat.png)}.bdshare-button-style1-16>.bds_tsina{background-image:url(../images/weibo.png)}.bdshare-button-style1-16>.bds_qzone{background-image:url(../images/QQ.png)}.time{text-indent:130px;font-size:1.2rem}.bdsharebuttonbox{padding-right:130px!important;position:relative}.bd_weixin_popup{height:327px!important}.banner-box{display:block;width:100%}.w-alert-win{width:360px!important;height:207px!important;left:50%!important;position:fixed!important;top:50%!important;margin:-103px 0 0 -180px!important;z-index:9999!important}
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 1. 项目名称：悟空找房活动推广前端MVC框架
+ 2. 文件名称：web-two.less (组件风格)
+ 3. 作者：yinqin@lifang.com
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 1. 项目名称：悟空找房活动推广页前端MVC框架
+ 2. 文件名称：variables.less (整个应用的风格变量)
+ 3. 作者：yinqin@lifang.com
+ 4. taken from activity_template by tangxuyang@lifang.com
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 1. 项目名称：悟空找房活动推广页前端MVC框架
+ 2. 文件名称：variables->global.less (全局变量)
+ 3. 作者：lifang@lifang.com
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+块级颜色设置
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+线条颜色设置
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+阴影设置
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+字体颜色设置
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+字体设置
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+尺寸设置
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 1. 项目名称：悟空找房活动推广前端MVC框架
+ 2. 文件名称：mixins (混合)
+ 3. 作者：zhaohuagang@lifang.com
+ 4. taken from activity_template
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 1. 项目名称：悟空找房前端MVC框架
+ 2. 文件名称：background.less(混合 -> 背景类)
+ 3. 作者：zhaohuagang@guanaihui.com
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 1. 项目名称：悟空找房前端MVC框架
+ 2. 文件名称：background.less(混合 -> 圆角类)
+ 3. 作者：zhaohuagang@guanaihui.com
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 1. 项目名称：悟空找房前端MVC框架
+ 2. 文件名称：background.less(混合 -> 块级化并居中类)
+ 3. 作者：zhaohuagang@guanaihui.com
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 1.  项目名称：悟空找房前端MVC框架
+ 2. 文件名称：display.less(混合 -> 显示方式类)
+ 3. 作者：zhaohuagang@guanaihui.com
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 1. 项目名称：悟空找房前端MVC框架
+ 2. 文件名称：float.less(混合 -> 浮动类)
+ 3. 作者：zhaohuagang@guanaihui.com
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 1. 项目名称：悟空找房前端MVC框架
+ 2. 文件名称：background.less(混合 -> 字体类)
+ 3. 作者：zhaohuagang@guanaihui.com
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 1. 项目名称：悟空找房前端MVC框架
+ 2. 文件名称：background.less(混合 -> 文本类)
+ 3. 作者：zhaohuagang@guanaihui.com
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 1. 项目名称：悟空找房前端MVC框架
+ 2. 文件名称：background.less(混合 -> 三角符号类)
+ 3. 作者：zhaohuagang@guanaihui.com
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 1. 项目名称：悟空找房活动推广前端MVC框架
+ 2. 文件名称：smartCity->index.less (智慧城Web)
+ 3. 作者：lifang@lifang.com
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.fixed-bottom {
+  background: rgba(15, 17, 69, 0.6);
+  bottom: 0;
+  height: 88px;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  z-index: 99;
+}
+.fixed-bottom .content-wrapper {
+  height: 40px;
+  padding: 24px 0;
+  width: 1024px;
+}
+.fixed-bottom .content-wrapper span,
+.fixed-bottom .content-wrapper input,
+.fixed-bottom .content-wrapper div {
+  float: left;
+  display: inline-block;
+  *display: inline ;
+  *zoom: 1 ;
+}
+.fixed-bottom .content-wrapper .title {
+  color: #ffff00;
+  font-size: 24px;
+  line-height: 40px;
+  margin: 0 35px;
+}
+.fixed-bottom .content-wrapper .send-code-btn {
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 40px;
+  width: 90px;
+  margin: 0 10px;
+  text-align: center;
+  text-decoration: underline;
+}
+.fixed-bottom .content-wrapper .label {
+  color: #fff;
+  font-size: 18px;
+  line-height: 40px;
+}
+.fixed-bottom .content-wrapper input {
+  height: 25px;
+  margin-top: 8px;
+  margin-right: 10px;
+  width: 160px;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.fixed-bottom .content-wrapper .code {
+  margin-right: 20px;
+  width: 65px;
+}
+.fixed-bottom .content-wrapper .select {
+  height: 24px;
+  margin-top: 8px;
+  position: relative;
+  width: 161px;
+}
+.fixed-bottom .content-wrapper .select span {
+  background: #fff url(../images/icon.jpg) no-repeat scroll top right;
+  cursor: pointer;
+  color: #aaa;
+  display: block;
+  height: 24px;
+  padding-right: 27px;
+  line-height: 24px;
+  text-align: center;
+  width: 135px;
+}
+.fixed-bottom .content-wrapper .select span.active {
+  color: #4e4e4e;
+}
+.fixed-bottom .content-wrapper .select ul {
+  background: #fff;
+  bottom: 24px;
+  display: none;
+  left: 0;
+  position: absolute;
+  padding: 0 6px;
+}
+.fixed-bottom .content-wrapper .select ul li {
+  border-bottom: 2px solid #4081d6;
+  color: #4081d6;
+  cursor: pointer;
+  height: 27px;
+  font-size: 14px;
+  line-height: 27px;
+  text-align: center;
+  width: 123px;
+}
+.fixed-bottom .content-wrapper .select ul li:hover {
+  background: #4081d6;
+  color: #fff;
+}
+.fixed-bottom .content-wrapper .send-btn {
+  background: #ffff00;
+  cursor: pointer;
+  color: #6b3caf;
+  font-size: 18px;
+  height: 37px;
+  line-height: 37px;
+  margin-top: 2px;
+  margin-left: 36px;
+  width: 90px;
+  text-align: center;
+}
+.w-alert-box {
+  display: none;
+}
+.w-alert-box .w-alert-bg {
+  background: rgba(0, 0, 0, 0.4);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  top: 0;
+  z-index: 9998;
+}
+.w-alert-box .w-alert-win {
+  height: 385px;
+  left: 50%;
+  position: fixed;
+  top: 50%;
+  margin: -192px 0 0 -300px;
+  z-index: 9999;
+  width: 600px;
+}
+.w-alert-box .w-alert-win span {
+  bottom: 35px;
+  cursor: pointer;
+  height: 87px;
+  left: 50%;
+  margin-left: -152px;
+  position: absolute;
+  width: 305px;
+}
+body {
+  background-color: #f5f5f5;
+}
+body.include-reserve {
+  padding-bottom: 90px;
+}
+.fixed-bottom {
+  background-color: #fff;
+}
+.fixed-bottom .content-wrapper {
+  margin: 0 auto;
+}
+.fixed-bottom .content-wrapper .title {
+  color: #545454;
+}
+.fixed-bottom .content-wrapper .label {
+  color: #545454;
+}
+.fixed-bottom .content-wrapper .send-code-btn {
+  color: #545454;
+}
+.fixed-bottom .content-wrapper .send-btn {
+  background-color: #4081d5!important;
+  border-radius: 15px;
+  color: #fff;
+  margin-left: 15px;
+  width: 80px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+}
+.fixed-bottom .content-wrapper .phone-btn {
+  background-color: #4081d5!important;
+  border-radius: 15px;
+  color: #fff;
+  margin-left: 15px;
+  display: inline-block;
+  line-height: 37px;
+  height: 37px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  cursor: pointer;
+  background-image: url("../images/phone.png");
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  padding: 0px 20px 0px 30px;
+  font-size: 16px;
+}
+.fixed-bottom .content-wrapper .code {
+  width: 80px;
+}
+.fixed-bottom .content-wrapper .title {
+  margin: 0px 15px;
+}
+.fixed-bottom .content-wrapper .send-code-btn {
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  color: #4886d9;
+  width: 80px;
+  height: 40px;
+  text-decoration: none;
+}
+.fixed-bottom .content-wrapper input {
+  background-color: #f5f5f5;
+  width: 80px;
+  border: 0px;
+  border-radius: 5px;
+  /*height: 40px;*/
+  padding: 12px 0px;
+  margin-top: 0;
+  height: auto;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+.public-footer {
+  background-color: #2c2d2e;
+  width: 100%;
+  color: #cbcbcb;
+  font-size: 16px;
+  font-family: 微软雅黑;
+}
+.public-footer .index-main-frame {
+  width: 1024px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.public-footer .index-main-frame .logo-phone {
+  height: 80px;
+  border-bottom: 1px solid #4a4a4a;
+  overflow: hidden;
+}
+.public-footer .index-main-frame .logo-phone .logo {
+  float: left;
+  margin-top: 20px;
+}
+.public-footer .index-main-frame .logo-phone .logo img {
+  width: auto;
+}
+.public-footer .index-main-frame .logo-phone .phone {
+  font-weight: normal;
+  float: right;
+  margin-top: 35px;
+  margin-right: 15px;
+}
+.public-footer .bottom {
+  height: 70px;
+  line-height: 70px;
+  font-size: 12px;
+  overflow: hidden;
+}
+.public-footer .bottom span {
+  display: block;
+  float: left;
+}
+.tools {
+  background-color: #fff;
+  *zoom: 1;
+}
+.tools:after {
+  clear: both ;
+  content: " ";
+  display: block ;
+  font-size: 0 ;
+  height: 0 ;
+  visibility: hidden ;
+}
+.tools > div {
+  display: inline-block;
+  padding: 20px 0;
+  float: left;
+  width: 50%;
+}
+.tools > div.bdsharebuttonbox {
+  float: right;
+  text-align: right;
+}
+.tools .bdshare-button-style1-16 a,
+.tools .bdshare-button-style1-16 .bds_more {
+  float: right;
+}
+.bdshare-button-style1-16 > .bds_weixin {
+  background-image: url(../images/wechat.png);
+  background-position: 0 0 !important;
+  height: 34px;
+  width: 34px;
+}
+.bdshare-button-style1-16 > .bds_tsina {
+  background-image: url(../images/weibo.png);
+  background-position: 0 0 !important;
+  height: 34px;
+  width: 34px;
+}
+.bdshare-button-style1-16 > .bds_qzone {
+  background-image: url(../images/QQ.png);
+  background-position: 0 0 !important;
+  height: 34px;
+  width: 34px;
+}
+.time {
+  text-indent: 130px;
+  font-size: 1.2rem;
+}
+.bdsharebuttonbox {
+  padding-right: 130px!important;
+  position: relative;
+}
+.bd_weixin_popup {
+  height: 327px!important;
+}
+.banner-box {
+  display: block;
+  width: 100%;
+  background-color: #fff;
+}
+.w-alert-win {
+  width: 360px!important;
+  height: 207px!important;
+  left: 50%!important;
+  position: fixed!important;
+  top: 50%!important;
+  margin: -103px 0 0 -180px !important;
+  z-index: 9999!important;
+}

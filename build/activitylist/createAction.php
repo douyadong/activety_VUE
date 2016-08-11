@@ -24,18 +24,18 @@
 ?>
 
 <?php
-	//$config = print_r($_POST);
 
-	$activityName = $_POST["activityName"];
-	$matchCss = $_POST["matchCss"];
-	$matchJs = $_POST["matchJs"];
-	$errorArray = array();
+	$activityName = $_POST["activityName"];//活动目录
+	$matchCss = $_POST["matchCss"];//匹配路由样式
+	$matchJs = $_POST["matchJs"];//匹配路由脚本
+	$errorArray = array();//错误
 
-	if(is_dir("../../$activityName")){
-        deldir("../../$activityName");
+    $activityPath = "../../$activityName";
+	if(is_dir($activityPath)){//删除已存在活动目录
+        deldir($activityPath);
     }
-    if(mkdir("../../$activityName") && mkdir("../../$activityName/less") && mkdir("../../$activityName/images") && 
-        mkdir("../../$activityName/jssrc")){                        
+    if(mkdir($activityPath) && mkdir("$activityPath/less") && mkdir("$activityPath/images") && 
+        mkdir("$activityPath/jssrc")){                        
             //生成config.php
             require_once('create_config.php');
 
@@ -48,13 +48,13 @@
             //创建活动相关的资源（css和js文件），放在活动目录中
             //require_once('create_match_resources.php');    
             if($matchCss){
-            	$file = fopen("../../$activityName/less/web.less",'wb');
+            	$file = fopen("$activityPath/less/web.less",'wb');
 				if($file){
 					fclose($file);	
 				}else{
 					array_push($error_array,"创建文件:web.js失败");
 				}
-			$file = fopen("../../$activityName/less/wap.less",'wb');
+			$file = fopen("$activityPath/less/wap.less",'wb');
 				if($file){
 					fclose($file);	
 				}else{
@@ -63,13 +63,13 @@
             }   
 
             if($matchJs){
-            	$file = fopen("../../$activityName/jssrc/web.js",'wb');
+            	$file = fopen("$activityPath/jssrc/web.js",'wb');
 				if($file){
 					fclose($file);	
 				}else{
 					array_push($errorArray,"创建文件:web.js失败");
 				}
-				$file = fopen("../../$activityName/jssrc/wap.js",'wb');
+				$file = fopen("$activityPath/jssrc/wap.js",'wb');
 				if($file){
 					fclose($file);	
 				}else{
@@ -80,5 +80,9 @@
         array_push($errorArray,"创建活动目录失败");
     }
 
-    echo '{"status":1}';//成功
+    if(count($errorArray) == 0){//成功
+        echo '{"status":1}';
+    } else{
+        echo '{"status":0,"message":"' . $errorArray[0] . '"}';
+    }
 ?>
