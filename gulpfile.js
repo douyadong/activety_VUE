@@ -27,7 +27,7 @@ var lessPath=[
 		'!public/less/normalize.less',
 		'!public/less/rem.less',
 		'!public/less/reset.less',
-		'!public/less/variables.less'		
+		'!public/less/variables.less',		
 		'!node_modules/**/*.less',
 		'!public/less/activitylist/variables.less'		
 	],	
@@ -74,13 +74,8 @@ gulp.task('less',function(){
 //把Controller,jquery和jquery.lazyload编译成app.min.js
 gulp.task('js-app',function(){
 	return gulp.src(appJsPath)
-<<<<<<< .mine
 	.pipe(plumber())
-	.pipe(concat(isTest?'app.min.js':'app.js'))
-=======
 	.pipe(concat('app.min.js'))
-
->>>>>>> .theirs
 	.pipe(gulpif(isTest,uglify()))
 	.pipe(gulp.dest('public/js'))
 })
@@ -88,13 +83,8 @@ gulp.task('js-app',function(){
 //编译公用的js，不包含app.min.js
 gulp.task('js',function(){
 	return gulp.src(jsPath)
-<<<<<<< .mine
 	.pipe(plumber())
-	.pipe(gulpif(isTest,rename({suffix:'.min'})))
-=======
 	.pipe(rename({suffix:'.min'}))
-
->>>>>>> .theirs
 	.pipe(gulpif(isTest,uglify()))
 	.pipe(gulp.dest('public/js'))
 })
