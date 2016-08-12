@@ -11,9 +11,11 @@ html {
     font-size: @font-size;
     background-color: @page-background-color;
 }
-*{
+
+* {
     vertical-align: baseline;
 }
+
 img {
     width: 100%;
 }
@@ -33,8 +35,8 @@ a {
         padding: 2rem;
         section {
             h3 {
-                font-weight:normal;
-                font-size:1.8rem;                
+                font-weight: normal;
+                font-size: 1.8rem;
                 a {
                     float: right;
                     color: #646f83;
@@ -51,14 +53,14 @@ a {
                 margin: 0.75rem 0 1.5rem 0;
                 .img {
                     width: 100%;
-                    display:block;
+                    display: block;
                     position: relative;
                     img {
                         width: 100%;
                     }
                     .price {
-                        width:10.4rem;
-                        height:2.7rem;
+                        width: 10.4rem;
+                        height: 2.7rem;
                         position: absolute;
                         bottom: 0.85rem;
                         left: 0.25rem;
@@ -66,14 +68,14 @@ a {
                         background-color: #000000;
                         padding: .3rem .5rem .4rem .5rem;
                         border-radius: 0.3rem;
-                        background-color: rgba(0,0,0,0.49);
+                        background-color: rgba(0, 0, 0, 0.49);
                         font-size: 1.5rem;
                         .prefix {
                             margin-right: 0.2rem;
                         }
                         .subfix {
                             margin-left: 0.2rem;
-                            sup{
+                            sup {
                                 vertical-align: top;
                             }
                             font-size:1.2rem;
@@ -87,20 +89,19 @@ a {
                     height: 6.8rem;
                     .contact {
                         color: #828da7;
-                        font-size:1.5rem;
+                        font-size: 1.5rem;
                         .translate {
                             margin: 0 0.4rem;
                         }
                     }
-                    .estate_name{
-                        font-size:1.5rem;
-                        margin-bottom:.6rem;
+                    .estate_name {
+                        font-size: 1.5rem;
+                        margin-bottom: .6rem;
                     }
-
                     .btn_reserve {
                         position: absolute;
-                        width:10rem;
-                        height:3.2rem;
+                        width: 10rem;
+                        height: 3.2rem;
                         right: 1rem;
                         top: 1.8rem;
                         border-radius: 0.6rem;
@@ -117,94 +118,90 @@ a {
     }
 }
 
-.reserve-form{
-	background:rgba(0,0,0,.5);
-	display:none;
-	height:100%;
-	position:fixed;
-	left:0;
-	right:0;
-	top:0;	
-	width:100%;
-	z-index:999;
-
-	.content{	
-		left:50%;
-		margin-left:-15rem;
-		position:absolute;
-		top:50%;
-		margin-top:-14rem;
-		color:#999;
-		width:30rem;
-		background-color:#fff;
-		font-size:1.6rem;
-		border-radius:.5rem;
-		padding:.5rem 0;
-
-		.tips-txt{
-			color:red;
-			text-align:center;
-            font-size:1.2rem;
-		}
-		h3{
-			text-align:center;
-			margin:.8rem 0;
-			color:#4e4e4e;
-		}
-
-		.item{
-			margin:1.2rem;
-			padding:.6rem 0;
-			border-bottom:1px solid #cfcfcf;
-			font-size:1.4rem;
-			label{
-				width:5rem;
-				line-height:2rem;
-				display:inline-block;
-			}
-			input{
-				border:none;
-				outline:none;
-				padding:.5rem;
-				font-size:1.4rem;
-			}
-			&:nth-child(4){
-				border:none;
-				padding-bottom:.2rem;
-				margin-bottom:.4rem;
-				input{
-					width: 10rem;
-				}
-				button{
-					background-color:#3e7ed0;
-					color:#fff;
-                    margin-left:2rem;
-					padding:.6rem 1.0rem;
-					border-radius:.5rem;
-					font-size:1.2rem;
-					border:none;
-					outline:none;
-				}
-			}
-			
-		}
-
-		.footer{
-			border-top: 1px solid #cfcfcf;
-			button{
-				width:49%;
-				border:none;
-				outline:none;
-				font-size:1.6rem;
-				padding:1.2rem 1.2rem;
-				color:#3e7ed0;
-				background-color:#fff;
-				font-family:microsoft yahei,simsun;
-				&:nth-child(1){
-					border-right: 1px solid #cfcfcf;
-				}
-			}
-
-		}
-	}	
+.reserve-form {
+    background: rgba(0, 0, 0, .5);
+    display: none;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    .content {
+        left: 50%;
+        margin-left: -150;
+        position: absolute;
+        top: 50%;
+        margin-top: -14rem;
+        color: #999;
+        width: 300px;
+        background-color: #fff;
+        font-size: 1.6rem;
+        border-radius: .5rem;
+        padding: .5rem 0;
+        .tips-txt {
+            color: red;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+        h3 {
+            text-align: center;
+            margin: .8rem 0;
+            color: #444;
+            font-weight: 400;
+            font-size: 1.6rem;
+        }
+        .item {
+            margin: 1.2rem;
+            padding: .6rem 0;
+            border-bottom: 1px solid #cfcfcf;
+            font-size: 1.4rem;
+            label {
+                font-size: 1.2rem;
+                color: #999;
+                width: 5rem;
+                line-height: 2rem;
+                display: inline-block;
+            }
+            input {
+                border: none;
+                outline: none;
+                font-size: 1.2rem;
+            }
+            &:nth-child(4) {
+                border: none;
+                padding-bottom: .2rem;
+                margin-bottom: .4rem;
+                input {
+                    width: 10rem;
+                }
+                button {
+                    background-color: #3e7ed0;
+                    color: #fff;
+                    padding: .6rem 1.0rem;
+                    border-radius: .5rem;
+                    font-size: 1.2rem;
+                    border: none;
+                    outline: none;
+                }
+            }
+        }
+        .footer {
+            border-top: 1px solid #cfcfcf;
+            button {
+                width: 49%;
+                border: none;
+                outline: none;
+                font-size: 1.6rem;
+                padding: 1rem 1.2rem;
+                color: #3e7ed0;
+                background-color: #fff;
+                font-family: microsoft yahei, simsun;
+                &:nth-child(1) {
+                    border-right: 1px solid #cfcfcf;
+                }
+            }
+        }
+    }
 }
