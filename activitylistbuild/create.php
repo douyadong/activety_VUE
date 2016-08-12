@@ -8,7 +8,7 @@
 <!doctype html>
 <html>
     <?php
-        require_once('../../public/global.php');
+        require_once('../public/global.php');
     ?>
 <head>
     <meta charset="utf-8">

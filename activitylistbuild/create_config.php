@@ -40,5 +40,5 @@
 	\$config = $str;
 	?>
 comments;
-	file_put_contents("../../$activityName/config.php", $configStr);	
+	file_put_contents("../$activityName/config.php", $configStr);	
 ?>

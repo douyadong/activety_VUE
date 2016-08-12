@@ -30,7 +30,7 @@
 	$matchJs = $_POST["matchJs"];//匹配路由脚本
 	$errorArray = array();//错误
 
-    $activityPath = "../../$activityName";
+    $activityPath = "../$activityName";
 	if(is_dir($activityPath)){//删除已存在活动目录
         deldir($activityPath);
     }

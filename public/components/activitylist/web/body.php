@@ -7,10 +7,14 @@
                 foreach($config["sections"] as $section){
             ?>
                 <section>
-                <h2>
-                    <?php echo $section['name']?>                    
-                </h2>
-                <p style="text-align:right;">
+                <div class="section-header">
+                    <div class="section-header-content">
+                        <div class="section-header-body">
+                            <h2 class="section-title"><?php echo $section['name']?></h2>
+                        </div>
+                    </div>
+                </div>
+                <p class="more">
                     <a href="<?php echo $section['webLink']?>" style="margin-right:20px;margin-bottom:10px;">查看更多></a>
                 </p>
                 <?php

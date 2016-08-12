@@ -37,7 +37,7 @@
     )); 
     //当前域名      
     $CURRENT_STATIC_DOMAIN =  get_stage_domain(array(
-        "dev"=>'//10.0.90.169/activity',//"//devhd.fe.wkzf",
+        "dev"=>"//devhd.fe.wkzf",
         "test"=>"//testhd.fe.wkzf",
         "sim"=>"//simhd.fe.wkzf",
         "prod"=>"//hd.wkzf.com"

@@ -21,5 +21,5 @@
 
 webContent;
 
-file_put_contents("../../$activityName/web.php", $webContent);
+file_put_contents("../$activityName/web.php", $webContent);
 ?>
