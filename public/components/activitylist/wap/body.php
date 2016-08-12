@@ -9,7 +9,7 @@
 		<section>
 		<h3>
 			<?php echo $section['name']?>
-			<a href="<?php echo $section['wapLink']?>">查看更多></a>
+			<a href="<?php echo $section['wapLink']?>">查看更多 ></a>
 		</h3>
 		<?php 
 			foreach ($section['estates'] as $item) {
