@@ -17,7 +17,7 @@
 			<div class="item">
 			<a class="img" href="<?php echo $item['wapLink']?>">
 				<img class="lazy" data-src="<?php echo $CURRENT_STATIC_DOMAIN . '/' . $router['activity_name']; ?>/images/wap/<?php echo $item['wapImg']?>"/>
-				<span class="price"><span class="prefix">￥</span><?php echo $item['price']?><span class="subfix">元/m<sup>2</sup></span></span>
+				<span class="price"><?php echo $item['price']?><span class="subfix">元/m&sup2;</span></span>
 			</a>
 			<div class="desc">
 				<div class="estate_name"><?php echo $item['estateName']?></div>

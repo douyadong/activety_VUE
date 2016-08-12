@@ -104,7 +104,7 @@ gulp.task('activityJs',function(){
         .pipe(gulpif(isTest,uglify()))
         .pipe(rename(function(filepath) {      
             filepath.dirname = path.join('/', filepath.dirname.split(path.sep)[0], 'js');
-            filepath.extname = isTest?".min.js":".js";
+            filepath.extname = ".min.js";
         }))
         .pipe(gulp.dest('./'));	
 });
