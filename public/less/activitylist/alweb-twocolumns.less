@@ -1,0 +1,258 @@
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 1. 项目名称：悟空找房活动推广页前端MVC框架
+ 2. 文件名称：activitylist->web (web样式)
+ 3. 作者：tangxuyang@lifang.com
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+@import 'variables.less';
+@import '../reset.less';
+@import '../mixins.less';
+html {
+    font-size: @font-size ;
+    background-color: @page-background-color;
+}
+
+* {
+    vertical-align: baseline;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none
+}
+
+.container {
+    min-width: 120rem;
+    text-align: center;
+    .header {
+        width: 100%;
+        .banner {
+            width: 100%;
+        }
+    }
+    .content {
+        width: 90rem;
+        margin: 0 auto;
+        section {
+            width: 100%;
+            font-size: 1.6rem;
+            clear: both;
+            text-align: center;
+            .section-header {
+                text-align: center;
+                .section-header-content {
+                    margin: 0 auto;
+                    width: 50%;
+                    .section-header-body {
+                        border-top: 1px solid #4e4e4e;
+                        margin-top: 5rem;
+                        h2.section-title {
+                            font-weight: 400;
+                            font-size: 4.5rem;
+                            background-color: #f6f6f5;
+                            display: inline-block;
+                            padding: 1rem 3rem;
+                            margin-top: -4rem;
+                        }
+                    }
+                }
+            }
+            p.more{
+                text-align:right;
+                margin-bottom:1rem;
+                margin-top:-2rem;
+                a{
+                    color:828da7;
+                }
+            }
+            .item {
+                float: left;
+                width: 43rem;
+                background-color: #fff;
+                border-radius: 1rem;
+                margin-right: 4rem;
+                margin-bottom: 4rem;
+                display: inline-block;
+                &:nth-child(2n) {
+                    margin-right: 0;
+                }
+                .img {
+                    position: relative;
+                    img {
+                        width: 100%;
+                    }
+                    .price {
+                        position: absolute;
+                        bottom: .8rem;
+                        left: .5rem;
+                        color: #fff;
+                        background-color: gray;
+                        padding: .4rem;
+                        border-radius: .5rem;
+                        filter: alpha(opacity=70);
+                        -moz-opacity: 0.7;
+                        -khtml-opacity: 0.7;
+                        opacity: 0.7;
+                        .prefix {
+                            margin-right: .1rem;
+                        }
+                        .subfix {
+                            margin-left: .2rem;
+                        }
+                        sup {
+                            font-size: .3rem;
+                            vertical-align: top;
+                        }
+                    }
+                }
+                .desc {
+                    text-align: left;
+                    position: relative;
+                    padding: .8rem 1rem;
+                    color: #47466f;
+                    .estate_name {
+                        margin-bottom: .6rem;
+                    }
+                    .contact {
+                        color: #828da7;
+                        margin-bottom: .6rem;
+                        .translate {
+                            margin: 0 .3rem;
+                        }
+                    }
+                    .btn_reserve {
+                        position: absolute;
+                        right: 1.2rem;
+                        top: 1rem;
+                        border-radius: .8rem;
+                        background-color: #4081d6;
+                        color: #fff;
+                        padding: .6rem 1.6rem;
+                        font-size: 1.4rem;
+                        border: none;
+                        cursor: pointer;
+                        outline: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    width: 100%;
+    background-color: rgb(44, 45, 46);
+    text-align: center;
+    .content {
+        width: 90rem;
+        margin: 0rem auto;
+        text-align: left;
+        padding: 2rem 0;
+        a.logo {
+            width: 100%;
+            display: block;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #4a4a4a;
+            img {
+                width: 170px;
+                height: 40px;
+            }
+        }
+        .copy-right {
+            color: #cbcbcb;
+            font-size: 1.2rem;
+            margin-top: 3rem;
+        }
+    }
+}
+
+.reserve-form {
+    background: rgba(0, 0, 0, .5);
+    display: none;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    .content {
+        left: 50%;
+        margin-left: -18rem;
+        position: absolute;
+        top: 50%;
+        margin-top: -14rem;
+        color: #999;
+        width: 36rem;
+        background-color: #fff;
+        font-size: 1.6rem;
+        border-radius: .5rem;
+        padding: 1rem 2rem;
+        .tips-txt {
+            color: red;
+            text-align: center;
+            font-size: 1.4rem;
+        }
+        h3 {
+            text-align: center;
+            margin: .8rem 0;
+            color: #4e4e4e;
+        }
+        .item {
+            margin: 1.2rem;
+            padding: .6rem 0;
+            border-bottom: 1px solid #cfcfcf;
+            /*font-size:1.4rem;*/
+            label {
+                width: 5rem;
+                line-height: 2rem;
+                display: inline-block;
+            }
+            input {
+                border: none;
+                outline: none;
+                padding: .5rem;
+                font-size: 1.4rem;
+            }
+            &:nth-child(4) {
+                border: none;
+                padding-bottom: .2rem;
+                margin-bottom: .4rem;
+                input {
+                    /*width: 14rem;*/
+                }
+                button {
+                    background-color: #3e7ed0;
+                    color: #fff;
+                    padding: .6rem 1.0rem;
+                    border-radius: .5rem;
+                    font-size: 1.4rem;
+                    border: none;
+                    outline: none;
+                    cursor: pointer;
+                }
+            }
+        }
+        .footer {
+            border-top: 1px solid #cfcfcf;
+            background-color: #fff;
+            button {
+                width: 49%;
+                border: none;
+                outline: none;
+                font-size: 1.6rem;
+                padding: 1.2rem 1.2rem;
+                color: #3e7ed0;
+                background-color: #fff;
+                font-family: microsoft yahei, simsun;
+                cursor: pointer;
+                &:nth-child(1) {
+                    border-right: 1px solid #cfcfcf;
+                }
+            }
+        }
+    }
+}

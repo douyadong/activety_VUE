@@ -27,8 +27,9 @@ var lessPath=[
 		'!public/less/normalize.less',
 		'!public/less/rem.less',
 		'!public/less/reset.less',
-		'!public/less/variables.less',
-		'!node_modules/**/*.less'		
+		'!public/less/variables.less'		
+		'!node_modules/**/*.less',
+		'!public/less/activitylist/variables.less'		
 	],	
 	//活动公共js路径
 	jsPath=[
@@ -50,8 +51,7 @@ var lessPath=[
 		'*/jssrc/**/*.js',
 		'!public/jssrc/**/*.js',
 		'!node_modules/**/*.js'
-	]
-
+	];
 //清空公共和活动特定的js和css
 gulp.task('clear',function(){
 	return gulp.src([
@@ -67,15 +67,20 @@ gulp.task('less',function(){
         .pipe(gulpif(isTest,minifyCss()))
         .pipe(rename(function(filepath) {      
             filepath.dirname = path.join('/', filepath.dirname.split(path.sep)[0], 'css');
-            filepath.extname = isTest?".min.css":".css";
+            filepath.extname = ".min.css";
         }))
         .pipe(gulp.dest('./'));
 })
 //把Controller,jquery和jquery.lazyload编译成app.min.js
 gulp.task('js-app',function(){
 	return gulp.src(appJsPath)
+<<<<<<< .mine
 	.pipe(plumber())
 	.pipe(concat(isTest?'app.min.js':'app.js'))
+=======
+	.pipe(concat('app.min.js'))
+
+>>>>>>> .theirs
 	.pipe(gulpif(isTest,uglify()))
 	.pipe(gulp.dest('public/js'))
 })
@@ -83,8 +88,13 @@ gulp.task('js-app',function(){
 //编译公用的js，不包含app.min.js
 gulp.task('js',function(){
 	return gulp.src(jsPath)
+<<<<<<< .mine
 	.pipe(plumber())
 	.pipe(gulpif(isTest,rename({suffix:'.min'})))
+=======
+	.pipe(rename({suffix:'.min'}))
+
+>>>>>>> .theirs
 	.pipe(gulpif(isTest,uglify()))
 	.pipe(gulp.dest('public/js'))
 })

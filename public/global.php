@@ -3,7 +3,17 @@
      读取config.js里面的环境参数
      -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
     function get_stage_domain($options) {
-        $config_file = "../config.js" ;
+        $config_file = "config.js" ;
+        $config_path = '';
+        while(!file_exists($config_path . '/' . $config_file))
+        {
+            $config_path = '../' . $config_path;
+            if(!is_dir($config_path)){
+                throw new Exception("can't find config.js", 1);            
+            }
+        }
+        $config_file = $config_path . $config_file;
+        //echo $config_path . $config_file . ' <br/>';
         $config_file_handle = fopen($config_file, "r") ;
         $config_file_contents = fread($config_file_handle, filesize ($config_file)) ;
         fclose($config_file_handle) ;

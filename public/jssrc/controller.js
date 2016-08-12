@@ -148,7 +148,8 @@ function Controller() {
     //延迟加载图片
     $(function() {
         $(".lazy").lazyload({
-            threshold: 200
+            threshold: 200,
+            ignoreInvisible: false
         });
     }); 
 
