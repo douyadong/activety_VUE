@@ -15,7 +15,7 @@
                     </div>
                 </div>
                 <p class="more">
-                    <a href="<?php echo $section['webLink']?>" style="margin-right:20px;margin-bottom:10px;">查看更多></a>
+                    <a href="<?php echo $section['webLink']?>">查看更多 &gt;&nbsp;&nbsp;</a>
                 </p>
                 <?php
                     foreach ($section['estates'] as $item) {
