@@ -24,7 +24,7 @@
 	if($config["wechatShare"] == "true"){
 ?>
 <input type="hidden" id="wechatTitle" value="<?php echo $config["wechatTitle"]?>"/>
-<input type="hidden" id="wechatContent" value="<?php echo $config["wechatTitle"]?>"/>
+<input type="hidden" id="wechatContent" value="<?php echo $config["wechatContent"]?>"/>
 <input type="hidden" id="wechatImgUrl" value="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"] ; ?>/images/wechat_shared.jpg"/> 
 
 <!--这里是微信分享的脚本-->        
