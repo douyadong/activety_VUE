@@ -231,6 +231,7 @@ a {
                 outline: none;
                 padding: 5px;
                 font-size: 14px;
+                width:160px;
             }
             &:nth-child(4) {
                 border: none;
@@ -268,5 +269,29 @@ a {
                 margin-top:0px;
             }
         }
+    }
+}
+
+
+.success-dialog{
+    display:none;
+    vertical-align:middle;
+    .success-dialog-bg{
+        background: rgba(0,0,0,.4);
+        bottom: 0;
+        left: 0;
+        right: 0;
+        position: fixed;
+        top: 0;
+        z-index: 9998;
+    }
+    .w-alert-win{
+        width: 360px!important;
+        height: 207px!important;
+        left: 50%!important;
+        position: fixed!important;
+        top: 50%!important;
+        margin: -103px 0 0 -180px!important;
+        z-index: 9999!important;
     }
 }
