@@ -47,7 +47,9 @@ WapController.prototype.bindEvent = function(){
                     classSelf.showLog(data.message);
                 }
             });
-        }
+
+            classSelf.allowed = false;
+        }        
 	});
 
 	//取消按钮点击事件处理函数
