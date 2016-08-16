@@ -98,10 +98,10 @@ WapController.prototype.bindEvent = function(){
         $('.reserve-form [name=phoneNumber]').val('');//预约人手机号
         $('.reserve-form [name=name]').val('');//预约人姓名
         $('.reserve-form [name=verifyCode]').val('');
+        classSelf.clearCountDown();
         $("#sendCodeBtn").text("获取验证码");
         $("#sendCodeBtn").removeClass('disabled');
-        $('.success-dialog').hide();
-        classSelf.clearCountDown();
+        $('.success-dialog').hide();        
         (top.window || window).location.reload();
     });
 };

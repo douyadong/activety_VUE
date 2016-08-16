@@ -147,6 +147,7 @@ function Controller() {
 
     this.clearCountDown = function(){
         clearInterval(this.timer);
+        this.allowed = true;
     }
 
     //延迟加载图片
