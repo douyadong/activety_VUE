@@ -45,6 +45,8 @@ WebController.prototype.bindEvent = function(){
                 },
                 'onExceptionInterface': function(data) {
                     classSelf.showLog(data.message);
+                    classSelf.allowed = true;
+
                 }
             });
 
