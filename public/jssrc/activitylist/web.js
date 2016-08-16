@@ -78,7 +78,7 @@ WebController.prototype.bindEvent = function(){
             subEstateName: estateName,
             subEstateId: estateId,
             vertifyCode: verifyCode,
-            source: 2
+            source: 1
         };
         classSelf.request(classSelf.apiUrl.wechat.saveData, data, {
             'type': 'GET',
@@ -93,6 +93,10 @@ WebController.prototype.bindEvent = function(){
             }
         });
 	});
+
+    $('.w-alert-win').click(function(){
+        location.reload();
+    });
 };
 
 //错误显示

@@ -93,6 +93,10 @@ WapController.prototype.bindEvent = function(){
             }
         });
 	});
+
+    $('#closeSuccess').click(function(){
+        location.reload();
+    });
 };
 
 //错误显示

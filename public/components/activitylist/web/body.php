@@ -29,8 +29,9 @@
                         <div class="estate_name"><?php echo $item['estateName']?></div>
                         <div class="contact">
                             <span class="hotline"><?php echo $item['hotline']?></span><span class="translate">转</span><span class="hotline_subnum"><?php echo $item['hotlineSubNum']?></span>
+                            <button type="button" class="btn_reserve" data-id="<?php echo $item['estateId']?>" data-name="<?php echo $item['estateName']?>">预约看房</button>
                         </div>
-                        <button type="button" class="btn_reserve" data-id="<?php echo $item['estateId']?>" data-name="<?php echo $item['estateName']?>">预约看房</button>
+                        
                     </div>
                 </div>
                 <?php
@@ -71,4 +72,8 @@
 			<button class="cancelBtn">取消</button>
 		</div>
 	</div>
+</div>
+<div class="success-dialog">
+    <div class="success-dialog-bg"></div>
+    <div class="w-alert-win" style="background: url('//devhd.fe.wkzf/public/images/reserve_success.jpg') no-repeat scroll;"><span id="closeSuccess"></span></div>
 </div>

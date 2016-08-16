@@ -24,8 +24,8 @@
 				<div class="contact">
 					<a href="tel:<?php echo $item['hotline']?>">
 					<span class="hotline"><?php echo $item['hotline']?></span><span class="translate">转</span><span class="hotline_subnum"><?php echo $item['hotlineSubNum']?></span></a>
-				</div>
-				<button class="btn_reserve" data-id="<?php echo $item['estateId']?>" data-name="<?php echo $item['estateName']?>">预约看房</button>
+					<button class="btn_reserve" data-id="<?php echo $item['estateId']?>" data-name="<?php echo $item['estateName']?>">预约看房</button>
+				</div>				
 			</div>
 		</div>
 		<?php
@@ -58,4 +58,12 @@
 			<button class="cancelBtn">取消</button>
 		</div>
 	</div>
+</div>
+
+<div class="w-dialog success-dialog">
+    <div class="w-alert-box success-box">
+        <p class="text">看房预约</p>
+        <p class="fz14">您的预约已成功，我们的新房顾问将马上与您联系!</p>
+        <span id="closeSuccess" class="close-success">确   定</span>
+    </div>
 </div>

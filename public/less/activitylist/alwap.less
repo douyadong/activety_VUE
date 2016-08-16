@@ -89,20 +89,16 @@ a {
                     color: #47466f;
                     height: 6.8rem;
                     .contact {
+                        position:relative;
                         color: #828da7;
                         font-size: 1.5rem;
                         .translate {
                             margin: 0 0.4rem;
                         }
-                    }
-                    .estate_name {
-                        font-size: 1.5rem;
-                        margin-bottom: .6rem;
-                    }
-                    .btn_reserve {
+                        .btn_reserve {
                         position: absolute;
                         right: .8rem;
-                        top: 1.8rem;
+                        top: -0.5rem;
                         border-radius: 0.3rem;
                         background-color: #4081d6;
                         color: #fff;
@@ -111,6 +107,11 @@ a {
                         outline: none;
                         border: none;
                     }
+                    }
+                    .estate_name {
+                        font-size: 1.5rem;
+                        margin-bottom: .6rem;
+                    }                    
                 }
             }
         }
@@ -212,4 +213,85 @@ a {
 
 		}
 	}	
+}
+
+.success-dialog{    
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    height: 100%;
+    left: 0;
+    right: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    .w-alert-box {
+        background: url(../img/source/smartCity/smartM-bg-reserve.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 320px;
+        left: 50%;
+        margin-left: -150px;
+        margin-top: -160px;
+        position: absolute;
+        padding: 10px 0;
+        top: 50%;
+        width: 300px;
+        .alertlogo {
+            margin-bottom: 2px;
+        }
+        .text {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffff00;
+            text-align: center;
+            text-indent: 8px;
+            margin: 20px 0;
+        }
+    }
+    .success-box {
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 192px;
+        position: relative;
+        span.close-success {
+            background: #ffff00;
+            color: #4081D6;
+            display: block;
+            font-size: 18px;
+            height: 44px;
+            line-height: 44px;
+            margin: 122px auto;
+            text-align: center;
+            width: 152px;
+        }
+    }
+
+    .success-box {
+        background: #fff;
+        height: 170px;
+        border-radius: 5px;
+        overflow: hidden;
+        .text {
+            color: #4e4e4e;
+            background: #fff;
+            font-weight: normal;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        span.close-success {
+            background: #FFF;
+            display: block;
+            font-size: 18px;
+            height: 44px;
+            line-height: 44px;
+            margin: 35px auto;
+            text-align: center;
+            width: 100%;
+            border-top: 1px solid #cfcfcf;
+        }
+        .fz14 {
+            font-size: 14px;
+            padding: 0 20px;
+        }
+    }
 }
