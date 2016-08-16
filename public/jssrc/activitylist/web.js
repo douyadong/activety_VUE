@@ -100,6 +100,7 @@ WebController.prototype.bindEvent = function(){
         $('.reserve-form [name=verifyCode]').val('');
         $("#sendCodeBtn").text("获取验证码");
         $("#sendCodeBtn").removeClass('disabled');
+        classSelf.clearCountDown();
         location.reload();
     });
 };

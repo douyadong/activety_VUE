@@ -126,8 +126,8 @@ function Controller() {
         var classSelf = this;
         var timeNum = 60; //计时器为60
         classSelf.allowed = false;
-        clearInterval(timer);
-        var timer = setInterval(function() {
+        clearInterval(classSelf.timer);
+        this.timer = setInterval(function() {
             if (timeNum > 1) { //60s之内，“发送验证码” 按钮，文本为 “过Xs后可重发”
                 $("#sendCodeBtn").addClass('disabled');
                 timeNum--;
@@ -140,10 +140,14 @@ function Controller() {
                 $("#sendCodeBtn").removeClass('disabled');
                 $("#sendCodeBtn").text("获取验证码");
                 classSelf.allowed = true;
-                clearInterval(timer);
+                clearInterval(classSelf.timer);
             }
         }, 1000);
     };   
+
+    this.clearCountDown = function(){
+        clearInterval(this.timer);
+    }
 
     //延迟加载图片
     $(function() {
