@@ -1,5 +1,6 @@
 <div class="container">
-        <div class="header" style="background-color:#f6f6f5;background-position: center center;background-image:url(<?php echo $CURRENT_STATIC_DOMAIN . '/' . $router['activity_name']; ?>/images/web_banner.jpg)">
+        <div class="header">
+            <div class="banner" style="background-color:#f6f6f5;background-position: center center;background-image:url(<?php echo $CURRENT_STATIC_DOMAIN . '/' . $router['activity_name']; ?>/images/web_banner.jpg)"></div>
             <!--<img class="banner" src="<?php echo $CURRENT_STATIC_DOMAIN . '/' . $router['activity_name']; ?>/images/web_banner.jpg" />-->
         </div>
         <div class="content">

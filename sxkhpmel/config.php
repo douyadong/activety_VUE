@@ -50,7 +50,7 @@
     array (
       'name' => '好“铺”袭来',
       'webLink' => 'http://www.wkzf.com/shanghai/xflist/t3',
-      'wapLink' => 'http://m.wkzf.com/shanghai/xflist/3',
+      'wapLink' => 'http://m.wkzf.com/shanghai/xflist/t3',
       'estates' => 
       array (
         0 => 
@@ -131,7 +131,7 @@
     array (
       'name' => '“商住”跟上',
       'webLink' => 'http://www.wkzf.com/shanghai/xflist/t3',
-      'wapLink' => 'http://m.wkzf.com/shanghai/xflist/3',
+      'wapLink' => 'http://m.wkzf.com/shanghai/xflist/t3',
       'estates' => 
       array (
         0 => 

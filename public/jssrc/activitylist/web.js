@@ -95,6 +95,11 @@ WebController.prototype.bindEvent = function(){
 	});
 
     $('.w-alert-win').click(function(){
+        $('.reserve-form [name=phoneNumber]').val('');//预约人手机号
+        $('.reserve-form [name=name]').val('');//预约人姓名
+        $('.reserve-form [name=verifyCode]').val('');
+        $("#sendCodeBtn").text("获取验证码");
+        $("#sendCodeBtn").removeClass('disabled');
         location.reload();
     });
 };
