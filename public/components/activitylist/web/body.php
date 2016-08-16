@@ -1,6 +1,6 @@
 <div class="container">
-        <div class="header">
-            <img class="banner" src="<?php echo $CURRENT_STATIC_DOMAIN . '/' . $router['activity_name']; ?>/images/web_banner.jpg" />
+        <div class="header" style="background-color:#f6f6f5;background-position: center center;background-image:url(<?php echo $CURRENT_STATIC_DOMAIN . '/' . $router['activity_name']; ?>/images/web_banner.jpg)">
+            <!--<img class="banner" src="<?php echo $CURRENT_STATIC_DOMAIN . '/' . $router['activity_name']; ?>/images/web_banner.jpg" />-->
         </div>
         <div class="content">
             <?php
@@ -64,7 +64,7 @@
 			<label>电话:</label> <input type="text" placeholder="请输入电话号码" name="phoneNumber"/>
 		</div>
 		<div class="item">
-			<label>验证码:</label> <input type="text" placeholder="请输入验证码" name="verifyCode" /><button class="sendCodeBtn">获取验证码</button>
+			<label>验证码:</label> <input type="text" placeholder="请输入验证码" name="verifyCode" /><button class="sendCodeBtn" id="sendCodeBtn">获取验证码</button>
 		</div>
 		<p class="tips-txt"></p>
 		<div class="footer">

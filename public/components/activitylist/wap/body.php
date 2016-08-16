@@ -50,7 +50,7 @@
 			<label>电话:</label> <input type="text" placeholder="请输入电话号码" name="phoneNumber"/>
 		</div>
 		<div class="item">
-			<label>验证码:</label> <input type="text" placeholder="请输入验证码" name="verifyCode" /><button class="sendCodeBtn">获取验证码</button>
+			<label>验证码:</label> <input type="text" placeholder="请输入验证码" name="verifyCode" /><button class="sendCodeBtn" id="sendCodeBtn">获取验证码</button>
 		</div>
 		<p class="tips-txt"></p>
 		<div class="footer">

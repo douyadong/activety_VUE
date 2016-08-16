@@ -137,7 +137,7 @@
         0 => 
         array (
           'estateId' => '106763',
-          'estateName' => '嘉隆国际 （商住）',
+          'estateName' => '嘉隆国际 [ 商住 ]',
           'webLink' => 'http://www.wkzf.com/shanghai/xfdetail/9dba792040787f61.html',
           'wapLink' => 'http://m.wkzf.com/shanghai/xfdetail/9dba792040787f61.html',
           'price' => '16000',
@@ -149,7 +149,7 @@
         1 => 
         array (
           'estateId' => '145069',
-          'estateName' => '光明D9空间 （商住）',
+          'estateName' => '光明D9空间 [ 商住 ]',
           'webLink' => 'http://www.wkzf.com/shanghai/xfdetail/bed3badf1f11fb31.html',
           'wapLink' => 'http://m.wkzf.com/shanghai/xfdetail/bed3badf1f11fb31.html',
           'price' => '20000',
@@ -161,7 +161,7 @@
         2 => 
         array (
           'estateId' => '153100',
-          'estateName' => '智富城Mimon公寓（商住）',
+          'estateName' => '智富城Mimon公寓 [ 商住 ]',
           'webLink' => 'http://www.wkzf.com/jiaxing/xfdetail/e6c0e863044c5948.html',
           'wapLink' => 'http://m.wkzf.com/jiaxing/xfdetail/e6c0e863044c5948.html',
           'price' => '6500',
@@ -173,7 +173,7 @@
         3 => 
         array (
           'estateId' => '106899',
-          'estateName' => '宝山卓越时代广场 （商住）',
+          'estateName' => '宝山卓越时代广场 [ 商住 ]',
           'webLink' => 'http://www.wkzf.com/shanghai/xfdetail/00c129bcb09b05ef.html',
           'wapLink' => 'http://m.wkzf.com/shanghai/xfdetail/00c129bcb09b05ef.html',
           'price' => '25000',
@@ -185,7 +185,7 @@
         4 => 
         array (
           'estateId' => '147181',
-          'estateName' => '乐都新界商业广场（商住）',
+          'estateName' => '乐都新界商业广场 [ 商住 ]',
           'webLink' => 'http://www.wkzf.com/shanghai/xfdetail/90c8b908f452874e.html',
           'wapLink' => 'http://m.wkzf.com/shanghai/xfdetail/90c8b908f452874e.html',
           'price' => '22000',
@@ -197,7 +197,7 @@
         5 => 
         array (
           'estateId' => '122837',
-          'estateName' => '一品国际 （商住）',
+          'estateName' => '一品国际 [ 商住 ]',
           'webLink' => 'http://www.wkzf.com/shanghai/xfdetail/f9be9680891a2c61.html',
           'wapLink' => 'http://m.wkzf.com/shanghai/xfdetail/f9be9680891a2c61.html',
           'price' => '66000',
