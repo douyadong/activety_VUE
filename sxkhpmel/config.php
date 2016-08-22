@@ -62,7 +62,7 @@
           'price' => '35000',
           'webImg' => '旭辉恒基.jpg',
           'wapImg' => '旭辉恒基.jpg',
-          'hotline' => '4009230626',
+          'hotline' => '4008208907',
           'hotlineSubNum' => '9845',
         ),
         1 => 
@@ -74,7 +74,7 @@
           'price' => '60000',
           'webImg' => '新华红星.jpg',
           'wapImg' => '新华红星.jpg',
-          'hotline' => '4009230626',
+          'hotline' => '4008208907',
           'hotlineSubNum' => '8117',
         ),
         2 => 
@@ -86,7 +86,7 @@
           'price' => '40000',
           'webImg' => '虹桥正荣.jpg',
           'wapImg' => '虹桥正荣.jpg',
-          'hotline' => '4009230626',
+          'hotline' => '4008208907',
           'hotlineSubNum' => '9150',
         ),
         3 => 
@@ -98,7 +98,7 @@
           'price' => '25000',
           'webImg' => '中童巴比尼.jpg',
           'wapImg' => '中童巴比尼.jpg',
-          'hotline' => '4009230626',
+          'hotline' => '4008208907',
           'hotlineSubNum' => '8081',
         ),
         4 => 
@@ -110,7 +110,7 @@
           'price' => '40000',
           'webImg' => '大融城.jpg',
           'wapImg' => '大融城.jpg',
-          'hotline' => '4009230626',
+          'hotline' => '4008208907',
           'hotlineSubNum' => '9122',
         ),
         5 => 
@@ -122,7 +122,7 @@
           'price' => '60000',
           'webImg' => '红太阳.jpg',
           'wapImg' => '红太阳.jpg',
-          'hotline' => '4009230626',
+          'hotline' => '4008208907',
           'hotlineSubNum' => '9201',
         ),
       ),
@@ -143,7 +143,7 @@
           'price' => '16000',
           'webImg' => '嘉隆国际.jpg',
           'wapImg' => '嘉隆国际.jpg',
-          'hotline' => '4009230626',
+          'hotline' => '4008208907',
           'hotlineSubNum' => '8150',
         ),
         1 => 
@@ -155,7 +155,7 @@
           'price' => '20000',
           'webImg' => '光明D9空间.jpg',
           'wapImg' => '光明D9空间.jpg',
-          'hotline' => '4009230626',
+          'hotline' => '4008208907',
           'hotlineSubNum' => '9114',
         ),
         2 => 
@@ -167,7 +167,7 @@
           'price' => '6500',
           'webImg' => '智富城.jpg',
           'wapImg' => '智富城.jpg',
-          'hotline' => '4009230626',
+          'hotline' => '4008208907',
           'hotlineSubNum' => '9488',
         ),
         3 => 
@@ -179,7 +179,7 @@
           'price' => '25000',
           'webImg' => '宝山卓越.jpg',
           'wapImg' => '宝山卓越.jpg',
-          'hotline' => '4009230626',
+          'hotline' => '4008208907',
           'hotlineSubNum' => '8148',
         ),
         4 => 
@@ -191,7 +191,7 @@
           'price' => '22000',
           'webImg' => '乐都新界.jpg',
           'wapImg' => '乐都新界.jpg',
-          'hotline' => '4009230626',
+          'hotline' => '4008208907',
           'hotlineSubNum' => '9715',
         ),
         5 => 
@@ -203,7 +203,7 @@
           'price' => '66000',
           'webImg' => '一品国际.jpg',
           'wapImg' => '一品国际.jpg',
-          'hotline' => '4009230626',
+          'hotline' => '4008208907',
           'hotlineSubNum' => '8149',
         ),
       ),
