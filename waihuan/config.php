@@ -50,7 +50,7 @@
     array (
       'name' => '地铁沿线',
       'webLink' => 'http://www.wkzf.com/shanghai/xflist',
-      'wapLink' => 'http://www.wkzf.com/shanghai/xflist',
+      'wapLink' => 'http://m.wkzf.com/shanghai/xflist',
       'estates' => 
       array (
         0 => 
@@ -107,7 +107,7 @@
     array (
       'name' => '物超所值',
       'webLink' => 'http://www.wkzf.com/shanghai/xflist',
-      'wapLink' => 'http://www.wkzf.com/shanghai/xflist',
+      'wapLink' => 'http://m.wkzf.com/shanghai/xflist',
       'estates' => 
       array (
         0 => 
@@ -164,7 +164,7 @@
     array (
       'name' => '配套齐全',
       'webLink' => 'http://www.wkzf.com/shanghai/xflist',
-      'wapLink' => 'http://www.wkzf.com/shanghai/xflist',
+      'wapLink' => 'http://m.wkzf.com/shanghai/xflist',
       'estates' => 
       array (
         0 => 
