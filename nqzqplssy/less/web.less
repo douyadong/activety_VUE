@@ -5,19 +5,179 @@
 -----------------------------------------------------------------------------------------------------------*/
 
 @import "../../public/less/mixins.less";
-.content {
+.wrapper {
     text-align: center;
+    min-width: 1200px;
+    .banner {
+        width: 100%;
+    }
     .table-container {
+        padding-top: 100px;
         position: relative;
-        text-align: center;
-        height: 500px;
+        height: 400px;
         background-color: #31304f;
         &>.table {
-            margin: 0 auto;
-            background-color: #31304f;
-            img {
-                margin-top: 50px;
-                width: 80%;
+            width: 70%;
+        }
+        .item {
+            z-index: 1000;
+            top: 5%;
+            border: 1px solid #D69762;
+            display: table;
+            padding: 15px 5px;
+            text-align: center;
+            width: 270px;
+            height: 190px;
+            left: 50%;
+            margin-left: -135px;
+            position: absolute;
+            .desc {
+                background-color: rgba(214, 151, 98, 0.5);
+                display: table-cell;
+                padding: 10px 40px;
+                vertical-align: middle;
+                h1 {
+                    color: #fff;
+                    font-size: 18px;
+                    margin-bottom: 10px;
+                }
+                p {
+                    color: #fff;
+                    font-size: 14px;
+                    letter-spacing: 3.5px;
+                }
+            }
+            &:before {
+                content: " ";
+                width: 280px;
+                height: 175px;
+                border: 1px solid #D69762;
+                position: absolute;
+                top: 6px;
+                left: -7px;
+            }
+        }
+        .cake1 {
+            position: absolute;
+            left: 50%;
+            top: 260px;
+            margin-left: -50px;
+            width: 100px;
+        }
+        .cake2 {
+            position: absolute;
+            left: 50%;
+            top: 250px;
+            margin-left: -250px;
+            width: 85px;
+        }
+        .cake3 {
+            position: absolute;
+            left: 50%;
+            top: 200px;
+            margin-left: -400px;
+            width: 70px;
+        }
+        .cake4 {
+            position: absolute;
+            left: 50%;
+            top: 140px;
+            margin-left: -290px;
+            width: 55px;
+        }
+        .cake5 {
+            position: absolute;
+            left: 50%;
+            top: 120px;
+            margin-left: -160px;
+            width: 55px;
+        }
+        .cake6 {
+            position: absolute;
+            left: 50%;
+            top: 120px;
+            margin-left: 100px;
+            width: 55px;
+        }
+        .cake7 {
+            position: absolute;
+            left: 50%;
+            top: 140px;
+            margin-left: 230px;
+            width: 55px;
+        }
+        .cake8 {
+            position: absolute;
+            left: 50%;
+            top: 200px;
+            margin-left: 330px;
+            width: 70px;
+        }
+        .cake9 {
+            position: absolute;
+            left: 50%;
+            top: 250px;
+            margin-left: 150px;
+            width: 85px;
+        }
+        .down-arrow {
+            position: absolute;
+            top: 83%;
+            left: 50%;
+            margin-left: -10px;
+            &:after,
+            &:before {
+                border: 10px solid transparent;
+                border-top: 10px solid #955F4B;
+                width: 0;
+                height: 0;
+                position: absolute;
+                top: -101px;
+                content: ' '
+            }
+            &:before {
+                border-top-color: #D69762;
+                top: -100px;
+            }
+        }
+        .left-arrow {
+            position: absolute;
+            left: 0;
+            top: 60%;
+            margin-top: -50px;
+            &:after,
+            &:before {
+                border: 40px solid transparent;
+                border-right: 40px solid #31304f;
+                width: 0;
+                height: 0;
+                position: absolute;
+                left: 21px;
+                content: ' '
+            }
+            &:before {
+                border-right-color: #D69762;
+                left: 20px;
+            }
+        }
+        .right-arrow {
+            position: absolute;
+            top: 60%;
+            left: 90%;
+            margin-top: -50px;
+            &:after,
+            &:before {
+                border: 40px solid transparent;
+                border-left: 40px solid #31304f;
+                width: 0;
+                height: 0;
+                position: absolute;
+                left: 20px;
+                content: ' '
+            }
+            &:before {
+                border-left-color: #D69762;
+                left: 21px;
             }
         }
     }

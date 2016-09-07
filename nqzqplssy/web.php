@@ -20,15 +20,29 @@
         <?php } ?>
     </head>
     <body>
-        <div class="content">
-            <div>
+        <div class="wrapper">
+            <div class="banner">
                 <img src="<?php echo "$CURRENT_STATIC_DOMAIN/" . $router["activity_name"]?>/images/pc_background.jpg" alt="">
             </div>
             <div class="table-container">
                 <div class="left-arrow"></div>
-                <div class="table">
-                     <img src="<?php echo "$CURRENT_STATIC_DOMAIN/" . $router["activity_name"]?>/images/table.png" alt="">
-                </div>    
+                <img class="table" src="<?php echo "$CURRENT_STATIC_DOMAIN/" . $router["activity_name"]?>/images/table.png" alt="">
+                <div class="item">
+                    <div class="desc">
+                        <h1>豆沙月饼</h1>
+                        <p>红豆沙月饼是用红豆制成。农历八月十五日是传统的中秋节，食用月饼是中国传统食俗。</p>
+                    </div>
+                </div>
+                <img class="cake cake1" src="<?php echo "$CURRENT_STATIC_DOMAIN/" . $router["activity_name"]?>/images/cake.png" alt="">
+                <img class="cake cake2" src="<?php echo "$CURRENT_STATIC_DOMAIN/" . $router["activity_name"]?>/images/cake.png" alt="">
+                <img class="cake cake3" src="<?php echo "$CURRENT_STATIC_DOMAIN/" . $router["activity_name"]?>/images/cake.png" alt="">
+                 <img class="cake cake4" src="<?php echo "$CURRENT_STATIC_DOMAIN/" . $router["activity_name"]?>/images/cake.png" alt="">
+                 <img class="cake cake5" src="<?php echo "$CURRENT_STATIC_DOMAIN/" . $router["activity_name"]?>/images/cake.png" alt="">
+                 <img class="cake cake6" src="<?php echo "$CURRENT_STATIC_DOMAIN/" . $router["activity_name"]?>/images/cake.png" alt="">
+                  <img class="cake cake7" src="<?php echo "$CURRENT_STATIC_DOMAIN/" . $router["activity_name"]?>/images/cake.png" alt="">
+                 <img class="cake cake8" src="<?php echo "$CURRENT_STATIC_DOMAIN/" . $router["activity_name"]?>/images/cake.png" alt="">
+                <img class="cake cake9" src="<?php echo "$CURRENT_STATIC_DOMAIN/" . $router["activity_name"]?>/images/cake.png" alt="">
+                <div class="down-arrow"></div>
                 <div class="right-arrow"></div>
             </div>
         </div>

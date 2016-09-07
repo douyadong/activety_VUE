@@ -49,20 +49,180 @@
  2. 文件名称：background.less(混合 -> 三角符号类)
  3. 作者：zhaohuagang@guanaihui.com
  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-.content {
+.wrapper {
   text-align: center;
+  min-width: 1200px;
 }
-.content .table-container {
+.wrapper .banner {
+  width: 100%;
+}
+.wrapper .table-container {
+  padding-top: 100px;
   position: relative;
+  height: 400px;
+  background-color: #31304f;
+}
+.wrapper .table-container > .table {
+  width: 70%;
+}
+.wrapper .table-container .item {
+  z-index: 1000;
+  top: 5%;
+  border: 1px solid #D69762;
+  display: table;
+  padding: 15px 5px;
   text-align: center;
-  height: 500px;
-  background-color: #31304f;
+  width: 270px;
+  height: 190px;
+  left: 50%;
+  margin-left: -135px;
+  position: absolute;
 }
-.content .table-container > .table {
-  margin: 0 auto;
-  background-color: #31304f;
+.wrapper .table-container .item .desc {
+  background-color: rgba(214, 151, 98, 0.5);
+  display: table-cell;
+  padding: 10px 40px;
+  vertical-align: middle;
 }
-.content .table-container > .table img {
-  margin-top: 50px;
-  width: 80%;
+.wrapper .table-container .item .desc h1 {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.wrapper .table-container .item .desc p {
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 3.5px;
+}
+.wrapper .table-container .item:before {
+  content: " ";
+  width: 280px;
+  height: 175px;
+  border: 1px solid #D69762;
+  position: absolute;
+  top: 6px;
+  left: -7px;
+}
+.wrapper .table-container .cake1 {
+  position: absolute;
+  left: 50%;
+  top: 260px;
+  margin-left: -50px;
+  width: 100px;
+}
+.wrapper .table-container .cake2 {
+  position: absolute;
+  left: 50%;
+  top: 250px;
+  margin-left: -250px;
+  width: 85px;
+}
+.wrapper .table-container .cake3 {
+  position: absolute;
+  left: 50%;
+  top: 200px;
+  margin-left: -400px;
+  width: 70px;
+}
+.wrapper .table-container .cake4 {
+  position: absolute;
+  left: 50%;
+  top: 140px;
+  margin-left: -290px;
+  width: 55px;
+}
+.wrapper .table-container .cake5 {
+  position: absolute;
+  left: 50%;
+  top: 120px;
+  margin-left: -160px;
+  width: 55px;
+}
+.wrapper .table-container .cake6 {
+  position: absolute;
+  left: 50%;
+  top: 120px;
+  margin-left: 100px;
+  width: 55px;
+}
+.wrapper .table-container .cake7 {
+  position: absolute;
+  left: 50%;
+  top: 140px;
+  margin-left: 230px;
+  width: 55px;
+}
+.wrapper .table-container .cake8 {
+  position: absolute;
+  left: 50%;
+  top: 200px;
+  margin-left: 330px;
+  width: 70px;
+}
+.wrapper .table-container .cake9 {
+  position: absolute;
+  left: 50%;
+  top: 250px;
+  margin-left: 150px;
+  width: 85px;
+}
+.wrapper .table-container .down-arrow {
+  position: absolute;
+  top: 83%;
+  left: 50%;
+  margin-left: -10px;
+}
+.wrapper .table-container .down-arrow:after,
+.wrapper .table-container .down-arrow:before {
+  border: 10px solid transparent;
+  border-top: 10px solid #955F4B;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: -101px;
+  content: ' ';
+}
+.wrapper .table-container .down-arrow:before {
+  border-top-color: #D69762;
+  top: -100px;
+}
+.wrapper .table-container .left-arrow {
+  position: absolute;
+  left: 0;
+  top: 60%;
+  margin-top: -50px;
+}
+.wrapper .table-container .left-arrow:after,
+.wrapper .table-container .left-arrow:before {
+  border: 40px solid transparent;
+  border-right: 40px solid #31304f;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 21px;
+  content: ' ';
+}
+.wrapper .table-container .left-arrow:before {
+  border-right-color: #D69762;
+  left: 20px;
+}
+.wrapper .table-container .right-arrow {
+  position: absolute;
+  top: 60%;
+  left: 90%;
+  margin-top: -50px;
+}
+.wrapper .table-container .right-arrow:after,
+.wrapper .table-container .right-arrow:before {
+  border: 40px solid transparent;
+  border-left: 40px solid #31304f;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 20px;
+  content: ' ';
+}
+.wrapper .table-container .right-arrow:before {
+  border-left-color: #D69762;
+  left: 21px;
 }
