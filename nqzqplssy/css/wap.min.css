@@ -591,6 +591,7 @@ wap端第二种预约样式表
   *display: inline ;
   *zoom: 1 ;
   width: 10px;
+  margin-left: 5px;
   height: 10px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
