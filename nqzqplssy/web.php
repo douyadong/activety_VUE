@@ -21,11 +21,14 @@
     </head>
     <body>
         <div class="content">
+            <div>
+                <img src="<?php echo "$CURRENT_STATIC_DOMAIN/" . $router["activity_name"]?>/images/pc_background.jpg" alt="">
+            </div>
             <div class="table-container">
                 <div class="left-arrow"></div>
-                <div class="desc"></div>
-                <div class="table"></div>
-                <div class="shadow"></div>
+                <div class="table">
+                     <img src="<?php echo "$CURRENT_STATIC_DOMAIN/" . $router["activity_name"]?>/images/table.png" alt="">
+                </div>    
                 <div class="right-arrow"></div>
             </div>
         </div>
@@ -33,7 +36,7 @@
     <script src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/config.js"></script>
     <!--app.min.js-->
     <script src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/public/js/app.min.js"></script>
-    <script src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/public/js/web.min.js"></script>
+    <script src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/nqzqplssy/js/web.min.js"></script>
     <?php
         if($config["match_javascripts"]) {//匹配路由脚本
     ?>
