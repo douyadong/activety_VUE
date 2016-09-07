@@ -429,11 +429,18 @@ wap端第二种预约样式表
   height: 400px;
   margin-top: -1px;
   padding-top: 50px;
+  display: flex;
+  justify-content: center;
 }
 .wrapper .turntable .table {
   position: absolute;
   left: 0;
-  top: 165px;
+  top: 150px;
+}
+@media screen and (device-aspect-ratio: 40/71) {
+  .wrapper .turntable .table {
+    top: 170px;
+  }
 }
 .wrapper .turntable .item {
   border: 1px solid #D69762;
@@ -443,7 +450,8 @@ wap端第二种预约样式表
   text-align: center;
   width: 270px;
   height: 130px;
-  position: relative;
+  position: absolute;
+  top: 55px;
 }
 .wrapper .turntable .item .content {
   background-color: rgba(214, 151, 98, 0.5);
@@ -474,6 +482,7 @@ wap端第二种预约样式表
   position: absolute;
   left: 50%;
   margin-left: -20px;
+  top: 195px;
 }
 .wrapper .turntable .arrow:after,
 .wrapper .turntable .arrow:before {
@@ -491,6 +500,103 @@ wap端第二种预约样式表
 }
 .wrapper .turntable .cake {
   width: 60px;
-  height: 40px;
+  height: 30px;
   position: absolute;
+}
+.wrapper .turntable .cake-1 {
+  left: 50%;
+  margin-left: -50px;
+  bottom: 15px;
+  width: 80px;
+}
+.wrapper .turntable .cake-left-2 {
+  left: 25%;
+  margin-left: -50px;
+  bottom: 25px;
+  width: 70px;
+}
+.wrapper .turntable .cake-right-2 {
+  right: 28%;
+  margin-right: -50px;
+  bottom: 25px;
+  width: 70px;
+}
+.wrapper .turntable .cake-left-3 {
+  left: 10%;
+  margin-left: -50px;
+  bottom: 50px;
+  width: 60px;
+}
+.wrapper .turntable .cake-right-3 {
+  right: 10%;
+  margin-right: -50px;
+  bottom: 50px;
+  width: 60px;
+}
+.wrapper .turntable .cake-left-4 {
+  left: 20%;
+  margin-left: -50px;
+  bottom: 85px;
+  width: 50px;
+}
+@media screen and (device-aspect-ratio: 40/71) {
+  .wrapper .turntable .cake-left-4 {
+    left: 25%;
+    bottom: 70px;
+  }
+}
+.wrapper .turntable .cake-right-4 {
+  right: 20%;
+  margin-right: -50px;
+  bottom: 85px;
+  width: 50px;
+}
+@media screen and (device-aspect-ratio: 40/71) {
+  .wrapper .turntable .cake-right-4 {
+    right: 25%;
+    bottom: 70px;
+  }
+}
+.wrapper .turntable .cake-left-5 {
+  left: 40%;
+  margin-left: -50px;
+  bottom: 95px;
+  width: 40px;
+}
+@media screen and (device-aspect-ratio: 40/71) {
+  .wrapper .turntable .cake-left-5 {
+    left: 45%;
+    bottom: 80px;
+  }
+}
+.wrapper .turntable .cake-right-5 {
+  right: 40%;
+  margin-right: -50px;
+  bottom: 95px;
+  width: 40px;
+}
+@media screen and (device-aspect-ratio: 40/71) {
+  .wrapper .turntable .cake-right-5 {
+    right: 45%;
+    bottom: 80px;
+  }
+}
+.wrapper .turntable .spot-list {
+  position: absolute;
+  bottom: 80px;
+  margin-left: -12px;
+}
+.wrapper .turntable .spot-list .spot-item {
+  display: inline-block;
+  *display: inline ;
+  *zoom: 1 ;
+  width: 10px;
+  height: 10px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #D69762;
+}
+.wrapper .turntable .spot-list .spot-item.active {
+  background-color: #D69762;
 }
