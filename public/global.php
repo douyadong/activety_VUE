@@ -30,16 +30,14 @@
     }    
     //静态资源域名
     $STATIC_DOMAIN = get_stage_domain(array(
-        // "dev"=>"//dev01.fe.wkzf",
-        "dev"=>"//10.0.92.98/activity",       
+        "dev"=>"//dev01.fe.wkzf",
         "test"=>"//test01.fe.wkzf",
         "sim"=>"//sim01.fe.wkzf",
         "prod"=>"//cdn01.wkzf.com"
     )); 
     //当前域名      
     $CURRENT_STATIC_DOMAIN =  get_stage_domain(array(
-        // "dev"=>"//devhd.fe.wkzf",
-        "dev"=>"http://10.0.92.98/activity",
+        "dev"=>"//devhd.fe.wkzf",
         "test"=>"//testhd.fe.wkzf",
         "sim"=>"//simhd.fe.wkzf",
         "prod"=>"//hd.wkzf.com"
