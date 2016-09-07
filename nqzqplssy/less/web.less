@@ -1,0 +1,36 @@
+/*-----------------------------------------------------------------------------------------------------------
+项目名称：悟空找房邀您一起挑月饼看楼盘啦
+页面路径：nqzqplssy/web.php （web专题页）
+作者：luwei@lifang.com
+-----------------------------------------------------------------------------------------------------------*/
+
+@import "../../public/less/mixins.less";
+@import "../../public/less/web.less";
+.content {
+    text-align: center;
+    .table-container {
+        position: relative;
+    }
+    .table {
+        position: absolute;
+        z-index: 1000;
+        border-radius: 150px;
+        width: 300px;
+        height: 300px;
+        background-size: 300px;
+        background-image: url(../images/pic.png);
+        transform: rotateX(60deg) rotateY(0) rotateZ(0deg);
+        -webkit-transform: rotateX(60deg) rotateY(0) rotateZ(0deg);
+    }
+    .shadow {
+        position: absolute;
+        top: 10px;
+        border-radius: 150px;
+        width: 300px;
+        height: 300px;
+        border: 1px solid red;
+        background-color: red;
+        transform: rotateX(60deg) rotateY(0) rotateZ(0deg);
+        -webkit-transform: rotateX(60deg) rotateY(0) rotateZ(0deg);
+    }
+}
