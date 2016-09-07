@@ -30,18 +30,55 @@
 
 	<div class="wrapper">
 		<img src="<?php echo $confs["module_img_path"]; ?>/h5_bg.jpg"  alt="背景">
+
 		<!-- 转动圆盘 -->
 		<div class="turntable">
-			 <img class="table" src="<?php echo $confs["module_img_path"]; ?>/h5_table.png" alt="">
+			 <div class="table">
+			 	<img src="<?php echo $confs["module_img_path"]; ?>/h5_table.png" alt="">
+			 	<img class="cake cake-1" src="<?php echo $confs["module_img_path"]; ?>/h5_cake.png" alt="">
+			 	<img class="cake cake-left-2" src="<?php echo $confs["module_img_path"]; ?>/h5_cake.png" alt="">
+			 	<img class="cake cake-right-2" src="<?php echo $confs["module_img_path"]; ?>/h5_cake.png" alt="">
+			 	<img class="cake cake-left-3" src="<?php echo $confs["module_img_path"]; ?>/h5_cake.png" alt="">
+			 	<img class="cake cake-right-3" src="<?php echo $confs["module_img_path"]; ?>/h5_cake.png" alt="">
+			 	<img class="cake cake-left-4" src="<?php echo $confs["module_img_path"]; ?>/h5_cake.png" alt="">
+			 	<img class="cake cake-right-4" src="<?php echo $confs["module_img_path"]; ?>/h5_cake.png" alt="">
+			 	<img class="cake cake-left-5" src="<?php echo $confs["module_img_path"]; ?>/h5_cake.png" alt="">
+			 	<img class="cake cake-right-5" src="<?php echo $confs["module_img_path"]; ?>/h5_cake.png" alt="">
+			 </div>
+			 
              <div class="item">
             	<div class="content">
             		<h1>豆沙月饼</h1>
             		<p>红豆沙月饼是用红豆制成。农历八月十五日是传统的中秋节，食用月饼是中国传统食俗。</p>
             	</div>
-            </div>		
+            </div>	
+
+            <!-- 箭头	 -->
             <span class="arrow"></span>
-            <img class="cake" src="<?php echo $confs["module_img_path"]; ?>/h5_cake.png" alt="">
+
+            <!-- 点集合 -->
+			<div class="spot-list">
+				<span class="spot-item">					
+				</span>
+				<span class="spot-item">					
+				</span>
+				<span class="spot-item">					
+				</span>
+				<span class="spot-item">					
+				</span>
+				<span class="spot-item active">					
+				</span>
+				<span class="spot-item">					
+				</span>
+				<span class="spot-item">					
+				</span>
+				<span class="spot-item">					
+				</span>
+				<span class="spot-item">					
+				</span>
+			</div>
 		</div>
+	
     </div>
 
 
