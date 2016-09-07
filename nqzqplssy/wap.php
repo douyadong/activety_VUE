@@ -27,19 +27,27 @@
 		<?php } ?>
     </head>
     <body>
-    
+
 	<div class="wrapper">
-        <div class="content">
-            <div class="circle">
-                <div class="s-circle s1">1</div>
-                <div class="s-circle s2">2</div>
-                <div class="s-circle s3">3</div>
-                <div class="s-circle s4">4</div>
-            </div>
-        </div>
+		<img src="<?php echo $confs["module_img_path"]; ?>/h5_bg.jpg"  alt="背景">
+		<!-- 转动圆盘 -->
+		<div class="turntable">
+			 <img class="table" src="<?php echo $confs["module_img_path"]; ?>/h5_table.png" alt="">
+             <div class="item">
+            	<div class="content">
+            		<h1>豆沙月饼</h1>
+            		<p>红豆沙月饼是用红豆制成。农历八月十五日是传统的中秋节，食用月饼是中国传统食俗。</p>
+            	</div>
+            </div>		
+            <span class="arrow"></span>
+            <img class="cake" src="<?php echo $confs["module_img_path"]; ?>/h5_cake.png" alt="">
+		</div>
     </div>
+
+
+
 	
-		<!--wap-->
+	<!--wap-->
 	<script src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/config.js"></script>
 	<!--app.min.js-->
 	<script src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/public/js/app.min.js"></script>
