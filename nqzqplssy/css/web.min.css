@@ -193,9 +193,10 @@ body {
 }
 .wrapper .table-container .left-arrow {
   position: absolute;
-  left: 0;
+  left: 50%;
   top: 130px;
   margin-top: -50px;
+  margin-left: -600px;
 }
 .wrapper .table-container .left-arrow:after,
 .wrapper .table-container .left-arrow:before {
@@ -214,8 +215,9 @@ body {
 .wrapper .table-container .right-arrow {
   position: absolute;
   top: 130px;
-  left: 90%;
+  left: 50%;
   margin-top: -50px;
+  margin-left: 480px;
 }
 .wrapper .table-container .right-arrow:after,
 .wrapper .table-container .right-arrow:before {
