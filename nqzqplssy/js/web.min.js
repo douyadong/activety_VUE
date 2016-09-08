@@ -33,15 +33,16 @@ zqController.prototype.initPage = function() {
 
     var jump = function() {
         $('.table-container .item').animate({
-            top: "-5px",
+            top: "-105px",
         }, 1000).animate({
-            top: "20px"
+            top: "-80px"
         }, 1000);
     }
     jump();
     si = setInterval(function() {
         jump();
     }, 2000);
+
 };
 
 /*-----------------------------------------------------------------------------------------------------------

@@ -5,14 +5,20 @@
 -----------------------------------------------------------------------------------------------------------*/
 
 @import "../../public/less/mixins.less";
+html,
+body {
+    background-color: #31304f;
+}
+
 .wrapper {
     text-align: center;
     min-width: 1200px;
     .banner {
         width: 100%;
+        margin-bottom: 100px;
+        background-color: #31304f;
     }
     .table-container {
-        padding-top: 100px;
         position: relative;
         height: 400px;
         background-color: #31304f;
@@ -21,7 +27,7 @@
         }
         .item {
             z-index: 1000;
-            top: 20px;
+            top: -80px;
             border: 1px solid #D69762;
             display: table;
             padding: 15px 5px;
@@ -80,70 +86,70 @@
         .cake1 {
             position: absolute;
             left: 50%;
-            top: 260px;
+            top: 160px;
             margin-left: -50px;
             width: 100px;
         }
         .cake2 {
             position: absolute;
             left: 50%;
-            top: 250px;
+            top: 150px;
             margin-left: -250px;
             width: 85px;
         }
         .cake3 {
             position: absolute;
             left: 50%;
-            top: 200px;
+            top: 100px;
             margin-left: -400px;
             width: 70px;
         }
         .cake4 {
             position: absolute;
             left: 50%;
-            top: 140px;
+            top: 40px;
             margin-left: -290px;
             width: 55px;
         }
         .cake5 {
             position: absolute;
             left: 50%;
-            top: 120px;
+            top: 20px;
             margin-left: -160px;
             width: 55px;
         }
         .cake6 {
             position: absolute;
             left: 50%;
-            top: 120px;
+            top: 20px;
             margin-left: 100px;
             width: 55px;
         }
         .cake7 {
             position: absolute;
             left: 50%;
-            top: 140px;
+            top: 40px;
             margin-left: 230px;
             width: 55px;
         }
         .cake8 {
             position: absolute;
             left: 50%;
-            top: 200px;
+            top: 100px;
             margin-left: 330px;
             width: 70px;
         }
         .cake9 {
             position: absolute;
             left: 50%;
-            top: 250px;
+            top: 150px;
             margin-left: 150px;
             width: 85px;
         }
         .left-arrow {
             position: absolute;
             left: 0;
-            top: 60%;
+            top: 130px;
             margin-top: -50px;
             &:after,
             &:before {
@@ -162,7 +168,7 @@
         }
         .right-arrow {
             position: absolute;
-            top: 60%;
+            top: 130px;
             left: 90%;
             margin-top: -50px;
             &:after,

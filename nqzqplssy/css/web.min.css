@@ -49,15 +49,20 @@
  2. 文件名称：background.less(混合 -> 三角符号类)
  3. 作者：zhaohuagang@guanaihui.com
  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+html,
+body {
+  background-color: #31304f;
+}
 .wrapper {
   text-align: center;
   min-width: 1200px;
 }
 .wrapper .banner {
   width: 100%;
+  margin-bottom: 100px;
+  background-color: #31304f;
 }
 .wrapper .table-container {
-  padding-top: 100px;
   position: relative;
   height: 400px;
   background-color: #31304f;
@@ -67,7 +72,7 @@
 }
 .wrapper .table-container .item {
   z-index: 1000;
-  top: 20px;
+  top: -80px;
   border: 1px solid #D69762;
   display: table;
   padding: 15px 5px;
@@ -126,70 +131,70 @@
 .wrapper .table-container .cake1 {
   position: absolute;
   left: 50%;
-  top: 260px;
+  top: 160px;
   margin-left: -50px;
   width: 100px;
 }
 .wrapper .table-container .cake2 {
   position: absolute;
   left: 50%;
-  top: 250px;
+  top: 150px;
   margin-left: -250px;
   width: 85px;
 }
 .wrapper .table-container .cake3 {
   position: absolute;
   left: 50%;
-  top: 200px;
+  top: 100px;
   margin-left: -400px;
   width: 70px;
 }
 .wrapper .table-container .cake4 {
   position: absolute;
   left: 50%;
-  top: 140px;
+  top: 40px;
   margin-left: -290px;
   width: 55px;
 }
 .wrapper .table-container .cake5 {
   position: absolute;
   left: 50%;
-  top: 120px;
+  top: 20px;
   margin-left: -160px;
   width: 55px;
 }
 .wrapper .table-container .cake6 {
   position: absolute;
   left: 50%;
-  top: 120px;
+  top: 20px;
   margin-left: 100px;
   width: 55px;
 }
 .wrapper .table-container .cake7 {
   position: absolute;
   left: 50%;
-  top: 140px;
+  top: 40px;
   margin-left: 230px;
   width: 55px;
 }
 .wrapper .table-container .cake8 {
   position: absolute;
   left: 50%;
-  top: 200px;
+  top: 100px;
   margin-left: 330px;
   width: 70px;
 }
 .wrapper .table-container .cake9 {
   position: absolute;
   left: 50%;
-  top: 250px;
+  top: 150px;
   margin-left: 150px;
   width: 85px;
 }
 .wrapper .table-container .left-arrow {
   position: absolute;
   left: 0;
-  top: 60%;
+  top: 130px;
   margin-top: -50px;
 }
 .wrapper .table-container .left-arrow:after,
@@ -208,7 +213,7 @@
 }
 .wrapper .table-container .right-arrow {
   position: absolute;
-  top: 60%;
+  top: 130px;
   left: 90%;
   margin-top: -50px;
 }
