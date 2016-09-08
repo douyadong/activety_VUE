@@ -18,8 +18,7 @@
         height: 400px;
         margin-top: -1px;
         padding-top: 50px;
-        display: flex;
-        justify-content: center;
+        overflow: hidden;
         .table {
             position: absolute;
             left: 0;
@@ -31,23 +30,24 @@
         .item {
             border: 1px solid #D69762;
             display: table;
-            padding: 12px;
-            margin: 0 auto;
-            text-align: center;
-            width: 270px;
+            padding: 10px;
+            width: 220px;
             height: 130px;
             position: absolute;
-            top: 55px;
+            top: 35px;
+            left: 50%;
+            margin-left: -110px;
             .content {
                 background-color: rgba(214, 151, 98, 0.5);
                 display: table-cell;
-                padding: 10px 40px;
+                padding: 10px 15px;
                 vertical-align: middle;
-                h1 {
-                    color: #fff;
-                    font-size: 18px;
-                    margin-bottom: 10px;
+                .title {
+                    width: 80px;
+                    height: 20px;
+                    margin-bottom: 5px;
                 }
+
                 p {
                     color: #fff;
                     font-size: 14px;
@@ -56,19 +56,19 @@
             }
             &:before {
                 content: " ";
-                width: 255px;
-                height: 160px;
+                width: 208px;
+                height: 176px;
                 border: 1px solid #D69762;
                 position: absolute;
-                top: -10px;
-                left: 5px;
+                top: -7px;
+                left: 4px;
             }
         }
         .arrow {
             position: absolute;
             left: 50%;
             margin-left: -20px;
-            top: 195px;
+            top: 155px;
             &:after,
             &:before {
                 border: 10px solid transparent;
@@ -159,11 +159,12 @@
             bottom: 95px;
             width: 40px;
         }
-
         .spot-list {
             position: absolute;
             bottom: 80px;
-            margin-left: -12px;
+            left: 50%;
+            width: 200px;
+            margin-left: -115px;
             .spot-item {
                 .inline-block();
                 width: 10px;
@@ -171,8 +172,8 @@
                 height: 10px;
                 .border-radius(5px);
                 border: 1px solid #D69762;
-                &.active{
-                	background-color: #D69762;
+                &.active {
+                    background-color: #D69762;
                 }
             }
         }

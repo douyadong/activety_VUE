@@ -48,13 +48,13 @@
 			 
              <div class="item">
             	<div class="content">
-            		<h1>豆沙月饼</h1>
+            		<img class="title" src="<?php echo $confs["module_img_path"]; ?>/dousha.png" alt="">
             		<p>红豆沙月饼是用红豆制成。农历八月十五日是传统的中秋节，食用月饼是中国传统食俗。</p>
             	</div>
-            </div>	
+            	 <!-- 箭头	 -->
+            	<span class="arrow"></span>
 
-            <!-- 箭头	 -->
-            <span class="arrow"></span>
+            </div>	           
 
             <!-- 点集合 -->
 			<div class="spot-list">
@@ -82,17 +82,14 @@
     </div>
 
 
-
+	<!-- hammer.js -->
+	<script src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/public/jssrc/hammer.js"></script>
 	
 	<!--wap-->
 	<script src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/config.js"></script>
 	<!--app.min.js-->
 	<script src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/public/js/app.min.js"></script>
-	
-	<script src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/public/js/wap.min.js"></script>
-
         	
-
 	<?php
 	    if($config["match_javascripts"]) {//匹配路由脚本
 	?>

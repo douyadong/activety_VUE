@@ -429,8 +429,7 @@ wap端第二种预约样式表
   height: 400px;
   margin-top: -1px;
   padding-top: 50px;
-  display: flex;
-  justify-content: center;
+  overflow: hidden;
 }
 .wrapper .turntable .table {
   position: absolute;
@@ -445,24 +444,24 @@ wap端第二种预约样式表
 .wrapper .turntable .item {
   border: 1px solid #D69762;
   display: table;
-  padding: 12px;
-  margin: 0 auto;
-  text-align: center;
-  width: 270px;
+  padding: 10px;
+  width: 220px;
   height: 130px;
   position: absolute;
-  top: 55px;
+  top: 35px;
+  left: 50%;
+  margin-left: -110px;
 }
 .wrapper .turntable .item .content {
   background-color: rgba(214, 151, 98, 0.5);
   display: table-cell;
-  padding: 10px 40px;
+  padding: 10px 15px;
   vertical-align: middle;
 }
-.wrapper .turntable .item .content h1 {
-  color: #fff;
-  font-size: 18px;
-  margin-bottom: 10px;
+.wrapper .turntable .item .content .title {
+  width: 80px;
+  height: 20px;
+  margin-bottom: 5px;
 }
 .wrapper .turntable .item .content p {
   color: #fff;
@@ -471,18 +470,18 @@ wap端第二种预约样式表
 }
 .wrapper .turntable .item:before {
   content: " ";
-  width: 255px;
-  height: 160px;
+  width: 208px;
+  height: 176px;
   border: 1px solid #D69762;
   position: absolute;
-  top: -10px;
-  left: 5px;
+  top: -7px;
+  left: 4px;
 }
 .wrapper .turntable .arrow {
   position: absolute;
   left: 50%;
   margin-left: -20px;
-  top: 195px;
+  top: 155px;
 }
 .wrapper .turntable .arrow:after,
 .wrapper .turntable .arrow:before {
@@ -584,7 +583,9 @@ wap端第二种预约样式表
 .wrapper .turntable .spot-list {
   position: absolute;
   bottom: 80px;
-  margin-left: -12px;
+  left: 50%;
+  width: 200px;
+  margin-left: -115px;
 }
 .wrapper .turntable .spot-list .spot-item {
   display: inline-block;
