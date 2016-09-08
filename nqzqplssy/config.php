@@ -87,5 +87,13 @@
             $config["hotline"] = "";
             $config["hotline_subnum"] = "";
 
-            $confs["module_img_path"]=$CURRENT_STATIC_DOMAIN . "/nqzqplssy/images"
+            $confs["module_img_path"]=$CURRENT_STATIC_DOMAIN . "/nqzqplssy/images";
+
+            /*
+            |--------------------------------------------------------------
+            |月饼楼盘信息
+            |--------------------------------------------------------------   
+            */   
+            $config["info"] = json_decode(file_get_contents('config.json'),true);
+            
         ?>                        
