@@ -30,7 +30,6 @@ zqController.prototype.initPage = function() {
         }
         classSelf.CakePos.push(cake);
     });
-
     var jump = function() {
         $('.table-container .item').animate({
             top: "-105px",
@@ -42,6 +41,7 @@ zqController.prototype.initPage = function() {
     si = setInterval(function() {
         jump();
     }, 2000);
+
 
 };
 

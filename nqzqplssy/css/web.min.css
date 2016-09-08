@@ -68,7 +68,7 @@ body {
   background-color: #31304f;
 }
 .wrapper .table-container > .table {
-  width: 70%;
+  width: 900px;
 }
 .wrapper .table-container .item {
   z-index: 1000;
