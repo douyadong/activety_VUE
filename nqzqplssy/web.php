@@ -25,13 +25,14 @@
                 <img src="<?php echo "$CURRENT_STATIC_DOMAIN/" . $router["activity_name"]?>/images/pc_background.jpg" alt="">
             </div>
             <div class="table-container">
-                <div class="left-arrow"></div>
+                <div class="arrow left-arrow"></div>
                 <img class="table" src="<?php echo "$CURRENT_STATIC_DOMAIN/" . $router["activity_name"]?>/images/table.png" alt="">
                 <div class="item">
                     <div class="desc">
                         <h1>豆沙月饼</h1>
                         <p>红豆沙月饼是用红豆制成。农历八月十五日是传统的中秋节，食用月饼是中国传统食俗。</p>
                     </div>
+                    <div class="down-arrow"></div>
                 </div>
                 <img class="cake cake1" src="<?php echo "$CURRENT_STATIC_DOMAIN/" . $router["activity_name"]?>/images/cake.png" alt="">
                 <img class="cake cake2" src="<?php echo "$CURRENT_STATIC_DOMAIN/" . $router["activity_name"]?>/images/cake.png" alt="">
@@ -42,19 +43,17 @@
                   <img class="cake cake7" src="<?php echo "$CURRENT_STATIC_DOMAIN/" . $router["activity_name"]?>/images/cake.png" alt="">
                  <img class="cake cake8" src="<?php echo "$CURRENT_STATIC_DOMAIN/" . $router["activity_name"]?>/images/cake.png" alt="">
                 <img class="cake cake9" src="<?php echo "$CURRENT_STATIC_DOMAIN/" . $router["activity_name"]?>/images/cake.png" alt="">
-                <div class="down-arrow"></div>
-                <div class="right-arrow"></div>
+                <div class=" arrow right-arrow"></div>
             </div>
         </div>
     <!--web-->
     <script src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/config.js"></script>
     <!--app.min.js-->
     <script src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/public/js/app.min.js"></script>
-    <script src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/nqzqplssy/js/web.min.js"></script>
     <?php
         if($config["match_javascripts"]) {//匹配路由脚本
     ?>
-    <script src="<?php echo "$CURRENT_STATIC_DOMAIN/" . $router["activity_name"] . "/jssrc/" . $router['page_type'] . ".js" ?>"></script>
+    <script src="<?php echo "$CURRENT_STATIC_DOMAIN/" . $router["activity_name"] . "/js/" . $router['page_type'] . ".min.js" ?>"></script>
     <?php 
         }
     ?>    

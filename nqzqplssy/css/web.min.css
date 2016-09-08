@@ -67,7 +67,7 @@
 }
 .wrapper .table-container .item {
   z-index: 1000;
-  top: 5%;
+  top: 20px;
   border: 1px solid #D69762;
   display: table;
   padding: 15px 5px;
@@ -102,6 +102,26 @@
   position: absolute;
   top: 6px;
   left: -7px;
+}
+.wrapper .table-container .item .down-arrow {
+  position: absolute;
+  top: 165%;
+  left: 50%;
+  margin-left: -10px;
+}
+.wrapper .table-container .item .down-arrow:after,
+.wrapper .table-container .item .down-arrow:before {
+  border: 10px solid transparent;
+  border-top: 10px solid #955F4B;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: -101px;
+  content: ' ';
+}
+.wrapper .table-container .item .down-arrow:before {
+  border-top-color: #D69762;
+  top: -100px;
 }
 .wrapper .table-container .cake1 {
   position: absolute;
@@ -165,26 +185,6 @@
   top: 250px;
   margin-left: 150px;
   width: 85px;
-}
-.wrapper .table-container .down-arrow {
-  position: absolute;
-  top: 83%;
-  left: 50%;
-  margin-left: -10px;
-}
-.wrapper .table-container .down-arrow:after,
-.wrapper .table-container .down-arrow:before {
-  border: 10px solid transparent;
-  border-top: 10px solid #955F4B;
-  width: 0;
-  height: 0;
-  position: absolute;
-  top: -101px;
-  content: ' ';
-}
-.wrapper .table-container .down-arrow:before {
-  border-top-color: #D69762;
-  top: -100px;
 }
 .wrapper .table-container .left-arrow {
   position: absolute;
