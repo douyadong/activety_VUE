@@ -54,6 +54,10 @@ body {
   background-color: #31304f;
   text-align: center;
   font-weight: lighter;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 .wrapper {
   text-align: center;
@@ -88,7 +92,7 @@ body {
 .wrapper .table-container .item .desc {
   background-color: rgba(214, 151, 98, 0.5);
   display: table-cell;
-  padding: 10px 40px;
+  padding: 10px 20px;
   vertical-align: middle;
 }
 .wrapper .table-container .item .desc img {
@@ -239,7 +243,7 @@ body {
   left: 21px;
 }
 .dialog {
-  z-index: 10001;
+  z-index: 11000;
   position: fixed;
   padding: 20px 10px;
   border: 1px solid #D69762;
@@ -279,6 +283,7 @@ body {
   line-height: 20px;
 }
 .dialog .details dl {
+  z-index: 12000;
   display: inline-block;
   *display: inline ;
   *zoom: 1 ;
@@ -307,6 +312,7 @@ body {
   margin-right: 10px;
 }
 .dialog:before {
+  z-index: -1;
   content: " ";
   width: 102%;
   height: 96%;

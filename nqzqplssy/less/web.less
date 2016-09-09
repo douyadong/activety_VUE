@@ -10,6 +10,10 @@ body {
     background-color: #31304f;
     text-align: center;
     font-weight: lighter;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 .wrapper {
@@ -42,7 +46,7 @@ body {
             .desc {
                 background-color: rgba(214, 151, 98, 0.5);
                 display: table-cell;
-                padding: 10px 40px;
+                padding: 10px 20px;
                 vertical-align: middle;
                 img {
                     width: 112px;
@@ -197,7 +201,7 @@ body {
 }
 
 .dialog {
-    z-index: 10001;
+    z-index: 11000;
     position: fixed;
     padding: 20px 10px;
     border: 1px solid #D69762;
@@ -227,6 +231,7 @@ body {
             line-height: 20px;
         }
         dl {
+            z-index: 12000;
             .inline-block();
             margin-right: 15px;
             img {
@@ -254,6 +259,7 @@ body {
         }
     }
     &:before {
+        z-index: -1;
         content: " ";
         width: 102%;
         height: 96%;
