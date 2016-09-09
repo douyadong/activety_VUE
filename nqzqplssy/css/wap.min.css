@@ -511,75 +511,85 @@ body {
   width: 80px;
 }
 .wrapper .turntable .cake-left-2 {
-  left: 25%;
-  margin-left: -50px;
+  left: 50%;
+  margin-left: -140px;
   bottom: 25px;
   width: 70px;
 }
 .wrapper .turntable .cake-right-2 {
-  right: 28%;
-  margin-right: -50px;
+  left: 50%;
+  margin-left: 60px;
   bottom: 25px;
   width: 70px;
 }
 .wrapper .turntable .cake-left-3 {
-  left: 10%;
-  margin-left: -50px;
+  left: 50%;
+  margin-left: -200px;
   bottom: 50px;
   width: 60px;
+}
+@media screen and (device-aspect-ratio: 40/71) {
+  .wrapper .turntable .cake-left-3 {
+    margin-left: -190px;
+  }
 }
 .wrapper .turntable .cake-right-3 {
-  right: 10%;
-  margin-right: -50px;
+  left: 50%;
+  margin-left: 140px;
   bottom: 50px;
   width: 60px;
 }
+@media screen and (device-aspect-ratio: 40/71) {
+  .wrapper .turntable .cake-right-3 {
+    margin-left: 130px;
+  }
+}
 .wrapper .turntable .cake-left-4 {
-  left: 20%;
-  margin-left: -50px;
+  left: 50%;
+  margin-left: -160px;
   bottom: 85px;
   width: 50px;
 }
 @media screen and (device-aspect-ratio: 40/71) {
   .wrapper .turntable .cake-left-4 {
-    left: 25%;
     bottom: 70px;
+    margin-left: -130px;
   }
 }
 .wrapper .turntable .cake-right-4 {
-  right: 20%;
-  margin-right: -50px;
+  left: 50%;
+  margin-left: 110px;
   bottom: 85px;
   width: 50px;
 }
 @media screen and (device-aspect-ratio: 40/71) {
   .wrapper .turntable .cake-right-4 {
-    right: 25%;
     bottom: 70px;
+    margin-left: 80px;
   }
 }
 .wrapper .turntable .cake-left-5 {
-  left: 40%;
-  margin-left: -50px;
+  left: 50%;
+  margin-left: -70px;
   bottom: 95px;
   width: 40px;
 }
 @media screen and (device-aspect-ratio: 40/71) {
   .wrapper .turntable .cake-left-5 {
-    left: 45%;
     bottom: 80px;
+    margin-left: -60px;
   }
 }
 .wrapper .turntable .cake-right-5 {
-  right: 40%;
-  margin-right: -50px;
+  left: 50%;
+  margin-left: 20px;
   bottom: 95px;
   width: 40px;
 }
 @media screen and (device-aspect-ratio: 40/71) {
   .wrapper .turntable .cake-right-5 {
-    right: 45%;
     bottom: 80px;
+    margin-left: 10px;
   }
 }
 .wrapper .turntable .spot-list {
@@ -655,6 +665,12 @@ body {
   *display: inline ;
   *zoom: 1 ;
   margin-right: 10px;
+}
+.dialog .details dd a:link,
+.dialog .details dd a:visited,
+.dialog .details dd a:hover,
+.dialog .details dd a:active {
+  color: #543C27;
 }
 .dialog:before {
   z-index: -1;

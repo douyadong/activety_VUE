@@ -32,10 +32,8 @@ wapController.prototype.initPage = function() {
     $('.turntable .cake').each(function(index, el) {
         var cake = {
             key: index,
-            left: $(el).css('left'),
             bottom: $(el).css('bottom'),
             marginLeft: $(el).css('margin-left'),
-            marginRight: $(el).css('margin-right'),
             width: $(el).css('width')
         }
         classSelf.CakePos.push(cake);
@@ -105,24 +103,8 @@ wapController.prototype.initSwiper = function() {
                 $('.item .content p').text($(el).data('desc'));
                 $('.item').data('dialog', $(el).data('dialog'));
             }
-            //上下移动动画
-            //queue:一个布尔值，指示是否将动画放置在效果队列中。如果为false时，将立即开始动画。
-            $(el).animate({
-                left: pos.left
-            }, {
-                queue: false,
-                easing: 'linear',
-                duration: 1000
-            });
             $(el).animate({
                 bottom: pos.bottom
-            }, {
-                queue: false,
-                easing: 'linear',
-                duration: 1000
-            });
-            $(el).animate({
-                "margin-right": pos.marginRight
             }, {
                 queue: false,
                 easing: 'linear',

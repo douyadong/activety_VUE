@@ -87,7 +87,7 @@
             $config["hotline"] = "";
             $config["hotline_subnum"] = "";
 
-            $confs["module_img_path"]=$CURRENT_STATIC_DOMAIN . "/nqzqplssy/images";
+            $confs["module_img_path"]=$STATIC_DOMAIN . "/activity/nqzqplssy/images";
 
             /*
             |--------------------------------------------------------------
