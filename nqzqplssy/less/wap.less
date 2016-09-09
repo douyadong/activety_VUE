@@ -6,6 +6,10 @@
 
 @import "../../public/less/mixins.less";
 @import "../../public/less/wap.less";
+body {
+    background-color: #302d50;
+}
+
 .wrapper {
     text-align: center;
     img {
@@ -34,7 +38,8 @@
             width: 220px;
             height: 130px;
             position: absolute;
-            top: 35px;
+            // top: 35px;
+            top: 70px;
             left: 50%;
             margin-left: -110px;
             .content {
@@ -47,17 +52,17 @@
                     height: 20px;
                     margin-bottom: 5px;
                 }
-
                 p {
                     color: #fff;
-                    font-size: 14px;
+                    // font-size: 14px;
                     letter-spacing: 3.5px;
                 }
             }
             &:before {
                 content: " ";
                 width: 208px;
-                height: 176px;
+                // height: 176px;
+                height: 142px;
                 border: 1px solid #D69762;
                 position: absolute;
                 top: -7px;
@@ -68,7 +73,8 @@
             position: absolute;
             left: 50%;
             margin-left: -20px;
-            top: 155px;
+            // top: 155px;
+            top: 120px;
             &:after,
             &:before {
                 border: 10px solid transparent;
@@ -177,5 +183,77 @@
                 }
             }
         }
+    }
+}
+
+.dialog {
+    z-index: 11000;
+    position: absolute;
+    text-align: center;
+    display: none;
+    padding: 20px 10px;
+    border: 1px solid #D69762;
+    color: #543C27;
+    width: 90%;
+    margin: 0 auto 50px auto;
+    font-size: 16px;
+    top: 7%;
+    left: 5%;
+    .close {
+        right: 20px;
+        position: absolute;
+        top: 35px;
+        width: 7%;
+    }
+    .details {
+        padding: 25px;
+        background-color: #d69762;
+        .cake-name {
+            width: 50%;
+            margin-bottom: 20px;
+        }
+        .desc {
+            padding-bottom: 25px;
+            line-height: 28px;
+        }
+        dl {
+            img {
+                width: 100%;
+            }
+        }
+        dt {
+            p {
+                margin: 10px 0;
+                font-weight: bold;
+                color: #694B31;
+            }
+        }
+        dd {
+            text-align: left;
+            padding-left: 40px;
+            margin-bottom: 5px;
+            text-align: left;
+            img {
+                width: 7%;
+                .inline-block();
+                margin-right: 10px
+            }
+        }
+    }
+    &:before {
+        z-index: -1;
+        content: " ";
+        width: 104%;
+        border: 1px solid #D69762;
+        position: absolute;
+        top: 8px;
+        left: -8px;
+        height: 98.5%
+    }
+}
+
+.dialog-five-item {
+    &:before {
+        height: 99%;
     }
 }

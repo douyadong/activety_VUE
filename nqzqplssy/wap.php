@@ -35,20 +35,20 @@
 		<div class="turntable">
 			 <div class="table">
 			 	<img src="<?php echo $confs["module_img_path"]; ?>/h5_table.png" alt="">
-			 	<img class="cake cake-1" src="<?php echo $confs["module_img_path"]; ?>/h5_cake.png" alt="">
-			 	<img class="cake cake-left-2" src="<?php echo $confs["module_img_path"]; ?>/h5_cake.png" alt="">
-			 	<img class="cake cake-right-2" src="<?php echo $confs["module_img_path"]; ?>/h5_cake.png" alt="">
-			 	<img class="cake cake-left-3" src="<?php echo $confs["module_img_path"]; ?>/h5_cake.png" alt="">
-			 	<img class="cake cake-right-3" src="<?php echo $confs["module_img_path"]; ?>/h5_cake.png" alt="">
-			 	<img class="cake cake-left-4" src="<?php echo $confs["module_img_path"]; ?>/h5_cake.png" alt="">
-			 	<img class="cake cake-right-4" src="<?php echo $confs["module_img_path"]; ?>/h5_cake.png" alt="">
-			 	<img class="cake cake-left-5" src="<?php echo $confs["module_img_path"]; ?>/h5_cake.png" alt="">
-			 	<img class="cake cake-right-5" src="<?php echo $confs["module_img_path"]; ?>/h5_cake.png" alt="">
+			 	<img class="cake cake-1 dousha" data-dialog="dialog-dousha" src="<?php echo $confs["module_img_path"]?>/h5_cake.png" alt="豆沙月饼" data-font-src="<?php echo $confs["module_img_path"]?>/white-dousha.png" data-desc="红豆沙月饼是用红豆制成。八月十五日中秋节，食用月饼是中国传统食俗。">
+				<img class="cake cake-left-2 lianrong" data-dialog="dialog-lianrong" src="<?php echo $confs["module_img_path"]?>/h5_cake.png" alt="莲蓉月饼" data-font-src="<?php echo $confs["module_img_path"]?>/white-lianrong.png" data-desc="莲蓉月饼是广东省近代的汉族名点，品种有纯正莲蓉月、榄仁莲蓉月等。">
+				<img class="cake cake-left-3 huotui" data-dialog="dialog-huotui" src="<?php echo $confs["module_img_path"]?>/h5_cake.png" alt="火腿月饼" data-font-src="<?php echo $confs["module_img_path"]?>/white-huotui.png" data-desc="火腿月饼初创于民国时期的昆明合香楼，是中秋传统节日食品。">
+				<img class="cake cake-left-4 wuren" data-dialog="dialog-wuren" src="<?php echo $confs["module_img_path"]?>/h5_cake.png" alt="五仁月饼" data-font-src="<?php echo $confs["module_img_path"]?>/white-wuren.png" data-desc="五仁月饼属于广式月饼的一种，在中秋节各式月饼中最为著名。">
+				<img class="cake cake-left-5 icecream" data-dialog="dialog-icecream" src="<?php echo $confs["module_img_path"]?>/h5_cake.png" alt="冰激凌月饼" data-font-src="<?php echo $confs["module_img_path"]?>/white-icecream.png" data-desc="冰淇淋月饼将中国传统文化和西式食品结合，做成迎合中国人习惯的月饼。">
+				<img class="cake cake-right-5 chocolate" data-dialog="dialog-chocolate" src="<?php echo $confs["module_img_path"]?>/h5_cake.png" alt="巧克力月饼" data-font-src="<?php echo $confs["module_img_path"]?>/white-chocolate.png" data-desc="巧克力月饼以巧克力为主要材料，以各种口味馅料为辅料制成的非传统月饼。">
+				<img class="cake cake-right-4 mocha" data-dialog="dialog-mocha" src="<?php echo $confs["module_img_path"]?>/h5_cake.png" alt="摩卡咖啡月饼" data-font-src="<?php echo $confs["module_img_path"]?>/white-mocha.png" data-desc="摩卡咖啡月饼是以咖啡为冰皮制成的新式月饼，属于西点的一种，口感香醇。">
+				<img class="cake cake-right-3 haiwei" data-dialog="dialog-haiwei" src="<?php echo $confs["module_img_path"]?>/h5_cake.png" alt="海味月饼" data-font-src="<?php echo $confs["module_img_path"]?>/white-haiwei.png" data-desc="海味月饼是比较名贵的月饼，有鲍鱼、鱼翅、紫菜、鳐柱等，以甘香著称。">
+				<img class="cake cake-right-2 yanwo" data-dialog="dialog-yanwo" src="<?php echo $confs["module_img_path"]?>/h5_cake.png" alt="燕窝月饼" data-font-src="<?php echo $confs["module_img_path"]?>/white-yanwo.png" data-desc="燕窝月饼选用头期燕窝入馅，保证了燕窝纯正的品质。口感柔软，质感细腻。">
 			 </div>
 			 
-             <div class="item">
+             <div class="item" data-dialog="dialog-dousha">
             	<div class="content">
-            		<img class="title" src="<?php echo $confs["module_img_path"]; ?>/dousha.png" alt="">
+            		<img class="title" src="<?php echo $confs["module_img_path"]; ?>/white-dousha.png" alt="">
             		<p>红豆沙月饼是用红豆制成。农历八月十五日是传统的中秋节，食用月饼是中国传统食俗。</p>
             	</div>
             	 <!-- 箭头	 -->
@@ -80,6 +80,19 @@
 		</div>
 	
     </div>
+
+    <?php foreach($config["info"]["data"] as $key => $val){ ?>
+      <div class="dialog <?php echo count($val["estate"]) == 3 ? "dialog-three-item":"dialog-five-item" ?> dialog-<?php echo $val["name"]?>">
+        <img class="close" src="<?php echo $confs["module_img_path"]?>/close.png" alt="关闭">
+        <div class="details">
+        <img class="cake-name" src="<?php echo $confs["module_img_path"]?>/brown-<?php echo $val["name"]?>.png" alt="">
+        <p class="desc"><?php echo $val["desc"]?></p>
+        <?php foreach($val["estate"] as $eskey => $esval){ ?>
+          <dl><dt><a href="<?php echo $esval["h5link"]?>" target="_blank"><img src="<?php echo $confs["module_img_path"]?>/<?php echo $esval["pic"]?>.jpg" alt=""><p><?php echo $esval["name"]?></p></a></dt><dd><img src="<?php echo $confs["module_img_path"]?>/address.png" alt="">地址：<?php echo $esval["address"]?></dd><dd><img src="<?php echo $confs["module_img_path"]?>/price.png" alt="">均价：<?php echo $esval["price"]?></dd><dd><img src="<?php echo $confs["module_img_path"]?>/phone.png" alt=""><?php echo $esval["phone"]?></dd></dl>
+        <?php } ?>
+        </div>
+      </div>
+    <?php } ?>
 
 
 	<!-- hammer.js -->

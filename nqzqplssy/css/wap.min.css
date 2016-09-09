@@ -417,6 +417,9 @@ wap端第二种预约样式表
   font-size: 16px;
   margin-top: -0.2em;
 }
+body {
+  background-color: #302d50;
+}
 .wrapper {
   text-align: center;
 }
@@ -448,7 +451,7 @@ wap端第二种预约样式表
   width: 220px;
   height: 130px;
   position: absolute;
-  top: 35px;
+  top: 70px;
   left: 50%;
   margin-left: -110px;
 }
@@ -465,13 +468,12 @@ wap端第二种预约样式表
 }
 .wrapper .turntable .item .content p {
   color: #fff;
-  font-size: 14px;
   letter-spacing: 3.5px;
 }
 .wrapper .turntable .item:before {
   content: " ";
   width: 208px;
-  height: 176px;
+  height: 142px;
   border: 1px solid #D69762;
   position: absolute;
   top: -7px;
@@ -481,7 +483,7 @@ wap端第二种预约样式表
   position: absolute;
   left: 50%;
   margin-left: -20px;
-  top: 155px;
+  top: 120px;
 }
 .wrapper .turntable .arrow:after,
 .wrapper .turntable .arrow:before {
@@ -601,4 +603,69 @@ wap端第二种预约样式表
 }
 .wrapper .turntable .spot-list .spot-item.active {
   background-color: #D69762;
+}
+.dialog {
+  z-index: 11000;
+  position: absolute;
+  text-align: center;
+  display: none;
+  padding: 20px 10px;
+  border: 1px solid #D69762;
+  color: #543C27;
+  width: 90%;
+  margin: 0 auto 50px auto;
+  font-size: 16px;
+  top: 7%;
+  left: 5%;
+}
+.dialog .close {
+  right: 20px;
+  position: absolute;
+  top: 35px;
+  width: 7%;
+}
+.dialog .details {
+  padding: 25px;
+  background-color: #d69762;
+}
+.dialog .details .cake-name {
+  width: 50%;
+  margin-bottom: 20px;
+}
+.dialog .details .desc {
+  padding-bottom: 25px;
+  line-height: 28px;
+}
+.dialog .details dl img {
+  width: 100%;
+}
+.dialog .details dt p {
+  margin: 10px 0;
+  font-weight: bold;
+  color: #694B31;
+}
+.dialog .details dd {
+  padding-left: 40px;
+  margin-bottom: 5px;
+  text-align: left;
+}
+.dialog .details dd img {
+  width: 7%;
+  display: inline-block;
+  *display: inline ;
+  *zoom: 1 ;
+  margin-right: 10px;
+}
+.dialog:before {
+  z-index: -1;
+  content: " ";
+  width: 104%;
+  border: 1px solid #D69762;
+  position: absolute;
+  top: 8px;
+  left: -8px;
+  height: 98.5%;
+}
+.dialog-five-item:before {
+  height: 99%;
 }
