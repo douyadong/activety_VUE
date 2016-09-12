@@ -34,7 +34,8 @@ wapController.prototype.initPage = function() {
             key: index,
             bottom: $(el).css('bottom'),
             marginLeft: $(el).css('margin-left'),
-            width: $(el).css('width')
+            width: $(el).css('width'),
+            height: $(el).css('height')
         }
         classSelf.CakePos.push(cake);
     });
@@ -108,7 +109,7 @@ wapController.prototype.initSwiper = function() {
             }, {
                 queue: false,
                 easing: 'linear',
-                duration: 1000
+                duration: 500
             });
             //左右移动动画
             $(el).animate({
@@ -116,7 +117,7 @@ wapController.prototype.initSwiper = function() {
             }, {
                 queue: false,
                 easing: 'linear',
-                duration: 1000
+                duration: 500
             });
             //月饼大小动画
             $(el).animate({
@@ -124,7 +125,14 @@ wapController.prototype.initSwiper = function() {
             }, {
                 queue: false,
                 easing: 'linear',
-                duration: 1000
+                duration: 500
+            });
+            $(el).animate({
+                height: pos.height
+            }, {
+                queue: false,
+                easing: 'linear',
+                duration: 500
             });
         });
 
@@ -168,21 +176,21 @@ wapController.prototype.initSwiper = function() {
             }, {
                 queue: false,
                 easing: 'linear',
-                duration: 1000
+                duration: 500
             });
             $(el).animate({
                 bottom: pos.bottom
             }, {
                 queue: false,
                 easing: 'linear',
-                duration: 1000
+                duration: 500
             });
             $(el).animate({
                 "margin-right": pos.marginRight
             }, {
                 queue: false,
                 easing: 'linear',
-                duration: 1000
+                duration: 500
             });
             //左右移动动画
             $(el).animate({
@@ -190,7 +198,7 @@ wapController.prototype.initSwiper = function() {
             }, {
                 queue: false,
                 easing: 'linear',
-                duration: 1000
+                duration: 500
             });
             //月饼大小动画
             $(el).animate({
@@ -198,7 +206,14 @@ wapController.prototype.initSwiper = function() {
             }, {
                 queue: false,
                 easing: 'linear',
-                duration: 1000
+                duration: 500
+            });
+            $(el).animate({
+                height: pos.height
+            }, {
+                queue: false,
+                easing: 'linear',
+                duration: 500
             });
         });
         //变换spot-list

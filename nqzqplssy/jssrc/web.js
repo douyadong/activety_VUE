@@ -101,7 +101,7 @@ zqController.prototype.eventBind = function() {
                 }, {
                     queue: false,
                     easing: 'linear',
-                    duration: 1000
+                    duration: 500
                 });
                 //左右移动动画
                 $(el).animate({
@@ -109,7 +109,7 @@ zqController.prototype.eventBind = function() {
                 }, {
                     queue: false,
                     easing: 'linear',
-                    duration: 1000
+                    duration: 500
                 });
                 //月饼大小动画
                 $(el).animate({
@@ -117,7 +117,7 @@ zqController.prototype.eventBind = function() {
                 }, {
                     queue: false,
                     easing: 'linear',
-                    duration: 1000
+                    duration: 500
                 });
             });
         }
@@ -149,7 +149,7 @@ zqController.prototype.eventBind = function() {
                 }, {
                     queue: false,
                     easing: 'linear',
-                    duration: 1000
+                    duration: 500
                 });
                 //左右移动动画
                 $(el).animate({
@@ -157,7 +157,7 @@ zqController.prototype.eventBind = function() {
                 }, {
                     queue: false,
                     easing: 'linear',
-                    duration: 1000
+                    duration: 500
                 });
                 //月饼大小动画
                 $(el).animate({
@@ -165,7 +165,7 @@ zqController.prototype.eventBind = function() {
                 }, {
                     queue: false,
                     easing: 'linear',
-                    duration: 1000
+                    duration: 500
                 });
             });
         }
