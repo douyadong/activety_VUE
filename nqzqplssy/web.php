@@ -9,9 +9,9 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title></title>
-        <meta name="keywords" content="">
-        <meta name="description" content="">
+        <title><?php echo $config["page_title"] ; ?></title>
+        <meta name="keywords" content="<?php echo $config["page_keywords"] ; ?>">
+        <meta name="description" content="<?php echo $config["page_description"] ; ?>"> 
         <!-- 引入stylesheet资源 -->
        <link rel="stylesheet" href="<?php echo "$CURRENT_STATIC_DOMAIN/public/css/app.min.css"?>" />
         <?php
