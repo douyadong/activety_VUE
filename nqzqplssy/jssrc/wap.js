@@ -67,7 +67,8 @@ wapController.prototype.createMask = function() {
         'top': 0,
         'height': sHeight + 'px',
         'width': sWidth + 'px',
-        'z-index': '9999'
+        'z-index': '9999',
+        'cursor': 'pointer'
     });
     $(document.body).append(mask);
 };
@@ -242,11 +243,20 @@ wapController.prototype.bindEvent = function() {
         classSelf.createMask();
         $('.dialog').hide();
         $("." + $(this).data("dialog")).show();
+        $(document).scrollTop(0);
     });
 
     $('body').delegate('#mask-container,.close', 'click', function(event) {
         $('.dialog').hide();
         $('#mask-container').remove();
+    });
+
+    $('.link').on('click', function(event) {
+        event.preventDefault();
+        /* Act on the event */
+        $('.dialog').hide();
+        $("." + $(this).data("dialog")).show();
+        $(document).scrollTop(0);
     });
 
 };
