@@ -23,7 +23,7 @@
     <body>
         <div class="wrapper">
             <div class="banner">
-                <img src="<?php echo $confs["module_img_path"]?>/pc_background.jpg" alt="">
+                <img src="<?php echo $confs["module_img_path"]?>/pc_background.png" alt="">
             </div>
             <div class="table-container">
                 <div class="arrow left-arrow"></div>
