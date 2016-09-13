@@ -88,7 +88,7 @@
         <img class="cake-name" src="<?php echo $confs["module_img_path"]?>/brown-<?php echo $val["name"]?>.png" alt="">
         <p class="desc"><?php echo $val["desc"]?></p>
         <?php foreach($val["estate"] as $eskey => $esval){ ?>
-          <dl><dt><a href="<?php echo $esval["h5link"]?>" target="_blank"><img src="<?php echo $confs["module_img_path"]?>/<?php echo $esval["pic"]?>.jpg" alt=""><p><?php echo $esval["name"]?></p></a></dt><dd><img src="<?php echo $confs["module_img_path"]?>/address.png" alt="">地址：<?php echo $esval["address"]?></dd><dd><img src="<?php echo $confs["module_img_path"]?>/price.png" alt="">均价：<?php echo $esval["price"]?></dd><dd><a href="tel:<?php echo $esval["phonecall"]?>"><img src="<?php echo $confs["module_img_path"]?>/phone.png" alt=""><?php echo $esval["phone"]?></a></dd></dl>
+          <dl><dt><a href="<?php echo $esval["h5link"]?>" target="_blank"><img src="<?php echo $confs["module_img_path"]?>/<?php echo $esval["pic"]?>.jpg" alt=""><p><?php echo $esval["name"]?></p></a></dt><dd><img src="<?php echo $confs["module_img_path"]?>/address.png" alt="">地址：<?php echo $esval["address"]?></dd><dd><img src="<?php echo $confs["module_img_path"]?>/price.png" alt="">均价：<?php echo $esval["price"]?></dd><dd><a href="<?php echo $esval["linkPhone"]?>"><img src="<?php echo $confs["module_img_path"]?>/phone.png" alt=""><?php echo $esval["phone"]?></a></dd></dl>
         <?php } ?>
         <div class="link" data-dialog="dialog-<?php echo $val["next"]?>"><img src="<?php echo $confs["module_img_path"]; ?>/white-<?php echo $val["next"]?>.png" alt="" ></div>
         </div>
