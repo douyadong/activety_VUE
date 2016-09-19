@@ -1,3 +1,6 @@
+.container .content {
+  min-width: 1170px;
+}
 .container .content section:nth-child(1) .section-header {
   display: none;
 }
@@ -19,6 +22,9 @@
 }
 .container .content section:nth-child(1) a {
   border: none;
+}
+.container .content section .item .img img {
+  height: auto;
 }
 .container .content section:nth-child(9) .more {
   display: none;
