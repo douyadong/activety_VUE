@@ -1,0 +1,283 @@
+/*-----------------------------------------------------------------------------------------------------------
+项目名称：悟空找房邀您一起挑月饼看楼盘啦
+页面路径：nqzqplssy/web.php （web专题页）
+作者：luwei@lifang.com
+-----------------------------------------------------------------------------------------------------------*/
+
+@import "../../public/less/mixins.less";
+html,
+body {
+    background-color: #302d50;
+    text-align: center;
+    font-weight: lighter;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    font-size: 12px;
+}
+
+.wrapper {
+    text-align: center;
+    min-width: 1200px;
+    .banner {
+        width: 100%;
+        margin-bottom: 100px;
+        background-color: #302d50;
+    }
+    .table-container {
+        position: relative;
+        height: 400px;
+        background-color: #302d50;
+        &>.table {
+            width: 900px;
+        }
+        .item {
+            z-index: 1000;
+            top: -80px;
+            border: 1px solid #D69762;
+            display: table;
+            padding: 15px 5px;
+            text-align: center;
+            width: 270px;
+            height: 190px;
+            left: 50%;
+            margin-left: -135px;
+            position: absolute;
+            .desc {
+                background-color: rgba(214, 151, 98, 0.5);
+                display: table-cell;
+                padding: 10px 20px;
+                vertical-align: middle;
+                img {
+                    width: 112px;
+                    margin-bottom: 10px;
+                }
+                p {
+                    color: #fff;
+                    font-size: 12px;
+                    letter-spacing: 3.5px;
+                    line-height: 20px
+                }
+            }
+            &:before {
+                content: " ";
+                width: 280px;
+                height: 175px;
+                border: 1px solid #D69762;
+                position: absolute;
+                top: 6px;
+                left: -7px;
+            }
+            .down-arrow {
+                position: absolute;
+                top: 165%;
+                left: 50%;
+                margin-left: -10px;
+                &:after,
+                &:before {
+                    border: 10px solid transparent;
+                    border-top: 10px solid #955F4B;
+                    width: 0;
+                    height: 0;
+                    position: absolute;
+                    top: -101px;
+                    content: ' '
+                }
+                &:before {
+                    border-top-color: #D69762;
+                    top: -100px;
+                }
+            }
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .cake1 {
+            position: absolute;
+            left: 50%;
+            top: 160px;
+            margin-left: -50px;
+            width: 100px;
+        }
+        .cake2 {
+            position: absolute;
+            left: 50%;
+            top: 150px;
+            margin-left: -250px;
+            width: 85px;
+        }
+        .cake3 {
+            position: absolute;
+            left: 50%;
+            top: 100px;
+            margin-left: -400px;
+            width: 70px;
+        }
+        .cake4 {
+            position: absolute;
+            left: 50%;
+            top: 40px;
+            margin-left: -290px;
+            width: 55px;
+        }
+        .cake5 {
+            position: absolute;
+            left: 50%;
+            top: 20px;
+            margin-left: -160px;
+            width: 55px;
+        }
+        .cake6 {
+            position: absolute;
+            left: 50%;
+            top: 20px;
+            margin-left: 100px;
+            width: 55px;
+        }
+        .cake7 {
+            position: absolute;
+            left: 50%;
+            top: 40px;
+            margin-left: 230px;
+            width: 55px;
+        }
+        .cake8 {
+            position: absolute;
+            left: 50%;
+            top: 100px;
+            margin-left: 330px;
+            width: 70px;
+        }
+        .cake9 {
+            position: absolute;
+            left: 50%;
+            top: 150px;
+            margin-left: 150px;
+            width: 85px;
+        }
+        .arrow {
+            cursor: pointer;
+            position: absolute;
+            top: 130px;
+            left: 50%;
+            margin-top: -50px;
+            &:after,
+            &:before {
+                border: 40px solid transparent;
+                width: 0;
+                height: 0;
+                position: absolute;
+                content: ' '
+            }
+            &:before {
+                left: 20px;
+            }
+        }
+        .left-arrow {
+            margin-left: -600px;
+            &:after,
+            &:before {
+                border-right: 40px solid #302d50;
+                left: 21px;
+            }
+            &:before {
+                border-right-color: #D69762;
+                left: 20px;
+            }
+        }
+        .right-arrow {
+            margin-left: 480px;
+            &:after,
+            &:before {
+                border-left: 40px solid #302d50;
+                left: 20px;
+            }
+            &:before {
+                border-left-color: #D69762;
+                left: 21px;
+            }
+        }
+    }
+}
+
+.dialog {
+    z-index: 11000;
+    position: fixed;
+    padding: 20px 10px;
+    border: 1px solid #D69762;
+    display: none;
+    color: #543C27;
+    top: 20%;
+    left: 50%;
+    .close {
+        position: absolute;
+        right: 30px;
+        top: 40px;
+        width: 20px;
+    }
+    .details {
+        .clearfix();
+        text-align: center;
+        background-color: #d69762;
+        padding: 25px;
+        margin: 0 auto;
+        .cake-name {
+            width: 150px;
+        }
+        .desc {
+            margin-bottom: 25px;
+            margin: 25px auto;
+            width: 500px;
+            line-height: 20px;
+        }
+        dl {
+            z-index: 12000;
+            .inline-block();
+            margin-right: 15px;
+            img {
+                display: block;
+                width: 200px;
+            }
+            dt {
+                p {
+                    margin: 10px 0;
+                    font-weight: bold;
+                    color: #694B31;
+                }
+            }
+            dd {
+                line-height: 20px;
+                margin-left: 30px;
+                margin-bottom: 5px;
+                text-align: left;
+                img {
+                    .inline-block();
+                    width: 15px;
+                    margin-right: 10px
+                }
+            }
+        }
+    }
+    &:before {
+        z-index: -1;
+        content: " ";
+        width: 102%;
+        height: 96%;
+        border: 1px solid #D69762;
+        position: absolute;
+        top: 10px;
+        left: -12px;
+    }
+}
+
+.dialog-three-item {
+    margin-left: -350px;
+    &:before {
+        width: 103%;
+    }
+}
+
+.dialog-five-item {
+    margin-left: -580px;
+}
