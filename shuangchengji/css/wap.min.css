@@ -1,0 +1,31 @@
+.container .content section:nth-child(1) h3 {
+  display: none;
+}
+.container .content section:nth-child(1) .item {
+  width: 100%;
+  border-radius: 0px;
+}
+.container .content section:nth-child(1) .item .desc {
+  display: none;
+}
+.container .content section:nth-child(1) .item .price {
+  display: none;
+}
+.container .content section:nth-child(1) a {
+  border: none;
+}
+.container .content section {
+  margin-top: 28px;
+}
+.container .header .banner {
+  height: auto;
+}
+.container .content section:nth-child(5) h3 a {
+  display: none;
+}
+.container .content section:nth-child(5) .item .desc {
+  display: none;
+}
+.container .content section:nth-child(5) .item .price {
+  display: none;
+}

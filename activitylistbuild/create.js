@@ -204,7 +204,7 @@ $('#createBtn').click(function(){
             activityName: activityName,
             pageTitle: pageTitle,
             pageDescription: pageDescription,
-            pagekeywords: pagekeywords,
+            pageKeywords: pagekeywords,
             wechatShare: wechatShare,
             wechatTitle: wechatTitle,
             wechatContent: wechatContent,

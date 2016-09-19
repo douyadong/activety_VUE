@@ -11,7 +11,7 @@
         <meta name="ML-Config" content="fullscreen=yes,preventMove=no">
         <title><?php echo $config["pageTitle"] ; ?></title>
         <meta name="keywords" content="<?php echo $config["pageKeywords"] ; ?>">
-        <meta name="description" content="<?php echo $config["pageDescripts"] ; ?>"> 
+        <meta name="description" content="<?php echo $config["pageDescription"] ; ?>"> 
         <!-- 引入stylesheet资源 -->
         <?php
                 if(array_key_exists("extraCsses",$config) && count($config["extraCsses"]) > 0){
