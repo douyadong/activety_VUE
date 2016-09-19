@@ -4,6 +4,9 @@
 .container .content section:nth-child(1) .more {
   display: none;
 }
+.container .content section:nth-child(1) a {
+  cursor: default;
+}
 .container .content section:nth-child(1) .item {
   width: 100%;
   border-radius: 0px;

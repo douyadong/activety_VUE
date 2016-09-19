@@ -1,1 +1,31 @@
-.wrapper{position:relative}.wrapper img{width:100%}.wrapper img.overlay_img{position:absolute;top:0;display:none;left:0}.wrapper .btnJoin{position:absolute;width:130px;height:45px;bottom:14%;z-index:100;left:33%;opacity:0}@media screen and (device-aspect-ratio:40/71){.wrapper .btnJoin{width:110px}}
+/*-----------------------------------------------------------------------------------------------------------
+项目名称：奥运嘉年华
+页面路径：olympic/wechat_share.php
+作者：yuxiaochen@lifang.com
+-----------------------------------------------------------------------------------------------------------*/
+.wrapper {
+  position: relative;
+}
+.wrapper img {
+  width: 100%;
+}
+.wrapper img.overlay_img {
+  position: absolute;
+  top: 0;
+  display: none;
+  left: 0;
+}
+.wrapper .btnJoin {
+  position: absolute;
+  width: 130px;
+  height: 45px;
+  bottom: 14%;
+  z-index: 100;
+  left: 33%;
+  opacity: 0;
+}
+@media screen and (device-aspect-ratio: 40/71) {
+  .wrapper .btnJoin {
+    width: 110px;
+  }
+}
