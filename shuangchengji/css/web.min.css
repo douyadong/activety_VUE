@@ -37,7 +37,7 @@
   border-radius: 10px;
   margin-right: 30px;
   margin-bottom: 27px;
-  display: inline-block;
+  box-shadow: none;
 }
 .container .content section:nth-child(9) .item:nth-child(3n-1) {
   margin-right: 0;
