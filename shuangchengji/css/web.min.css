@@ -48,3 +48,6 @@
 .container .content section:nth-child(9) .item .price {
   display: none;
 }
+.container .header .banner {
+  height: 500px;
+}
