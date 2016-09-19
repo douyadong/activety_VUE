@@ -7,9 +7,14 @@
 @import "../../public/less/mixins.less";
 html,
 body {
-    background-color: #31304f;
+    background-color: #302d50;
     text-align: center;
     font-weight: lighter;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    font-size: 12px;
 }
 
 .wrapper {
@@ -18,12 +23,12 @@ body {
     .banner {
         width: 100%;
         margin-bottom: 100px;
-        background-color: #31304f;
+        background-color: #302d50;
     }
     .table-container {
         position: relative;
         height: 400px;
-        background-color: #31304f;
+        background-color: #302d50;
         &>.table {
             width: 900px;
         }
@@ -42,7 +47,7 @@ body {
             .desc {
                 background-color: rgba(214, 151, 98, 0.5);
                 display: table-cell;
-                padding: 10px 40px;
+                padding: 10px 20px;
                 vertical-align: middle;
                 img {
                     width: 112px;
@@ -173,7 +178,7 @@ body {
             margin-left: -600px;
             &:after,
             &:before {
-                border-right: 40px solid #31304f;
+                border-right: 40px solid #302d50;
                 left: 21px;
             }
             &:before {
@@ -185,7 +190,7 @@ body {
             margin-left: 480px;
             &:after,
             &:before {
-                border-left: 40px solid #31304f;
+                border-left: 40px solid #302d50;
                 left: 20px;
             }
             &:before {
@@ -197,7 +202,7 @@ body {
 }
 
 .dialog {
-    z-index: 10001;
+    z-index: 11000;
     position: fixed;
     padding: 20px 10px;
     border: 1px solid #D69762;
@@ -227,6 +232,7 @@ body {
             line-height: 20px;
         }
         dl {
+            z-index: 12000;
             .inline-block();
             margin-right: 15px;
             img {
@@ -242,7 +248,7 @@ body {
             }
             dd {
                 line-height: 20px;
-                margin-left: 45px;
+                margin-left: 30px;
                 margin-bottom: 5px;
                 text-align: left;
                 img {
@@ -253,7 +259,8 @@ body {
             }
         }
     }
-    &:after {
+    &:before {
+        z-index: -1;
         content: " ";
         width: 102%;
         height: 96%;
@@ -266,7 +273,7 @@ body {
 
 .dialog-three-item {
     margin-left: -350px;
-    &:after {
+    &:before {
         width: 103%;
     }
 }

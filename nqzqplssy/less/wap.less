@@ -6,6 +6,10 @@
 
 @import "../../public/less/mixins.less";
 @import "../../public/less/wap.less";
+body {
+    background-color: #302d50;
+}
+
 .wrapper {
     text-align: center;
     img {
@@ -34,7 +38,8 @@
             width: 220px;
             height: 130px;
             position: absolute;
-            top: 35px;
+            // top: 35px;
+            top: 70px;
             left: 50%;
             margin-left: -110px;
             .content {
@@ -47,17 +52,17 @@
                     height: 20px;
                     margin-bottom: 5px;
                 }
-
                 p {
                     color: #fff;
-                    font-size: 14px;
+                    // font-size: 14px;
                     letter-spacing: 3.5px;
                 }
             }
             &:before {
                 content: " ";
                 width: 208px;
-                height: 176px;
+                // height: 176px;
+                height: 142px;
                 border: 1px solid #D69762;
                 position: absolute;
                 top: -7px;
@@ -68,7 +73,8 @@
             position: absolute;
             left: 50%;
             margin-left: -20px;
-            top: 155px;
+            // top: 155px;
+            top: 120px;
             &:after,
             &:before {
                 border: 10px solid transparent;
@@ -91,73 +97,83 @@
         }
         .cake-1 {
             left: 50%;
-            margin-left: -50px;
+            margin-left: -45px;
             bottom: 15px;
-            width: 80px;
+            width: 70px;
         }
         .cake-left-2 {
-            left: 25%;
-            margin-left: -50px;
+            left: 50%;
+            margin-left: -140px;
             bottom: 25px;
-            width: 70px;
+            width: 65px;
         }
         .cake-right-2 {
-            right: 28%;
-            margin-right: -50px;
+            left: 50%;
+            margin-left: 60px;
             bottom: 25px;
-            width: 70px;
+            width: 65px;
         }
         .cake-left-3 {
-            left: 10%;
-            margin-left: -50px;
+            @media screen and (device-aspect-ratio: 40/71) {
+                margin-left: -190px;
+            }
+            left: 50%;
+            margin-left: -200px;
             bottom: 50px;
             width: 60px;
         }
         .cake-right-3 {
-            right: 10%;
-            margin-right: -50px;
+            @media screen and (device-aspect-ratio: 40/71) {
+                margin-left: 130px;
+            }
+            left: 50%;
+            margin-left: 140px;
             bottom: 50px;
             width: 60px;
         }
         .cake-left-4 {
             @media screen and (device-aspect-ratio: 40/71) {
-                left: 25%;
                 bottom: 70px;
+                margin-left: -130px;
             }
-            left: 20%;
-            margin-left: -50px;
+            left: 50%;
+            margin-left: -160px;
             bottom: 85px;
             width: 50px;
+            height:25px;
         }
         .cake-right-4 {
             @media screen and (device-aspect-ratio: 40/71) {
-                right: 25%;
                 bottom: 70px;
+                margin-left: 80px;
             }
-            right: 20%;
-            margin-right: -50px;
+            left: 50%;
+            margin-left: 110px;
             bottom: 85px;
             width: 50px;
+            height:25px;
         }
         .cake-left-5 {
             @media screen and (device-aspect-ratio: 40/71) {
-                left: 45%;
                 bottom: 80px;
+                margin-left: -60px;
             }
-            left: 40%;
-            margin-left: -50px;
+            left: 50%;
+            margin-left: -70px;
             bottom: 95px;
-            width: 40px;
+            width: 45px;
+            height:23px;
         }
         .cake-right-5 {
             @media screen and (device-aspect-ratio: 40/71) {
-                right: 45%;
                 bottom: 80px;
+                margin-left: 10px;
             }
-            right: 40%;
-            margin-right: -50px;
+            left: 50%;
+            margin-left: 20px;
             bottom: 95px;
-            width: 40px;
+            width: 45px;
+            height:23px;
         }
         .spot-list {
             position: absolute;
@@ -177,5 +193,108 @@
                 }
             }
         }
+    }
+}
+
+.dialog {
+    z-index: 11000;
+    position: absolute;
+    text-align: center;
+    display: none;
+    padding: 20px 10px;
+    border: 1px solid #D69762;
+    color: #543C27;
+    width: 90%;
+    margin: 0 auto 50px auto;
+    font-size: 16px;
+    top: 7%;
+    left: 5%;
+    .close {
+        right: 20px;
+        position: absolute;
+        top: 35px;
+        width: 7%;
+        cursor: pointer;
+    }
+    .details {
+        padding: 25px;
+        background-color: #d69762;
+        .cake-name {
+            width: 50%;
+            margin-bottom: 20px;
+        }
+        .desc {
+            line-height: 28px;
+        }
+        dl {
+            text-align: center;
+            margin-top: 50px;
+            position: relative;
+            img {
+                width: 100%;
+            }
+        }
+        dl:after {
+            content: " ";
+            position: absolute;
+            border: 1px solid #694B31;
+            width: 60%;
+            left: 20%;
+            bottom: -25px;
+        }
+        dl:last-of-type {
+            &:after {
+                content: " ";
+                position: absolute;
+                border: none;
+            }
+        }
+        dt {
+            p {
+                margin: 10px 0;
+                font-weight: bold;
+                color: #694B31;
+            }
+        }
+        dd {
+            text-align: left;
+            padding-left: 20%;
+            margin-bottom: 5px;
+            img {
+                width: 7%;
+                .inline-block();
+                margin-right: 10px
+            }
+            a:link,
+            a:visited,
+            a:hover,
+            a:active {
+                color: #543C27;
+            }
+        }
+        .link {
+            background-color: #A0714A;
+            margin: 20px auto;
+            height: 70%;
+            padding: 10px 25px;
+            width: 60%;
+            cursor: pointer;
+        }
+    }
+    &:before {
+        z-index: -1;
+        content: " ";
+        width: 104%;
+        border: 1px solid #D69762;
+        position: absolute;
+        top: 8px;
+        left: -8px;
+        height: 98.5%
+    }
+}
+
+.dialog-five-item {
+    &:before {
+        height: 99%;
     }
 }

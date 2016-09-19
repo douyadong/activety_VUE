@@ -8,22 +8,69 @@ function wapController() {
      继承于Controller基类
      -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
     Controller.call(this);
-
-    /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    标记字段
-    -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-    this.toastStatus = true; //是否允许显示log
-
-
+    /*-----------------------------------------------------------------------------------------------------------
+    初始化页面
+    -----------------------------------------------------------------------------------------------------------*/
+    this.initPage();
     /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
      bindEvent
-     -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+    -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
     this.bindEvent();
-
     /*-----------------------------------------------------------------------------------------------------------
     初始化手势左右滑动
     -----------------------------------------------------------------------------------------------------------*/
     this.initSwiper();
+};
+
+/*-----------------------------------------------------------------------------------------------------------
+初始化页面
+-----------------------------------------------------------------------------------------------------------*/
+wapController.prototype.initPage = function() {
+    var classSelf = this;
+    classSelf.CakePos = [];
+    //缓存每个月饼的位置信息
+    $('.turntable .cake').each(function(index, el) {
+        var cake = {
+            key: index,
+            bottom: $(el).css('bottom'),
+            marginLeft: $(el).css('margin-left'),
+            width: $(el).css('width'),
+            height: $(el).css('height')
+        }
+        classSelf.CakePos.push(cake);
+    });
+
+    var jump = function() {
+        $('.turntable .item').animate({
+            top: "45px",
+        }, 1000).animate({
+            top: "70px"
+        }, 1000);
+    }
+    jump();
+    si = setInterval(function() {
+        jump();
+    }, 2000);
+}
+
+wapController.prototype.createMask = function() {
+    //获取页面高度和宽度
+    var sHeight = document.documentElement.scrollHeight,
+        sWidth = document.documentElement.scrollWidth,
+        mask = document.createElement('div');
+    mask.id = 'mask-container';
+    //遮罩层css
+    $(mask).css({
+        'background-color': 'rgba(0,0,0,0.7)',
+        'position': 'fixed',
+        'left': 0,
+        'top': 0,
+        'height': sHeight + 'px',
+        'width': sWidth + 'px',
+        'z-index': '9999',
+        'cursor': 'pointer'
+    });
+    $(document.body).append(mask);
 };
 
 /*-----------------------------------------------------------------------------------------------------------
@@ -36,11 +83,149 @@ wapController.prototype.initSwiper = function() {
 
     //Swipe
     Hammer(tableContainer).on("swipeleft", function() {
-        alert('swipeleft');
+        //顺时针移动一次，所有月饼应该变换到的位置
+        $.each(classSelf.CakePos, function(index, val) {
+            /* iterate through array or object */
+            classSelf.CakePos[index].key = classSelf.CakePos[index].key - 1 < 0 ? classSelf.CakePos.length - 1 : classSelf.CakePos[index].key - 1;
+        });
+
+        var itemCake = classSelf.CakePos[0];
+        //给每个月饼添加动画
+        $('.turntable .cake').each(function(index, el) {
+            //获取当前月饼的下一个位置信息
+            var pos = $.map(classSelf.CakePos, function(item, mapIndex) {
+                if (item.key == index) {
+                    return item;
+                }
+            })[0];
+            if (index == itemCake.key) {
+                $('.item .content img').attr({
+                    src: $(el).data('font-src')
+                });
+                $('.item .content p').text($(el).data('desc'));
+                $('.item').data('dialog', $(el).data('dialog'));
+            }
+            $(el).animate({
+                bottom: pos.bottom
+            }, {
+                queue: false,
+                easing: 'linear',
+                duration: 500
+            });
+            //左右移动动画
+            $(el).animate({
+                "margin-left": pos.marginLeft
+            }, {
+                queue: false,
+                easing: 'linear',
+                duration: 500
+            });
+            //月饼大小动画
+            $(el).animate({
+                width: pos.width
+            }, {
+                queue: false,
+                easing: 'linear',
+                duration: 500
+            });
+            $(el).animate({
+                height: pos.height
+            }, {
+                queue: false,
+                easing: 'linear',
+                duration: 500
+            });
+        });
+
+        //变换spot-list
+        var activeSpot = $('.spot-list').find('.active');
+        var nextSpot = activeSpot.next();
+        activeSpot.removeClass('active')
+        if (nextSpot.length > 0) {
+            nextSpot.addClass('active');
+        } else {
+            $('.spot-list span:first-child').addClass('active');
+        }
     });
 
     Hammer(tableContainer).on("swiperight", function() {
-        alert('swiperight');
+        //逆时针移动一次，所有月饼应该变换到的位置
+        $.each(classSelf.CakePos, function(index, val) {
+            /* iterate through array or object */
+            classSelf.CakePos[index].key = classSelf.CakePos[index].key + 1 == classSelf.CakePos.length ? 0 : classSelf.CakePos[index].key + 1;
+        });
+        var itemCake = classSelf.CakePos[0];
+        $('.turntable .cake').each(function(index, el) {
+            //获取当前月饼的下一个位置信息
+            var pos = $.map(classSelf.CakePos, function(item, mapIndex) {
+                if (item.key == index) {
+                    return item;
+                }
+            })[0];
+            if (index == itemCake.key) {
+                $('.item .content img').attr({
+                    src: $(el).data('font-src')
+                });
+                $('.item .content p').text($(el).data('desc'));
+                $('.item').data('dialog', $(el).data('dialog'))
+            }
+            //上下移动动画
+            //queue:一个布尔值，指示是否将动画放置在效果队列中。如果为false时，将立即开始动画。
+            //queue:一个布尔值，指示是否将动画放置在效果队列中。如果为false时，将立即开始动画。
+            $(el).animate({
+                left: pos.left
+            }, {
+                queue: false,
+                easing: 'linear',
+                duration: 500
+            });
+            $(el).animate({
+                bottom: pos.bottom
+            }, {
+                queue: false,
+                easing: 'linear',
+                duration: 500
+            });
+            $(el).animate({
+                "margin-right": pos.marginRight
+            }, {
+                queue: false,
+                easing: 'linear',
+                duration: 500
+            });
+            //左右移动动画
+            $(el).animate({
+                "margin-left": pos.marginLeft
+            }, {
+                queue: false,
+                easing: 'linear',
+                duration: 500
+            });
+            //月饼大小动画
+            $(el).animate({
+                width: pos.width
+            }, {
+                queue: false,
+                easing: 'linear',
+                duration: 500
+            });
+            $(el).animate({
+                height: pos.height
+            }, {
+                queue: false,
+                easing: 'linear',
+                duration: 500
+            });
+        });
+        //变换spot-list
+        var activeSpot = $('.spot-list').find('.active');
+        var prevSpot = activeSpot.prev();
+        activeSpot.removeClass('active')
+        if (prevSpot.length > 0) {
+            prevSpot.addClass('active');
+        } else {
+            $('.spot-list span:last-child').addClass('active');
+        }
     });
 }
 
@@ -49,76 +234,30 @@ wapController.prototype.initSwiper = function() {
  绑定事件
  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 wapController.prototype.bindEvent = function() {
-
     var classSelf = this;
 
-    var $btn = $('.btnSubmit');
-    var $tdList = $('.country-list table tr:not(".medal") td');
-
-    $('.country-list table tr:not(".medal")').find('td img').on('click', function() {
-        var _this = $(this);
-        $btn.attr('data-id', _this.attr('data-id'));
-
-        $tdList.removeClass('active');
-
-        _this.parent().addClass('active');
+    //item点击弹窗
+    $('.item').on('click', function(event) {
+        event.preventDefault();
+        /* Act on the event */
+        classSelf.createMask();
+        $('.dialog').hide();
+        $("." + $(this).data("dialog")).show();
+        $(document).scrollTop(0);
     });
 
-    $('.btnSubmit').on('click', function() {
-        var _this = $(this);
-        var reg = new RegExp('^[1-9]\d*|0$');
-        var txtGolden = $.trim($('#txtGolden').val());
-        var txtSilver = $.trim($('#txtSilver').val());
-        var txtCopper = $.trim($('#txtCopper').val());
-        var country = _this.attr('data-id');
-        var txtMobile = $.trim($('#custMobile').val());
-
-        var requestData = {};
-
-
-        if ($tdList.filter('.active').length == 0) {
-            classSelf.showLog('请先选择一个国家！');
-            return;
-        }
-
-        if (txtGolden.length == 0 || txtSilver.length == 0 || txtCopper.length == 0) {
-            classSelf.showLog('金、银、铜都必须猜啦');
-            return;
-        }
-
-        if (!reg.test(txtGolden) || !reg.test(txtSilver) || !reg.test(txtCopper)) {
-            classSelf.showLog('竞猜数必须是整数！');
-            return;
-        }
-
-
-        if (parseInt(txtGolden) > 999) {
-            classSelf.showLog('竞猜数不能超过999！');
-            return;
-        }
-
-        if (parseInt(txtSilver) > 999) {
-            classSelf.showLog('竞猜数不能超过999！');
-            return;
-        }
-
-        if (parseInt(txtCopper) > 999) {
-            classSelf.showLog('竞猜数不能超过999！');
-            return;
-        }
-
-        classSelf.displayDialog();
+    $('body').delegate('#mask-container,.close', 'click', function(event) {
+        $('.dialog').hide();
+        $('#mask-container').remove();
     });
 
-    if (/Android/gi.test(navigator.userAgent)) {
-        window.addEventListener('resize', function() {
-            if (document.activeElement.tagName == 'INPUT' || document.activeElement.tagName == 'TEXTAREA') {
-                window.setTimeout(function() {
-                    document.activeElement.scrollIntoViewIfNeeded();
-                }, 0);
-            }
-        })
-    }
+    $('.link').on('click', function(event) {
+        event.preventDefault();
+        /* Act on the event */
+        $('.dialog').hide();
+        $("." + $(this).data("dialog")).show();
+        $(document).scrollTop(0);
+    });
 
 };
 
