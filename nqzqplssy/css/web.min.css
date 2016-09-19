@@ -306,7 +306,7 @@ body {
   width: 15px;
   margin-right: 10px;
 }
-.dialog:before {
+.dialog:after {
   content: " ";
   width: 102%;
   height: 96%;
@@ -318,7 +318,7 @@ body {
 .dialog-three-item {
   margin-left: -350px;
 }
-.dialog-three-item:before {
+.dialog-three-item:after {
   width: 103%;
 }
 .dialog-five-item {
