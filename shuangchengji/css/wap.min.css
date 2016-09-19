@@ -23,6 +23,9 @@
 .container .content section:nth-child(5) h3 a {
   display: none;
 }
+.container .content section:nth-child(5) .item {
+  box-shadow: none;
+}
 .container .content section:nth-child(5) .item .desc {
   display: none;
 }
