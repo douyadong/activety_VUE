@@ -11,6 +11,10 @@
   position: relative;
   z-index: 200;
 }
+.web-container .brand a {
+  display: inline-block;
+  height: 30px;
+}
 .web-container .brand a:after {
   content: url(../images/web_brand.png);
   display: block;
