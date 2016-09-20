@@ -405,3 +405,9 @@ body.include-reserve {
   margin: -103px 0 0 -180px !important;
   z-index: 9999!important;
 }
+.web-container .banner {
+  height: 500px;
+}
+.web-container .banner img {
+  display: none;
+}
