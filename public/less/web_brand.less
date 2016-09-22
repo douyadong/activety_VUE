@@ -1,0 +1,48 @@
+/************************************将logo图片定在banner图的左上角**********************************************************/
+
+.web-container {
+    .header {
+        .brand {
+            position: relative;
+            z-index: 1200;
+            margin-bottom: -80px;
+        }
+    }
+    .banner {
+        position: relative;
+        z-index: 100;
+    }
+    .content {
+        position: relative;
+        z-index: 200;
+    }
+    .brand {
+        a {
+            display: inline-block;
+            height: 30px;
+            &:after {
+                content: url(../images/web_brand.png);
+                display: block;
+                margin-top: 30px;
+            }
+            img {
+                display: none;
+            }
+        }
+    }
+    .fixed-bottom {
+        z-index: 300;
+    }
+}
+
+
+/************************************banner图片改为背景图，高度固定为500**********************************************************/
+
+.web-container {
+    .banner {
+        height: 500px;
+        img {
+            display: none;
+        }
+    }
+}

@@ -7,7 +7,7 @@
 		</a>
 	</div>
 	<!--banner大图-->
-	<div class="banner">
-		<img src="<?php echo "$CURRENT_STATIC_DOMAIN/" . $router["activity_name"] . "/images/web_banner.jpg"?>" />
+	<div class="banner" style="background:url(<?php echo "$CURRENT_STATIC_DOMAIN/" . $router["activity_name"] . "/images/web_banner.jpg"?>) no-repeat center center">
+		<img src="<?php echo "$CURRENT_STATIC_DOMAIN/" . $router["activity_name"] . "/images/web_banner.jpg"?>" style="height:500px;"/>
 	</div>
 </div>
