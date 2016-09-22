@@ -56,7 +56,7 @@
         0 => array(
           'estateId' => '',
           'estateName' => '',
-          'webLink' => '',
+          'webLink' => 'javascript:;',
           'wapLink' => '',
           'price' => '',
           'webImg' => '上海和嘉兴.jpg',
@@ -98,6 +98,30 @@
           'hotline' => '4008208907',
           'hotlineSubNum' => '6246',
         ),
+        2 => 
+        array (
+          'estateId' => '155079',
+          'estateName' => '四季香榭',
+          'webLink' => 'http://www.wkzf.com/shanghai/xfdetail/0b64da93d4a7e7de.html',
+          'wapLink' => 'http://m.wkzf.com/shanghai/xfdetail/0b64da93d4a7e7de.html',
+          'price' => '8500',
+          'webImg' => '四季香榭.jpg',
+          'wapImg' => '四季香榭.jpg',
+          'hotline' => '4008208907',
+          'hotlineSubNum' => '6320',
+        ),
+        3 => 
+        array (
+          'estateId' => '155715',
+          'estateName' => '名城花苑',
+          'webLink' => 'http://www.wkzf.com/shanghai/xfdetail/949476d3b6f66d34.html',
+          'wapLink' => 'http://m.wkzf.com/shanghai/xfdetail/949476d3b6f66d34.html',
+          'price' => '7000',
+          'webImg' => '名城花苑.jpg',
+          'wapImg' => '名城花苑.jpg',
+          'hotline' => '4008208907',
+          'hotlineSubNum' => '6321',
+        )
       ),
     ),
     2 => 
@@ -130,6 +154,30 @@
           'wapImg' => '万联城.jpg',
           'hotline' => '4008208907',
           'hotlineSubNum' => '6248',
+        ),
+        2 => 
+        array (
+          'estateId' => '155706',
+          'estateName' => '嘉兴万达广场',
+          'webLink' => 'http://www.wkzf.com/shanghai/xfdetail/3ab567a2f1c64d66.html',
+          'wapLink' => 'http://m.wkzf.com/shanghai/xfdetail/3ab567a2f1c64d66.html',
+          'price' => '8000',
+          'webImg' => '嘉兴万达广场.jpg',
+          'wapImg' => '嘉兴万达广场.jpg',
+          'hotline' => '4008208907',
+          'hotlineSubNum' => '6322',
+        ),
+        3 => 
+        array (
+          'estateId' => '155623',
+          'estateName' => '嘉兴尚海年华',
+          'webLink' => 'http://www.wkzf.com/shanghai/xfdetail/3ab567a2f1c64d66.html',
+          'wapLink' => 'http://m.wkzf.com/shanghai/xfdetail/f2311b7eeb1c8667.html',
+          'price' => '6500',
+          'webImg' => '嘉兴尚海年华.jpg',
+          'wapImg' => '嘉兴尚海年华.jpg',
+          'hotline' => '4008208907',
+          'hotlineSubNum' => '6323',
         ),
       ),
     ),
