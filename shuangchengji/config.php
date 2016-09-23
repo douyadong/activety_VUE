@@ -171,7 +171,7 @@
         array (
           'estateId' => '155623',
           'estateName' => '嘉兴尚海年华',
-          'webLink' => 'http://www.wkzf.com/shanghai/xfdetail/3ab567a2f1c64d66.html',
+          'webLink' => 'http://www.wkzf.com/shanghai/xfdetail/f2311b7eeb1c8667.html',
           'wapLink' => 'http://m.wkzf.com/shanghai/xfdetail/f2311b7eeb1c8667.html',
           'price' => '6500',
           'webImg' => '嘉兴尚海年华.jpg',
