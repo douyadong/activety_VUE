@@ -76,14 +76,14 @@ img{
 <body>
 <div class="wap-container">
 	<div class="wap-module">
-		<img class="lazy" data-src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/11.jpg"/>
-		<img class="lazy" data-src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/12.jpg"/>
+		<img class="" src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/11.jpg"/>
+		<img class="" src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/12.jpg"/>
 		<a class="a11" href="http://m.wkzf.com/shanghai/xfdetail/6da9820a01a8420b.html">
-			<img class="lazy" data-src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/13.jpg"/>
+			<img class="" src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/13.jpg"/>
 		</a>
-		<img class="lazy" data-src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/14.jpg"/>
+		<img class="" src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/14.jpg"/>
 		<div class="linkBox">
-			<img class="lazy" data-src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/15.jpg"/>
+			<img class="" src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/15.jpg"/>
 			<div class="linklist clearfix">
 				<a class="a12" href="http://m.wkzf.com/shanghai/esf/6b646e61f7981d58.html?cityId=43"></a>
 				<a class="a13" href="http://m.wkzf.com/shanghai/esf/1b8caf553a553894.html?cityId=43"></a>
@@ -92,9 +92,9 @@ img{
 		</div>
 	</div>
 	<div class="wap-module">
-		<img class="lazy" data-src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/21.jpg"/>
+		<img class="" src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/21.jpg"/>
 		<div class="linkBox">
-			<img class="lazy" data-src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/22.jpg"/>
+			<img class="" src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/22.jpg"/>
 			<div class="linklist padding3 clearfix">
 				<a class="a21" href="http://m.wkzf.com/shanghai/esf/f1b9340bacd1c210.html"></a>
 				<a class="a22" href="http://m.wkzf.com/shanghai/esf/f8b9acdd3426d2a3.html?cityId=43"></a>
@@ -103,13 +103,13 @@ img{
 		</div>
 	</div>
 	<div class="wap-module">
-		<img class="lazy" data-src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/31.jpg"/>
+		<img class="" src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/31.jpg"/>
 		<a class="a31" href="http://m.wkzf.com/shanghai/xfdetail/45655e7dd4892fc7.html">
-			<img class="lazy" data-src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/32.jpg"/>
+			<img class="" src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/32.jpg"/>
 		</a>
-		<img class="lazy" data-src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/33.jpg"/>
+		<img class="" src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/33.jpg"/>
 		<div class="linkBox">
-			<img class="lazy" data-src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/34.jpg"/>
+			<img class="" src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/34.jpg"/>
 			<div class="linklist padding3 clearfix">
 				<a class="a32" href="http://m.wkzf.com/shanghai/esf/052c0547007e0abf.html?cityId=43"></a>
 				<a class="a33" href="http://m.wkzf.com/shanghai/esf/052c0547007e0abf.html?cityId=43"></a>
@@ -118,9 +118,9 @@ img{
 		</div>
 	</div>
 	<div class="wap-module">
-		<img class="lazy" data-src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/41.jpg"/>
+		<img class="" src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/41.jpg"/>
 		<div class="linkBox">
-			<img class="lazy" data-src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/42.jpg"/>
+			<img class="" src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/42.jpg"/>
 			<div class="linklist padding3 clearfix">
 				<a class="a41" href="http://m.wkzf.com/shanghai/esf/f5f9f0c215d20125.html"></a>
 				<a class="a42" href="http://m.wkzf.com/shanghai/esf/a17e3e465d8842ec.html"></a>
@@ -129,17 +129,17 @@ img{
 		</div>
 	</div>
 	<div class="wap-module">
-		<img class="lazy" data-src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/51.jpg"/>
+		<img class="" src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/51.jpg"/>
 		<a class="a51" href="http://m.wkzf.com/shanghai/xfdetail/8fce56db22e3888e.html">
-			<img class="lazy" data-src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/52.jpg"/>
+			<img class="" src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/52.jpg"/>
 		</a>
-		<img class="lazy" data-src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/53.jpg"/>
+		<img class="" src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/53.jpg"/>
 		<a class="a52" href="http://m.wkzf.com/shanghai/xfdetail/e3c0b4a5e19f4d2e.html">
-			<img class="lazy" data-src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/54.jpg"/>
+			<img class="" src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/54.jpg"/>
 		</a>
-		<img class="lazy" data-src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/55.jpg"/>
+		<img class="" src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/55.jpg"/>
 		<div class="linkBox">
-			<img class="lazy" data-src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/56.jpg"/>
+			<img class="" src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/56.jpg"/>
 			<div class="linklist padding3 clearfix">
 				<a class="a53" href="http://m.wkzf.com/shanghai/esf/8aa7bcf14206fdd2.html"></a>
 				<a class="a54" href="http://m.wkzf.com/shanghai/esf/4db81d582d75ce3d.html?cityId=43"></a>
@@ -148,19 +148,19 @@ img{
 		</div>
 	</div>
 	<div class="wap-module">
-		<img class="lazy" data-src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/61.jpg"/>
+		<img class="" src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/61.jpg"/>
 		<div class="btnlist clearfix">
 			<a href="http://m.wkzf.com" class="btn1">
-				<img class="lazy" data-src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/btn1.jpg"/>
+				<img class="" src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/btn1.jpg"/>
 			</a>
 			<a href="http://m.wkzf.com/shanghai/esf" class="btn2">
-				<img class="lazy" data-src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/btn2.jpg"/>
+				<img class="" src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/btn2.jpg"/>
 			</a>
 			<a href="http://m.wkzf.com/shanghai/xflist" class="btn3">
-				<img class="lazy" data-src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/btn3.jpg"/>
+				<img class="" src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/btn3.jpg"/>
 			</a>
 		</div>
-		<img class="lazy" data-src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/62.jpg"/>
+		<img class="" src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/62.jpg"/>
 	</div>
 </div>
 
