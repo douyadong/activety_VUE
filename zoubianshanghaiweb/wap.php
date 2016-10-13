@@ -112,7 +112,7 @@ img{
 			<img class="" src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/34.jpg"/>
 			<div class="linklist padding3 clearfix">
 				<a class="a32" href="http://m.wkzf.com/shanghai/esf/052c0547007e0abf.html?cityId=43"></a>
-				<a class="a33" href="http://m.wkzf.com/shanghai/esf/052c0547007e0abf.html?cityId=43"></a>
+				<a class="a33" href="http://m.wkzf.com/shanghai/esf/2aa9df9a45ee3b15.html"></a>
 				<a class="a34" href="http://m.wkzf.com/shanghai/esf/88173930d2d9a7ce.html?cityId=43"></a>
 			</div>
 		</div>
