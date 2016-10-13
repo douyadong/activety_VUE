@@ -197,4 +197,7 @@ img{
 	})();
 </script>
 </body>
-</html><!--保存内容到当前请求同名的html文件中,比如请求的是web.php，那么会生成web.html-->
+</html>
+
+<?php require_once("../public/components/save_file.php");?>
+<!--保存内容到当前请求同名的html文件中,比如请求的是web.php，那么会生成web.html-->
