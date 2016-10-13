@@ -169,7 +169,7 @@ img{
 <!--微信分享-->
 <input type="hidden" id="wechatTitle" value="住在这些地方的你，成为了大家眼里的风景。"/>
 <input type="hidden" id="wechatContent" value="细数上海最具风情地段，火热精选楼盘等你来看。"/>
-<input type="hidden" id="wechatImgUrl" value="//devhd.fe.wkzf/zhongliangtianyueyihao/images/wechat_shared.jpg"/> 
+<input type="hidden" id="wechatImgUrl" value="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/weixin.jpg"/>
 
 <!--页面脚本区域-->
 <!--这里是微信分享的脚本-->        
