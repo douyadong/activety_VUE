@@ -50,7 +50,7 @@
     array (
       'name' => '奢华大气型',
       'webLink' => 'http://www.wkzf.com/shanghai/xflist/p9 ',
-      //'wapLink' => 'http://m.wkzf.com/shanghai/xflist/p9',
+      'wapLink' => 'http://m.wkzf.com/shanghai/xflist/p9',
       'estates' => 
       array (
         0 => 
