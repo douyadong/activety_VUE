@@ -1,5 +1,8 @@
 <?php require_once("../public/global.php")?>
 <?php
+	ob_start();
+?>
+<?php
 	$config = array(
 		"imgs"=>array(array(
 			"url" => "web_01.jpg",
@@ -173,48 +176,66 @@
 </div>
 <div class="success-dialog">
     <div class="success-dialog-bg"></div>
-    <div class="w-alert-win" style="background: url('//devhd.fe.wkzf/public/images/reserve_success.jpg') no-repeat scroll;"><span id="closeSuccess"></span></div>
+    <div class="w-alert-win" style="background: url('<?php echo $CURRENT_STATIC_DOMAIN?>/public/images/reserve_success.jpg') no-repeat scroll;"><span id="closeSuccess"></span></div>
+</div>
+<div id="joinDialog" style="display:none">   
+	<div style="background:rgba(0,0,0,.4);bottom:0;left:0;right:0;position:fixed;top:0;z-index:9998"></div>
+	<div style="padding:0 30% 30% 30%;z-index:9999;position:fixed;width:100%;top:60px">
+		<img src='<?php echo $CURRENT_STATIC_DOMAIN . '/' . $router["activity_name"] . '/images/web/popup.png'?>'/>
+    </div>  
 </div>
 	</body>	
 	<script type="text/javascript">
-		function createMap(){
-	$('map').remove();//删除map元素
-	$('img[data-original-demension').each(function(index,img){//遍历有data-original-demension的img元素
-		//读取原始大小
-		var $this = $(this);
-		var $body = $('body');
-		var originalDemesion = $this.data('original-demension');
-		var originalWidth = originalDemesion[0];
-		var originalHeight = originalDemesion[1];
-		var currentWidth = $this.width();
-		var currentHeight = $this.height();
-		
-		//读取热点信息
-		var shapes = $this.data('shapes');
-		var name = $this.attr('name') || ('img_original_demesion'+index);
-		var mapName = "map_"+name;
-		var $map = $('<map></map>');
-		$map.attr('name',mapName);
-		var x1,x2,y1,y2,href;
-		var xRatio = currentWidth/originalWidth;
-		var yRatio = currentHeight/originalHeight;
-		$.each(shapes,function(j,shape){
-			x1 = parseInt(shape[0] * xRatio);
-			y1 = parseInt(shape[1] * yRatio);
-			x2 = parseInt((shape[0]+shape[2]) * xRatio);
-			y2 = parseInt((shape[1]+shape[3]) * yRatio);
-			href = shape[4];
-			$map.append($('<area shape="rect" coords="'+(x1+","+y1+","+x2+","+y2)+'" href="'+href+'"></area>'));
+	function createMap(){
+		$('map').remove();//删除map元素
+		$('img[data-original-demension').each(function(index,img){//遍历有data-original-demension的img元素
+			//读取原始大小
+			var $this = $(this);
+			var $body = $('body');
+			var originalDemesion = $this.data('original-demension');
+			var originalWidth = originalDemesion[0];
+			var originalHeight = originalDemesion[1];
+			var currentWidth = $this.width();
+			var currentHeight = $this.height();
+			
+			//读取热点信息
+			var shapes = $this.data('shapes');
+			var name = $this.attr('name') || ('img_original_demesion'+index);
+			var mapName = "map_"+name;
+			var $map = $('<map></map>');
+			$map.attr('name',mapName);
+			var x1,x2,y1,y2,href;
+			var xRatio = currentWidth/originalWidth;
+			var yRatio = currentHeight/originalHeight;
+			$.each(shapes,function(j,shape){
+				x1 = parseInt(shape[0] * xRatio);
+				y1 = parseInt(shape[1] * yRatio);
+				x2 = parseInt((shape[0]+shape[2]) * xRatio);
+				y2 = parseInt((shape[1]+shape[3]) * yRatio);
+				href = shape[4];
+				$map.append($('<area shape="rect" coords="'+(x1+","+y1+","+x2+","+y2)+'" href="'+href+'"></area>'));
+			});
+			$body.append($map);
+			$this.attr('usemap',"#"+mapName);
 		});
-		$body.append($map);
-		$this.attr('usemap',"#"+mapName);
-	});
-}
+	}
+
+	function showDialog(){
+		$('#joinDialog').show();
+	}
 
 	$(function(){		
 		$(window).on('resize',createMap);
+
+		$('#joinDialog img').click(function(){
+			$('#joinDialog').hide();
+		});
 	});
 	window.onload = createMap;
-
 	</script>
+	<?php require_once("../public/components/GA_Baidu_statistic.php");?>
 </html>
+<?php
+	require_once("../public/components/save_file.php");
+	ob_end_flush();
+?>

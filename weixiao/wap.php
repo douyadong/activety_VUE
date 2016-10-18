@@ -1,15 +1,23 @@
 <?php require_once("../public/global.php")?>
 <?php
+	ob_start();
+?>
+<?php
 	$config = array(
-		"imgs"=>array(array(
+		"wechat_title" =>"微笑力MAX 微笑达人力荐热盘",
+		"wechat_content" => "微笑达人力荐热盘 低总价 准现房 大品牌 任性购 地铁旁",
+		"page_title" => "悟空找房_十月微笑力max_微笑达人力荐楼盘",
+		"page_description" => "悟空找房十月推出微笑力max活动,参与活动可得精美礼品,微笑达人为您推荐楼盘,低总价楼盘,不限购,上海周边高性价比现房楼盘,地铁轨交房,地铁规划线路房,买房就上悟空找房",
+		"page_keywords" => "热门楼盘,现房,低价楼盘,不限购,轨交房,高性价比楼盘",
+		"imgs"=>array(array(//顶部【点击参与】按钮
 			"url" => "03_h5_01.jpg",
 			"original-demesion" => "[750,628]",
 			"shapes" => '[[498,560,146,61,"javascript:showDialog()"]]'
-		),array(
+		),array(//新西塘孔雀城
 			"url" => "03_h5_02.jpg",
 			"original-demesion" => "[750,946]",
 			"shapes" => '[[85,593,582,356,"http://m.wkzf.com/shanghai/xfdetail/c0e1f04866474879.html"]]'
-		),array(
+		),array(//雅居
 			"url" => "03_h5_03.jpg",
 			"original-demesion" => "[750,237]",
 			"shapes" => '[[427,114,200,60,"javascript:reserve(0)"]]'
@@ -290,8 +298,7 @@
 		<?php
 			}
 		?>	
-
-		<div class="reserve-form">
+<div class="reserve-form">
 	<div class="content">
 		<h3>看房预约</h3>
 		<div class="item">
@@ -318,46 +325,67 @@
         <span id="closeSuccess" class="close-success">确   定</span>
     </div>
 </div>	
+
+<div id="joinDialog" style="display:none">   
+	<div style="background:rgba(0,0,0,.4);bottom:0;left:0;right:0;position:fixed;top:0;z-index:9998"></div>
+	<div style="padding:0 10% 10% 10%;z-index:9999;position:fixed;width:100%;top:30px">
+		<img src='<?php echo $CURRENT_STATIC_DOMAIN . '/' . $router["activity_name"] . '/images/wap/popup.png'?>'/>
+    </div>  
+</div>
 	</body>	
+	<?php require_once("../public/components/wap/wechatshare.php") ; ?>
+
 	<script type="text/javascript">
-		function createMap(){
-	$('map').remove();//删除map元素
-	$('img[data-original-demension').each(function(index,img){//遍历有data-original-demension的img元素
-		//读取原始大小
-		var $this = $(this);
-		var $body = $('body');
-		var originalDemesion = $this.data('original-demension');
-		var originalWidth = originalDemesion[0];
-		var originalHeight = originalDemesion[1];
-		var currentWidth = $this.width();
-		var currentHeight = $this.height();
-		
-		//读取热点信息
-		var shapes = $this.data('shapes');
-		var name = $this.attr('name') || ('img_original_demesion'+index);
-		var mapName = "map_"+name;
-		var $map = $('<map></map>');
-		$map.attr('name',mapName);
-		var x1,x2,y1,y2,href;
-		var xRatio = currentWidth/originalWidth;
-		var yRatio = currentHeight/originalHeight;
-		$.each(shapes,function(j,shape){
-			x1 = parseInt(shape[0] * xRatio);
-			y1 = parseInt(shape[1] * yRatio);
-			x2 = parseInt((shape[0]+shape[2]) * xRatio);
-			y2 = parseInt((shape[1]+shape[3]) * yRatio);
-			href = shape[4];
-			$map.append($('<area shape="rect" coords="'+(x1+","+y1+","+x2+","+y2)+'" href="'+href+'"></area>'));
+	function createMap(){
+		$('map').remove();//删除map元素
+		$('img[data-original-demension').each(function(index,img){//遍历有data-original-demension的img元素
+			//读取原始大小
+			var $this = $(this);
+			var $body = $('body');
+			var originalDemesion = $this.data('original-demension');
+			var originalWidth = originalDemesion[0];
+			var originalHeight = originalDemesion[1];
+			var currentWidth = $this.width();
+			var currentHeight = $this.height();
+			
+			//读取热点信息
+			var shapes = $this.data('shapes');
+			var name = $this.attr('name') || ('img_original_demesion'+index);
+			var mapName = "map_"+name;
+			var $map = $('<map></map>');
+			$map.attr('name',mapName);
+			var x1,x2,y1,y2,href;
+			var xRatio = currentWidth/originalWidth;
+			var yRatio = currentHeight/originalHeight;
+			$.each(shapes,function(j,shape){
+				x1 = parseInt(shape[0] * xRatio);
+				y1 = parseInt(shape[1] * yRatio);
+				x2 = parseInt((shape[0]+shape[2]) * xRatio);
+				y2 = parseInt((shape[1]+shape[3]) * yRatio);
+				href = shape[4];
+				$map.append($('<area shape="rect" coords="'+(x1+","+y1+","+x2+","+y2)+'" href="'+href+'"></area>'));
+			});
+			$body.append($map);
+			$this.attr('usemap',"#"+mapName);
 		});
-		$body.append($map);
-		$this.attr('usemap',"#"+mapName);
-	});
-}
+	}
+
+	function showDialog(){
+		$('#joinDialog').show();
+	}
 
 	$(function(){		
 		$(window).on('resize',createMap);
+
+		$('#joinDialog img').click(function(){
+			$('#joinDialog').hide();
+		});
 	});
 	window.onload = createMap;
-
 	</script>
+	<?php require_once("../public/components/GA_Baidu_statistic.php");?>
 </html>
+<?php
+	require_once("../public/components/save_file.php");
+	ob_end_flush();
+?>
