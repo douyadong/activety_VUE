@@ -1,1 +1,528 @@
-#yyForm.w-dialog{background:rgba(0,0,0,.5);display:none;height:100%;left:0;right:0;position:fixed;top:0;width:100%;z-index:999}#yyForm.w-dialog .w-alert-box{background-size:100% 100%;left:50%;margin-left:-150px;margin-top:-160px;position:absolute;top:50%;width:300px}#yyForm.w-dialog .w-alert-box .alertlogo{margin-bottom:2px}#yyForm.w-dialog .w-alert-box .form,#yyForm.w-dialog .w-alert-box .form .item{margin-bottom:5px}#yyForm.w-dialog .w-alert-box .form .item span{float:left;font-size:12px}#yyForm.w-dialog .w-alert-box .form .item .input-box input,#yyForm.w-dialog .w-alert-box .form .item .input-box select{border:none;height:28px;line-height:28px;padding-left:10px;width:100%;-moz-border-radius:0;-webkit-border-radius:0;border-radius:0}#yyForm.w-dialog .w-alert-box .form .item .input-box .send-code-btn{width:100px;text-align:center}#yyForm.w-dialog .w-alert-box .form .tips-txt{font-size:14px;text-align:center}#yyForm.w-dialog .w-alert-box .btn-list:after{clear:both;content:" ";display:block;font-size:0;height:0;visibility:hidden}#yyForm.w-dialog .w-alert-box .btn-list>div{float:left;width:125px;padding-right:15px}#yyForm.w-dialog .w-alert-box .btn-list>div span{background:#ff0;color:#4081D6;display:block;font-size:14px;height:44px;line-height:44px;width:100%;text-align:center}#yyForm.w-dialog .w-alert-box .btn-list>div:last-child{font-size:14px;padding-right:0;padding-left:15px}#Success.w-dialog{background:rgba(0,0,0,.5);display:none;height:100%;left:0;right:0;position:fixed;top:0;width:100%;z-index:999}#Success.w-dialog .w-alert-box{background:url(../img/source/smartCity/smartM-bg-reserve.jpg) no-repeat;background-size:100% 100%;height:320px;left:50%;margin-left:-150px;margin-top:-160px;position:absolute;padding:10px 0;top:50%;width:300px}#Success.w-dialog .w-alert-box .alertlogo{margin-bottom:2px}#Success.w-dialog .w-alert-box .text{font-size:24px;font-weight:700;color:#ff0;text-align:center;text-indent:8px;margin:20px 0}#Success.w-dialog .success-box{background-repeat:no-repeat;background-size:100%;position:relative}.butbox,.fixed-bottom{position:fixed;bottom:0}#Success.w-dialog .success-box span.close-success{color:#4081D6}.fixed-bottom{background:#203f6b;width:100%;text-align:center;z-index:99}#yyForm.w-dialog .w-alert-box{background:#fff;border-radius:5px;height:auto;padding:5px 0}#yyForm.w-dialog .w-alert-box .text{text-align:center;text-indent:8px;color:#4e4e4e;background:#fff;font-weight:400;margin:10px 0;font-size:16px}#yyForm.w-dialog .w-alert-box .btn-list{border-top:1px solid #cfcfcf;display:-webkit-box;display:-webkit-flex;display:flex;display:box;display:block;margin:0}#yyForm.w-dialog .w-alert-box .btn-list div{-webkit-box-flex:1;-webkit-flex:1;box-flex:1;flex:1;width:50%}#yyForm.w-dialog .w-alert-box .btn-list div span{font-size:16px;background:#fff;color:#3e7ed0;text-align:center}#yyForm.w-dialog .w-alert-box .btn-list div:last-child{border-left:1px solid #cfcfcf}#yyForm.w-dialog .w-alert-box .form{padding:0 15px}#yyForm.w-dialog .w-alert-box .form .item{border-bottom:1px solid #cfcfcf;height:40px;line-height:40px}#yyForm.w-dialog .w-alert-box .form .item span{color:#999;height:40px;line-height:40px;width:50px}#yyForm.w-dialog .w-alert-box .form .item .input-box{overflow:hidden;height:40px;line-height:40px}#yyForm.w-dialog .w-alert-box .form .item .input-box .code{float:left;width:90px;height:38px;line-height:38px}.butbox,.wrapper img{width:100%}#yyForm.w-dialog .w-alert-box .form .item .input-box .send-code-btn{background:#4081d6;color:#fff;float:right;height:30px;line-height:30px;border-radius:5px;margin-top:5px}#yyForm.w-dialog .w-alert-box .form .item .input-box .disabled{background:#ccc}#yyForm.w-dialog .w-alert-box .form .tips-txt{color:red;height:auto}#Success.w-dialog .success-box{background:#fff;height:170px;border-radius:5px;overflow:hidden}#Success.w-dialog .success-box .text{color:#4e4e4e;background:#fff;font-weight:400;margin:10px 0;font-size:16px}#Success.w-dialog .success-box span.close-success{background:#FFF;display:block;font-size:18px;height:44px;line-height:44px;margin:35px auto;text-align:center;width:100%;border-top:1px solid #cfcfcf}#Success.w-dialog .success-box .fz14{font-size:14px;padding:0 20px}.butbox{display:-webkit-box;display:-webkit-flex;display:flex;display:box;left:0;height:55px;padding-top:8px}.butbox a{-webkit-box-flex:1;-webkit-flex:1;box-flex:1;flex:1;text-align:center;height:47px;line-height:47px;color:#fff;display:block;font-size:16px;background:#4a87d8;-webkit-box-shadow:0 0 15px #ccc}.butbox a.appointmentbtn{background:#5e85e9}.butbox a:nth-child(1){background-color:#fff;color:#5e85e9}.icon-phone{background-color:#4081d5!important;border-radius:15px;color:#fff;display:inline-block;line-height:1.8em;height:1.6em;-moz-border-radius:15px;-webkit-border-radius:15px;cursor:pointer;background-image:url(../images/phone.png);background-repeat:no-repeat;background-position:10px center;padding:0 .2em 0 30px;font-size:16px;margin-top:-.2em}html{font-size:10px}.wk-toast{margin:auto;padding:10px}input,textarea{-webkit-appearance:none}#closeBtn{margin-left:-6px}#sendBtn{margin-left:10px}.wrapper .country-container{margin-top:-1px;position:relative}.wrapper .country-container .country-list{position:absolute;top:-15px;left:15px;right:15px}.wrapper .country-container .country-list table{width:95%}.wrapper .country-container .country-list table tr td{position:relative;text-align:center;font-size:12px}.wrapper .country-container .country-list table tr td img{display:inline;height:66px;margin-bottom:5px}.wrapper .country-container .country-list table tr td img.gou_img{position:absolute;width:30px;height:25px;display:none;bottom:10px;right:-10px}.wrapper .country-container .country-list table tr td.sep{width:7px}.wrapper .country-container .country-list table tr td.active img.gou_img{display:inline}.wrapper .country-container .country-list table tr.sep{height:5px}@media screen and (device-aspect-ratio:40/71){.wrapper .country-container .country-list{top:-25px}.wrapper .country-container .country-list table tr.sep{height:0}}.wrapper .country-container .country-list table tr.medal td img{width:60%;height:50%}.wrapper .country-container .country-list table tr.medal td input{width:25px;border-top:none;border-right:none;border-left:none;border-bottom:2px solid #333;background-color:#fcde28;font-size:12px;text-align:center;color:#333;font-weight:700;font-style:italic;outline:0;-moz-border-radius:0;-webkit-border-radius:0;border-radius:0}.wrapper .country-container .country-list table tr.medal td #txtGolden{background-color:#fc0}.wrapper .country-container .btnSubmit{position:absolute;width:120px;height:35px;bottom:90px;z-index:100;left:33%;opacity:0}@media screen and (device-aspect-ratio:40/71){.wrapper .country-container .btnSubmit{width:110px;bottom:70px}}
+/*-----------------------------------------------------------------------------------------------------------
+项目名称：奥运嘉年华
+页面路径：olympic/index.php
+作者：yuxiaochen@lifang.com
+-----------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 1. 项目名称：悟空找房活动推广前端MVC框架
+ 2. 文件名称：mixins (混合)
+ 3. 作者：zhaohuagang@lifang.com
+ 4. taken from activity_template
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 1. 项目名称：悟空找房前端MVC框架
+ 2. 文件名称：background.less(混合 -> 背景类)
+ 3. 作者：zhaohuagang@guanaihui.com
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 1. 项目名称：悟空找房前端MVC框架
+ 2. 文件名称：background.less(混合 -> 圆角类)
+ 3. 作者：zhaohuagang@guanaihui.com
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 1. 项目名称：悟空找房前端MVC框架
+ 2. 文件名称：background.less(混合 -> 块级化并居中类)
+ 3. 作者：zhaohuagang@guanaihui.com
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 1.  项目名称：悟空找房前端MVC框架
+ 2. 文件名称：display.less(混合 -> 显示方式类)
+ 3. 作者：zhaohuagang@guanaihui.com
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 1. 项目名称：悟空找房前端MVC框架
+ 2. 文件名称：float.less(混合 -> 浮动类)
+ 3. 作者：zhaohuagang@guanaihui.com
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 1. 项目名称：悟空找房前端MVC框架
+ 2. 文件名称：background.less(混合 -> 字体类)
+ 3. 作者：zhaohuagang@guanaihui.com
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 1. 项目名称：悟空找房前端MVC框架
+ 2. 文件名称：background.less(混合 -> 文本类)
+ 3. 作者：zhaohuagang@guanaihui.com
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 1. 项目名称：悟空找房前端MVC框架
+ 2. 文件名称：background.less(混合 -> 三角符号类)
+ 3. 作者：zhaohuagang@guanaihui.com
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------
+wap端第二种预约样式表
+----------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 1. 项目名称：悟空找房活动推广页前端MVC框架
+ 2. 文件名称：variables.less (整个应用的风格变量)
+ 3. 作者：yinqin@lifang.com
+ 4. taken from activity_template by tangxuyang@lifang.com
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 1. 项目名称：悟空找房活动推广页前端MVC框架
+ 2. 文件名称：variables->global.less (全局变量)
+ 3. 作者：lifang@lifang.com
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+块级颜色设置
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+线条颜色设置
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+阴影设置
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+字体颜色设置
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+字体设置
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+尺寸设置
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 1. 项目名称：悟空找房活动推广前端MVC框架
+ 2. 文件名称：smartCity->index.less (智慧城Web)
+ 3. 作者：lifang@lifang.com
+ 4. 更新: tangxuyang@lifang 2016-07-14
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+#yyForm.w-dialog {
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  height: 100%;
+  left: 0;
+  right: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+#yyForm.w-dialog .w-alert-box {
+  background: url(../img/source/smartCity/smartM-bg-reserve.jpg) no-repeat;
+  background-size: 100% 100%;
+  height: 320px;
+  left: 50%;
+  margin-left: -150px;
+  margin-top: -160px;
+  position: absolute;
+  padding: 10px 0;
+  top: 50%;
+  width: 300px;
+}
+#yyForm.w-dialog .w-alert-box .alertlogo {
+  margin-bottom: 2px;
+}
+#yyForm.w-dialog .w-alert-box .text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffff00;
+  text-align: center;
+  text-indent: 8px;
+  margin: 20px 0;
+}
+#yyForm.w-dialog .w-alert-box .form {
+  padding: 0 35px;
+  margin-bottom: 5px;
+}
+#yyForm.w-dialog .w-alert-box .form .item {
+  height: 28px;
+  margin-bottom: 5px;
+}
+#yyForm.w-dialog .w-alert-box .form .item span {
+  color: #fff;
+  float: left;
+  width: 40px;
+  font-size: 12px;
+  height: 28px;
+  line-height: 28px;
+}
+#yyForm.w-dialog .w-alert-box .form .item .input-box {
+  height: 28px;
+  overflow: hidden;
+}
+#yyForm.w-dialog .w-alert-box .form .item .input-box input,
+#yyForm.w-dialog .w-alert-box .form .item .input-box select {
+  border: none;
+  height: 28px;
+  line-height: 28px;
+  padding-left: 10px;
+  width: 100%;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+#yyForm.w-dialog .w-alert-box .form .item .input-box .code {
+  float: left;
+  width: 90px;
+}
+#yyForm.w-dialog .w-alert-box .form .item .input-box .send-code-btn {
+  background: #ffff00;
+  color: #4081D6;
+  float: left;
+  width: 100px;
+  text-align: center;
+}
+#yyForm.w-dialog .w-alert-box .form .tips-txt {
+  color: #ffff00;
+  font-size: 14px;
+  height: 20px;
+  text-align: center;
+}
+#yyForm.w-dialog .w-alert-box .btn-list {
+  margin: 5px 25px 0;
+  *zoom: 1;
+}
+#yyForm.w-dialog .w-alert-box .btn-list:after {
+  clear: both ;
+  content: " ";
+  display: block ;
+  font-size: 0 ;
+  height: 0 ;
+  visibility: hidden ;
+}
+#yyForm.w-dialog .w-alert-box .btn-list > div {
+  float: left;
+  width: 125px;
+  padding-right: 15px;
+}
+#yyForm.w-dialog .w-alert-box .btn-list > div span {
+  background: #ffff00;
+  color: #4081D6;
+  display: block;
+  font-size: 14px;
+  height: 44px;
+  line-height: 44px;
+  width: 100%;
+  text-align: center;
+}
+#yyForm.w-dialog .w-alert-box .btn-list > div:last-child {
+  font-size: 14px;
+  padding-right: 0;
+  padding-left: 15px;
+}
+#Success.w-dialog {
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  height: 100%;
+  left: 0;
+  right: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+#Success.w-dialog .w-alert-box {
+  background: url(../img/source/smartCity/smartM-bg-reserve.jpg) no-repeat;
+  background-size: 100% 100%;
+  height: 320px;
+  left: 50%;
+  margin-left: -150px;
+  margin-top: -160px;
+  position: absolute;
+  padding: 10px 0;
+  top: 50%;
+  width: 300px;
+}
+#Success.w-dialog .w-alert-box .alertlogo {
+  margin-bottom: 2px;
+}
+#Success.w-dialog .w-alert-box .text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffff00;
+  text-align: center;
+  text-indent: 8px;
+  margin: 20px 0;
+}
+#Success.w-dialog .success-box {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 192px;
+  position: relative;
+}
+#Success.w-dialog .success-box span.close-success {
+  background: #ffff00;
+  color: #4081D6;
+  display: block;
+  font-size: 18px;
+  height: 44px;
+  line-height: 44px;
+  margin: 122px auto;
+  text-align: center;
+  width: 152px;
+}
+.fixed-bottom {
+  background: #203f6b;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  z-index: 99;
+}
+#yyForm.w-dialog .w-alert-box {
+  background: #fff;
+  border-radius: 5px;
+  height: auto;
+  padding: 5px 0;
+}
+#yyForm.w-dialog .w-alert-box .text {
+  color: #4e4e4e;
+  background: #fff;
+  font-weight: normal;
+  margin: 10px 0;
+  font-size: 16px;
+}
+#yyForm.w-dialog .w-alert-box .btn-list {
+  border-top: 1px solid #cfcfcf;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  display: box;
+  display: block;
+  margin: 0;
+}
+#yyForm.w-dialog .w-alert-box .btn-list div {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  box-flex: 1;
+  flex: 1;
+  width: 50%;
+}
+#yyForm.w-dialog .w-alert-box .btn-list div span {
+  font-size: 16px;
+  background: #fff;
+  color: #3e7ed0;
+  text-align: center;
+}
+#yyForm.w-dialog .w-alert-box .btn-list div:last-child {
+  border-left: 1px solid #cfcfcf;
+}
+#yyForm.w-dialog .w-alert-box .form {
+  padding: 0 15px;
+}
+#yyForm.w-dialog .w-alert-box .form .item {
+  border-bottom: 1px solid #cfcfcf;
+  height: 40px;
+  line-height: 40px;
+}
+#yyForm.w-dialog .w-alert-box .form .item span {
+  color: #999999;
+  height: 40px;
+  line-height: 40px;
+  width: 50px;
+}
+#yyForm.w-dialog .w-alert-box .form .item .input-box {
+  height: 40px;
+  line-height: 40px;
+}
+#yyForm.w-dialog .w-alert-box .form .item .input-box .code {
+  float: left;
+  width: 90px;
+  height: 38px;
+  line-height: 38px;
+}
+#yyForm.w-dialog .w-alert-box .form .item .input-box .send-code-btn {
+  background: #4081d6;
+  color: #fff;
+  float: right;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+#yyForm.w-dialog .w-alert-box .form .item .input-box .disabled {
+  background: #cccccc;
+}
+#yyForm.w-dialog .w-alert-box .form .tips-txt {
+  color: red;
+  height: auto;
+}
+#Success.w-dialog .success-box {
+  background: #fff;
+  height: 170px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+#Success.w-dialog .success-box .text {
+  color: #4e4e4e;
+  background: #fff;
+  font-weight: normal;
+  margin: 10px 0;
+  font-size: 16px;
+}
+#Success.w-dialog .success-box span.close-success {
+  background: #FFF;
+  display: block;
+  font-size: 18px;
+  height: 44px;
+  line-height: 44px;
+  margin: 35px auto;
+  text-align: center;
+  width: 100%;
+  border-top: 1px solid #cfcfcf;
+}
+#Success.w-dialog .success-box .fz14 {
+  font-size: 14px;
+  padding: 0 20px;
+}
+.butbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  display: box;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 55px;
+  padding-top: 8px;
+}
+.butbox a {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  box-flex: 1;
+  flex: 1;
+  text-align: center;
+  height: 47px;
+  line-height: 47px;
+  background: #5988ff;
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  background: #4a87d8;
+  -webkit-box-shadow: 0 0 15px #ccc;
+}
+.butbox a.appointmentbtn {
+  background: #5e85e9;
+}
+.butbox a:nth-child(1) {
+  background-color: #fff;
+  color: #5e85e9;
+}
+.icon-phone {
+  background-color: #4081d5!important;
+  border-radius: 15px;
+  color: #fff;
+  display: inline-block;
+  line-height: 1.8em;
+  height: 1.6em;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  cursor: pointer;
+  background-image: url("../images/phone.png");
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  padding: 0px .2em 0px 30px;
+  font-size: 16px;
+  margin-top: -0.2em;
+}
+html {
+  font-size: 10px;
+}
+.wk-toast {
+  margin: auto;
+  padding: 10px;
+}
+input,
+textarea {
+  -webkit-appearance: none;
+}
+#closeBtn {
+  margin-left: -6px;
+}
+#sendBtn {
+  margin-left: 10px;
+}
+.wrapper img {
+  width: 100%;
+}
+.wrapper .country-container {
+  margin-top: -1px;
+  position: relative;
+}
+.wrapper .country-container .country-list {
+  position: absolute;
+  top: -15px;
+  left: 15px;
+  right: 15px;
+}
+@media screen and (device-aspect-ratio: 40/71) {
+  .wrapper .country-container .country-list {
+    top: -25px;
+  }
+}
+.wrapper .country-container .country-list table {
+  width: 95%;
+}
+.wrapper .country-container .country-list table tr td {
+  position: relative;
+  text-align: center;
+  font-size: 12px;
+}
+.wrapper .country-container .country-list table tr td img {
+  display: inline;
+  height: 66px;
+  margin-bottom: 5px;
+}
+.wrapper .country-container .country-list table tr td img.gou_img {
+  position: absolute;
+  width: 30px;
+  height: 25px;
+  display: none;
+  bottom: 10px;
+  right: -10px;
+}
+.wrapper .country-container .country-list table tr td.sep {
+  width: 7px;
+}
+.wrapper .country-container .country-list table tr td.active img.gou_img {
+  display: inline;
+}
+.wrapper .country-container .country-list table tr.sep {
+  height: 5px;
+}
+@media screen and (device-aspect-ratio: 40/71) {
+  .wrapper .country-container .country-list table tr.sep {
+    height: 0px;
+  }
+}
+.wrapper .country-container .country-list table tr.medal td img {
+  width: 60%;
+  height: 50%;
+}
+.wrapper .country-container .country-list table tr.medal td input {
+  width: 25px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 2px solid #333;
+  background-color: #fcde28;
+  font-size: 12px;
+  text-align: center;
+  color: #333;
+  font-weight: 700;
+  font-style: italic;
+  outline: medium;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.wrapper .country-container .country-list table tr.medal td #txtGolden {
+  background-color: #ffcc00;
+}
+.wrapper .country-container .btnSubmit {
+  position: absolute;
+  width: 120px;
+  height: 35px;
+  bottom: 90px;
+  z-index: 100;
+  left: 33%;
+  opacity: 0;
+}
+@media screen and (device-aspect-ratio: 40/71) {
+  .wrapper .country-container .btnSubmit {
+    width: 110px;
+    bottom: 70px;
+  }
+}
