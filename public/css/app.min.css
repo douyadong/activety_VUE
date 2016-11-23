@@ -184,7 +184,16 @@ web-container是Web端的容器
 }
 .web-container .header .brand {
   width: 1200px;
-  margin: 0 auto;
+  height: 45px;
+  position: absolute;
+  left: 50%;
+  margin-left: -600px;
+}
+.web-container .header .brand > a {
+  width: 195px;
+  height: 45px;
+  display: block;
+  overflow: hidden;
 }
 .web-container .content {
   width: 1200px;
