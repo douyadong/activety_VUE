@@ -3,7 +3,7 @@
 	<!--顶部Brand图标-->
 	<div class="brand">
 		<a href="http://www.wkzf.com">
-			<img src="<?php echo $CURRENT_STATIC_DOMAIN?>/public/images/logo.png" />
+			<img src="<?php echo $CURRENT_STATIC_DOMAIN?>/public/images/web_brand.jpg" />
 		</a>
 	</div>
 	<!--banner大图-->
