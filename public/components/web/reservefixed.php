@@ -1,5 +1,9 @@
 <!--web版底部预约信息输入-->
 <div class="fixed-bottom">
+	<?php
+		$hotline = empty($config['web_hotline'])?$config['hotline']:$config['web_hotline'];
+		$hotline_subnum = empty($config['web_hotline_subnum'])?(empty($config['hotline_subnum'])?'':$config['hotline_subnum']):$config['web_hotline_subnum'];
+	?>
 	<div class="content-wrapper">
 		<span class="title">预约看房</span>
 		<span class="label">姓名：</span> 
@@ -10,7 +14,7 @@
 		<input type="text" class="code" id="vertifyCode">
 		<span class="send-code-btn" id="sendCodeBtn">获取验证码</span>
 		<span class="send-btn" id="sendBtn">确定</span>
-		<span class="phone-btn"><?php echo $config["hotline"]?><?php echo empty($config["hotline_subnum"])?"":" 转 " .$config["hotline_subnum"]?></span>
+		<span class="phone-btn"><?php echo $hotline?><?php echo empty($hotline_subnum)?'':('转'.$hotline_subnum)?></span>
 	</div>
 </div>
 <!--房产ID-->
