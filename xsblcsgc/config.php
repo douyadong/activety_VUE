@@ -86,4 +86,9 @@
             */
             $config["hotline"] = "4008208907";
             $config["hotline_subnum"] = "12564";
+            //4008208907转12564  4008208907转22564
+            $config["web_hotline"] = "4008208907";
+            $config["web_hotline_subnum"] = "12564";
+            $config["wap_hotline"] = "4008208907";
+            $config["wap_hotline_subnum"] = "22564";
         ?>                        

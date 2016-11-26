@@ -86,4 +86,9 @@
             */
             $config["hotline"] = "4008208907";
             $config["hotline_subnum"] = "12604";
+            //万科悦中环     4008208907转12604  4008208907转22604
+            $config["web_hotline"] = "4008208907";
+            $config["web_hotline_subnum"] = "12555";
+            $config["wap_hotline"] = "4008208907";
+            $config["wap_hotline_subnum"] = "22604";
         ?>                        

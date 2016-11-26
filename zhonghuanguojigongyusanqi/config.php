@@ -85,5 +85,10 @@
             |--------------------------------------------------------------   
             */
             $config["hotline"] = "4008208907";
-            $config["hotline_subnum"] = "12555";
+            $config["hotline_subnum"] = "12546";
+            //中环国际公寓三期    4008208907转12555  4008208907转22555
+            $config["web_hotline"] = "4008208907";
+            $config["web_hotline_subnum"] = "12555";
+            $config["wap_hotline"] = "4008208907";
+            $config["wap_hotline_subnum"] = "22555";
         ?>                        

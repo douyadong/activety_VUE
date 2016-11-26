@@ -86,4 +86,9 @@
             */
             $config["hotline"] = "4008208907";
             $config["hotline_subnum"] = "12582";
+            //名城花苑  4008208907转12582  4008208907转22582
+            $config["web_hotline"] = "4008208907";
+            $config["web_hotline_subnum"] = "12582";
+            $config["wap_hotline"] = "4008208907";
+            $config["wap_hotline_subnum"] = "22582";
         ?>                        
