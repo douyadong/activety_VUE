@@ -89,5 +89,5 @@
             $config["web_hotline"] = "4008208907";
             $config["web_hotline_subnum"] = "12559";
             $config["wap_hotline"] = "4008208907";
-            $config["wap_hotline_subnum"] = "12559";
+            $config["wap_hotline_subnum"] = "22559";
         ?>                        
