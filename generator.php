@@ -16,7 +16,6 @@
 	$dir = ".";
 	if($dh = opendir($dir)){
 		//echo "遍历目录成功";
-		//echo $dh;
 		while($file = readdir($dh)){//遍历根目录，收集子目录
 			echo "找到" . $file . '<br/>';
 			if(is_dir($file)){
@@ -24,33 +23,11 @@
 				if(in_array($file, $excludeDirs)){
 					echo "$file 被排除<br/>";
 				}else{
-					$dirs[] = $file;
-					/*if($dh2 = opendir($file)){//打开子目录
-						echo "$file 打开成功<br/>";
-						while($file2 = readdir($dh2)){
-							echo "找到$file2 <br/>";
-							if(is_file($file2)){							
-								$extension = get_extension($file2);//获取后缀名
-								echo "$file2 的后缀名$extension<br/>";
-								if($extension == "php"){//如果是php文件
-									$url = 'http://' . $domainName . '/' . $file . '/' . $file2 ;
-									echo "$url <br/>";
-									if(fopen($url,'r')){
-										echo "访问$url成功";
-									}
-								}
-							}
-						}
-					}else{
-						echo "$file 打开失败<br/>";
-					}*/
+					$dirs[] = $file;					
 				}				
 			}else{
 				echo "$file 不是目录<br/>";
 			}
-			//$extension = get_extension($file);//后缀名
-
-
 		}
 
 		echo "<br/><hr/>";
@@ -65,8 +42,8 @@
 					$extension = get_extension($file2);	
 					echo "$file2 后缀名 $extension<br/>";				
 					if($extension == 'php' && !in_array($file2, $excludeFiles)){
-						$url = 'http://' . $domainName . '/' . $value . '/' . $file2;
-						//$url = "$value/$file2";
+						//$url = 'http://' . $domainName . '/' . $value . '/' . $file2;
+						$url = "$value/$file2";
 				$urls[] = $url;
 
 					}
