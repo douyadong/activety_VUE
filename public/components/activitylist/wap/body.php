@@ -17,7 +17,17 @@
 			<div class="item">
 			<a class="img" href="<?php echo $item['wapLink']?>">
 				<img class="lazy" data-src="<?php echo $CURRENT_STATIC_DOMAIN . '/' . $router['activity_name']; ?>/images/wap/<?php echo $item['wapImg']?>"/>
-				<span class="price"><?php echo $item['price']?><span class="subfix">元/m&sup2;</span></span>
+				<span class="price">
+					<?php
+						if(empty($item['price'])){
+					?>
+						价格待定
+					<?php	}else{ ?>
+						<?php echo $item['price']?><span class="subfix">元/m&sup2;</span>
+					<?php	
+						}
+					?>					
+				</span>
 			</a>
 			<div class="desc">
 				<div class="estate_name"><?php echo $item['estateName']?></div>
