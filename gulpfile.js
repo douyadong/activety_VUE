@@ -111,9 +111,10 @@ gulp.task('activityJs',function(){
 
 //监控文件系统更改
 gulp.task('watch',function(){
-	gulp.watch('less/**/**/**.less',['less']);
+	gulp.watch(lessPath,['less']);
 	gulp.watch(appJsPath,['js-app']);	
 	gulp.watch(jsPath,['js']);
+	gulp.watch(activityJsPath,['activityJs']);
 })
 
 gulp.task('default',['watch']);
