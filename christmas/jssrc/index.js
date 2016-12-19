@@ -120,6 +120,7 @@ IndexController.prototype.bindEvent = function() {
     //选卡片点击事件
     $("#menu a[data-number=1]").click(function() {
         $("#chooseBg").show();
+        $("#chooseText").hide();
         $("[name='bg']").val("bg_1");
         $("[name='text']").val("");
         classSelf.initChooseBg();
@@ -127,6 +128,7 @@ IndexController.prototype.bindEvent = function() {
     //选祝福点击事件
     $("#menu a[data-number=2]").click(function() {
         $("#chooseText").show();
+        $("#chooseBg").hide();
         classSelf.initChooseText();
     });
 
