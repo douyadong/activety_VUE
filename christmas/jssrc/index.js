@@ -23,8 +23,6 @@ function IndexController() {
 IndexController.prototype.init = function() {
     var classSelf = this;
     $("[name='wechatUrl']").val(window.location.href);
-    var Media = document.getElementById("audio");
-    Media.play();
     var bg = classSelf.getQueryStringByName("bg"),
         text = classSelf.getQueryStringByName("text"),
         name = classSelf.getQueryStringByName("name");
@@ -125,6 +123,13 @@ IndexController.prototype.bindEvent = function() {
         $("[name='bg']").val("bg_1");
         $("[name='text']").val("");
         classSelf.initChooseBg();
+    });
+    //音乐点击事件
+    $("body").click(function() {
+        if ($("#audio").attr("data-number") == "0") {
+            document.getElementById('audio').play();
+        }
+        $("#audio").attr("data-number", "1");
     });
     //选祝福点击事件
     $("#menu a[data-number=2]").click(function() {
