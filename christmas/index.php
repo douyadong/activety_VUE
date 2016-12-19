@@ -91,7 +91,7 @@
                             <img src="images/text_1.png">
                         </div>
                         <div class="swiper-slide" data-number="2">
-                            <img src="images/text_4.png">
+                            <img src="images/text_2.png">
                         </div>
                         <div class="swiper-slide" data-number="3">
                             <img src="images/text_3.png">

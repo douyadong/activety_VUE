@@ -46,8 +46,6 @@ IndexController.prototype.init = function() {
         $("[name='wechatUrl']").val(window.location.href);
         classSelf.html2Canvans();
         $("#content").hide();
-
-
     } else {
         $("#loading").show();
         $("#content").hide();
@@ -99,6 +97,7 @@ IndexController.prototype.initChooseText = function() {
         prevButton: '.swiper-button-prev',
         onSlideChangeEnd: function(swiper, event) {
             $("[name='username']").val('');
+            console.log(swiper.activeIndex);
             var index = swiper.activeIndex;
             if (swiper.activeIndex == 5) {
                 index = 1;
