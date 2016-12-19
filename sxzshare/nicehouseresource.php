@@ -1,4 +1,4 @@
-	<?php require_once("dsxConfig.php");?>
+	<?php require_once("nhrConfig.php");?>
 	<?php
 		ob_start();
 	?>
