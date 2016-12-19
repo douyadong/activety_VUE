@@ -167,13 +167,16 @@ IndexController.prototype.bindEvent = function() {
             classSelf.html2Canvans();
             $("#content").hide();
             $("#makeup").show();
+            $("#guide").show();
         }
     });
     //输入姓名事件
     $("body").delegate('#name', 'change', function() {
         $("[name='username']").val($(this).val());
     });
-
+    $("#guide").click(function(){
+        $(this).hide();
+    });
     $("#tipsSubmit").click(function() {
             $("#tips").fadeOut();
             if (!$("[name='contract']").is(':checked')) {
