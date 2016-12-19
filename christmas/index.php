@@ -8,6 +8,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
     <title>Merry Christmas 我愿为你种星辰</title>
     <meta name="keywords" content="悟空找房,Merry Christams">
     <meta name="description" content="Merry Christmas 我愿为你种星辰">
