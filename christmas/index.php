@@ -155,7 +155,7 @@
         <p class="title">在法律允许的范围内，悟空找房有权对上述活动的条款作出合理解释和/或补充说明。</p>
         <a href="javascript:;" id="itemSubmit">我知道了</a>
     </div>
-    <audio src="images/music.mp3" autoplay="autoplay" loop="loop">
+    <audio src="images/music.mp3" loop="loop">
         您的浏览器不支持 audio 标签。
     </audio>
     <!--背景-->

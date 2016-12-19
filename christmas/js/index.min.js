@@ -23,6 +23,8 @@ function IndexController() {
 IndexController.prototype.init = function() {
     var classSelf = this;
     $("[name='wechatUrl']").val(window.location.href);
+    var Media = document.getElementById("video");
+    Media.play();
     var bg = classSelf.getQueryStringByName("bg"),
         text = classSelf.getQueryStringByName("text"),
         name = classSelf.getQueryStringByName("name");
