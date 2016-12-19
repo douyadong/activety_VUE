@@ -144,7 +144,7 @@ DSXController.prototype.bindEvent = function() {
 
     window.addEventListener('resize', function(e) {
         var $submit = $('.submit');
-        $submit.scrollIntoView(false);
+        $submit[0].scrollIntoView(false);
     });
 };
 
