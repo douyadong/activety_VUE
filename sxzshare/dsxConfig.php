@@ -74,9 +74,9 @@
             |微信分享内容
             |--------------------------------------------------------------   
             */
-            $config["wechat_share"] = false;
-            $config["wechat_title"] = "";
-            $config["wechat_content"] = "";
+            $config["wechat_share"] = true;
+            $config["wechat_title"] = "上传房源信息就能赚钱，还有这种好事？";
+            $config["wechat_content"] = "悟空找房诚邀你动动手指，活用人脉，躺着赚钱";
 
             /*
             |--------------------------------------------------------------

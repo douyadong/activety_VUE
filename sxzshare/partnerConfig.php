@@ -74,9 +74,9 @@
             |微信分享内容
             |--------------------------------------------------------------   
             */
-            $config["wechat_share"] = false;
-            $config["wechat_title"] = "";
-            $config["wechat_content"] = "";
+            $config["wechat_share"] = true;
+            $config["wechat_title"] = "一封来自悟空找房的邀请";
+            $config["wechat_content"] = "我是悟空找房的合伙人，我为自己代言";
 
             /*
             |--------------------------------------------------------------
