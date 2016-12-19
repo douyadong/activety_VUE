@@ -206,7 +206,7 @@ IndexController.prototype.bindEvent = function() {
             return false;
         }
         //检查是否10个字
-        var reg = /^[0-9a-zA-Z\u4e00-\u9fa5]{1,10}$/;
+        var reg = /^[a-zA-Z\/ ]{1,10}$/;
         if (!reg.test($("#name").val())) {
             classSelf.tips("姓名最多10个英文字符!");
             return false;
