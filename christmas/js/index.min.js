@@ -45,6 +45,7 @@ IndexController.prototype.init = function() {
         classSelf.html2Canvans();
         $("#content").hide();
 
+
     } else {
         $("#loading").show();
         $("#content").hide();
@@ -54,9 +55,13 @@ IndexController.prototype.init = function() {
  html2Canvans
  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 IndexController.prototype.html2Canvans = function() {
+    var classSelf = this;
     html2canvas(document.body, {
         onrendered: function(canvas) {
             document.body.appendChild(canvas);
+            var img = classSelf.convertCanvasToImage(document.getElementsByTagName("canvas")[0]);
+            $(document.getElementsByTagName("canvas")[0]).hide();
+            $("body").append(img).addClass("save-img");
         }
     });
 };
@@ -174,16 +179,20 @@ IndexController.prototype.bindEvent = function() {
     $("body").delegate('#name', 'change', function() {
         $("[name='username']").val($(this).val());
     });
-    $("#guide").click(function(){
+    $("#guide").click(function() {
         $(this).hide();
     });
     $("#tipsSubmit").click(function() {
-            $("#tips").fadeOut();
-            if (!$("[name='contract']").is(':checked')) {
-                $("#contract").show();
-            }
-        })
-        //送出祝福
+        $("#tips").fadeOut();
+        if (!$("[name='contract']").is(':checked')) {
+            $("#contract").show();
+        }
+    });
+    //送出祝福
+    window.addEventListener('resize', function(e) {
+        var $name = $('#name');
+        $name[0].scrollIntoView(false);
+    });
     $("#submit").click(function() {
         //检查是否选了祝福语
         if (!$("[name='text']").val()) {
@@ -246,6 +255,15 @@ IndexController.prototype.getQueryStringByName = function(name) {
 IndexController.prototype.tips = function(text) {
     $("#tips").show();
     $("#tips p").text(text);
+};
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ convertCanvasToImage
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+IndexController.prototype.convertCanvasToImage = function(canvas) {
+    var image = new Image();
+    image.src = canvas.toDataURL("image/png");
+    return image;
 };
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 类的初始化
