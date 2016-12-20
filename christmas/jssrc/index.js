@@ -129,7 +129,7 @@ IndexController.prototype.initChooseText = function() {
                 index = 1;
             }
             if (swiper.activeIndex == 0) {
-                index = 2;
+                index = 4;
             }
             var htmlStr = '<img src="images/text_' + index + '.png">\
                             <div>\
