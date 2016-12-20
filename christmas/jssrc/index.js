@@ -83,7 +83,9 @@ IndexController.prototype.html2Canvans = function() {
             var img = classSelf.convertCanvasToImage(document.getElementsByTagName("canvas")[0]);
             $(document.getElementsByTagName("canvas")[0]).hide();
             $("body").append(img).addClass("save-img");
-        }
+        },
+        width: 800,
+        height: 300
     });
 };
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -216,6 +218,7 @@ IndexController.prototype.bindEvent = function() {
             classSelf.tips("请勾选并同意！");
             $("#contract").hide();
         } else {
+            $("#mask-container").remove();
             $("#contract").hide();
             $("#content .text>div").html('').html($("[name='username']").val());
             $("[name='wechatTitle']").val("Merry Christmas 我愿为你种星辰");
@@ -226,6 +229,7 @@ IndexController.prototype.bindEvent = function() {
             $("#content").hide();
             $("#savePic").show();
             $("#sendMess").show();
+
         }
     });
     //输入姓名事件
@@ -237,6 +241,7 @@ IndexController.prototype.bindEvent = function() {
     });
     $("#tipsSubmit").click(function() {
         $("#tips").fadeOut();
+        $("#mask-container").remove();
         if (!$("[name='contract']").is(':checked')) {
             $("#contract").show();
         }
@@ -271,6 +276,11 @@ IndexController.prototype.bindEvent = function() {
             classSelf.tips("请填写姓名!");
             return false;
         }
+        var reg = /^[a-zA-Z\u4e00-\u9fa5]+$/;
+        if (!reg.test($("#name").val())) {
+            classSelf.tips("请填写正确的姓名!");
+            return false;
+        }
         //检查是否10个字
         if ($("#name").val().length > 10) {
             classSelf.tips("姓名最多10个字符!");
@@ -278,6 +288,8 @@ IndexController.prototype.bindEvent = function() {
         }
 
         $("#contract").fadeIn();
+        classSelf.createMask();
+        $("#mask-container").css("z-index", "1001");
     })
 };
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -318,7 +330,10 @@ IndexController.prototype.getQueryStringByName = function(name) {
  tips
  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 IndexController.prototype.tips = function(text) {
+    var classSelf = this;
     $("#tips").show();
+    classSelf.createMask();
+    $("#mask-container").css("z-index", "1001");
     $("#tips p").text(text);
 };
 
