@@ -1,4 +1,4 @@
-	<?php require_once("dsxConfig.php");?>
+	<?php require_once("partnerConfig.php");?>
 	<?php
 		ob_start();
 	?>
