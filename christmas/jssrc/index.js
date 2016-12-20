@@ -84,8 +84,7 @@ IndexController.prototype.html2Canvans = function() {
             $(document.getElementsByTagName("canvas")[0]).hide();
             $("body").append(img).addClass("save-img");
         },
-        width: 800,
-        height: 300
+        width: 640
     });
 };
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
