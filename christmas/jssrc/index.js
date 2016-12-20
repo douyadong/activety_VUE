@@ -103,6 +103,9 @@ IndexController.prototype.initChooseBg = function() {
             if (swiper.activeIndex == 5) {
                 index = 1;
             }
+            if (swiper.activeIndex == 0) {
+                index = 2;
+            }
             $(".text").html('');
             $("#content").removeAttr("class").addClass("bg_" + index);
         }
@@ -124,6 +127,9 @@ IndexController.prototype.initChooseText = function() {
             var index = swiper.activeIndex;
             if (swiper.activeIndex == 5) {
                 index = 1;
+            }
+            if (swiper.activeIndex == 0) {
+                index = 2;
             }
             var htmlStr = '<img src="images/text_' + index + '.png">\
                             <div>\
