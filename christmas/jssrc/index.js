@@ -332,7 +332,9 @@ IndexController.prototype.getQueryStringByName = function(name) {
 IndexController.prototype.tips = function(text) {
     var classSelf = this;
     $("#tips").show();
-    classSelf.createMask();
+    if (!$("#mask-container").length) {
+        classSelf.createMask();
+    }
     $("#mask-container").css("z-index", "1001");
     $("#tips p").text(text);
 };
