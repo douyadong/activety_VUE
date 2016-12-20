@@ -124,12 +124,12 @@ IndexController.prototype.bindEvent = function() {
         classSelf.initChooseBg();
     });
     //音乐点击事件
-    $("body").click(function() {
+    document.getElementsByTagName("body")[0].ontouchstart = function() {
         if ($("#audio").attr("data-number") == "0") {
             document.getElementById('audio').play();
         }
         $("#audio").attr("data-number", "1");
-    });
+    };
     //选祝福点击事件
     $("#menu a[data-number=2]").click(function() {
         $("#chooseText").show();
