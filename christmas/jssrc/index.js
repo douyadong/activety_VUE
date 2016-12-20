@@ -17,6 +17,26 @@ function IndexController() {
      -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
     this.initLoading();
 };
+
+IndexController.prototype.createMask = function() {
+    //获取页面高度和宽度
+    var sHeight = document.documentElement.scrollHeight,
+        sWidth = document.documentElement.scrollWidth,
+        mask = document.createElement('div');
+    mask.id = 'mask-container';
+    //遮罩层css
+    $(mask).css({
+        'background-color': 'rgba(0,0,0,0.7)',
+        'position': 'fixed',
+        'left': 0,
+        'top': 0,
+        'height': sHeight + 'px',
+        'width': sWidth + 'px',
+        'z-index': '999',
+        'cursor': 'pointer'
+    });
+    $(document.body).append(mask);
+};
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
  init
  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -101,8 +121,8 @@ IndexController.prototype.initChooseText = function() {
             }
             var htmlStr = '<img src="images/text_' + index + '.png">\
                             <div>\
-                                <i></i>\
-                                <input type="text" placeholder="输入姓名" id="name">\
+                                <div class="animate"><i></i>\
+                                <input type="text" placeholder="输入姓名" id="name"></div>\
                                 <p>(输入10个字符以内的名字)</p>\
                             </div>';
             $("#content").removeAttr("text").attr("text", "text_" + index);
@@ -121,6 +141,8 @@ IndexController.prototype.bindEvent = function() {
         $("#chooseText").hide();
         $("[name='bg']").val("bg_1");
         $("[name='text']").val("");
+        $(this).find(".tip").hide();
+        $("#mask-container").remove();
         classSelf.initChooseBg();
     });
     //音乐点击事件
@@ -134,6 +156,8 @@ IndexController.prototype.bindEvent = function() {
     $("#menu a[data-number=2]").click(function() {
         $("#chooseText").show();
         $("#chooseBg").hide();
+        $("#mask-container").remove();
+        $("#menu .tip[data-number='2']").hide();
         classSelf.initChooseText();
     });
 
@@ -144,6 +168,8 @@ IndexController.prototype.bindEvent = function() {
         if (dataNumber == "1") {
             $("[name = 'bg']").val($("#content").attr("class"));
             $("#chooseBg").hide();
+            classSelf.createMask();
+            $("#menu .tip[data-number='2']").show();
         } else {
             $("[name = 'text']").val($("#content").attr("text"));
             $("#chooseText").hide();
@@ -154,6 +180,8 @@ IndexController.prototype.bindEvent = function() {
     $("#start").click(function() {
         $("#loading").hide();
         $("#content").fadeIn();
+        classSelf.createMask();
+        $(".tip[data-number='1']").show();
     });
 
     //阅读活动规则
@@ -199,6 +227,11 @@ IndexController.prototype.bindEvent = function() {
     window.addEventListener('resize', function(e) {
         var $name = $('#name');
         $name[0].scrollIntoView(false);
+    });
+
+    //输入姓名获取焦点，去除class
+    $("body").delegate('#name', 'click', function() {
+        $(this).parents(".animate").removeClass("animate");
     });
     $("#submit").click(function() {
         //检查是否选了祝福语

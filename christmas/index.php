@@ -37,10 +37,12 @@
             <a data-number="1">
                 <img src="images/choose_bg.png">
                 <span>选张卡片</span>
+                <img class="tip" src="images/tips_2.png" data-number="1">
             </a>
             <a data-number="2">
                 <img src="images/choose_text.png">
                 <span>选个祝福</span>
+                <img class="tip" src="images/tips_1.png" data-number="2">
             </a>
             <a id="submit">
                 送出祝福<img src="images/sanjiao.jpg">
@@ -158,6 +160,7 @@
     <audio id="audio" src="images/music.mp3" loop="loop" autoplay="autoplay" data-number="0" preload="true">
         您的浏览器不支持 audio 标签。
     </audio>
+
     <!--背景-->
     <input type="hidden" value="bg_1" name="bg">
     <!--祝福-->
