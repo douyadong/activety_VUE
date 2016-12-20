@@ -50,14 +50,14 @@ html {
                 background-color: #273a4b;
                 position: absolute;
                 width: 200px;
-                height: 6px;
+                height: 2px;
                 margin-left: -100px;
                 top: 230px;
                 left: 50%;
                 #processInner {
                     background-color: #727d85;
                     width: 0px;
-                    height: 6px;
+                    height: 2px;
                 }
             }
             #loadfont {
@@ -90,7 +90,7 @@ html {
                 background: url(../images/bg_1.gif) no-repeat center;
                 background-size: 100% 100%;
                 .text {
-                    padding-top: 20%;
+                    padding-top: 15%;
                     padding-right: 4%;
                     text-align: right;
                     img {
@@ -103,7 +103,7 @@ html {
                 background: url(../images/bg_2.gif) no-repeat center;
                 background-size: 100% 100%;
                 .text {
-                    padding-top: 20%;
+                    padding-top: 15%;
                     padding-left: 4%;
                     text-align: left;
                     img {
@@ -116,7 +116,7 @@ html {
                 background: url(../images/bg_3.gif) no-repeat center;
                 background-size: 100% 100%;
                 .text {
-                    padding-top: 20%;
+                    padding-top: 15%;
                     text-align: center;
                     img {
                         width: 60%;
@@ -128,7 +128,7 @@ html {
                 background: url(../images/bg_4.gif) no-repeat center;
                 background-size: 100% 100%;
                 .text {
-                    padding-top: 20%;
+                    padding-top: 15%;
                     padding-left: 4%;
                     text-align: left;
                     img {
@@ -177,7 +177,7 @@ html {
             }
             #menu {
                 position: absolute;
-                height: 50px;
+                height: 60px;
                 background-color: #bf3228;
                 bottom: 0;
                 left: 0;
@@ -186,7 +186,7 @@ html {
                 a {
                     display: block;
                     width: 20%;
-                    padding: 5px;
+                    padding: 7px 5px;
                     float: left;
                     text-align: center;
                     position: relative;
@@ -209,6 +209,7 @@ html {
                     span {
                         display: block;
                         color: #fff;
+                        font-size:14px;
                     }
                     &#submit {
                         color: #fff;
@@ -217,6 +218,7 @@ html {
                         width: 85px;
                         margin-right: 10px;
                         margin-top: 10px;
+                        font-size:14px;
                         img {
                             width: 10px;
                             margin-left: 5px;
@@ -253,7 +255,9 @@ html {
                     }
                 }
                 img {
-                    padding: 13px 20px;
+                    padding: 20px 25px;
+                    border-radius: 30px;
+                    -webkit-border-radius: 30px;
                 }
             }
             .swiper-button-prev {
@@ -280,11 +284,13 @@ html {
                 margin-left: auto;
                 margin-right: auto;
                 padding: 10px 10px;
+                border-radius: 20px;
+                -webkit-border-radius: 20px;
                 img {
-                    padding: 15px;
+                    padding: 15px 25px;
                 }
                 .lick-btn {
-                    border: 1px solid #ee3132;
+                    background-color: #fff;
                     color: #ee3132;
                     margin: -5px auto 10px;
                     width: 90px;
@@ -337,6 +343,8 @@ html {
                 color: #fff;
                 font-size: 14px;
                 text-align: center;
+                border-radius: 20px;
+                -webkit-border-radius: 20px;
                 a {
                     padding: 3px 10px;
                     color: #fff;
@@ -363,8 +371,11 @@ html {
                 color: #fff;
                 font-size: 14px;
                 text-align: center;
+                border-radius: 20px;
+                -webkit-border-radius: 20px;
                 p {
                     margin-bottom: 10px;
+                    font-size: 16px;
                 }
                 a {
                     color: #fff;
@@ -372,9 +383,9 @@ html {
                     display: block;
                     &#submitContrct {
                         padding: 3px 10px;
-                        color: #fff;
+                        color: #D64040;
                         text-decoration: none;
-                        background-color: #D64040;
+                        background-color: #fff;
                         width: 60px;
                         margin: 10px auto;
                     }
@@ -392,6 +403,7 @@ html {
             color: #fff;
             background: url("../images/items_bg.png") repeat-y top;
             overflow-y: auto;
+            z-index: 1000;
             p {
                 font-size: 14px;
                 margin-bottom: 5px;
@@ -418,9 +430,9 @@ html {
             background-color: #bf3228;
             bottom: 25px;
             left: 50%;
-            width: 220px;
-            margin-left: -110px;
-            font-size: 14px;
+            width: 260px;
+            margin-left: -130px;
+            font-size: 16px;
             color: #fff;
             text-align: center;
             img {
@@ -429,13 +441,48 @@ html {
                 margin-top: -1px;
             }
         }
+        #savePic {
+            display: none;
+            position: fixed;
+            height: 35px;
+            line-height: 35px;
+            background: rgba(214,64,64,0.60);
+            bottom: 80px;
+            left: 50%;
+            width: 220px;
+            margin-left: -110px;
+            font-size: 16px;
+            color: #fff;
+            text-align: center;
+        }
+        #sendMess {
+            display: none;
+            position: fixed;
+            height: 35px;
+            line-height: 33px;
+            background-color:#D64040;
+            bottom: 25px;
+            left: 50%;
+            width: 120px;
+            margin-left: -60px;
+            font-size: 16px;
+            color: #fff;
+            text-align: center;
+        }
         audio {
             width: 0px;
             height: 0px;
         }
+        .music {
+            position: fixed;
+            right: 10px;
+            top: 10px;
+            width: 30px;
+        }
         .swiper-button-next,
         .swiper-button-prev {
             width: 20px;
+            height: 30px;
         }
     }
 }
