@@ -104,7 +104,7 @@ IndexController.prototype.initChooseBg = function() {
                 index = 1;
             }
             if (swiper.activeIndex == 0) {
-                index = 2;
+                index = 4;
             }
             $(".text").html('');
             $("#content").removeAttr("class").addClass("bg_" + index);
