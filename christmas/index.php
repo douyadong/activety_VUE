@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="http://cdn01.wkzf.com/fe_public_library/wkzf/js/util/swiper/dist/css/swiper.min.css">
 </head>
 
-<body>
+<body data-number="0">
     <section id="loading" style="display:none">
         <div id="man">
             <img src="images/bobsleigh.png">
@@ -54,6 +54,16 @@
             <div>
                 我也要制作悟空圣诞星辰卡<img src="images/sanjiao.jpg">
             </div>
+        </a>
+    </div>
+     <div>
+        <a id="savePic" href="javascript:;">
+                请长按屏幕保存壁纸
+        </a>
+    </div>
+    <div>
+        <a id="sendMess" href="javascript:;">
+                送出祝福
         </a>
     </div>
     <div id="chooseBg">
@@ -160,6 +170,10 @@
     <audio id="audio" src="images/music.mp3" loop="loop" autoplay="autoplay" data-number="0" preload="true">
         您的浏览器不支持 audio 标签。
     </audio>
+
+    <div class="music">
+        <img src="images/music.png">
+    </div>
 
     <!--背景-->
     <input type="hidden" value="bg_1" name="bg">

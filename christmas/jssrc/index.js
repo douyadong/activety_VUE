@@ -16,6 +16,9 @@ function IndexController() {
      initLoading
      -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
     this.initLoading();
+
+    this.mySwiper2 = null;
+    this.mySwiper = null;
 };
 
 IndexController.prototype.createMask = function() {
@@ -54,7 +57,7 @@ IndexController.prototype.init = function() {
         $("#content").attr("text", text);
         var htmlStr = '<img src="images/' + text + '.png">\
                             <div>\
-                                ' + name + '\
+                                ' + decodeURI(name) + '\
                             </div>';
         $("#content").find(".text").html('').html(htmlStr).find("div").show();
         $("#makeup").show();
@@ -87,7 +90,8 @@ IndexController.prototype.html2Canvans = function() {
  initChooseBg
  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 IndexController.prototype.initChooseBg = function() {
-    var mySwiper = new Swiper('#swiperBg', {
+    var classSelf = this;
+    classSelf.mySwiper = new Swiper('#swiperBg', {
         direction: 'horizontal',
         loop: true,
         // 如果需要前进后退按钮
@@ -107,7 +111,8 @@ IndexController.prototype.initChooseBg = function() {
  initChooseText
  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 IndexController.prototype.initChooseText = function() {
-    var mySwiper2 = new Swiper('#swiperText', {
+    var classSelf = this;
+    classSelf.mySwiper2 = new Swiper('#swiperText', {
         direction: 'horizontal',
         loop: true,
         // 如果需要前进后退按钮
@@ -143,22 +148,35 @@ IndexController.prototype.bindEvent = function() {
         $("[name='text']").val("");
         $(this).find(".tip").hide();
         $("#mask-container").remove();
-        classSelf.initChooseBg();
+        if (!classSelf.mySwiper) {
+            classSelf.initChooseBg();
+        }
+    });
+    $(".music").click(function() {
+        if ($("#audio").attr("data-number") == "0") {
+            document.getElementById('audio').play();
+            $("#audio").attr("data-number", "1");
+        } else {
+            document.getElementById('audio').pause();
+            $("#audio").attr("data-number", "0");
+        }
     });
     //音乐点击事件
     document.getElementsByTagName("body")[0].ontouchstart = function() {
-        if ($("#audio").attr("data-number") == "0") {
+        if ($("body").attr("data-number") == "0") {
             document.getElementById('audio').play();
         }
-        $("#audio").attr("data-number", "1");
+        $("body").attr("data-number", "1");
     };
     //选祝福点击事件
     $("#menu a[data-number=2]").click(function() {
         $("#chooseText").show();
         $("#chooseBg").hide();
         $("#mask-container").remove();
-        $("#menu .tip[data-number='2']").hide();
-        classSelf.initChooseText();
+        $("#menu .tip").hide();
+        if (!classSelf.mySwiper2) {
+            classSelf.initChooseText();
+        }
     });
 
     //喜欢背景/祝福点击事件
@@ -206,8 +224,8 @@ IndexController.prototype.bindEvent = function() {
             $("#menu").hide();
             classSelf.html2Canvans();
             $("#content").hide();
-            $("#makeup").show();
-            $("#guide").show();
+            $("#savePic").show();
+            $("#sendMess").show();
         }
     });
     //输入姓名事件
@@ -233,22 +251,29 @@ IndexController.prototype.bindEvent = function() {
     $("body").delegate('#name', 'click', function() {
         $(this).parents(".animate").removeClass("animate");
     });
+
+    $("#sendMess").click(function() {
+        $("#guide").fadeIn();
+    });
     $("#submit").click(function() {
         //检查是否选了祝福语
         if (!$("[name='text']").val()) {
-            classSelf.tips("请先选个祝福!");
+            $(".tip").hide();
+            $("#mask-container").remove();
+            $("#chooseText").show();
+            if (!classSelf.mySwiper2) {
+                classSelf.initChooseText();
+            }
             return false;
         }
-
         //检查姓名
         if (!$("[name='username']").val()) {
             classSelf.tips("请填写姓名!");
             return false;
         }
         //检查是否10个字
-        var reg = /^[a-zA-Z\/ ]{1,10}$/;
-        if (!reg.test($("#name").val())) {
-            classSelf.tips("姓名最多10个英文字符!");
+        if ($("#name").val().length > 10) {
+            classSelf.tips("姓名最多10个字符!");
             return false;
         }
 
@@ -269,7 +294,7 @@ IndexController.prototype.initLoading = function() {
             $("#process").fadeOut();
             $("#loadfont").fadeOut();
             var timeout = setTimeout(function() {
-                $("#start").css("bottom", "10px");
+                $("#start").css("bottom", "40px");
             }, 300);
         } else {
             $("#processInner").width(currentWidth + 2);
