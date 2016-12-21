@@ -158,20 +158,39 @@ IndexController.prototype.bindEvent = function() {
         }
     });
     $(".music").click(function() {
+        var $this = $(this);
         if ($("#audio").attr("data-number") == "0") {
-            document.getElementById('audio').play();
-            $("#audio").attr("data-number", "1");
+            if ($this.attr("data-number") == "0") {
+                document.getElementById('audio').pause();
+                $("#audio").attr("data-number", "1");
+                $this.attr("data-number", "1");
+            } else {
+                document.getElementById('audio').play();
+                $("#audio").attr("data-number", "1");
+                $this.attr("data-number", "0");
+            }
         } else {
-            document.getElementById('audio').pause();
-            $("#audio").attr("data-number", "0");
+            if ($this.attr("data-number") == "0") {
+                document.getElementById('audio').pause();
+                $("#audio").attr("data-number", "0");
+                $this.attr("data-number", "1");
+            } else {
+                document.getElementById('audio').play();
+                $this.attr("data-number", "0");
+                $("#audio").attr("data-number", "1");
+            }
         }
     });
     //音乐点击事件
     document.getElementsByTagName("body")[0].ontouchstart = function() {
-        if ($("body").attr("data-number") == "0") {
-            document.getElementById('audio').play();
+        var u = navigator.userAgent;
+        var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+        if (isiOS) {
+            if ($("body").attr("data-number") == "0") {
+                document.getElementById('audio').play();
+            }
+            $("body").attr("data-number", "1");
         }
-        $("body").attr("data-number", "1");
     };
     //选祝福点击事件
     $("#menu a[data-number=2]").click(function() {
