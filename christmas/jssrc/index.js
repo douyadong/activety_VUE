@@ -106,7 +106,6 @@ IndexController.prototype.initChooseBg = function() {
             if (swiper.activeIndex == 0) {
                 index = 4;
             }
-            $(".text").html('');
             $("#content").removeAttr("class").addClass("bg_" + index);
         }
     });
@@ -152,7 +151,6 @@ IndexController.prototype.bindEvent = function() {
         $("#chooseBg").show();
         $("#chooseText").hide();
         $("[name='bg']").val("bg_1");
-        $("[name='text']").val("");
         $(this).find(".tip").hide();
         $("#mask-container").remove();
         if (!classSelf.mySwiper) {
@@ -193,8 +191,10 @@ IndexController.prototype.bindEvent = function() {
         if (dataNumber == "1") {
             $("[name = 'bg']").val($("#content").attr("class"));
             $("#chooseBg").hide();
-            classSelf.createMask();
-            $("#menu .tip[data-number='2']").show();
+            if (!$("[name='text']").val()) {
+                classSelf.createMask();
+                $("#menu .tip[data-number='2']").show();
+            }
         } else {
             $("[name = 'text']").val($("#content").attr("text"));
             $("#chooseText").hide();
@@ -243,6 +243,7 @@ IndexController.prototype.bindEvent = function() {
     });
     $("#guide").click(function() {
         $(this).hide();
+        $(".guide").show();
     });
     $("#tipsSubmit").click(function() {
         $("#tips").fadeOut();
@@ -264,6 +265,7 @@ IndexController.prototype.bindEvent = function() {
 
     $("#sendMess").click(function() {
         $("#guide").fadeIn();
+        $(".music").fadeOut();
     });
     $("#submit").click(function() {
         //检查是否选了祝福语
