@@ -65,6 +65,10 @@ IndexController.prototype.init = function() {
         $("[name='username']").val(classSelf.getQueryStringByName("name"));
         $("[name='wechatTitle']").val('Merry Christmas 我愿为你种星辰');
         $("[name='wechatUrl']").val(window.location.href);
+        $(".bg_1").css("background", "url(images/bg_1.png) center no-repeat")；
+        $(".bg_2").css("background", "url(images/bg_2.png) center no-repeat")；
+        $(".bg_3").css("background", "url(images/bg_3.png) center no-repeat")；
+        $(".bg_4").css("background", "url(images/bg_4.png) center no-repeat");
         classSelf.html2Canvans();
         $("#content").hide();
     } else {
@@ -250,6 +254,10 @@ IndexController.prototype.bindEvent = function() {
             $("[name='wechatUrl']").val(window.location.href + "?bg=" + $("[name='bg']").val() + "&text=" + $("[name='text']").val() + "&name=" + $("[name='username']").val());
             $("#menu").hide();
             $(".music").hide();
+            $(".bg_1").css("background", "url(images/bg_1.png) center no-repeat")；
+            $(".bg_2").css("background", "url(images/bg_2.png) center no-repeat")；
+            $(".bg_3").css("background", "url(images/bg_3.png) center no-repeat")；
+            $(".bg_4").css("background", "url(images/bg_4.png) center no-repeat");
             classSelf.html2Canvans();
             $(".music").show();
             $("#content").hide();
