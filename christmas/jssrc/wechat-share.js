@@ -56,10 +56,8 @@ function WechatShareController() {
 
             },
             success: function(res) {},
-            cancel: function(res) {                
-            },
-            fail: function(res) {                
-            }
+            cancel: function(res) {},
+            fail: function(res) {}
         });
     };
     /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -139,5 +137,6 @@ function WechatShareController() {
 类的初始化
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 $(document).ready(function() {
-    new WechatShareController();
+    // new WechatShareController();
+    //console.log("test");
 });

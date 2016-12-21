@@ -230,11 +230,13 @@ IndexController.prototype.bindEvent = function() {
             $("[name='wechatContent']").val($("[name='username']").val() + "已经把对你的祝福种进悟空「圣诞星辰卡」，快打开看看吧~");
             $("[name='wechatUrl']").val(window.location.href + "?bg=" + $("[name='bg']").val() + "&text=" + $("[name='text']").val() + "&name=" + $("[name='username']").val());
             $("#menu").hide();
+            $(".music").hide();
             classSelf.html2Canvans();
+            $(".music").show();
             $("#content").hide();
             $("#savePic").show();
             $("#sendMess").show();
-
+            new WechatShareController();
         }
     });
     //输入姓名事件
