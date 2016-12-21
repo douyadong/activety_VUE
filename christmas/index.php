@@ -171,7 +171,7 @@
         您的浏览器不支持 audio 标签。
     </audio>
 
-    <div class="music">
+    <div class="music" data-number="0">
         <img src="images/music.png">
     </div>
 
