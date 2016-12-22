@@ -20,7 +20,6 @@ function IndexController() {
     this.mySwiper2 = null;
     this.mySwiper = null;
 };
-
 IndexController.prototype.createMask = function() {
     //获取页面高度和宽度
     var sHeight = document.documentElement.scrollHeight,
@@ -47,9 +46,10 @@ IndexController.prototype.init = function() {
     var classSelf = this;
     $("[name='wechatUrl']").val(decodeURI(window.location.href));
     var bg = classSelf.getQueryStringByName("bg"),
+        guid = classSelf.getQueryStringByName("guid"),
         text = classSelf.getQueryStringByName("text"),
         name = classSelf.getQueryStringByName("name");
-    if (bg && text && name) {
+    if (guid && bg && text && name) {
         $("#loading").hide();
         $("#makeup").hide();
         $("#content").show();
@@ -67,7 +67,8 @@ IndexController.prototype.init = function() {
         $("[name='wechatContent']").val(decodeURI(name) + "已经把对你的祝福种进悟空「圣诞星辰卡」，快打开看看吧~");
         $(".text div").css("font-size", "21px");
         $(".music").hide();
-        classSelf.html2Canvans();
+        var img = $('<img class="save-img" src="' + guid + '.jpg">');
+        $("body").append(img);
         $("#makeup").show();
         $("#content").hide();
         $(".music").show();
@@ -85,8 +86,32 @@ IndexController.prototype.html2Canvans = function() {
         onrendered: function(canvas) {
             document.body.appendChild(canvas);
             var img = classSelf.convertCanvasToImage(document.getElementsByTagName("canvas")[0]);
+            $(img).addClass("save-img");
             $(document.getElementsByTagName("canvas")[0]).hide();
-            $("body").append(img).addClass("save-img");
+            $("body").append(img);
+
+
+            var data = {
+                dataURI: $(".save-img").attr("src")
+            };
+            //发送请求
+            $.ajax({
+                url: 'save.php',
+                type: 'post',
+                dataType: 'json',
+                data: data,
+                success: function(data) {
+                    if (data.status == 1) {
+                        $(".save-img").attr("src", data.GUID + ".jpg");
+                        $("[name='wechatUrl']").val(window.location.href + "?bg=" + $("[name='bg']").val() + "&text=" + $("[name='text']").val() + "&name=" + $("[name='username']").val() + "&guid=" + data.GUID);
+                    } else {
+                        alert(data.message);
+                    }
+                },
+                error: function() {
+                    alert("生成失败:(");
+                }
+            });
         },
         width: document.documentElement.scrollWidth * 2
     });
@@ -251,7 +276,6 @@ IndexController.prototype.bindEvent = function() {
             $("#content .text>div").html('').html($("[name='username']").val());
             $("[name='wechatTitle']").val("Merry Christmas 我愿为你种星辰");
             $("[name='wechatContent']").val($("[name='username']").val() + "已经把对你的祝福种进悟空「圣诞星辰卡」，快打开看看吧~");
-            $("[name='wechatUrl']").val(window.location.href + "?bg=" + $("[name='bg']").val() + "&text=" + $("[name='text']").val() + "&name=" + $("[name='username']").val());
             $("#menu").hide();
             $(".music").hide();
             $(".text div").css("font-size", "21px");
