@@ -18,6 +18,8 @@ html {
   height: 100%;
 }
 html body {
+  background: url("../images/items_bg.png") no-repeat;
+  background-size: 100% 100%;
   height: 100%;
   width: 100%;
 }
