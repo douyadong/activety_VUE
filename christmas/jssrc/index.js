@@ -110,7 +110,6 @@ IndexController.prototype.html2Canvans = function() {
                 },
                 error: function() {
                     alert("生成失败:(");
-
                 }
             });
         },
