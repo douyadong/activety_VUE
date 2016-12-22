@@ -45,7 +45,7 @@ IndexController.prototype.createMask = function() {
  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 IndexController.prototype.init = function() {
     var classSelf = this;
-    $("[name='wechatUrl']").val(window.location.href);
+    $("[name='wechatUrl']").val(decodeURI(window.location.href));
     var bg = classSelf.getQueryStringByName("bg"),
         text = classSelf.getQueryStringByName("text"),
         name = classSelf.getQueryStringByName("name");
@@ -61,14 +61,16 @@ IndexController.prototype.init = function() {
                                 ' + decodeURI(name) + '\
                             </div>';
         $("#content").find(".text").html('').html(htmlStr).find("div").show();
-        $("#makeup").show();
         $("[name='text']").val(text);
         $("[name='username']").val(decodeURI(name));
         $("[name='wechatTitle']").val('Merry Christmas 我愿为你种星辰');
         $("[name='wechatContent']").val(decodeURI(name) + "已经把对你的祝福种进悟空「圣诞星辰卡」，快打开看看吧~");
         $(".text div").css("font-size", "28px");
+        $(".music").hide();
         classSelf.html2Canvans();
+        $("#makeup").show();
         $("#content").hide();
+        $(".music").show();
     } else {
         $("#loading").show();
         $("#content").hide();
