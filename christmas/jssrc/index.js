@@ -92,7 +92,7 @@ IndexController.prototype.html2Canvans = function() {
             $(document.getElementsByTagName("canvas")[0]).hide();
             $("body").append(img).addClass("save-img");
         },
-        width: 640
+        width: document.documentElement.scrollWidth * 2
     });
 };
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

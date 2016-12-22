@@ -187,6 +187,10 @@
     <input type="hidden" value="把你的星星种进悟空「圣诞星辰卡」，送给TA吧。" name="wechatContent">
     <!--微信分享内容-->
     <input type="hidden" value="" name="wechatUrl">
+    <img style="display:none" src="images/bg_1.png">
+    <img style="display:none" src="images/bg_2.png">
+    <img style="display:none" src="images/bg_3.png">
+    <img style="display:none" src="images/bg_4.png">
 </body>
 <script src="../config.js"></script>
 <script src="../public/js/app.min.js"></script>
