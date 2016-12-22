@@ -102,8 +102,8 @@ IndexController.prototype.html2Canvans = function() {
                 data: data,
                 success: function(data) {
                     if (data.status == 1) {
-                        var img = $('<img class="save-img" src="' + guid + '.jpg">');
-                        $("body").append(img);
+                        $(".save-img").attr("src", data.GUID + ".jpg");
+                        $("[name='wechatUrl']").val(window.location.href + "?bg=" + $("[name='bg']").val() + "&text=" + $("[name='text']").val() + "&name=" + $("[name='username']").val() + "&guid=" + data.GUID);
                     } else {
                         alert(data.message);
                     }
@@ -113,9 +113,6 @@ IndexController.prototype.html2Canvans = function() {
 
                 }
             });
-            /* var blob = classSelf.dataURItoBlob($(".save-img").attr("src"));
-             var url = window.URL.createObjectURL(blob);
-             $(".save-img").attr("src", url);*/
         },
         width: document.documentElement.scrollWidth * 2
     });
@@ -280,7 +277,6 @@ IndexController.prototype.bindEvent = function() {
             $("#content .text>div").html('').html($("[name='username']").val());
             $("[name='wechatTitle']").val("Merry Christmas 我愿为你种星辰");
             $("[name='wechatContent']").val($("[name='username']").val() + "已经把对你的祝福种进悟空「圣诞星辰卡」，快打开看看吧~");
-            $("[name='wechatUrl']").val(window.location.href + "?bg=" + $("[name='bg']").val() + "&text=" + $("[name='text']").val() + "&name=" + $("[name='username']").val());
             $("#menu").hide();
             $(".music").hide();
             $(".text div").css("font-size", "28px");
