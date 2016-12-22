@@ -51,6 +51,7 @@ IndexController.prototype.init = function() {
         name = classSelf.getQueryStringByName("name");
     if (bg && text && name) {
         $("#loading").hide();
+        $("#makeup").hide();
         $("#content").show();
         $("#content").removeAttr("class").addClass(bg);
         $("#menu").hide();
@@ -61,10 +62,10 @@ IndexController.prototype.init = function() {
                             </div>';
         $("#content").find(".text").html('').html(htmlStr).find("div").show();
         $("#makeup").show();
-        $("[name='text']").val(classSelf.getQueryStringByName('text'));
-        $("[name='username']").val(classSelf.getQueryStringByName("name"));
+        $("[name='text']").val(text);
+        $("[name='username']").val(decodeURI(name));
         $("[name='wechatTitle']").val('Merry Christmas 我愿为你种星辰');
-        $("[name='wechatContent']").val(name + "已经把对你的祝福种进悟空「圣诞星辰卡」，快打开看看吧~");
+        $("[name='wechatContent']").val(decodeURI(name) + "已经把对你的祝福种进悟空「圣诞星辰卡」，快打开看看吧~");
         $(".text div").css("font-size", "28px");
         classSelf.html2Canvans();
         $("#content").hide();
