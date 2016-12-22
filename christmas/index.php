@@ -57,9 +57,9 @@
         </a>
     </div>
      <div>
-        <a id="savePic" href="javascript:;">
+        <div id="savePic">
                 请长按屏幕保存壁纸
-        </a>
+        </div>
     </div>
     <div>
         <a id="sendMess" href="javascript:;">
