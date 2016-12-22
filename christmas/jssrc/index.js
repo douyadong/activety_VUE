@@ -65,7 +65,7 @@ IndexController.prototype.init = function() {
         $("[name='username']").val(decodeURI(name));
         $("[name='wechatTitle']").val('Merry Christmas 我愿为你种星辰');
         $("[name='wechatContent']").val(decodeURI(name) + "已经把对你的祝福种进悟空「圣诞星辰卡」，快打开看看吧~");
-        $(".text div").css("font-size", "28px");
+        $(".text div").css("font-size", "21px");
         $(".music").hide();
         classSelf.html2Canvans();
         $("#makeup").show();
@@ -254,7 +254,7 @@ IndexController.prototype.bindEvent = function() {
             $("[name='wechatUrl']").val(window.location.href + "?bg=" + $("[name='bg']").val() + "&text=" + $("[name='text']").val() + "&name=" + $("[name='username']").val());
             $("#menu").hide();
             $(".music").hide();
-            $(".text div").css("font-size", "28px");
+            $(".text div").css("font-size", "21px");
             classSelf.html2Canvans();
             $(".music").show();
             $("#content").hide();
