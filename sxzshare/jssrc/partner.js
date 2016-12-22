@@ -30,7 +30,7 @@ PartnerController.prototype.setApiPrefix = function() {
     this.sxzApiPrefix = "//mk.dev.wkzf:8170/";
     if (this.environment === "dev") this.sxzApiPrefix = "//mk.dev.wkzf:8170/";
     else if (this.environment === "test") this.sxzApiPrefix = "//mk.test.wkzf:8170/";
-    else if (this.environment === "sim") this.sxzApiPrefix = "//mk.sim.wkzf /";
+    else if (this.environment === "sim") this.sxzApiPrefix = "//mk.sim.wkzf/";
     else if (this.environment === "prod") this.sxzApiPrefix = "//mk.wkzf.com/";
 }
 
