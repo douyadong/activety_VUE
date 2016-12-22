@@ -64,15 +64,7 @@ IndexController.prototype.init = function() {
         $("[name='text']").val(classSelf.getQueryStringByName('text'));
         $("[name='username']").val(classSelf.getQueryStringByName("name"));
         $("[name='wechatTitle']").val('Merry Christmas 我愿为你种星辰');
-        $("[name='wechatUrl']").val(window.location.href);
-        $(".bg_1").css("background", "url(images/bg_1.png) center no-repeat");
-        $(".bg_1").css("background-size", "100% 100%");
-        $(".bg_2").css("background", "url(images/bg_2.png) center no-repeat");
-        $(".bg_2").css("background-size", "100% 100%");
-        $(".bg_3").css("background", "url(images/bg_3.png) center no-repeat");
-        $(".bg_3").css("background-size", "100% 100%");
-        $(".bg_4").css("background", "url(images/bg_4.png) center no-repeat");
-        $(".bg_4").css("background-size", "100% 100%");
+        $("[name='wechatContent']").val(name + "已经把对你的祝福种进悟空「圣诞星辰卡」，快打开看看吧~");
         classSelf.html2Canvans();
         $("#content").hide();
     } else {
@@ -258,14 +250,6 @@ IndexController.prototype.bindEvent = function() {
             $("[name='wechatUrl']").val(window.location.href + "?bg=" + $("[name='bg']").val() + "&text=" + $("[name='text']").val() + "&name=" + $("[name='username']").val());
             $("#menu").hide();
             $(".music").hide();
-            $(".bg_1").css("background", "url(images/bg_1.png) center no-repeat");
-            $(".bg_1").css("background-size", "100% 100%");
-            $(".bg_2").css("background", "url(images/bg_2.png) center no-repeat");
-            $(".bg_2").css("background-size", "100% 100%");
-            $(".bg_3").css("background", "url(images/bg_3.png) center no-repeat");
-            $(".bg_3").css("background-size", "100% 100%");
-            $(".bg_4").css("background", "url(images/bg_4.png) center no-repeat");
-            $(".bg_4").css("background-size", "100% 100%");
             classSelf.html2Canvans();
             $(".music").show();
             $("#content").hide();
