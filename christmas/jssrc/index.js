@@ -65,7 +65,7 @@ IndexController.prototype.init = function() {
         $("[name='username']").val(classSelf.getQueryStringByName("name"));
         $("[name='wechatTitle']").val('Merry Christmas 我愿为你种星辰');
         $("[name='wechatContent']").val(name + "已经把对你的祝福种进悟空「圣诞星辰卡」，快打开看看吧~");
-        $("#text div").css("font-size", "28px");
+        $(".text div").css("font-size", "28px");
         classSelf.html2Canvans();
         $("#content").hide();
     } else {
@@ -251,7 +251,7 @@ IndexController.prototype.bindEvent = function() {
             $("[name='wechatUrl']").val(window.location.href + "?bg=" + $("[name='bg']").val() + "&text=" + $("[name='text']").val() + "&name=" + $("[name='username']").val());
             $("#menu").hide();
             $(".music").hide();
-            $("#text div").css("font-size", "28px");
+            $(".text div").css("font-size", "28px");
             classSelf.html2Canvans();
             $(".music").show();
             $("#content").hide();
