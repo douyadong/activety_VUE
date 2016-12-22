@@ -20,25 +20,6 @@ function IndexController() {
     this.mySwiper2 = null;
     this.mySwiper = null;
 };
-IndexController.prototype.dataURItoBlob = function(dataURI, callback) {
-    // convert base64 to raw binary data held in a string
-    // doesn't handle URLEncoded DataURIs - see SO answer #6850276 for code that does this
-    var byteString = atob(dataURI.split(',')[1]);
-
-    // separate out the mime component
-    var mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0];
-
-    // write the bytes of the string to an ArrayBuffer
-    var ab = new ArrayBuffer(byteString.length);
-    var ia = new Uint8Array(ab);
-    for (var i = 0; i < byteString.length; i++) {
-        ia[i] = byteString.charCodeAt(i);
-    }
-    // write the ArrayBuffer to a blob, and you're done
-    var bb = new Blob([ab]);
-    return bb;
-};
-
 IndexController.prototype.createMask = function() {
     //获取页面高度和宽度
     var sHeight = document.documentElement.scrollHeight,
@@ -65,9 +46,10 @@ IndexController.prototype.init = function() {
     var classSelf = this;
     $("[name='wechatUrl']").val(decodeURI(window.location.href));
     var bg = classSelf.getQueryStringByName("bg"),
+        guid = classSelf.getQueryStringByName("guid"),
         text = classSelf.getQueryStringByName("text"),
         name = classSelf.getQueryStringByName("name");
-    if (bg && text && name) {
+    if (guid && bg && text && name) {
         $("#loading").hide();
         $("#makeup").hide();
         $("#content").show();
@@ -85,7 +67,8 @@ IndexController.prototype.init = function() {
         $("[name='wechatContent']").val(decodeURI(name) + "已经把对你的祝福种进悟空「圣诞星辰卡」，快打开看看吧~");
         $(".text div").css("font-size", "28px");
         $(".music").hide();
-        classSelf.html2Canvans();
+        var img = $('<img class="save-img" src="' + guid + '.jpg">');
+        $("body").append(img);
         $("#makeup").show();
         $("#content").hide();
         $(".music").show();
@@ -107,12 +90,32 @@ IndexController.prototype.html2Canvans = function() {
             $(document.getElementsByTagName("canvas")[0]).hide();
             $("body").append(img);
 
-            var blob = classSelf.dataURItoBlob($(".save-img").attr("src"));
 
-            var url = window.URL.createObjectURL(blob);
+            var data = {
+                dataURI: $(".save-img").attr("src")
+            };
+            //发送请求
+            $.ajax({
+                url: 'save.php',
+                type: 'post',
+                dataType: 'json',
+                data: data,
+                success: function(data) {
+                    if (data.status == 1) {
+                        var img = $('<img class="save-img" src="' + guid + '.jpg">');
+                        $("body").append(img);
+                    } else {
+                        alert(data.message);
+                    }
+                },
+                error: function() {
+                    alert("生成失败:(");
 
-            $(".save-img").attr("src", url);
-
+                }
+            });
+            /* var blob = classSelf.dataURItoBlob($(".save-img").attr("src"));
+             var url = window.URL.createObjectURL(blob);
+             $(".save-img").attr("src", url);*/
         },
         width: document.documentElement.scrollWidth * 2
     });

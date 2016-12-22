@@ -1,1 +1,54 @@
-.container .content section:nth-child(1) .item .desc,.container .content section:nth-child(1) .item .price,.container .content section:nth-child(1) .more,.container .content section:nth-child(1) .section-header,.container .content section:nth-child(9) .item .desc,.container .content section:nth-child(9) .item .price,.container .content section:nth-child(9) .more{display:none}.container .content{min-width:1170px}.container .content section:nth-child(1) .item{width:100%;border-radius:0;box-shadow:none}.container .content section:nth-child(1) a{cursor:default;border:none}.container .content section .item .img img{height:auto}.container .content section:nth-child(9) .section-header{margin-bottom:30px}.container .content section:nth-child(9) .item{width:365px;border-radius:10px;margin-right:30px;margin-bottom:27px;box-shadow:none}.container .content section:nth-child(9) .item:nth-child(3n-1){margin-right:0}.container .header .banner{height:500px}
+.container .content {
+  min-width: 1170px;
+}
+.container .content section:nth-child(1) .section-header {
+  display: none;
+}
+.container .content section:nth-child(1) .more {
+  display: none;
+}
+.container .content section:nth-child(1) a {
+  cursor: default;
+}
+.container .content section:nth-child(1) .item {
+  width: 100%;
+  border-radius: 0px;
+  box-shadow: none;
+}
+.container .content section:nth-child(1) .item .desc {
+  display: none;
+}
+.container .content section:nth-child(1) .item .price {
+  display: none;
+}
+.container .content section:nth-child(1) a {
+  border: none;
+}
+.container .content section .item .img img {
+  height: auto;
+}
+.container .content section:nth-child(9) .more {
+  display: none;
+}
+.container .content section:nth-child(9) .section-header {
+  margin-bottom: 30px;
+}
+.container .content section:nth-child(9) .item {
+  width: 365px;
+  border-radius: 10px;
+  margin-right: 30px;
+  margin-bottom: 27px;
+  box-shadow: none;
+}
+.container .content section:nth-child(9) .item:nth-child(3n-1) {
+  margin-right: 0;
+}
+.container .content section:nth-child(9) .item .desc {
+  display: none;
+}
+.container .content section:nth-child(9) .item .price {
+  display: none;
+}
+.container .header .banner {
+  height: 500px;
+}
