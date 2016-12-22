@@ -104,6 +104,7 @@ IndexController.prototype.html2Canvans = function() {
                     if (data.status == 1) {
                         $(".save-img").attr("src", data.GUID + ".jpg");
                         $("[name='wechatUrl']").val(window.location.href + "?bg=" + $("[name='bg']").val() + "&text=" + $("[name='text']").val() + "&name=" + $("[name='username']").val() + "&guid=" + data.GUID);
+                        new WechatShareController();
                     } else {
                         alert(data.message);
                     }
@@ -284,7 +285,6 @@ IndexController.prototype.bindEvent = function() {
             $("#content").hide();
             $("#savePic").show();
             $("#sendMess").show();
-            new WechatShareController();
         }
     });
     //输入姓名事件
