@@ -71,7 +71,7 @@ PartnerController.prototype.setDefault = function(name) {
                 $br.text(data.data.buySellRatioStr);
                 $biz.text(data.data.inviteBusinessRatioStr);
                 $bizOrd.text(data.data.inviteBusinessBillRatioStr);
-                $count.text(data.data.num);
+                $count.text(data.data.num - 0 + 1);
             } else {
                 $error.fadeIn('slow', function() {
                     $error.text(data.message);
