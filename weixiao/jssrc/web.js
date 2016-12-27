@@ -9,7 +9,7 @@ function MaxController() {
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
  继承WapController
  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-MaxController.prototype = new WebController();
+//MaxController.prototype = new WebController();
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
  显示预约框
  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -100,48 +100,48 @@ function reserve(index) {
 }
 
 function createMap(){
-		$('map').remove();//删除map元素
-		$('img[data-original-demension').each(function(index,img){//遍历有data-original-demension的img元素
-			//读取原始大小
-			var $this = $(this);
-			var $body = $('body');
-			var originalDemesion = $this.data('original-demension');
-			var originalWidth = originalDemesion[0];
-			var originalHeight = originalDemesion[1];
-			var currentWidth = $this.width();
-			var currentHeight = $this.height();
-			
-			//读取热点信息
-			var shapes = $this.data('shapes');
-			var name = $this.attr('name') || ('img_original_demesion'+index);
-			var mapName = "map_"+name;
-			var $map = $('<map></map>');
-			$map.attr('name',mapName);
-			var x1,x2,y1,y2,href;
-			var xRatio = currentWidth/originalWidth;
-			var yRatio = currentHeight/originalHeight;
-			$.each(shapes,function(j,shape){
-				x1 = parseInt(shape[0] * xRatio);
-				y1 = parseInt(shape[1] * yRatio);
-				x2 = parseInt((shape[0]+shape[2]) * xRatio);
-				y2 = parseInt((shape[1]+shape[3]) * yRatio);
-				href = shape[4];
-				$map.append($('<area shape="rect" coords="'+(x1+","+y1+","+x2+","+y2)+'" href="'+href+'"></area>'));
-			});
-			$body.append($map);
-			$this.attr('usemap',"#"+mapName);
+	$('map').remove();//删除map元素
+	$('img[data-original-demension').each(function(index,img){//遍历有data-original-demension的img元素
+		//读取原始大小
+		var $this = $(this);
+		var $body = $('body');
+		var originalDemesion = $this.data('original-demension');
+		var originalWidth = originalDemesion[0];
+		var originalHeight = originalDemesion[1];
+		var currentWidth = $this.width();
+		var currentHeight = $this.height();
+		
+		//读取热点信息
+		var shapes = $this.data('shapes');
+		var name = $this.attr('name') || ('img_original_demesion'+index);
+		var mapName = "map_"+name;
+		var $map = $('<map></map>');
+		$map.attr('name',mapName);
+		var x1,x2,y1,y2,href;
+		var xRatio = currentWidth/originalWidth;
+		var yRatio = currentHeight/originalHeight;
+		$.each(shapes,function(j,shape){
+			x1 = parseInt(shape[0] * xRatio);
+			y1 = parseInt(shape[1] * yRatio);
+			x2 = parseInt((shape[0]+shape[2]) * xRatio);
+			y2 = parseInt((shape[1]+shape[3]) * yRatio);
+			href = shape[4];
+			$map.append($('<area shape="rect" coords="'+(x1+","+y1+","+x2+","+y2)+'" href="'+href+'"></area>'));
 		});
-	}
-
-	function showDialog(){
-		$('#joinDialog').show();
-	}
-
-	$(function(){		
-		$(window).on('resize',createMap);
-
-		$('#joinDialog img').click(function(){
-			$('#joinDialog').hide();
-		});
+		$body.append($map);
+		$this.attr('usemap',"#"+mapName);
 	});
-	window.onload = createMap;
+}
+
+function showDialog(){
+	$('#joinDialog').show();
+}
+
+$(function(){		
+	$(window).on('resize',createMap);
+
+	$('#joinDialog img').click(function(){
+		$('#joinDialog').hide();
+	});
+});
+window.onload = createMap;
