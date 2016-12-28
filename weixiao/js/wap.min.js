@@ -146,7 +146,7 @@ function createMap() {
             location.href=href;
         }
     });*/
-    $('img[data-shapes]').wrap('<a></a>').click(function(){
+    $('img[data-shapes]').wrap('<a></a>').parent().click(function(){
         var $this = $(this);
         var href = $this.find('img').data('shapes')[0][4];
         if(href.indexOf('javascript')>-1){
