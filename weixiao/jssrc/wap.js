@@ -136,6 +136,16 @@ function createMap() {
         $body.append($map);
         $this.attr('usemap', "#" + mapName);
     });
+
+    //iphone热区失效
+    $('img[data-shapes]').click(function(){
+        var href = $(this).data('shapes')[0][4];
+        if(href.indexOf('javascript')){
+            eval(href)
+        }else{
+            location.href=href;
+        }
+    });
 }
 
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
