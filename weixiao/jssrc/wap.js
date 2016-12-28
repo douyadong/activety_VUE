@@ -140,8 +140,8 @@ function createMap() {
     //iphone热区失效
     $('img[data-shapes]').click(function(){
         var href = $(this).data('shapes')[0][4];
-        if(href.indexOf('javascript')){
-            eval(href)
+        if(href.indexOf('javascript')>-1){
+            eval(href);
         }else{
             location.href=href;
         }
