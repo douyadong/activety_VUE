@@ -105,8 +105,8 @@ function reserve(index) {
  创建热点
  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 function createMap() {
-    $('map').remove(); //删除map元素
-    $('img[data-original-demension').each(function(index, img) { //遍历有data-original-demension的img元素
+    /*$('map').remove(); //删除map元素
+    $('img[data-original-demension]').each(function(index, img) { //遍历有data-original-demension的img元素
         //读取原始大小
         var $this = $(this);
         var $body = $('body');
@@ -135,7 +135,7 @@ function createMap() {
         });
         $body.append($map);
         $this.attr('usemap', "#" + mapName);
-    });
+    });*/
 
     //iphone热区失效
     /*$('img[data-shapes]').click(function(){
@@ -146,7 +146,7 @@ function createMap() {
             location.href=href;
         }
     });*/
-    $('img[data-shapes]').wrap('<a></a>').parent().click(function(){
+    /*$('img[data-shapes]').wrap('<a></a>').parent().click(function(){
         var $this = $(this);
         var href = $this.find('img').data('shapes')[0][4];
         if(href.indexOf('javascript')>-1){
@@ -154,6 +154,11 @@ function createMap() {
         }else{
             location.href=href;
         }
+    });*/
+    $('img[data-shapes]').wrap('<a></a>').parent().each(function(){
+        var $this = $(this);
+        var href = $this.find('img').data('shapes')[0][4];
+        $this.attr('href',href);
     });
 }
 
