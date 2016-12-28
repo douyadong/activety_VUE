@@ -138,8 +138,17 @@ function createMap() {
     });
 
     //iphone热区失效
-    $('img[data-shapes]').click(function(){
+    /*$('img[data-shapes]').click(function(){
         var href = $(this).data('shapes')[0][4];
+        if(href.indexOf('javascript')>-1){
+            eval(href);
+        }else{
+            location.href=href;
+        }
+    });*/
+    $('img[data-shapes]').wrap('<a></a>').click(function(){
+        var $this = $(this);
+        var href = $this.find('img').data('shapes')[0][4];
         if(href.indexOf('javascript')>-1){
             eval(href);
         }else{
