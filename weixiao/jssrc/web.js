@@ -101,7 +101,7 @@ function reserve(index) {
 
 function createMap(){
 	$('map').remove();//删除map元素
-	$('img[data-original-demension').each(function(index,img){//遍历有data-original-demension的img元素
+	$('img[data-original-demension]').each(function(index,img){//遍历有data-original-demension的img元素
 		//读取原始大小
 		var $this = $(this);
 		var $body = $('body');
