@@ -1,1 +1,490 @@
-html body #loading #man,html body #loading #process{width:200px;margin-left:-100px;left:50%;position:absolute}@keyframes mymove{from{opacity:.3}to{opacity:1}}@-webkit-keyframes mymove{from{opacity:.3}to{opacity:1}}#savePic{pointer-events:none}html{height:100%}html body{background:url(../images/items_bg.jpg) no-repeat;background-size:100% 100%;height:100%;width:100%}html body #loading{opacity:1;transition:opacity 2s;-moz-transition:opacity 2s;-webkit-transition:opacity 2s;-o-transition:opacity 2s;width:100%;height:100%;position:relative;background:url(../images/loading_bg.gif) no-repeat;background-size:100% 100%;overflow:hidden}html body #loading #man{top:195px;height:50px;text-align:left;color:#fff}html body #loading #man img{width:50px}html body #loading #process{background-color:#273a4b;height:2px;top:230px}html body #loading #process #processInner{background-color:#727d85;width:0;height:2px}html body #loading #loadfont{position:absolute;top:245px;height:20px;width:100%;text-align:center;color:#fff}html body #loading #start{position:absolute;right:30px;bottom:-100px}html body #loading #start img{width:90px}html body #content{height:100%;width:100%;position:relative;background:url(../images/bg_1.gif) center no-repeat #081d3a;background-size:100% 100%;display:none}html body #content.bg_1 .text img,html body #content.bg_2 .text img,html body #content.bg_3 .text img{width:60%}html body #content.bg_1{background:url(../images/bg_1.gif) center no-repeat;background-size:100% 100%}html body #content.bg_1 .text{padding-top:15%;padding-right:4%;text-align:right}html body #content.bg_2{background:url(../images/bg_2.gif) center no-repeat;background-size:100% 100%}html body #content.bg_2 .text{padding-top:15%;padding-left:4%;text-align:left}html body #content.bg_3{background:url(../images/bg_3.gif) center no-repeat;background-size:100% 100%}html body #content.bg_3 .text{padding-top:15%;text-align:center}html body #content.bg_4{background:url(../images/bg_4.gif) center no-repeat;background-size:100% 100%}html body #content.bg_4 .text{padding-top:15%;padding-left:4%;text-align:left}html body #content.bg_4 .text img{width:60%;margin-bottom:10px}html body #content .text>div{display:none;padding-top:10px;color:#fff;font-size:14px}html body #content .text>div .animate{animation:mymove 1.5s infinite;animation-timing-function:ease-out;animation-fill-mode:forwards;-webkit-animation:mymove 1.5s infinite;-webkit-animation-timing-function:ease-out;-webkit-animation-fill-mode:forwards}html body #content .text>div i{display:inline-block;background:url(../images/choose_text.png) center no-repeat;background-size:100% 100%;height:20px;width:20px;margin-right:10px}html body #chooseBg,html body #chooseText,html body #guide,html body #tips{display:none;position:absolute}html body #content .text>div input{color:#fff;font-size:14px;padding-left:10px;height:25px;width:100px;background-color:transparent;border:1px solid #fff}html body #content .text>div p{color:#fff;font-size:14px;margin-top:10px}html body #content #menu{position:absolute;height:60px;background-color:#bf3228;bottom:0;left:0;width:100%;z-index:1000}html body #content #menu a{display:block;width:80px;padding:7px 5px;float:left;text-align:center;position:relative}html body #content #menu a .tip{position:absolute;top:-55px;left:30px;width:140px;display:none;animation:mymove 1.5s 3;animation-timing-function:ease-out;animation-fill-mode:forwards;-webkit-animation:mymove 1.5s 3;-webkit-animation-timing-function:ease-out;-webkit-animation-fill-mode:forwards}html body #content #menu a img{width:25px}html body #content #menu a span{display:block;color:#fff;font-size:14px}html body #content #menu a#submit{color:#fff;float:right;border:1px solid #fff;width:85px;margin-right:10px;margin-top:12px;font-size:14px}html body #content #menu a#submit img{width:10px;margin-left:5px;margin-top:-1px}html body #chooseBg{width:100%;top:0;left:0}html body #chooseBg .choose_content{width:280px;margin-top:10%;background:url(../images/modual.png) center no-repeat;background-size:100% 100%;margin-left:auto;margin-right:auto;padding:20px}html body #chooseBg .choose_content .lick-btn{border:1px solid #ee3132;color:#ee3132;margin:0 auto;width:90px;font-size:14px;padding:5px 10px}html body #chooseBg .choose_content .lick-btn img{width:12px;padding:0}html body #chooseBg .choose_content img{padding:20px 25px;border-radius:30px;-webkit-border-radius:30px}html body #chooseBg .swiper-button-prev{background:url(../images/arrow_1.png);background-size:100% 100%;left:-1px}html body #chooseBg .swiper-button-next{background:url(../images/arrow_2.png);background-size:100% 100%;right:0}html body #chooseText{width:100%;top:0;left:0}html body #chooseText .choose_content{width:300px;margin-top:30%;background:#020c1d;margin-left:auto;margin-right:auto;padding:10px;border-radius:20px;-webkit-border-radius:20px}html body #chooseText .choose_content img{padding:15px 25px}html body #chooseText .choose_content .lick-btn{background-color:#fff;color:#ee3132;margin:-5px auto 10px;width:90px;font-size:14px;padding:5px 10px}html body #chooseText .choose_content .lick-btn img{width:12px;padding:0}html body #chooseText .swiper-button-prev{background:url(../images/arrow_3.png);background-size:100% 100%;left:-4px}html body #chooseText .swiper-button-next{background:url(../images/arrow_4.png);background-size:100% 100%;right:-4px}html body #guide{width:100%;height:100%;top:0;left:0;background:rgba(2,12,29,.6)}html body #guide .contract_content{width:220px;margin-left:auto;padding:5px}html body #tips{width:100%;top:40%;left:0;z-index:1003}html body #tips .contract_content{width:220px;background:#020c1d;margin-left:auto;margin-right:auto;padding:20px;color:#fff;font-size:14px;text-align:center;border-radius:20px;-webkit-border-radius:20px}html body #tips .contract_content a{padding:3px 10px;color:#D64040;text-decoration:none;background-color:#fff;width:60px;margin:10px auto;display:block}html body #contract{display:none;position:absolute;width:100%;top:30%;left:0;z-index:1002}html body #contract .contract_content{width:220px;background:#020c1d;margin-left:auto;margin-right:auto;padding:20px;color:#fff;font-size:14px;text-align:center;border-radius:20px;-webkit-border-radius:20px}html body #contract .contract_content p{margin-bottom:10px;font-size:16px}html body #contract .contract_content a{color:#fff;text-decoration:underline;display:block}html body #contract .contract_content a#submitContrct{padding:3px 10px;color:#D64040;text-decoration:none;background-color:#fff;width:60px;margin:10px auto}html body #items{display:none;position:fixed;padding:10px;height:100%;width:100%;top:0;left:0;color:#fff;background:url(../images/items_bg.jpg) top repeat-y;overflow-y:auto;z-index:1050}html body #items p{font-size:14px;margin-bottom:5px}html body #makeup,html body #savePic,html body #sendMess{display:none;height:44px;line-height:44px;left:50%;font-size:16px;color:#fff;text-align:center;position:fixed}html body #items p.title{margin-bottom:10px;font-weight:600}html body #items #itemSubmit{width:100px;display:block;margin:10px auto;color:#fff;text-align:center;padding:8px 15px;background-color:#D64040}html body #makeup{background-color:#bf3228;bottom:25px;width:260px;margin-left:-130px}html body #makeup img{width:10px;margin-left:8px;margin-top:-1px}html body #savePic{background:rgba(214,64,64,.6);bottom:80px;width:280px;margin-left:-140px}html body #sendMess{background-color:#D64040;bottom:25px;width:120px;margin-left:-60px}html body audio{width:0;height:0}html body .music{position:fixed;right:10px;top:10px;width:30px}html body .swiper-button-next,html body .swiper-button-prev{width:20px;height:30px}
+@keyframes mymove {
+  from {
+    opacity: .3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes mymove {
+  from {
+    opacity: .3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#savePic {
+  pointer-events: none;
+}
+html {
+  height: 100%;
+}
+html body {
+  background: url("../images/items_bg.jpg") no-repeat;
+  background-size: 100% 100%;
+  height: 100%;
+  width: 100%;
+}
+html body #loading {
+  opacity: 1;
+  transition: opacity 2s;
+  -moz-transition: opacity 2s;
+  -webkit-transition: opacity 2s;
+  -o-transition: opacity 2s;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: url("../images/loading_bg.gif") no-repeat;
+  background-size: 100% 100%;
+  overflow: hidden;
+}
+html body #loading #man {
+  position: absolute;
+  top: 195px;
+  left: 50%;
+  height: 50px;
+  width: 200px;
+  margin-left: -100px;
+  text-align: left;
+  color: #fff;
+}
+html body #loading #man img {
+  width: 50px;
+}
+html body #loading #process {
+  background-color: #273a4b;
+  position: absolute;
+  width: 200px;
+  height: 2px;
+  margin-left: -100px;
+  top: 230px;
+  left: 50%;
+}
+html body #loading #process #processInner {
+  background-color: #727d85;
+  width: 0px;
+  height: 2px;
+}
+html body #loading #loadfont {
+  position: absolute;
+  top: 245px;
+  height: 20px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+html body #loading #start {
+  position: absolute;
+  right: 30px;
+  bottom: -100px;
+}
+html body #loading #start img {
+  width: 90px;
+}
+html body #content {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: url(../images/bg_1.gif) no-repeat center;
+  background-color: #081d3a;
+  background-size: 100% 100%;
+  display: none;
+  /******背景1***********/
+  /******背景2***********/
+  /******背景3***********/
+  /******背景4***********/
+}
+html body #content.bg_1 {
+  background: url(../images/bg_1.gif) no-repeat center;
+  background-size: 100% 100%;
+}
+html body #content.bg_1 .text {
+  padding-top: 15%;
+  padding-right: 4%;
+  text-align: right;
+}
+html body #content.bg_1 .text img {
+  width: 60%;
+}
+html body #content.bg_2 {
+  background: url(../images/bg_2.gif) no-repeat center;
+  background-size: 100% 100%;
+}
+html body #content.bg_2 .text {
+  padding-top: 15%;
+  padding-left: 4%;
+  text-align: left;
+}
+html body #content.bg_2 .text img {
+  width: 60%;
+}
+html body #content.bg_3 {
+  background: url(../images/bg_3.gif) no-repeat center;
+  background-size: 100% 100%;
+}
+html body #content.bg_3 .text {
+  padding-top: 15%;
+  text-align: center;
+}
+html body #content.bg_3 .text img {
+  width: 60%;
+}
+html body #content.bg_4 {
+  background: url(../images/bg_4.gif) no-repeat center;
+  background-size: 100% 100%;
+}
+html body #content.bg_4 .text {
+  padding-top: 15%;
+  padding-left: 4%;
+  text-align: left;
+}
+html body #content.bg_4 .text img {
+  width: 60%;
+  margin-bottom: 10px;
+}
+html body #content .text > div {
+  display: none;
+  padding-top: 10px;
+  color: #fff;
+  font-size: 14px;
+}
+html body #content .text > div .animate {
+  animation: mymove 1.5s infinite;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  -webkit-animation: mymove 1.5s infinite;
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+}
+html body #content .text > div i {
+  display: inline-block;
+  background: url("../images/choose_text.png") no-repeat center;
+  background-size: 100% 100%;
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+}
+html body #content .text > div input {
+  color: #fff;
+  font-size: 14px;
+  padding-left: 10px;
+  height: 25px;
+  width: 100px;
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+html body #content .text > div p {
+  color: #fff;
+  font-size: 14px;
+  margin-top: 10px;
+}
+html body #content #menu {
+  position: absolute;
+  height: 60px;
+  background-color: #bf3228;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+html body #content #menu a {
+  display: block;
+  width: 80px;
+  padding: 7px 5px;
+  float: left;
+  text-align: center;
+  position: relative;
+}
+html body #content #menu a .tip {
+  position: absolute;
+  top: -55px;
+  left: 30px;
+  width: 140px;
+  display: none;
+  animation: mymove 1.5s 3;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  -webkit-animation: mymove 1.5s 3;
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+}
+html body #content #menu a img {
+  width: 25px;
+}
+html body #content #menu a span {
+  display: block;
+  color: #fff;
+  font-size: 14px;
+}
+html body #content #menu a#submit {
+  color: #fff;
+  float: right;
+  border: 1px solid #fff;
+  width: 85px;
+  margin-right: 10px;
+  margin-top: 12px;
+  font-size: 14px;
+}
+html body #content #menu a#submit img {
+  width: 10px;
+  margin-left: 5px;
+  margin-top: -1px;
+}
+html body #chooseBg {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0%;
+}
+html body #chooseBg .choose_content {
+  width: 280px;
+  margin-top: 10%;
+  background: url(../images/modual.png) no-repeat center;
+  background-size: 100% 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
+html body #chooseBg .choose_content .lick-btn {
+  border: 1px solid #ee3132;
+  color: #ee3132;
+  margin: 0px auto;
+  width: 90px;
+  font-size: 14px;
+  padding: 5px 10px;
+}
+html body #chooseBg .choose_content .lick-btn img {
+  width: 12px;
+  padding: 0;
+}
+html body #chooseBg .choose_content img {
+  padding: 20px 25px;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+}
+html body #chooseBg .swiper-button-prev {
+  background: url(../images/arrow_1.png);
+  background-size: 100% 100%;
+  left: -1px;
+}
+html body #chooseBg .swiper-button-next {
+  background: url(../images/arrow_2.png);
+  background-size: 100% 100%;
+  right: 0px;
+}
+html body #chooseText {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0%;
+}
+html body #chooseText .choose_content {
+  width: 300px;
+  margin-top: 30%;
+  background: #020c1d;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 10px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+}
+html body #chooseText .choose_content img {
+  padding: 15px 25px;
+}
+html body #chooseText .choose_content .lick-btn {
+  background-color: #fff;
+  color: #ee3132;
+  margin: -5px auto 10px;
+  width: 90px;
+  font-size: 14px;
+  padding: 5px 10px;
+}
+html body #chooseText .choose_content .lick-btn img {
+  width: 12px;
+  padding: 0;
+}
+html body #chooseText .swiper-button-prev {
+  background: url(../images/arrow_3.png);
+  background-size: 100% 100%;
+  left: -4px;
+}
+html body #chooseText .swiper-button-next {
+  background: url(../images/arrow_4.png);
+  background-size: 100% 100%;
+  right: -4px;
+}
+html body #guide {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0%;
+  background: rgba(2, 12, 29, 0.6);
+}
+html body #guide .contract_content {
+  width: 220px;
+  margin-left: auto;
+  padding: 5px;
+}
+html body #tips {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 40%;
+  left: 0%;
+  z-index: 1003;
+}
+html body #tips .contract_content {
+  width: 220px;
+  background: #020c1d;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+}
+html body #tips .contract_content a {
+  padding: 3px 10px;
+  color: #D64040;
+  text-decoration: none;
+  background-color: #fff;
+  width: 60px;
+  margin: 10px auto;
+  display: block;
+}
+html body #contract {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 30%;
+  left: 0%;
+  z-index: 1002;
+}
+html body #contract .contract_content {
+  width: 220px;
+  background: #020c1d;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+}
+html body #contract .contract_content p {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+html body #contract .contract_content a {
+  color: #fff;
+  text-decoration: underline;
+  display: block;
+}
+html body #contract .contract_content a#submitContrct {
+  padding: 3px 10px;
+  color: #D64040;
+  text-decoration: none;
+  background-color: #fff;
+  width: 60px;
+  margin: 10px auto;
+}
+html body #items {
+  display: none;
+  position: fixed;
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  color: #fff;
+  background: url("../images/items_bg.jpg") repeat-y top;
+  overflow-y: auto;
+  z-index: 1050;
+}
+html body #items p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+html body #items p.title {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+html body #items #itemSubmit {
+  width: 100px;
+  display: block;
+  margin: 10px auto;
+  color: #fff;
+  text-align: center;
+  padding: 8px 15px;
+  background-color: #D64040;
+}
+html body #makeup {
+  display: none;
+  position: fixed;
+  height: 44px;
+  line-height: 44px;
+  background-color: #bf3228;
+  bottom: 25px;
+  left: 50%;
+  width: 260px;
+  margin-left: -130px;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+}
+html body #makeup img {
+  width: 10px;
+  margin-left: 8px;
+  margin-top: -1px;
+}
+html body #savePic {
+  display: none;
+  position: fixed;
+  height: 44px;
+  line-height: 44px;
+  background: rgba(214, 64, 64, 0.6);
+  bottom: 80px;
+  left: 50%;
+  width: 280px;
+  margin-left: -140px;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+}
+html body #sendMess {
+  display: none;
+  position: fixed;
+  height: 44px;
+  line-height: 44px;
+  background-color: #D64040;
+  bottom: 25px;
+  left: 50%;
+  width: 120px;
+  margin-left: -60px;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+}
+html body audio {
+  width: 0px;
+  height: 0px;
+}
+html body .music {
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  width: 30px;
+}
+html body .swiper-button-next,
+html body .swiper-button-prev {
+  width: 20px;
+  height: 30px;
+}
