@@ -21,71 +21,71 @@ MaxController.prototype.showReverseDialog = function(estateId, estateName) {
 
 var controller = new MaxController();
 var estates = [{
-        estateId: "153191",
-        estateName: "新西塘孔雀城",
+        estateId: "158180",
+        estateName: "翡翠名都",
     }, {
-        estateId: "155712",
-        estateName: "华润置地橡树湾"
+        estateId: "161276",
+        estateName: "摩尔公馆"
     }, {
-        estateId: "155079",
+        estateId: "154842",
         estateName: "四季香榭"
     }, {
-        estateId: "155079",
-        estateName: "赞成名仕府邸"
+        estateId: "146858",
+        estateName: "银亿上府"
     },
 
 
     {
-        estateId: "155856",
+        estateId: "155854",
         estateName: "山景水岸"
     }, {
-        estateId: "155715",
+        estateId: "156173",
         estateName: "名城花苑"
     }, {
         estateId: "155765",
         estateName: "名都豪庭"
     }, {
         estateId: "155259",
-        estateName: "无锡田园东方"
+        estateName: "田园东方"
     },
     //大品牌
     {
-        estateId: "153101",
+        estateId: "107503",
         estateName: "保利西塘越"
     }, {
-        estateId: "155706",
-        estateName: "嘉兴万达广场"
+        estateId: "149345",
+        estateName: "绿地滨江中央广场"
     }, {
-        estateId: "154677",
-        estateName: "中环国际公寓三期"
+        estateId: "107277",
+        estateName: "旭辉铂悦西郊"
     }, {
-        estateId: "143689",
-        estateName: "万科翡翠雅宾利"
+        estateId: "142729",
+        estateName: "慈溪碧桂园"
     },
     //任性购
     {
-        estateId: "153100",
+        estateId: "146967",
         estateName: "智富城Mimon公寓"
     }, {
-        estateId: "144551",
-        estateName: "MORE街区"
+        estateId: "161282",
+        estateName: "绿地中心"
     }, {
-        estateId: "155623",
+        estateId: "155378",
         estateName: "嘉兴尚海年华"
     }, {
-        estateId: "153093",
-        estateName: "上影安吉新奇世界"
+        estateId: "161381",
+        estateName: "金泰城"
     },
     //地铁旁
     {
-        estateId: "119211",
-        estateName: "融创外滩188"
+        estateId: "154821",
+        estateName: "高和海德公馆"
     }, {
         estateId: "145298",
         estateName: "香溢花城三期香溢天地"
     }, {
-        estateId: "106565",
-        estateName: "盛世滨江壹号公馆"
+        estateId: "106821",
+        estateName: "南京西路公馆"
     }, {
         estateId: "15973",
         estateName: "华润外滩九里"
