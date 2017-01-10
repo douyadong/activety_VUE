@@ -194,7 +194,7 @@ img{
 			<img src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/<?php echo $router["activity_name"]?>/images/wap/b2.jpg">
 			<div class="linklist clearfix">
 				<a class="b1" href="http://m.wkzf.com/shanghai/esf"></a>
-				<a class="b2" href="http://http://m.wkzf.com/shanghai"></a>
+				<a class="b2" href="http://m.wkzf.com/shanghai"></a>
 				<a class="b3" href="http://m.wkzf.com/shanghai/xflist"></a>
 			</div>
 		</div>
