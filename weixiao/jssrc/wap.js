@@ -99,6 +99,7 @@ function reserve(index) {
     var estateId = estate.estateId,
         estateName = estate.estateName;
     controller.showReverseDialog(estateId, estateName);
+    return false;
 }
 
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
