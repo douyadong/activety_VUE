@@ -104,12 +104,13 @@ function Controller() {
         var onExceptionInterface = (params === null || params.onExceptionInterface === null || params.onExceptionInterface === undefined) ? null : params.onExceptionInterface;
         if (this.showLoadingTips) this.tips(loadingTips);
         try {
-            $.ajax({
+
+            var ajaxOptions = {
                 url: apiUrl,
                 type: type,
                 data: data,
                 dataType: apiDataType,
-                jsonpCallback: "callback", //这个配置是在没有真正后端接口前端用自己的 json文件模拟接口的时候为了保持callback参数值一致所做的设置
+                // jsonpCallback: "callback", //这个配置是在没有真正后端接口前端用自己的 json文件模拟接口的时候为了保持callback参数值一致所做的设置
                 error: function (e) {
                     //子类提供
                     classSelf.showLog('网络异常');
@@ -121,7 +122,13 @@ function Controller() {
                         if (onExceptionInterface) onExceptionInterface(data); //出了问题，就调用出错函数
                     }
                 }
-            });
+            }
+
+            // if (classSelf.environment != "dev") {
+            //     delete ajaxOptions.jsonpCallback;
+            // }
+
+            $.ajax(ajaxOptions);
         } catch (e) {
 
         }

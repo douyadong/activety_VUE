@@ -125,7 +125,7 @@
     <script src="http://api.map.baidu.com/api?v=2.0&amp;ak=qNYWrlPhhs31jXqbHLMnKWrI"></script>
 	<!--这里是微信分享的脚本-->        
 	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
-	<script src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/public/js/wechat-share.min.js"></script> 
+	<script src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/public/js/wechat-share.min.js"></script>
 	</body>
 	</html>
 		<?php
