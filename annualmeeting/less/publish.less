@@ -1,0 +1,89 @@
+/*-----------------------------------------------------------------------------------------------------------
+项目名称：悟空衫点亮活动
+页面路径：olympic/detail.php
+作者：yuxiaochen@lifang.com
+-----------------------------------------------------------------------------------------------------------*/
+
+@import "../../public/less/mixins";
+@import "rem";
+@import "sprite.less";
+@border-color: #00b7ce;
+html {
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    text-align: center;
+    color: #fff;
+    padding: .5rem;
+    &>.choose-box {
+        border: 1px solid @border-color;
+        height: 15rem;
+        margin-bottom: 1rem;
+        &>.icon {
+            color: #00a7ba;
+            font-size: 8rem;
+            text-align: center;
+            line-height: 15rem;
+        }
+    }
+    &>.location-info {
+        border-bottom: 1px solid @border-color;
+        text-align: left;
+        padding: 0.4rem 1.1rem;
+        position: relative;
+        &>.sprite-34 {
+            position: absolute;
+            left: 0;
+            top:0;
+            .inline-block();
+        }
+        &>span {
+            color: #fff;
+            font-size: 0.7rem;
+        }
+    }
+    &>.form {
+        padding: 1rem 0.5rem;
+        text-align: left;
+        &>.row {
+            width: 100%;
+            font-size: 0.7rem;
+            margin-bottom: 0.7rem;
+            padding-left: 0.8rem;
+            input {
+                background-color: #122243;
+                border: 1px solid @border-color;
+                -webkit-appearance: none;
+                outline: medium;
+                padding: 0.2rem;
+                width: 70%;
+                font-size: 0.7rem;
+                color: @border-color;
+            }
+            label {
+                color: #01fff5;
+            }
+        }
+
+        &>.button{
+            background-color: #febb26;
+            .border-radius(5px);
+            padding: 0.5rem 1rem;
+
+            &>span{
+                color: #fff;
+                font-size: 1.3rem;
+            }
+        }
+    }
+}

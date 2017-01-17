@@ -1,7 +1,7 @@
 /*-----------------------------------------------------------------------------------------------------------
-项目名称：奥运嘉年华
+项目名称：悟空衫点亮活动
 页面路径：olympic/detail.php
-作者：luwei@lifang.com
+作者：yuxiaochen@lifang.com
 -----------------------------------------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
  1. 项目名称：悟空找房活动推广前端MVC框架
@@ -108,33 +108,257 @@ body {
     font-size: 30px !important;
   }
 }
+.sprite {
+  background-image: url(../images/spritesheet.png);
+  background-repeat: no-repeat;
+  display: block;
+}
+.sprite-1 {
+  width: 56px;
+  height: 36px;
+  background-position: -5px -5px;
+}
+.sprite-10 {
+  width: 74px;
+  height: 25px;
+  background-position: -71px -5px;
+}
+.sprite-11 {
+  width: 64px;
+  height: 14px;
+  background-position: -155px -5px;
+}
+.sprite-12 {
+  width: 34px;
+  height: 19px;
+  background-position: -229px -5px;
+}
+.sprite-13 {
+  width: 35px;
+  height: 34px;
+  background-position: -155px -34px;
+}
+.sprite-14 {
+  width: 46px;
+  height: 15px;
+  background-position: -200px -34px;
+}
+.sprite-15 {
+  width: 9px;
+  height: 15px;
+  background-position: -256px -34px;
+}
+.sprite-16 {
+  width: 28px;
+  height: 24px;
+  background-position: -5px -59px;
+}
+.sprite-17 {
+  width: 28px;
+  height: 24px;
+  background-position: -43px -59px;
+}
+.sprite-18 {
+  width: 19px;
+  height: 19px;
+  background-position: -81px -59px;
+}
+.sprite-19 {
+  width: 34px;
+  height: 21px;
+  background-position: -110px -59px;
+}
+.sprite-2 {
+  width: 43px;
+  height: 42px;
+  background-position: -200px -59px;
+}
+.sprite-20 {
+  width: 39px;
+  height: 39px;
+  background-position: -5px -111px;
+}
+.sprite-21 {
+  width: 39px;
+  height: 39px;
+  background-position: -54px -111px;
+}
+.sprite-22 {
+  width: 68px;
+  height: 68px;
+  background-position: -103px -111px;
+}
+.sprite-23 {
+  width: 25px;
+  height: 14px;
+  background-position: -181px -111px;
+}
+.sprite-24 {
+  width: 249px;
+  height: 44px;
+  background-position: -5px -189px;
+}
+.sprite-25 {
+  width: 15px;
+  height: 20px;
+  background-position: -253px -59px;
+}
+.sprite-26 {
+  width: 9px;
+  height: 80px;
+  background-position: -253px -89px;
+}
+.sprite-27 {
+  width: 14px;
+  height: 20px;
+  background-position: -5px -243px;
+}
+.sprite-28 {
+  width: 5px;
+  height: 5px;
+  background-position: -81px -89px;
+}
+.sprite-29 {
+  width: 5px;
+  height: 5px;
+  background-position: -154px -89px;
+}
+.sprite-3 {
+  width: 11px;
+  height: 16px;
+  background-position: -29px -243px;
+}
+.sprite-30 {
+  width: 34px;
+  height: 40px;
+  background-position: -275px -5px;
+}
+.sprite-31 {
+  width: 24px;
+  height: 12px;
+  background-position: -278px -55px;
+}
+.sprite-32 {
+  width: 24px;
+  height: 13px;
+  background-position: -278px -77px;
+}
+.sprite-33 {
+  width: 95px;
+  height: 36px;
+  background-position: -50px -243px;
+}
+.sprite-34 {
+  width: 16px;
+  height: 25px;
+  background-position: -272px -100px;
+}
+.sprite-4 {
+  width: 24px;
+  height: 24px;
+  background-position: -181px -135px;
+}
+.sprite-5 {
+  width: 40px;
+  height: 69px;
+  background-position: -272px -135px;
+}
+.sprite-6 {
+  width: 33px;
+  height: 51px;
+  background-position: -264px -214px;
+}
+.sprite-7 {
+  width: 59px;
+  height: 37px;
+  background-position: -155px -243px;
+}
+.sprite-8 {
+  width: 70px;
+  height: 16px;
+  background-position: -224px -275px;
+}
+.sprite-9 {
+  width: 73px;
+  height: 20px;
+  background-position: -319px -5px;
+}
+html {
+  height: 100%;
+}
+body {
+  width: 100%;
+  height: 100%;
+}
 .wrapper {
-  *zoom: 1;
-  color: #464C56;
-  font-size: 0.6rem;
-  padding: 0.6rem;
-}
-.wrapper:after {
-  clear: both ;
-  content: " ";
-  display: block ;
-  font-size: 0 ;
-  height: 0 ;
-  visibility: hidden ;
-}
-.wrapper p {
-  padding: 0.2rem 0;
-  line-height: 1rem;
-}
-.wrapper .title {
-  font-size: 0.8rem;
-  font-weight: bold;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 100;
   text-align: center;
+  color: #fff;
+  padding: .5rem;
 }
-.wrapper .sub-title {
-  font-size: 0.6rem;
-  font-weight: bold;
+.wrapper > .choose-box {
+  border: 1px solid #00b7ce;
+  height: 15rem;
+  margin-bottom: 1rem;
 }
-.wrapper .num {
-  color: #FC4C5A;
+.wrapper > .choose-box > .icon {
+  color: #00a7ba;
+  font-size: 8rem;
+  text-align: center;
+  line-height: 15rem;
+}
+.wrapper > .location-info {
+  border-bottom: 1px solid #00b7ce;
+  text-align: left;
+  padding: 0.4rem 1.1rem;
+  position: relative;
+}
+.wrapper > .location-info > .sprite-34 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  *display: inline ;
+  *zoom: 1 ;
+}
+.wrapper > .location-info > span {
+  color: #fff;
+  font-size: 0.7rem;
+}
+.wrapper > .form {
+  padding: 1rem 0.5rem;
+  text-align: left;
+}
+.wrapper > .form > .row {
+  width: 100%;
+  font-size: 0.7rem;
+  margin-bottom: 0.7rem;
+  padding-left: 0.8rem;
+}
+.wrapper > .form > .row input {
+  background-color: #122243;
+  border: 1px solid #00b7ce;
+  -webkit-appearance: none;
+  outline: medium;
+  padding: 0.2rem;
+  width: 70%;
+  font-size: 0.7rem;
+  color: #00b7ce;
+}
+.wrapper > .form > .row label {
+  color: #01fff5;
+}
+.wrapper > .form > .button {
+  background-color: #febb26;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+}
+.wrapper > .form > .button > span {
+  color: #fff;
+  font-size: 1.3rem;
 }
