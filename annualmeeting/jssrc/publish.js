@@ -101,6 +101,10 @@ PublishController.prototype.getLocation = function () {
         if (this.getStatus() == BMAP_STATUS_SUCCESS) {
             lng = r.point.lng;
             lat = r.point.lat;
+
+            classSelf.latitude = lat;
+            classSelf.longitude = lng;
+
             url = geoRequestUrl.replace('#positionInfo#', lat + ',' + lng);
 
             $.ajax({
@@ -108,6 +112,9 @@ PublishController.prototype.getLocation = function () {
                 type: 'GET',
                 dataType: 'jsonp',
                 success: function (resp) {
+                    classSelf.country = resp.result.addressComponent.country;
+                    classSelf.city = resp.result.addressComponent.city;
+
                     $('.location-info').find('.country').html(resp.result.addressComponent.country).css('visibility', 'visible');
                     $('.location-info').find('.city').html(resp.result.addressComponent.city.replace('市', '')).css('visibility', 'visible');
                 },
@@ -123,28 +130,6 @@ PublishController.prototype.getLocation = function () {
     }, { enableHighAccuracy: true })
 }
 
-
-//创建阴影层
-PublishController.prototype.createMask = function () {
-    //获取页面高度和宽度
-    var sHeight = document.documentElement.scrollHeight,
-        sWidth = document.documentElement.scrollWidth,
-        mask = document.createElement('div');
-    mask.id = 'mask-container';
-    //遮罩层css
-    $(mask).css({
-        'background-color': 'rgba(0,0,0,0.7)',
-        'position': 'fixed',
-        'left': 0,
-        'top': 0,
-        'height': sHeight + 'px',
-        'width': sWidth + 'px',
-        'z-index': '1000',
-        'cursor': 'pointer'
-    });
-    $(document.body).append(mask);
-};
-
 /*-----------------------------------------------------------------------------------------------------------
 上传图片
 -----------------------------------------------------------------------------------------------------------*/
@@ -152,13 +137,32 @@ PublishController.prototype.uploadImage = function () {
     var classSelf = this;
     var serverId;
 
+    var txtMobile = $.trim($('#txtMobile').val());
+    var txtUserName = $.trim($('#txtUserName').val());
+
     wx.uploadImage({
         localId: classSelf.localId, // 需要上传的图片的本地ID，由chooseImage接口获得
         isShowProgressTips: 1, // 默认为1，显示进度提示
         success: function (res) {
             serverId = res.serverId; // 返回图片的服务器端ID
 
-            classSelf.request(classSelf.apiUrl.annualmeeting.addPhoto, {})
+            alert("serverId:" + serverId);
+            console.log("serverId:" + serverId)
+
+            classSelf.request(classSelf.apiUrl.annualmeeting.addPhoto, {
+                openId: classSelf.openId,
+                latitude: classSelf.latitude,
+                longitude: classSelf.longitude,
+                country: classSelf.country,
+                city: classSelf.city,
+                userName: txtUserName,
+                userPhone: txtMobile,
+                media_id: serverId
+            }, {
+                    process: function (resp) {
+                        alert("上传成功！")
+                    }
+                })
         }
     });
 }
@@ -176,14 +180,22 @@ PublishController.prototype.bindEvent = function () {
             sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
             sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
             success: function (res) {
-                var localIds = res.localIds; // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
+                classSelf.localId = res.localIds; // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
             }
         });
     })
 
     //上传按钮事件绑定
-    $('.button').on('click',function(){
-        
+    $('.button').on('click', function () {
+        var txtMobile = $.trim($('#txtMobile').val());
+        var txtUserName = $.trim($('#txtUserName').val());
+
+        if (!classSelf.localId) {
+
+        }
+
+
+
     })
 
     $('body').delegate('#mask-container', 'click', function (event) {

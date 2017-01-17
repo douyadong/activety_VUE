@@ -338,6 +338,7 @@ body {
   top: 50%;
   margin-top: -6rem;
   margin-right: -4.5rem;
+  z-index: 100;
 }
 .wrapper > .details > .img-box > .sprite-27 {
   position: absolute;
