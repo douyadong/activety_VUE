@@ -29,20 +29,34 @@
     <body>
     	<div class="wrapper">
 		   <div class="logo">
-		   		<img src="http://cdn.wkzf.com/wkweb_fe/img/source/public/logo.png" alt="logo">
+		   		<img src="<?php echo $confs["module_img_path"]; ?>/wklogo.png" alt="logo">	
 		   </div>
 		   <div class="title">
-		   		标题
-		   		<!-- <img src="" alt=""> -->
+			   <img src="<?php echo $confs["module_img_path"]; ?>/title.png" alt="title">	
 		   </div>
 		   <div class="desc">
-		   		描述
+		   		<p>有家的地方就是悟空</p>
+		   		<p>在这个特殊的欢聚时刻</p>
+		   		<p>让我们身着悟空衫</p>
+		   		<p>共同点亮属于悟空的足迹地图</p>
+		   		<i class="lefttop sprite sprite-32"></i>
+		   		<i class="rightbottom sprite sprite-31"></i>
+		   		<img class="planet" src="<?php echo $confs["module_img_path"]; ?>/2-min.png" alt="planet">	
 		   </div>
 		   <div class="lighted">
-		   		点亮
+		   		<img src="<?php echo $confs["module_img_path"]; ?>/bulb.png" alt="bulb">	
+		   		已点亮<span class="count">14</span>个城市
+		   		<img class="planet" src="<?php echo $confs["module_img_path"]; ?>/1-min.png" alt="planet">	
 		   </div>
 		    <div class="rule">
-		   		规则
+		    	<div class="award">
+			    	<p>点击查看</p>
+			    	<p>活动奖品</p>
+		    	</div>		
+		    	<p class="title">活动规则</p>
+				<p class="time">活动时间：即日起至2017年2月20日</p>
+				<p class="requirement">活动要求：身着悟空衫（冬装或者夏装均可），与当地城市的地标性建筑或景点或者WP门店合影并上传；成功后还可将页面分享至亲朋好友为你点赞。<span>（没人最多上传5张照片）</span></p>
+		   		
 		   </div>
 		   <div class="hot">
 		   		<p class="title">热门</p>
