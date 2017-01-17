@@ -39,19 +39,20 @@ function PublishController() {
 初始化页面
 -----------------------------------------------------------------------------------------------------------*/
 PublishController.prototype.initPage = function () {
+    var classSelf=this;
 
-    this.openId = "";
+    classSelf.openId = classSelf.getQueryStringByName("openId");
 
     //微信选择本地图片返回的选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
-    this.localIds = null;
+    classSelf.localIds = null;
 
-    this.country = "中国"; // 定位的国家名，默认为中国
+    classSelf.country = "中国"; // 定位的国家名，默认为中国
 
-    this.city = "上海";//定位的城市名，默认为上海
+    classSelf.city = "上海";//定位的城市名，默认为上海
 
-    this.latitude = "38.65777"; //经度
+    classSelf.latitude = "38.65777"; //经度
 
-    this.longitude = "104.08296"; //纬度
+    classSelf.longitude = "104.08296"; //纬度
 }
 
 
@@ -85,6 +86,7 @@ PublishController.prototype.getDetails = function () {
             }
         })
 }
+
 
 /*-----------------------------------------------------------------------------------------------------------
 调用百度地图获取地位信息
@@ -204,6 +206,16 @@ PublishController.prototype.bindEvent = function () {
 }
 
 
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 根据QueryString参数名称获取值
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+PublishController.prototype.getQueryStringByName = function(name) {
+    var result = location.search.match(new RegExp("[\?\&]" + name + "=([^\&]+)", "i"));
+    if (result == null || result.length < 1) {
+        return "";
+    }
+    return result[1];
+};
 
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 类的初始化
