@@ -8,7 +8,7 @@ function Controller() {
     /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
     静态资源域名序列随机化，为什么要定义在上面，因为在后面定义的话前面用这个方法取不到
     -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-    this.randomDomainSn = function() {
+    this.randomDomainSn = function () {
         var sn = Math.floor(Math.random() * 10 + 1).toString();
         if (sn.length < 2) sn = "0" + sn;
         return sn;
@@ -23,7 +23,7 @@ function Controller() {
     //this.environment = "development" ; //环境定义
     this.environment = STAGE_ENVIRONENT;
 
-    this.staticDomain="//devhd.fe.wkzf";
+    this.staticDomain = "//devhd.fe.wkzf";
     if (this.environment === "test") this.staticDomain = "//testhd.fe.wkzf";
     else if (this.environment === "sim") this.staticDomain = "//simhd.fe.wkzf";
     else if (this.environment === "prod") this.staticDomain = "//hd.wkzf.com";
@@ -48,25 +48,36 @@ function Controller() {
             "getPhoneVertifyCode": this.apiPrefix + "actOrder/getPhoneVertifyCode.rest", //获取验证码
             "saveData": this.apiPrefix + "actOrder/saveData.rest" //保存提交的数据
         },
-        "olympics":{
-            "getPhoneVertifyCode":this.apiPrefix + "actActOlympics/getPhoneVertifyCode.rest",
-            "query":this.apiPrefix+"actActOlympics/query.rest",
-            "add":this.apiPrefix+"actActOlympics/insert.rest"
+        "olympics": {
+            "getPhoneVertifyCode": this.apiPrefix + "actActOlympics/getPhoneVertifyCode.rest",
+            "query": this.apiPrefix + "actActOlympics/query.rest",
+            "add": this.apiPrefix + "actActOlympics/insert.rest"
+        },
+        "annualmeeting": {
+            "getPhotoInfoById": this.apiPrefix + "ay/getPhotoInfoById.rest",
+            "getPhotoInfoByOpenId": this.apiPrefix + "ay/getPhotoInfoByOpenId.rest",
+            "getHotPhotos": this.apiPrefix + "ay/getHotPhotos.rest",
+            "getNewPhotos": this.apiPrefix + "ay/getNewPhotos.rest",
+            "getPhotoInfoById": this.apiPrefix + "ay/getPhotoInfoById.rest",
+            "addPhoto": this.apiPrefix + "ay/addPhoto.rest",
+            "addThumbs": this.apiPrefix + "ay/addThumbs.rest",
+            "delThumbs": this.apiPrefix + "ay/delThumbs.rest",
+            "delPhoto": this.apiPrefix + "ay/delPhoto.rest"
         }
     };
 
     /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
     跳转URL 配置
     -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-    this.redirectUrl={
-        "olympics":{
-            "detail":this.staticDomain+'/olympic/detail.php'
+    this.redirectUrl = {
+        "olympics": {
+            "detail": this.staticDomain + '/olympic/detail.php'
         }
     }
 
     /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
     标记字段
-    -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/    
+    -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
     this.allowed = true; //是否允许点击 “获取验证码” 标记
     /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
     发送Ajax请求的方法：
@@ -82,7 +93,7 @@ function Controller() {
         @onExceptionInterface：发生错误的时候的回调接口方法
     }    
     -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-    this.request = function(apiUrl, data, params) {
+    this.request = function (apiUrl, data, params) {
         var classSelf = this;
         var type = (params === null || params.type === null || params.type === undefined) ? "GET" : params.type;
         if (this.environment !== "production") type = "GET"; //只要是jsonp请求，type肯定为GET
@@ -99,11 +110,11 @@ function Controller() {
                 data: data,
                 dataType: apiDataType,
                 jsonpCallback: "callback", //这个配置是在没有真正后端接口前端用自己的 json文件模拟接口的时候为了保持callback参数值一致所做的设置
-                error: function(e) {
+                error: function (e) {
                     //子类提供
-                    classSelf.showLog('网络异常');                    
+                    classSelf.showLog('网络异常');
                 },
-                success: function(data) {
+                success: function (data) {
                     if (data.status.toString() === "1") {
                         if (process) process(data); //一切没有问题，就处理数据
                     } else {
@@ -118,16 +129,16 @@ function Controller() {
         整个try-catch块结束
         -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
     };
-    
+
     /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
     计算时间,是否可以重发验证码
     -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-    this.countDown = function() {
+    this.countDown = function () {
         var classSelf = this;
         var timeNum = 60; //计时器为60
         classSelf.allowed = false;
         clearInterval(classSelf.timer);
-        this.timer = setInterval(function() {
+        this.timer = setInterval(function () {
             if (timeNum > 1) { //60s之内，“发送验证码” 按钮，文本为 “过Xs后可重发”
                 $("#sendCodeBtn").addClass('disabled');
                 timeNum--;
@@ -143,23 +154,23 @@ function Controller() {
                 clearInterval(classSelf.timer);
             }
         }, 1000);
-    };   
+    };
 
-    this.clearCountDown = function(){
+    this.clearCountDown = function () {
         clearInterval(this.timer);
         this.allowed = true;
     }
 
     //延迟加载图片
-    $(function() {
+    $(function () {
         $(".lazy").lazyload({
             threshold: 200,
             ignoreInvisible: false
         });
-    }); 
+    });
 
     //关闭成功提示框
-    $("#closeSuccess").click(function() {
+    $("#closeSuccess").click(function () {
         $("#Success").hide();
         $("html,body").css({
             'overflow': '',
