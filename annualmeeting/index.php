@@ -48,30 +48,70 @@
 		   		<p class="title">热门</p>
 		   		<div class="image">
 		   			<img src="http://imgwater.oss.aliyuncs.com/45d675a655924322b45a045212035700.ML" alt="">
+		   			<div class="location">
+			   			<span class="content">content</span>
+						<i class="triangel"></i>
+		   			</div>
+		   			<div class="zan"></div>
 		   		</div>
 		   		<div class="image">
 		   			<img src="http://imgwater.oss.aliyuncs.com/45d675a655924322b45a045212035700.ML" alt="">
+		   			<div class="location">
+			   			<span class="content">content</span>
+						<i class="triangel"></i>
+		   			</div>
+		   			<div class="zan"></div>
 		   		</div>
 		   		<div class="image">
 		   			<img src="http://imgwater.oss.aliyuncs.com/45d675a655924322b45a045212035700.ML" alt="">
+		   			<div class="location">
+			   			<span class="content">content</span>
+						<i class="triangel"></i>
+		   			</div>
+		   			<div class="zan"></div>
 		   		</div>
 		   		<div class="image">
 		   			<img src="http://imgwater.oss.aliyuncs.com/45d675a655924322b45a045212035700.ML" alt="">
+		   			<div class="location">
+			   			<span class="content">content</span>
+						<i class="triangel"></i>
+		   			</div>
+		   			<div class="zan"></div>
 		   		</div>
 		   </div>
 		   <div class="new">
 		   		<p class="title">最新</p>
 		   		<div class="image">
 		   			<img src="http://imgwater.oss.aliyuncs.com/45d675a655924322b45a045212035700.ML" alt="">
+		   			<div class="location">
+			   			<span class="content">content</span>
+						<i class="triangel"></i>
+		   			</div>
+		   			<div class="zan"></div>
 		   		</div>
 		   		<div class="image">
 		   			<img src="http://imgwater.oss.aliyuncs.com/45d675a655924322b45a045212035700.ML" alt="">
+		   			<div class="location">
+			   			<span class="content">content</span>
+						<i class="triangel"></i>
+		   			</div>
+		   			<div class="zan"></div>
 		   		</div>
 		   		<div class="image">
 		   			<img src="http://imgwater.oss.aliyuncs.com/45d675a655924322b45a045212035700.ML" alt="">
+		   			<div class="location">
+			   			<span class="content">content</span>
+						<i class="triangel"></i>
+		   			</div>
+		   			<div class="zan"></div>
 		   		</div>
 		   		<div class="image">
 		   			<img src="http://imgwater.oss.aliyuncs.com/45d675a655924322b45a045212035700.ML" alt="">
+		   			<div class="location">
+			   			<span class="content">content</span>
+						<i class="triangel"></i>
+		   			</div>
+		   			<div class="zan"></div>
 		   		</div>
 		   </div>
 		</div>
