@@ -3,7 +3,7 @@
  2. 页面路径：annualmeeting/index.php
  3. 作者：yuxiaochen@lifang.com
  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-function IndexController() {
+function PublishController() {
     /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
      继承于Controller基类
      -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -19,7 +19,7 @@ function IndexController() {
 /*-----------------------------------------------------------------------------------------------------------
     初始化星空背景
 -----------------------------------------------------------------------------------------------------------*/
-IndexController.prototype.initStar = function() {
+PublishController.prototype.initStar = function() {
 
     if ($('#star').length) $('#star').remove();
     $('body').append('<div id="star"></div>');
@@ -32,7 +32,7 @@ IndexController.prototype.initStar = function() {
 
 
 //创建阴影层
-IndexController.prototype.createMask = function() {
+PublishController.prototype.createMask = function() {
     //获取页面高度和宽度
     var sHeight = document.documentElement.scrollHeight,
         sWidth = document.documentElement.scrollWidth,
@@ -52,7 +52,7 @@ IndexController.prototype.createMask = function() {
     $(document.body).append(mask);
 };
 
-IndexController.prototype.bindEvent = function() {
+PublishController.prototype.bindEvent = function() {
     var classSelf = this;
     $('.operation').on('click', function(event) {
         event.preventDefault();
@@ -75,5 +75,5 @@ IndexController.prototype.bindEvent = function() {
 类的初始化
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 $(document).ready(function() {
-    new IndexController();
+    new PublishController();
 });
