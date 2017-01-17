@@ -203,7 +203,34 @@
 			
 		</div>
 		<div class="award-dialog">
-			
+			<p class="title">活动奖品</p>
+			<i class="sprite sprite-4"></i>
+			<div>
+				<i class="sprite sprite-5"></i>
+				<p>1、照片合乎要求且成功上传者，均可以获赠一个大礼包。</p>
+			</div>
+			<div>
+				<p>特别鸣谢</p>
+				<p>以下赞助商提供的礼品</p>
+				<div class="company">
+					<img src="<?php echo $confs["module_img_path"]; ?>/baidu.png" alt="title">
+					<img src="<?php echo $confs["module_img_path"]; ?>/yin.png" alt="title">
+					<img src="<?php echo $confs["module_img_path"]; ?>/lechebang.png" alt="title">
+					<img src="<?php echo $confs["module_img_path"]; ?>/ysmy.png" alt="title">
+					<img src="<?php echo $confs["module_img_path"]; ?>/ruikang.png" alt="title">
+					<img src="<?php echo $confs["module_img_path"]; ?>/zhongliang.png" alt="title">
+					<img src="<?php echo $confs["module_img_path"]; ?>/papa.png" alt="title">
+				</div>
+			</div>
+			<div>
+				<i class="sprite sprite-6"></i>
+				<p>2、照片呵护要求且首位成功点亮中国的省、直辖市以及海外国家的参与者，可获赠定制版的悟空吉祥物异型交通卡一张。</p>
+			</div>
+			<div>
+				<i class="sprite sprite-7"></i>
+				<p>3、照片合乎要求且获点赞数最高的前10位参与者，还可获赠100元话费。</p>
+			</div>
+			<span>*以上所有奖项可叠加 本活动最终解释权归悟空找房所有</span>
 		</div>
 
 	<!--wap-->

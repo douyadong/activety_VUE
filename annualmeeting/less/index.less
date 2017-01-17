@@ -208,13 +208,60 @@ body {
 .photo-dialog,
 .award-dialog {
     display: none;
-    height: 8rem;
     width: 90%;
     margin-left: 5%;
     position: fixed;
-    top: 30%;
+    top: 20%;
     z-index: 1100;
-    border: 1px solid green;
+    border: 1px solid #00a7bb;
+}
+
+.award-dialog {
+    padding: .5rem;
+    background:rgba(9,21,51,0.8);
+    &>.title {
+        position: absolute;
+        font-size: .9rem;
+        padding: 0 .3rem;
+        line-height: 1.2rem;
+        font-style: italic;
+        font-weight: bold;
+        background: #00a7bb;
+        top: -0.7rem;
+        left: 0.5rem;
+    }
+    &>i {
+        position: absolute;
+        top: -12px;
+        right: .5rem;
+    }
+    &>div {
+        &>i {
+            margin-left: 2rem;
+        }
+        .company {
+           img{
+           	width:40%
+           }
+        }
+        display: inline-block;
+        width: 45%;
+        height:50%;
+        font-size: .5rem;
+        line-height:.8rem;
+        color: #00a7bb;
+    }
+    &>div:nth-child(2n){
+    	margin-left:.5rem;
+    }
+    span {
+    	padding-top:.5rem;
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: .5rem;
+        color: red;
+    }
 }
 
 .operation {

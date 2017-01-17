@@ -14,6 +14,7 @@ function IndexController() {
     this.initStar();
 
     this.bindEvent();
+    this.createMask();
 };
 
 /*-----------------------------------------------------------------------------------------------------------
