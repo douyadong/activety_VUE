@@ -49,14 +49,10 @@
 		   		<img class="planet" src="<?php echo $confs["module_img_path"]; ?>/1-min.png" alt="planet">	
 		   </div>
 		    <div class="rule">
-		    	<div class="award">
-			    	<p>点击查看</p>
-			    	<p>活动奖品</p>
-		    	</div>		
+		    	<img src="<?php echo $confs["module_img_path"]; ?>/award.png" alt="planet">	
 		    	<p class="title">活动规则</p>
 				<p class="time">活动时间：即日起至2017年2月20日</p>
 				<p class="requirement">活动要求：身着悟空衫（冬装或者夏装均可），与当地城市的地标性建筑或景点或者WP门店合影并上传；成功后还可将页面分享至亲朋好友为你点赞。<span>（没人最多上传5张照片）</span></p>
-		   		
 		   </div>
 		   <div class="hot">
 		   		<p class="title">热门</p>
@@ -130,8 +126,14 @@
 		   </div>
 		</div>
 		<div class="operation">
-			<span>上传照片</span>
-			<span>我的图片</span>
+			<div class="add">
+				<span class="sprite sprite-20"></span>
+				<span>上传照片</span>
+			</div>
+			<div class="my">
+				<span class="sprite sprite-21"></span>
+				<span>我的图片</span>
+			</div>
 		</div>
 		<div class="dialog">
 			

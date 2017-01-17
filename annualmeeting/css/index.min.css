@@ -362,12 +362,12 @@ body {
 }
 .wrapper > .lighted > .planet {
   position: absolute;
-  top: 0;
   left: .3rem;
   width: 3rem;
+  top: .3rem;
 }
 .wrapper > .rule {
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   position: relative;
   background: rgba(15, 30, 64, 0.8);
   border: 1px solid #00a7bb;
@@ -375,7 +375,7 @@ body {
 }
 .wrapper > .rule > .title {
   position: absolute;
-  font-size: .8rem;
+  font-size: .9rem;
   padding: 0 .3rem;
   line-height: 1.2rem;
   font-style: italic;
@@ -397,6 +397,12 @@ body {
 .wrapper > .rule > .requirement > span {
   font-size: .3rem;
 }
+.wrapper > .rule img {
+  position: absolute;
+  top: -1.5rem;
+  right: 0;
+  width: 2rem;
+}
 .wrapper > .hot,
 .wrapper > .new {
   padding-top: .5rem;
@@ -404,13 +410,14 @@ body {
 }
 .wrapper > .hot > .title,
 .wrapper > .new > .title {
+  font-size: .9rem;
   text-align: left;
 }
 .wrapper > .hot > .image,
 .wrapper > .new > .image {
   position: relative;
   display: inline-block;
-  width: 49%;
+  width: 48%;
   padding-top: .5rem;
 }
 .wrapper > .hot > .image > img,
@@ -431,8 +438,7 @@ body {
   position: absolute;
   top: 1.4rem;
   left: 0.3rem;
-  height: .8rem;
-  width: 3rem;
+  height: .6rem;
   font-size: .5rem;
 }
 .wrapper > .hot > .image > .location .content,
@@ -454,11 +460,10 @@ body {
   line-height: 0 ;
   margin: 0 5px ;
   width: 0 ;
-  border-top: 0.4rem solid transparent;
-  border-bottom: 0.4rem solid transparent;
-  border-left: 0.4rem solid rgba(78, 85, 94, 0.8);
+  border-top: 0.6rem solid transparent;
+  border-bottom: 0.6rem solid transparent;
+  border-left: 0.6rem solid rgba(78, 85, 94, 0.8);
   margin: 0;
-  padding: 0;
 }
 .dialog {
   display: none;
@@ -475,11 +480,21 @@ body {
   position: fixed;
   right: .5rem;
   top: 40%;
-  height: 4rem;
   border: 1px solid yellow;
+  text-align: center;
+  padding: .2rem;
+  background: rgba(11, 27, 45, 0.8);
+  border: 1px solid #00a7bb;
+  -moz-border-radius: 0.2rem;
+  -webkit-border-radius: 0.2rem;
+  border-radius: 0.2rem;
+}
+.operation .add {
+  padding-bottom: .5rem;
 }
 .operation span {
+  margin: 0 auto;
   color: #fff;
-  font-size: .5rem;
+  font-size: .4rem;
   display: block;
 }
