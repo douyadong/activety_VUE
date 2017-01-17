@@ -1,7 +1,7 @@
 /*-----------------------------------------------------------------------------------------------------------
-项目名称：奥运嘉年华
+项目名称：悟空衫点亮活动
 页面路径：olympic/detail.php
-作者：luwei@lifang.com
+作者：yuxiaochen@lifang.com
 -----------------------------------------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
  1. 项目名称：悟空找房活动推广前端MVC框架
@@ -136,167 +136,152 @@ body {
 .sprite-13 {
   width: 35px;
   height: 34px;
-  background-position: -273px -5px;
+  background-position: -155px -34px;
 }
 .sprite-14 {
   width: 46px;
   height: 15px;
-  background-position: -71px -49px;
+  background-position: -200px -34px;
 }
 .sprite-15 {
   width: 9px;
   height: 15px;
-  background-position: -318px -5px;
+  background-position: -256px -34px;
 }
 .sprite-16 {
   width: 28px;
   height: 24px;
-  background-position: -127px -49px;
+  background-position: -5px -59px;
 }
 .sprite-17 {
   width: 28px;
   height: 24px;
-  background-position: -165px -49px;
+  background-position: -43px -59px;
 }
 .sprite-18 {
   width: 19px;
   height: 19px;
-  background-position: -203px -49px;
+  background-position: -81px -59px;
 }
 .sprite-19 {
   width: 34px;
   height: 21px;
-  background-position: -232px -49px;
+  background-position: -110px -59px;
 }
 .sprite-2 {
   width: 43px;
   height: 42px;
-  background-position: -276px -49px;
+  background-position: -200px -59px;
 }
 .sprite-20 {
   width: 39px;
   height: 39px;
-  background-position: -5px -101px;
+  background-position: -5px -111px;
 }
 .sprite-21 {
   width: 39px;
   height: 39px;
-  background-position: -54px -101px;
+  background-position: -54px -111px;
 }
 .sprite-22 {
   width: 68px;
   height: 68px;
-  background-position: -103px -101px;
+  background-position: -103px -111px;
 }
 .sprite-23 {
   width: 25px;
   height: 14px;
-  background-position: -181px -101px;
+  background-position: -181px -111px;
 }
 .sprite-24 {
   width: 249px;
   height: 44px;
-  background-position: -5px -179px;
+  background-position: -5px -189px;
 }
 .sprite-25 {
   width: 15px;
   height: 20px;
-  background-position: -216px -101px;
+  background-position: -253px -59px;
 }
 .sprite-26 {
   width: 9px;
   height: 80px;
-  background-position: -264px -101px;
+  background-position: -253px -89px;
 }
 .sprite-27 {
   width: 14px;
   height: 20px;
-  background-position: -283px -101px;
+  background-position: -5px -243px;
 }
 .sprite-28 {
   width: 5px;
   height: 5px;
-  background-position: -155px -30px;
+  background-position: -81px -89px;
 }
 .sprite-29 {
   width: 5px;
   height: 5px;
-  background-position: -170px -30px;
+  background-position: -154px -89px;
 }
 .sprite-3 {
   width: 11px;
   height: 16px;
-  background-position: -241px -101px;
+  background-position: -29px -243px;
 }
 .sprite-30 {
   width: 34px;
   height: 40px;
-  background-position: -283px -131px;
+  background-position: -275px -5px;
 }
 .sprite-31 {
   width: 24px;
   height: 12px;
-  background-position: -181px -131px;
+  background-position: -278px -55px;
 }
 .sprite-32 {
   width: 24px;
   height: 13px;
-  background-position: -215px -131px;
+  background-position: -278px -77px;
 }
 .sprite-33 {
   width: 95px;
   height: 36px;
-  background-position: -5px -233px;
+  background-position: -50px -243px;
 }
 .sprite-34 {
   width: 16px;
   height: 25px;
-  background-position: -283px -181px;
-}
-.sprite-35 {
-  width: 75px;
-  height: 15px;
-  background-position: -110px -233px;
-}
-.sprite-36 {
-  width: 298px;
-  height: 86px;
-  background-position: -337px -5px;
-}
-.sprite-37 {
-  width: 50px;
-  height: 54px;
-  background-position: -327px -101px;
+  background-position: -272px -100px;
 }
 .sprite-4 {
   width: 24px;
   height: 24px;
-  background-position: -387px -101px;
+  background-position: -181px -135px;
 }
 .sprite-5 {
   width: 40px;
   height: 69px;
-  background-position: -421px -101px;
+  background-position: -272px -135px;
 }
 .sprite-6 {
   width: 33px;
   height: 51px;
-  background-position: -471px -101px;
+  background-position: -264px -214px;
 }
 .sprite-7 {
   width: 59px;
   height: 37px;
-  background-position: -514px -101px;
+  background-position: -155px -243px;
 }
 .sprite-8 {
   width: 70px;
   height: 16px;
-  background-position: -514px -148px;
+  background-position: -224px -275px;
 }
 .sprite-9 {
   width: 73px;
   height: 20px;
-  background-position: -327px -174px;
+  background-position: -319px -5px;
 }
 html {
   height: 100%;
@@ -304,10 +289,8 @@ html {
 body {
   width: 100%;
   height: 100%;
-  background: #050c1c;
 }
 .wrapper {
-  font-size: .53rem;
   position: relative;
   top: 0;
   left: 0;
@@ -316,170 +299,103 @@ body {
   color: #fff;
   padding: .5rem;
 }
-.wrapper > .logo > img {
-  width: 5rem;
+.wrapper > .choose-box {
+  border: 1px solid #00b7ce;
+  height: 15rem;
+  margin-bottom: 1rem;
 }
-.wrapper > .title {
-  padding-top: .5rem;
-}
-.wrapper > .title > img {
-  width: 100%;
-}
-.wrapper > .desc {
-  position: relative;
-  display: inline-block;
-  width: 60%;
-  padding: .3rem;
-}
-.wrapper > .desc > p {
-  padding-bottom: .2rem;
-}
-.wrapper > .desc > .lefttop {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.wrapper > .desc > .rightbottom {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-.wrapper > .desc > .planet {
-  position: absolute;
-  top: 10%;
-  right: -2rem;
-  width: 2.5rem;
-}
-.wrapper > .lighted {
-  padding-top: .5rem;
-  position: relative;
-  line-height: 1rem;
-  font-size: .9rem;
-  font-weight: bold;
-}
-.wrapper > .lighted > img {
-  width: .8rem;
-}
-.wrapper > .lighted > .planet {
-  position: absolute;
-  top: 0;
-  left: .3rem;
-  width: 3rem;
-}
-.wrapper > .rule {
-  margin-top: 1.5rem;
-  position: relative;
-  background: rgba(15, 30, 64, 0.8);
-  border: 1px solid #00a7bb;
-  text-align: left;
-}
-.wrapper > .rule > .title {
-  position: absolute;
-  font-size: .8rem;
-  padding: 0 .3rem;
-  line-height: 1.2rem;
-  font-style: italic;
-  font-weight: bold;
-  background: #00a7bb;
-  top: -0.7rem;
-  left: 0.5rem;
-}
-.wrapper > .rule > .time {
-  padding: .5rem;
-  padding-top: 1rem;
-  padding-bottom: 0;
-}
-.wrapper > .rule > .requirement {
-  padding: .5rem;
-  padding-top: .2rem;
-  line-height: 1rem;
-}
-.wrapper > .rule > .requirement > span {
-  font-size: .3rem;
-}
-.wrapper > .hot,
-.wrapper > .new {
-  padding-top: .5rem;
+.wrapper > .choose-box > .icon {
+  color: #00a7ba;
+  font-size: 8rem;
   text-align: center;
+  line-height: 15rem;
 }
-.wrapper > .hot > .title,
-.wrapper > .new > .title {
+.wrapper > .location-info {
+  border-bottom: 1px solid #00b7ce;
   text-align: left;
-}
-.wrapper > .hot > .image,
-.wrapper > .new > .image {
+  padding: 0.4rem 1.1rem;
   position: relative;
-  display: inline-block;
-  width: 49%;
-  padding-top: .5rem;
 }
-.wrapper > .hot > .image > img,
-.wrapper > .new > .image > img {
-  display: block;
-  width: 100%;
-}
-.wrapper > .hot > .image > .zan,
-.wrapper > .new > .image > .zan {
+.wrapper > .location-info > .sprite-34 {
   position: absolute;
-  bottom: 0;
-  border: 1px solid green;
-  height: 1rem;
-  width: 100%;
-}
-.wrapper > .hot > .image > .location,
-.wrapper > .new > .image > .location {
-  position: absolute;
-  top: 1.4rem;
-  left: 0.3rem;
-  height: .8rem;
-  width: 3rem;
-  font-size: .5rem;
-}
-.wrapper > .hot > .image > .location .content,
-.wrapper > .new > .image > .location .content {
-  display: inline-block;
-  float: left;
-  line-height: .8rem;
-  background: rgba(78, 85, 94, 0.8);
-  padding: .2rem .5rem;
-}
-.wrapper > .hot > .image > .location .triangel,
-.wrapper > .new > .image > .location .triangel {
-  float: left;
-  font-size: 0 ;
-  height: 0 ;
+  left: 0;
+  top: 0.3rem;
   display: inline-block;
   *display: inline ;
   *zoom: 1 ;
-  line-height: 0 ;
-  margin: 0 5px ;
-  width: 0 ;
-  border-top: 0.4rem solid transparent;
-  border-bottom: 0.4rem solid transparent;
-  border-left: 0.4rem solid rgba(78, 85, 94, 0.8);
-  margin: 0;
-  padding: 0;
 }
-.dialog {
-  display: none;
-  height: 8rem;
-  width: 90%;
-  margin-left: 5%;
-  position: fixed;
-  top: 30%;
-  z-index: 1100;
-  border: 1px solid green;
-}
-.operation {
-  z-index: 200;
-  position: fixed;
-  right: .5rem;
-  top: 40%;
-  height: 4rem;
-  border: 1px solid yellow;
-}
-.operation span {
+.wrapper > .location-info > span {
+  visibility: hidden;
   color: #fff;
-  font-size: .5rem;
-  display: block;
+  font-size: 0.7rem;
+}
+.wrapper > .form {
+  padding: 1rem 0.5rem;
+  text-align: center;
+}
+.wrapper > .form > .row {
+  width: 100%;
+  font-size: 0.7rem;
+  margin-bottom: 0.7rem;
+  padding-left: 0.8rem;
+}
+.wrapper > .form > .row input {
+  background-color: #122243;
+  border: 1px solid #00b7ce;
+  -webkit-appearance: none;
+  outline: medium;
+  padding: 0.2rem;
+  width: 70%;
+  font-size: 0.7rem;
+  color: #00b7ce;
+}
+.wrapper > .form > .row label {
+  color: #01fff5;
+}
+.wrapper > .form > .button {
+  background-color: #febb26;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #eca318;
+  display: inline-block;
+  *display: inline ;
+  *zoom: 1 ;
+  margin-top: 1rem;
+  line-height: 42px;
+  height: 44px;
+  margin-left: 0.5rem;
+  *zoom: 1;
+}
+.wrapper > .form > .button:after {
+  clear: both ;
+  content: " ";
+  display: block ;
+  font-size: 0 ;
+  height: 0 ;
+  visibility: hidden ;
+}
+.wrapper > .form > .button > div {
+  float: left;
+}
+.wrapper > .form > .button > .seperator-line {
+  width: 1px;
+  height: 43px;
+  background-color: #eca318;
+}
+.wrapper > .form > .button > .left {
+  margin-left: 0.5rem;
+}
+.wrapper > .form > .button > .left > .bulb {
+  width: 8%;
+}
+.wrapper > .form > .button > .left > span {
+  color: #fff;
+  font-size: 1rem;
+}
+.wrapper > .form > .button > .right {
+  float: right;
+}
+.wrapper > .form > .button > .right > .right_arrows {
+  width: 60%;
 }

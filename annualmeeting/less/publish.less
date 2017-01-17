@@ -44,17 +44,18 @@ body {
         &>.sprite-34 {
             position: absolute;
             left: 0;
-            top:0;
+            top: 0.3rem;
             .inline-block();
         }
         &>span {
+            visibility: hidden;
             color: #fff;
             font-size: 0.7rem;
         }
     }
     &>.form {
         padding: 1rem 0.5rem;
-        text-align: left;
+        text-align: center;
         &>.row {
             width: 100%;
             font-size: 0.7rem;
@@ -74,15 +75,42 @@ body {
                 color: #01fff5;
             }
         }
-
-        &>.button{
+        &>.button {
             background-color: #febb26;
-            .border-radius(5px);
-            padding: 0.5rem 1rem;
+            .border-radius(3px);
+            border: 1px solid #eca318;
+            .inline-block();
+            margin-top: 1rem;
+            line-height: 42px;
+            height: 44px;
+            margin-left: 0.5rem;
+            .clearfix();
+            &>div{
+                 float: left;
+            }
 
-            &>span{
-                color: #fff;
-                font-size: 1.3rem;
+            &>.seperator-line{
+                width: 1px;
+                height: 43px;
+                background-color: #eca318;
+            }
+
+            &>.left {             
+                margin-left: 0.5rem;
+                &>.bulb {
+                    width: 8%;
+                }
+
+                &>span {
+                    color: #fff;
+                    font-size: 1rem;
+                }
+            }
+            &>.right {
+                float: right;
+                &>.right_arrows {
+                    width: 60%;
+                }
             }
         }
     }

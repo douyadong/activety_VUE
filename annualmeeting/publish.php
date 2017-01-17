@@ -33,10 +33,9 @@
             </div>
 
             <div class="location-info">
-                <i class="sprite sprite-34"></i>
-                
-                <span>中国</span>
-                <span>上海</span>
+                <i class="sprite sprite-34"></i>              
+                <span class="country">中国</span>
+                <span class="city">上海</span>
             </div>
 
             <div class="form">
@@ -50,7 +49,16 @@
                 </div>
 
                 <div class="button">
-                    <span>上传照片点亮城市</span>
+                     <div class="left">
+                          <img class="bulb" src="images/bulb.png" alt="bulb">
+                          <span>上传照片点亮城市</span>
+                     </div>
+                     <div class="seperator-line">
+
+                     </div>
+                     <div class="right">
+                         <img class="right_arrows" src="images/right_arrows.png" alt="arrows">
+                     </div> 
                 </div>
             </div>
 		</div>
@@ -74,7 +82,8 @@
 	<input type="hidden" id="wechatTitle" value="<?php echo $config["wechat_title"]?>"/>
 	<input type="hidden" id="wechatContent" value="<?php echo $config["wechat_content"]?>"/>
 	<input type="hidden" id="wechatImgUrl" value="<?php echo $confs["module_img_path"]; ?>/wechat_shared.jpg"/> 
-
+    <!--百度地图脚本-->
+    <script src="http://api.map.baidu.com/api?v=2.0&amp;ak=qNYWrlPhhs31jXqbHLMnKWrI"></script>
 	<!--这里是微信分享的脚本-->        
 	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 	<script src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/public/js/wechat-share.min.js"></script> 
