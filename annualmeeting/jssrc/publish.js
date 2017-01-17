@@ -168,6 +168,8 @@ PublishController.prototype.uploadImage = function () {
 -----------------------------------------------------------------------------------------------------------*/
 PublishController.prototype.bindEvent = function () {
     var classSelf = this;
+
+    //上传图片事件绑定
     $('.choose-box').on('click', function () {
         wx.chooseImage({
             count: 1,
@@ -177,6 +179,11 @@ PublishController.prototype.bindEvent = function () {
                 var localIds = res.localIds; // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
             }
         });
+    })
+
+    //上传按钮事件绑定
+    $('.button').on('click',function(){
+        
     })
 
     $('body').delegate('#mask-container', 'click', function (event) {

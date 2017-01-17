@@ -1,0 +1,157 @@
+/*-----------------------------------------------------------------------------------------------------------
+项目名称：悟空衫点亮活动
+页面路径：annualmeeting/success.php
+作者：yuxiaochen@lifang.com
+-----------------------------------------------------------------------------------------------------------*/
+
+@import "../../public/less/mixins";
+@import "rem";
+@import "sprite.less";
+html {
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: #07132e;
+}
+
+.wrapper {
+    text-align: center;
+    color: #fff;
+    padding: .5rem;
+    position: relative;
+    &>.sprite-19 {
+        position: absolute;
+        right: .5rem;
+        top: 0.5rem;
+    }
+    &>.title {
+        color: #01fff6;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    &>.details {
+        position: relative;
+        &>.sprite-1 {
+            margin-top: 0.5rem;
+        }
+        &>.img-box {
+            position: absolute;
+            border: 1px solid #01fff6;
+            width: 9rem;
+            height: 10rem;
+            text-align: center;
+            right: 50%;
+            top: 50%;
+            margin-top: -6rem;
+            margin-right: -4.5rem;
+        }
+    }
+    &>.list {
+        padding-top: .5rem;
+        text-align: center;
+        &>div:nth-child(2n+1) {
+            margin-left: 0.2rem;
+        }
+        &>.image {
+            position: relative;
+            display: inline-block;
+            width: 48%;
+            padding-top: .5rem;
+            &>img {
+                display: block;
+                width: 100%;
+            }
+            &>.zan {
+                position: absolute;
+                bottom: 0;
+                line-height: 1.3rem;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.3);
+                font-size: 0.6rem;
+                &>div {
+                    display: inline-block;
+                }
+                .left {
+                    padding-left: .2rem;
+                    float: left;
+                    width: 15%;
+                }
+                .right {
+                    width: 85%;
+                    float: right;
+                    .count {
+                        text-align: left;
+                        float: left;
+                        width: 30%;
+                        .text-ellipsis();
+                        padding-left: 0.1rem;
+                    }
+                    .name {
+                        text-align: right;
+                        float: right;
+                        width: 70%;
+                        .text-ellipsis();
+                        padding-right: 0.1rem;
+                    }
+                }
+            }
+            &>.location {
+                position: absolute;
+                top: 1rem;
+                left: 0.3rem;
+                height: .6rem;
+                font-size: .5rem;
+                .content {
+                    .clearfix();
+                    display: inline-block;
+                    float: left;
+                    line-height: .8rem;
+                    background: rgba(78, 85, 94, 0.8);
+                    padding: .2rem;
+                    i {
+                        display: inline-block;
+                        margin-right: .2rem;
+                    }
+                    &>span {
+                        display: inline-block;
+                        width: 3rem;
+                        height: .8rem;
+                        .text-ellipsis()
+                    }
+                }
+                .triangel {
+                    .clearfix();
+                    display: inline-block;
+                    float: left;
+                    .triangle-next(.65rem, rgba(78, 85, 94, 0.8));
+                    margin: 0;
+                }
+            }
+        }
+    }
+    .swiper-container {
+        &>.swiper-wrapper {
+            &>.swiper-slide {
+                img {
+                    width: 8.9rem;
+                    height: 9.94rem;
+                }
+            }
+        }
+    }
+    .swiper-pagination-bullet {
+        background: #d4d8bd;
+        opacity: 1;
+    }
+    .swiper-pagination-bullet-active {
+        border: 1px solid #fff;
+        opacity: 0.2;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    .swiper-pagination {
+        bottom: 5px;
+    }
+}
