@@ -319,18 +319,19 @@ body {
 .wrapper > .location-info > .sprite-34 {
   position: absolute;
   left: 0;
-  top: 0;
+  top: 0.3rem;
   display: inline-block;
   *display: inline ;
   *zoom: 1 ;
 }
 .wrapper > .location-info > span {
+  visibility: hidden;
   color: #fff;
   font-size: 0.7rem;
 }
 .wrapper > .form {
   padding: 1rem 0.5rem;
-  text-align: left;
+  text-align: center;
 }
 .wrapper > .form > .row {
   width: 100%;
@@ -353,12 +354,48 @@ body {
 }
 .wrapper > .form > .button {
   background-color: #febb26;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  padding: 0.5rem 1rem;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #eca318;
+  display: inline-block;
+  *display: inline ;
+  *zoom: 1 ;
+  margin-top: 1rem;
+  line-height: 42px;
+  height: 44px;
+  margin-left: 0.5rem;
+  *zoom: 1;
 }
-.wrapper > .form > .button > span {
+.wrapper > .form > .button:after {
+  clear: both ;
+  content: " ";
+  display: block ;
+  font-size: 0 ;
+  height: 0 ;
+  visibility: hidden ;
+}
+.wrapper > .form > .button > div {
+  float: left;
+}
+.wrapper > .form > .button > .seperator-line {
+  width: 1px;
+  height: 43px;
+  background-color: #eca318;
+}
+.wrapper > .form > .button > .left {
+  margin-left: 0.5rem;
+}
+.wrapper > .form > .button > .left > .bulb {
+  width: 8%;
+}
+.wrapper > .form > .button > .left > span {
   color: #fff;
-  font-size: 1.3rem;
+  font-size: 1rem;
+}
+.wrapper > .form > .button > .right {
+  float: right;
+}
+.wrapper > .form > .button > .right > .right_arrows {
+  width: 60%;
 }
