@@ -194,8 +194,7 @@ PublishController.prototype.bindEvent = function () {
 
         }
 
-
-
+        classSelf.uploadImage();
     })
 
     $('body').delegate('#mask-container', 'click', function (event) {
