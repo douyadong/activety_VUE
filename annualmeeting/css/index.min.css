@@ -413,6 +413,10 @@ body {
   font-size: .9rem;
   text-align: left;
 }
+.wrapper > .hot > div:nth-child(2n+1),
+.wrapper > .new > div:nth-child(2n+1) {
+  margin-left: 0.2rem;
+}
 .wrapper > .hot > .image,
 .wrapper > .new > .image {
   position: relative;
@@ -429,9 +433,57 @@ body {
 .wrapper > .new > .image > .zan {
   position: absolute;
   bottom: 0;
-  border: 1px solid green;
-  height: 1rem;
+  line-height: 1.3rem;
   width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  font-size: 0.6rem;
+}
+.wrapper > .hot > .image > .zan > div,
+.wrapper > .new > .image > .zan > div {
+  display: inline-block;
+}
+.wrapper > .hot > .image > .zan .left,
+.wrapper > .new > .image > .zan .left {
+  padding-left: .2rem;
+  float: left;
+  width: 15%;
+}
+.wrapper > .hot > .image > .zan .right,
+.wrapper > .new > .image > .zan .right {
+  width: 85%;
+  float: right;
+}
+.wrapper > .hot > .image > .zan .right .count,
+.wrapper > .new > .image > .zan .right .count {
+  text-align: left;
+  float: left;
+  width: 30%;
+  /*
+    *截取文本用省略号追加在后面
+    */
+  overflow: hidden ;
+  white-space: nowrap ;
+  text-overflow: ellipsis ;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis ;
+  -moz-binding: url("ellipsis.xml#ellipsis");
+  padding-left: 0.1rem;
+}
+.wrapper > .hot > .image > .zan .right .name,
+.wrapper > .new > .image > .zan .right .name {
+  text-align: right;
+  float: right;
+  width: 70%;
+  /*
+    *截取文本用省略号追加在后面
+    */
+  overflow: hidden ;
+  white-space: nowrap ;
+  text-overflow: ellipsis ;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis ;
+  -moz-binding: url("ellipsis.xml#ellipsis");
+  padding-right: 0.1rem;
 }
 .wrapper > .hot > .image > .location,
 .wrapper > .new > .image > .location {
@@ -443,14 +495,45 @@ body {
 }
 .wrapper > .hot > .image > .location .content,
 .wrapper > .new > .image > .location .content {
+  *zoom: 1;
   display: inline-block;
   float: left;
   line-height: .8rem;
   background: rgba(78, 85, 94, 0.8);
-  padding: .2rem .5rem;
+  padding: .2rem;
+}
+.wrapper > .hot > .image > .location .content:after,
+.wrapper > .new > .image > .location .content:after {
+  clear: both ;
+  content: " ";
+  display: block ;
+  font-size: 0 ;
+  height: 0 ;
+  visibility: hidden ;
+}
+.wrapper > .hot > .image > .location .content i,
+.wrapper > .new > .image > .location .content i {
+  display: inline-block;
+  margin-right: .2rem;
+}
+.wrapper > .hot > .image > .location .content > span,
+.wrapper > .new > .image > .location .content > span {
+  display: inline-block;
+  width: 3rem;
+  height: .8rem;
+  /*
+    *截取文本用省略号追加在后面
+    */
+  overflow: hidden ;
+  white-space: nowrap ;
+  text-overflow: ellipsis ;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis ;
+  -moz-binding: url("ellipsis.xml#ellipsis");
 }
 .wrapper > .hot > .image > .location .triangel,
 .wrapper > .new > .image > .location .triangel {
+  *zoom: 1;
   float: left;
   font-size: 0 ;
   height: 0 ;
@@ -460,12 +543,22 @@ body {
   line-height: 0 ;
   margin: 0 5px ;
   width: 0 ;
-  border-top: 0.6rem solid transparent;
-  border-bottom: 0.6rem solid transparent;
-  border-left: 0.6rem solid rgba(78, 85, 94, 0.8);
+  border-top: 0.65rem solid transparent;
+  border-bottom: 0.65rem solid transparent;
+  border-left: 0.65rem solid rgba(78, 85, 94, 0.8);
   margin: 0;
 }
-.dialog {
+.wrapper > .hot > .image > .location .triangel:after,
+.wrapper > .new > .image > .location .triangel:after {
+  clear: both ;
+  content: " ";
+  display: block ;
+  font-size: 0 ;
+  height: 0 ;
+  visibility: hidden ;
+}
+.photo-dialog,
+.award-dialog {
   display: none;
   height: 8rem;
   width: 90%;

@@ -123,6 +123,9 @@ body {
             text-align: left;
         }
         text-align: center;
+        &>div:nth-child(2n+1) {
+            margin-left: 0.2rem;
+        }
         &>.image {
             position: relative;
             display: inline-block;
@@ -135,9 +138,36 @@ body {
             &>.zan {
                 position: absolute;
                 bottom: 0;
-                border: 1px solid green;
-                height: 1rem;
+                line-height: 1.3rem;
                 width: 100%;
+                background: rgba(0, 0, 0, 0.3);
+                font-size: 0.6rem;
+                &>div {
+                    display: inline-block;
+                }
+                .left {
+                    padding-left: .2rem;
+                    float: left;
+                    width: 15%;
+                }
+                .right {
+                    width: 85%;
+                    float: right;
+                    .count {
+                        text-align: left;
+                        float: left;
+                        width: 30%;
+                        .text-ellipsis();
+                        padding-left: 0.1rem;
+                    }
+                    .name {
+                        text-align: right;
+                        float: right;
+                        width: 70%;
+                        .text-ellipsis();
+                        padding-right: 0.1rem;
+                    }
+                }
             }
             &>.location {
                 position: absolute;
@@ -146,16 +176,28 @@ body {
                 height: .6rem;
                 font-size: .5rem;
                 .content {
+                    .clearfix();
                     display: inline-block;
                     float: left;
                     line-height: .8rem;
                     background: rgba(78, 85, 94, 0.8);
-                    padding: .2rem .5rem;
+                    padding: .2rem;
+                    i {
+                        display: inline-block;
+                        margin-right: .2rem;
+                    }
+                    &>span {
+                        display: inline-block;
+                        width: 3rem;
+                        height: .8rem;
+                        .text-ellipsis()
+                    }
                 }
                 .triangel {
+                    .clearfix();
                     display: inline-block;
                     float: left;
-                    .triangle-next(.6rem, rgba(78, 85, 94, 0.8));
+                    .triangle-next(.65rem, rgba(78, 85, 94, 0.8));
                     margin: 0;
                 }
             }
@@ -163,7 +205,8 @@ body {
     }
 }
 
-.dialog {
+.photo-dialog,
+.award-dialog {
     display: none;
     height: 8rem;
     width: 90%;
