@@ -37,6 +37,7 @@
                  <img class="arrow" src="images/success_bg1.png" alt="success_bg1"/>
                  <i class="sprite sprite-1"></i>  
                  <div class="img-box">
+                    <i class="sprite sprite-27"></i>
                     <div  class="swiper-container">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
@@ -54,40 +55,48 @@
                     </div>
                  </div>
             </div>
-            <div class="list">
-		   		<div class="image">
-		   			<img src="http://imgwater.oss.aliyuncs.com/45d675a655924322b45a045212035700.ML" alt="">
-		   			<div class="location">
-			   			<span class="content"><i class="sprite sprite-15"></i><span>中国.上海中国.上海中国.上海</span></span>
-						<i class="triangel"></i>
-		   			</div>
-		   			<div class="zan">
-		   				<div class="left">
-		   					<img src="<?php echo $confs["module_img_path"]; ?>/heart1.png" alt="planet">	
-		   				</div>
-		   				<div class="right">
-		   					<span class="count">147</span>
-		   					<span class="name">测试测试</span>
-		   				</div>
-		   			</div>
-		   		</div>
-		   		<div class="image">
-		   			<img src="http://imgwater.oss.aliyuncs.com/45d675a655924322b45a045212035700.ML" alt="">
-		   			<div class="location">
-			   			<span class="content"><i class="sprite sprite-15"></i><span>中国.上海中国.上海中国.上海</span></span>
-						<i class="triangel"></i>
-		   			</div>
-		   			<div class="zan">
-		   				<div class="left">
-		   					<img src="<?php echo $confs["module_img_path"]; ?>/heart1.png" alt="planet">	
-		   				</div>
-		   				<div class="right">
-		   					<span class="count">147</span>
-		   					<span class="name">测试测试</span>
-		   				</div>
-		   			</div>
-		   		</div>
-		   </div>
+
+            <div class="list-box">
+                <div class="title">
+                    其他作品征集
+                </div>
+                <a class="link_more" href="#">查看更多</a>
+                <div class="list">
+                    <div class="image">
+                        <img src="http://imgwater.oss.aliyuncs.com/45d675a655924322b45a045212035700.ML" alt="">
+                        <div class="location">
+                            <span class="content"><i class="sprite sprite-15"></i><span>中国.上海中国.上海中国.上海</span></span>
+                            <i class="triangel"></i>
+                        </div>
+                        <div class="zan">
+                            <div class="left">
+                                <img src="<?php echo $confs["module_img_path"]; ?>/heart1.png" alt="planet">	
+                            </div>
+                            <div class="right">
+                                <span class="count">147</span>
+                                <span class="name">测试测试</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <img src="http://imgwater.oss.aliyuncs.com/45d675a655924322b45a045212035700.ML" alt="">
+                        <div class="location">
+                            <span class="content"><i class="sprite sprite-15"></i><span>中国.上海中国.上海中国.上海</span></span>
+                            <i class="triangel"></i>
+                        </div>
+                        <div class="zan">
+                            <div class="left">
+                                <img src="<?php echo $confs["module_img_path"]; ?>/heart1.png" alt="planet">	
+                            </div>
+                            <div class="right">
+                                <span class="count">147</span>
+                                <span class="name">测试测试</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 		</div>
 
 	<!--wap-->
