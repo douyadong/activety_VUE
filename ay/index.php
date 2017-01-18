@@ -1,4 +1,4 @@
-	<?php require_once("indexconfig.php");?>
+	<?php require_once("config.php");?>
 	<?php
 		ob_start();
 	?>

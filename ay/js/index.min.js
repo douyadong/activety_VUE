@@ -111,7 +111,7 @@ IndexController.prototype.createListItem = function(el) {
     arr.push('</div>');
     arr.push('<div class="zan">');
     arr.push('<div class="left">');
-    arr.push('<img src="' + classSelf.staticDomain + '/annualmeeting/images/heart1.png" alt="heart">');
+    arr.push('<img src="' + classSelf.staticDomain + '/ay/images/heart1.png" alt="heart">');
     arr.push('</div>');
     arr.push('<div class="right">');
     arr.push('<span class="count">147</span>');
@@ -142,9 +142,9 @@ IndexController.prototype.createPhotoContent = function(el) {
     arr.push('<p class="zan">')
         //0可以投票给，1不可以投票
     if (el.isVote) {
-        arr.push('<img src="' + classSelf.staticDomain + '/annualmeeting/images/heart1.png" alt="heart">');
+        arr.push('<img src="' + classSelf.staticDomain + '/ay/images/heart1.png" alt="heart">');
     } else {
-        arr.push('<img src="' + classSelf.staticDomain + '/annualmeeting/images/heart2.png" alt="heart">');
+        arr.push('<img src="' + classSelf.staticDomain + '/ay/images/heart2.png" alt="heart">');
     }
     arr.push('点击为TA投票</p>');
     arr.push('<p class="count">目前票数 ' + el.thumbs + '</p>');
@@ -221,20 +221,19 @@ IndexController.prototype.bindEvent = function() {
         var id = parseInt(_.attr('data-id'));
         var requestUrl = '';
         var data = {
-            openId: "openId",
+            openId: "oYaCYs-15kCMP529S81Yu0JsTLVg",
             photoId: id
         };
         var params = {
             process: function(res) {
-                debugger;
                 if (isVote) {
                     _.attr('data-isvote',0);
                     photoInfo.isVote = 0;
-                    _.find('img').attr('src', classSelf.staticDomain + '/annualmeeting/images/heart2.png');
+                    _.find('img').attr('src', classSelf.staticDomain + '/ay/images/heart2.png');
                 } else {
                     _.attr('data-isvote',1);
                     photoInfo.isVote = 1;
-                    _.find('img').attr('src', classSelf.staticDomain + '/annualmeeting/images/heart2.png');
+                    _.find('img').attr('src', classSelf.staticDomain + '/ay/images/heart1.png');
                 }
                 $('.hot,.new').find('.image[data-id="' + id + '"]').attr('data-info', JSON.stringify(photoInfo));
             },

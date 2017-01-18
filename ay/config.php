@@ -87,5 +87,5 @@
             $config["hotline"] = "";
             $config["hotline_subnum"] = "";
 
-            $confs["module_img_path"]=$CURRENT_STATIC_DOMAIN . "/annualmeeting/images"
+            $confs["module_img_path"]=$CURRENT_STATIC_DOMAIN . "/ay/images"
         ?>                        
