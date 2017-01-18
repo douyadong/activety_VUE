@@ -353,42 +353,35 @@ body {
 .wrapper > .note {
   margin: .5rem 0;
 }
-.wrapper > .note img {
+.wrapper > .note > img {
   width: 1rem;
 }
 .wrapper > .desc {
-  *zoom: 1;
-  text-align: left;
-}
-.wrapper > .desc:after {
-  clear: both ;
-  content: " ";
-  display: block ;
-  font-size: 0 ;
-  height: 0 ;
-  visibility: hidden ;
-}
-.wrapper > .desc > div {
-  float: left;
-}
-.wrapper > .desc .left {
-  width: 8%;
-  margin-left: 1rem;
-}
-.wrapper > .desc .left img {
-  width: .5rem;
-}
-.wrapper > .desc .right {
-  margin-top: -0.2rem;
-  width: 85%;
+  position: relative;
   text-align: left;
   font-size: .6rem;
+  height: 5.5rem;
+  top: .5rem;
 }
-.wrapper > .desc .right .line1 {
-  margin-bottom: .9rem;
+.wrapper > .desc > img {
+  position: absolute;
+  width: 3%;
+  left: .7rem;
 }
-.wrapper > .desc .right .line2 {
-  margin-bottom: .9rem;
+.wrapper > .desc .line1 {
+  position: absolute;
+  left: 1.4rem;
+  top: -0.2rem;
+}
+.wrapper > .desc .line2 {
+  position: absolute;
+  left: 1.4rem;
+  top: 1.3rem;
+}
+.wrapper > .desc .line3 {
+  position: absolute;
+  left: 1.4rem;
+  top: 3.6rem;
 }
 .wrapper > .button {
   background-color: #febb26;

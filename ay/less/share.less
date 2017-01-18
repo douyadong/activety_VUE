@@ -62,35 +62,35 @@ body {
     }
     &>.note {
         margin: .5rem 0;
-        img {
+        &>img {
             width: 1rem;
         }
     }
     &>.desc {
-        .clearfix();
+        position: relative;
         text-align: left;
-        &>div {
-            float: left;
+        font-size: .6rem;
+        height: 5.5rem;
+        top: .5rem;
+        &>img {
+            position: absolute;
+            width: 3%;
+            left: .7rem;
         }
-        .left {
-            width: 8%;
-            margin-left: 1rem;
-            img {
-                width: .5rem;
-            }
+        .line1 {
+            position: absolute;
+            left: 1.4rem;
+            top: -0.2rem;
         }
-        .right {
-            margin-top: -.2rem;
-            width: 85%;
-            text-align: left;
-            font-size: .6rem;
-            .line1 {
-                margin-bottom: .9rem;
-            }
-            .line2 {
-                margin-bottom: .9rem;
-            }
-            .line3 {}
+        .line2 {
+            position: absolute;
+            left: 1.4rem;
+            top: 1.3rem;
+        }
+        .line3 {
+            position: absolute;
+            left: 1.4rem;
+            top: 3.6rem;
         }
     }
     &>.button {

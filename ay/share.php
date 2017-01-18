@@ -50,15 +50,12 @@
                 <img class="bulb" src="images/hand.png" alt="hand">
             </div>
             <div class="desc">
-                <div class="left">
-                    <img class="bulb" src="images/timeline.png" alt="timeline">
-                </div>
-                <div class="right">
-                    <p class="line1">2015年：上海出现第一家WP门店。</p>
-                    <p class="line2">2016年：悟空蓝的身影开始蔓延在上海、杭州、苏州、宁波、南京、成都……等数十个城市</p>
-                    <p class="line3">2017年：“百城万店”计划的全面启动……</p>
-                </div>
+                <img src="images/timeline.png" alt="timeline">
+                <p class="line1">2015年：上海出现第一家WP门店。</p>
+                <p class="line2">2016年：悟空蓝的身影开始蔓延在上海、杭州、苏州、宁波、南京、成都……等数十个城市</p>
+                <p class="line3">2017年：“百城万店”计划的全面启动……</p>
             </div>
+            <p>有家的地方就有悟空</p>
             <div class="button">
                  <div class="left">
                       <img class="bulb" src="images/bulb.png" alt="bulb">

@@ -56,6 +56,7 @@ IndexController.prototype.initPage = function() {
                         $(".hot").append(tmp);
                     }
                 });
+                classSelf.initStar();
             }
         }
     });
@@ -73,6 +74,7 @@ IndexController.prototype.initPage = function() {
                         $(".new").append('<p class="title">最新</p>' + tmp);
                     }
                 });
+                classSelf.initStar();
             }
         }
     })
@@ -108,6 +110,7 @@ IndexController.prototype.initPullload = function() {
                     $(".new").append(tmp);
                 }
             });
+            classSelf.initStar();
         }
     });
 };
