@@ -190,7 +190,7 @@ PublishController.prototype.bindEvent = function () {
                 if (res.localIds && res.localIds.length > 0) {
                     classSelf.localId = res.localIds[0]; // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
 
-                    $('.choose-box').find('.icon').show();
+                    $('.choose-box').find('.icon').hide();
                     $('.choose-box').find('img').attr('src', classSelf.localId).show();
                 }
             }
