@@ -92,6 +92,7 @@ ShareController.prototype.getDetails = function() {
 
                 $('.img-box').show();
                 classSelf.initSwiper();
+                classSelf.initStar();
             }
         }
     })
