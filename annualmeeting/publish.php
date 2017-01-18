@@ -41,11 +41,11 @@
 
             <div class="form">
                 <div class="row">
-                    <label for="">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</label>
+                    <label for="">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名:</label>
                     <input type="text" max-length="20" id="txtUserName"/>
                 </div>
                 <div class="row">
-                    <label for="">联系电话：</label>
+                    <label for="">联系电话:</label>
                     <input type="text" max-length="20" id="txtMobile"/>
                 </div>
 

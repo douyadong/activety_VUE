@@ -251,7 +251,7 @@ PublishController.prototype.bindEvent = function () {
                             window.location = "/success.php";
                         },
                         onExceptionInterface: function () {
-                            _this.removeClass('disabled').html('上传照片点亮城市');
+                            _this.removeClass('disabled').find('.left span').html('上传照片点亮城市');
                         }
                     })
             }

@@ -376,7 +376,12 @@ body {
   color: #00b7ce;
 }
 .wrapper > .form > .row label {
+  text-align: left;
   color: #01fff5;
+  display: inline-block;
+  *display: inline ;
+  *zoom: 1 ;
+  width: 25%;
 }
 .wrapper > .form > .button {
   background-color: #febb26;
