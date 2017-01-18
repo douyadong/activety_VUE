@@ -67,21 +67,23 @@ body {
         }
     }
     &>.desc {
+        .clearfix();
         text-align: left;
-        div {
-            display: inline-block;
+        &>div {
+            float: left;
         }
         .left {
+            width: 8%;
             margin-left: 1rem;
             img {
                 width: .5rem;
             }
         }
         .right {
-            // margin-top: -1.8rem;
+            margin-top: -.2rem;
+            width: 85%;
             text-align: left;
             font-size: .6rem;
-            width: 88%;
             .line1 {
                 margin-bottom: .9rem;
             }

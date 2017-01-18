@@ -357,21 +357,32 @@ body {
   width: 1rem;
 }
 .wrapper > .desc {
+  *zoom: 1;
   text-align: left;
 }
-.wrapper > .desc div {
-  display: inline-block;
+.wrapper > .desc:after {
+  clear: both ;
+  content: " ";
+  display: block ;
+  font-size: 0 ;
+  height: 0 ;
+  visibility: hidden ;
+}
+.wrapper > .desc > div {
+  float: left;
 }
 .wrapper > .desc .left {
+  width: 8%;
   margin-left: 1rem;
 }
 .wrapper > .desc .left img {
   width: .5rem;
 }
 .wrapper > .desc .right {
+  margin-top: -0.2rem;
+  width: 85%;
   text-align: left;
   font-size: .6rem;
-  width: 88%;
 }
 .wrapper > .desc .right .line1 {
   margin-bottom: .9rem;
