@@ -31,8 +31,8 @@ IndexController.prototype.initPage = function () {
     classSelf.pageIndex = parseInt($('.new').attr('pageindex'));
     classSelf.pageSize = parseInt($('.new').attr('pagesize'));
 
-    // classSelf.openId = classSelf.getQueryStringByName("openId");
-    classSelf.openId = "oYaCYs-15kCMP529S81Yu0JsTLVg";
+    classSelf.openId = classSelf.getQueryStringByName("openId");
+    // classSelf.openId = "oYaCYs-15kCMP529S81Yu0JsTLVg";
 
     //点亮城市
     classSelf.request(classSelf.apiUrl.annualmeeting.getCityCount, {}, {

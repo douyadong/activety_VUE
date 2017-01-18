@@ -32,9 +32,9 @@ function PublishSuccessController() {
 PublishSuccessController.prototype.initPage = function () {
     var classSelf = this;
 
-    // classSelf.openId = classSelf.getQueryStringByName("openId");
+    classSelf.openId = classSelf.getQueryStringByName("openId");
 
-    classSelf.openId = "onco6txFeeYY_Y1UxYGbbl9Ch_tI";
+    // classSelf.openId = "onco6txFeeYY_Y1UxYGbbl9Ch_tI";
 
     //热门
     classSelf.request(classSelf.apiUrl.annualmeeting.getHotPhotos + '?openId=' + classSelf.openId, {}, {

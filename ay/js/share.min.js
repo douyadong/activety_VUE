@@ -33,9 +33,9 @@ function ShareController() {
 ShareController.prototype.initPage = function() {
     var classSelf = this;
 
-    // classSelf.openId = classSelf.getQueryStringByName("openId");
+    classSelf.openId = classSelf.getQueryStringByName("openId");
 
-    classSelf.openId = "onco6txFeeYY_Y1UxYGbbl9Ch_tI";
+    // classSelf.openId = "onco6txFeeYY_Y1UxYGbbl9Ch_tI";
 
     var link_moreUrl = $('.link_more').attr('href') + "?openId=" + classSelf.openId;
 
