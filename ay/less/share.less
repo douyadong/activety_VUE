@@ -1,0 +1,232 @@
+/*-----------------------------------------------------------------------------------------------------------
+项目名称：悟空衫点亮活动
+页面路径：annualmeeting/success.php
+作者：yuxiaochen@lifang.com
+-----------------------------------------------------------------------------------------------------------*/
+
+@import "../../public/less/mixins";
+@import "rem";
+@import "sprite.less";
+html {
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: #07132e;
+}
+
+.wrapper {
+    text-align: center;
+    color: #fff;
+    padding: .5rem;
+    position: relative;
+    z-index: 100;
+    &>.title {
+        text-align: left;
+        &>img {
+            margin-left: -1rem;
+            width: 10rem;
+        }
+    }
+    &>.sprite-19 {
+        position: absolute;
+        right: .5rem;
+        top: 0.5rem;
+    }
+    &>.details {
+        position: relative;
+        &>.sprite-1 {
+            margin-top: 0.5rem;
+        }
+        &>.img-box {
+            display: none;
+            position: absolute;
+            border: 1px solid #01fff6;
+            width: 9rem;
+            height: 10rem;
+            text-align: center;
+            right: 50%;
+            top: 50%;
+            margin-top: -5rem;
+            margin-right: -4.5rem;
+            z-index: 100;
+            &>.sprite-27 {
+                position: absolute;
+                z-index: 10;
+                top: -8px;
+                left: -5px;
+            }
+        }
+    }
+    &>.note {
+        margin: .5rem 0;
+        img {
+            width: 1rem;
+        }
+    }
+    &>.desc {
+        text-align: left;
+        div {
+            display: inline-block;
+        }
+        .left {
+            margin-left: 1rem;
+            img {
+                width: .5rem;
+            }
+        }
+        .right {
+            // margin-top: -1.8rem;
+            text-align: left;
+            font-size: .6rem;
+            width: 88%;
+            .line1 {
+                margin-bottom: .9rem;
+            }
+            .line2 {
+                margin-bottom: .9rem;
+            }
+            .line3 {}
+        }
+    }
+    &>.button {
+        background-color: #febb26;
+        .border-radius(3px);
+        border: 1px solid #eca318;
+        .inline-block();
+        margin-top: 1rem;
+        line-height: 42px;
+        height: 44px;
+        margin-left: 0.5rem;
+        .clearfix();
+        &>div {
+            float: left;
+        }
+        &>.seperator-line {
+            width: 1px;
+            height: 43px;
+            background-color: #eca318;
+        }
+        &>.left {
+            margin-left: 0.5rem;
+            &>.bulb {
+                width: 8%;
+            }
+            &>span {
+                color: #fff;
+                font-size: 1rem;
+            }
+        }
+        &>.right {
+            float: right;
+            &>.right_arrows {
+                width: 60%;
+            }
+        }
+    }
+    .swiper-container {
+        &>.swiper-wrapper {
+            &>.swiper-slide {
+                img {
+                    width: 8.9rem;
+                    height: 9.93rem;
+                }
+            }
+        }
+    }
+    .swiper-pagination-bullet {
+        background: #d4d8bd;
+        opacity: 1;
+    }
+    .swiper-pagination-bullet-active {
+        border: 1px solid #fff;
+        opacity: 0.2;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    .swiper-pagination {
+        bottom: 5px;
+    }
+}
+
+.dialog {
+    display: none;
+    width: 90%;
+    margin-left: 5%;
+    position: fixed;
+    top: 20%;
+    z-index: 1100;
+    border: 1px solid #00a7bb;
+    .sprite-4 {
+        cursor: pointer;
+    }
+}
+
+.photo-dialog {
+    color: #01fff6;
+    font-size: .6rem;
+    text-align: center;
+    &>i {
+        position: absolute;
+        top: -12px;
+        right: .5rem;
+    }
+    &>.image {
+        max-height: 14rem;
+        img {
+            max-height: 14rem;
+        }
+    }
+    &>.location {
+        position: absolute;
+        top: 1rem;
+        left: 0.3rem;
+        height: .6rem;
+        font-size: .5rem;
+        .content {
+            .clearfix();
+            display: inline-block;
+            float: left;
+            line-height: .8rem;
+            background: rgba(78, 85, 94, 0.8);
+            padding: .2rem;
+            i {
+                display: inline-block;
+            }
+            &>span {
+                display: inline-block;
+                max-width: 5rem;
+                height: .8rem;
+                .text-ellipsis()
+            }
+        }
+        .triangel {
+            .clearfix();
+            display: inline-block;
+            float: left;
+            .triangle-next(.65rem, rgba(78, 85, 94, 0.8));
+            margin: 0;
+        }
+    }
+    &>.vote {
+        background: #091c32;
+        border-top: 1px solid #00a7bb;
+        &>.name {
+            padding-top: .2rem;
+            color: #fff;
+        }
+        &>.zan {
+            font-size: .8rem;
+            font-weight: bold;
+            padding-top: .2rem;
+            img {
+                margin-right: .2rem;
+                width: 1rem;
+            }
+        }
+        &>.count {
+            padding: .2rem 0;
+        }
+    }
+}

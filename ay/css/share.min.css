@@ -1,0 +1,556 @@
+/*-----------------------------------------------------------------------------------------------------------
+项目名称：悟空衫点亮活动
+页面路径：annualmeeting/success.php
+作者：yuxiaochen@lifang.com
+-----------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 1. 项目名称：悟空找房活动推广前端MVC框架
+ 2. 文件名称：mixins (混合)
+ 3. 作者：zhaohuagang@lifang.com
+ 4. taken from activity_template
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 1. 项目名称：悟空找房前端MVC框架
+ 2. 文件名称：background.less(混合 -> 背景类)
+ 3. 作者：zhaohuagang@guanaihui.com
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 1. 项目名称：悟空找房前端MVC框架
+ 2. 文件名称：background.less(混合 -> 圆角类)
+ 3. 作者：zhaohuagang@guanaihui.com
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 1. 项目名称：悟空找房前端MVC框架
+ 2. 文件名称：background.less(混合 -> 块级化并居中类)
+ 3. 作者：zhaohuagang@guanaihui.com
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 1.  项目名称：悟空找房前端MVC框架
+ 2. 文件名称：display.less(混合 -> 显示方式类)
+ 3. 作者：zhaohuagang@guanaihui.com
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 1. 项目名称：悟空找房前端MVC框架
+ 2. 文件名称：float.less(混合 -> 浮动类)
+ 3. 作者：zhaohuagang@guanaihui.com
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 1. 项目名称：悟空找房前端MVC框架
+ 2. 文件名称：background.less(混合 -> 字体类)
+ 3. 作者：zhaohuagang@guanaihui.com
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 1. 项目名称：悟空找房前端MVC框架
+ 2. 文件名称：background.less(混合 -> 文本类)
+ 3. 作者：zhaohuagang@guanaihui.com
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 1. 项目名称：悟空找房前端MVC框架
+ 2. 文件名称：background.less(混合 -> 三角符号类)
+ 3. 作者：zhaohuagang@guanaihui.com
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 1. 项目名称：app内嵌h5前端MVC框架
+ 2. 文件名称：mixins (混合)
+ 3. 作者：zhaohuagang@lifang.com
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+html {
+  font-size: 20px;
+}
+body {
+  font-size: 20px;
+}
+@media only screen and (min-width: 360px) {
+  html {
+    font-size: 22.5px !important;
+  }
+  body {
+    font-size: 22.5px !important;
+  }
+}
+@media only screen and (min-width: 375px) {
+  html {
+    font-size: 23.4375px !important;
+  }
+  body {
+    font-size: 23.4375px !important;
+  }
+}
+@media only screen and (min-width: 400px) {
+  html {
+    font-size: 25px !important;
+  }
+  body {
+    font-size: 25px !important;
+  }
+}
+@media only screen and (min-width: 414px) {
+  html {
+    font-size: 25.875px !important;
+  }
+  body {
+    font-size: 25.875px !important;
+  }
+}
+@media only screen and (min-width: 435px) {
+  html {
+    font-size: 27.1875px !important;
+  }
+  body {
+    font-size: 27.1875px !important;
+  }
+}
+@media only screen and (min-width: 480px) {
+  html {
+    font-size: 30px !important;
+  }
+  body {
+    font-size: 30px !important;
+  }
+}
+.sprite {
+  background-image: url(../images/spritesheet.png);
+  background-repeat: no-repeat;
+  display: block;
+}
+.sprite-1 {
+  width: 56px;
+  height: 36px;
+  background-position: -5px -5px;
+}
+.sprite-10 {
+  width: 74px;
+  height: 25px;
+  background-position: -71px -5px;
+}
+.sprite-11 {
+  width: 64px;
+  height: 14px;
+  background-position: -155px -5px;
+}
+.sprite-12 {
+  width: 34px;
+  height: 19px;
+  background-position: -229px -5px;
+}
+.sprite-13 {
+  width: 35px;
+  height: 34px;
+  background-position: -273px -5px;
+}
+.sprite-14 {
+  width: 46px;
+  height: 15px;
+  background-position: -71px -49px;
+}
+.sprite-15 {
+  width: 9px;
+  height: 15px;
+  background-position: -318px -5px;
+}
+.sprite-16 {
+  width: 28px;
+  height: 24px;
+  background-position: -127px -49px;
+}
+.sprite-17 {
+  width: 28px;
+  height: 24px;
+  background-position: -165px -49px;
+}
+.sprite-18 {
+  width: 19px;
+  height: 19px;
+  background-position: -203px -49px;
+}
+.sprite-19 {
+  width: 34px;
+  height: 21px;
+  background-position: -232px -49px;
+}
+.sprite-2 {
+  width: 43px;
+  height: 42px;
+  background-position: -276px -49px;
+}
+.sprite-20 {
+  width: 39px;
+  height: 39px;
+  background-position: -5px -101px;
+}
+.sprite-21 {
+  width: 39px;
+  height: 39px;
+  background-position: -54px -101px;
+}
+.sprite-22 {
+  width: 68px;
+  height: 68px;
+  background-position: -103px -101px;
+}
+.sprite-23 {
+  width: 25px;
+  height: 14px;
+  background-position: -181px -101px;
+}
+.sprite-24 {
+  width: 249px;
+  height: 44px;
+  background-position: -5px -179px;
+}
+.sprite-25 {
+  width: 15px;
+  height: 20px;
+  background-position: -216px -101px;
+}
+.sprite-26 {
+  width: 9px;
+  height: 80px;
+  background-position: -264px -101px;
+}
+.sprite-27 {
+  width: 14px;
+  height: 20px;
+  background-position: -283px -101px;
+}
+.sprite-28 {
+  width: 5px;
+  height: 5px;
+  background-position: -155px -30px;
+}
+.sprite-29 {
+  width: 5px;
+  height: 5px;
+  background-position: -170px -30px;
+}
+.sprite-3 {
+  width: 11px;
+  height: 16px;
+  background-position: -241px -101px;
+}
+.sprite-30 {
+  width: 34px;
+  height: 40px;
+  background-position: -283px -131px;
+}
+.sprite-31 {
+  width: 24px;
+  height: 12px;
+  background-position: -181px -131px;
+}
+.sprite-32 {
+  width: 24px;
+  height: 13px;
+  background-position: -215px -131px;
+}
+.sprite-33 {
+  width: 95px;
+  height: 36px;
+  background-position: -5px -233px;
+}
+.sprite-34 {
+  width: 16px;
+  height: 25px;
+  background-position: -283px -181px;
+}
+.sprite-35 {
+  width: 75px;
+  height: 15px;
+  background-position: -110px -233px;
+}
+.sprite-36 {
+  width: 298px;
+  height: 86px;
+  background-position: -337px -5px;
+}
+.sprite-37 {
+  width: 50px;
+  height: 54px;
+  background-position: -327px -101px;
+}
+.sprite-4 {
+  width: 24px;
+  height: 24px;
+  background-position: -387px -101px;
+}
+.sprite-5 {
+  width: 40px;
+  height: 69px;
+  background-position: -421px -101px;
+}
+.sprite-6 {
+  width: 33px;
+  height: 51px;
+  background-position: -471px -101px;
+}
+.sprite-7 {
+  width: 59px;
+  height: 37px;
+  background-position: -514px -101px;
+}
+.sprite-8 {
+  width: 70px;
+  height: 16px;
+  background-position: -514px -148px;
+}
+.sprite-9 {
+  width: 73px;
+  height: 20px;
+  background-position: -327px -174px;
+}
+html {
+  height: 100%;
+}
+body {
+  width: 100%;
+  height: 100%;
+  background: #07132e;
+}
+.wrapper {
+  text-align: center;
+  color: #fff;
+  padding: .5rem;
+  position: relative;
+  z-index: 100;
+}
+.wrapper > .title {
+  text-align: left;
+}
+.wrapper > .title > img {
+  margin-left: -1rem;
+  width: 10rem;
+}
+.wrapper > .sprite-19 {
+  position: absolute;
+  right: .5rem;
+  top: 0.5rem;
+}
+.wrapper > .details {
+  position: relative;
+}
+.wrapper > .details > .sprite-1 {
+  margin-top: 0.5rem;
+}
+.wrapper > .details > .img-box {
+  display: none;
+  position: absolute;
+  border: 1px solid #01fff6;
+  width: 9rem;
+  height: 10rem;
+  text-align: center;
+  right: 50%;
+  top: 50%;
+  margin-top: -5rem;
+  margin-right: -4.5rem;
+  z-index: 100;
+}
+.wrapper > .details > .img-box > .sprite-27 {
+  position: absolute;
+  z-index: 10;
+  top: -8px;
+  left: -5px;
+}
+.wrapper > .note {
+  margin: .5rem 0;
+}
+.wrapper > .note img {
+  width: 1rem;
+}
+.wrapper > .desc {
+  text-align: left;
+}
+.wrapper > .desc div {
+  display: inline-block;
+}
+.wrapper > .desc .left {
+  margin-left: 1rem;
+}
+.wrapper > .desc .left img {
+  width: .5rem;
+}
+.wrapper > .desc .right {
+  text-align: left;
+  font-size: .6rem;
+  width: 88%;
+}
+.wrapper > .desc .right .line1 {
+  margin-bottom: .9rem;
+}
+.wrapper > .desc .right .line2 {
+  margin-bottom: .9rem;
+}
+.wrapper > .button {
+  background-color: #febb26;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #eca318;
+  display: inline-block;
+  *display: inline ;
+  *zoom: 1 ;
+  margin-top: 1rem;
+  line-height: 42px;
+  height: 44px;
+  margin-left: 0.5rem;
+  *zoom: 1;
+}
+.wrapper > .button:after {
+  clear: both ;
+  content: " ";
+  display: block ;
+  font-size: 0 ;
+  height: 0 ;
+  visibility: hidden ;
+}
+.wrapper > .button > div {
+  float: left;
+}
+.wrapper > .button > .seperator-line {
+  width: 1px;
+  height: 43px;
+  background-color: #eca318;
+}
+.wrapper > .button > .left {
+  margin-left: 0.5rem;
+}
+.wrapper > .button > .left > .bulb {
+  width: 8%;
+}
+.wrapper > .button > .left > span {
+  color: #fff;
+  font-size: 1rem;
+}
+.wrapper > .button > .right {
+  float: right;
+}
+.wrapper > .button > .right > .right_arrows {
+  width: 60%;
+}
+.wrapper .swiper-container > .swiper-wrapper > .swiper-slide img {
+  width: 8.9rem;
+  height: 9.93rem;
+}
+.wrapper .swiper-pagination-bullet {
+  background: #d4d8bd;
+  opacity: 1;
+}
+.wrapper .swiper-pagination-bullet-active {
+  border: 1px solid #fff;
+  opacity: 0.2;
+  background: rgba(0, 0, 0, 0.5);
+}
+.wrapper .swiper-pagination {
+  bottom: 5px;
+}
+.dialog {
+  display: none;
+  width: 90%;
+  margin-left: 5%;
+  position: fixed;
+  top: 20%;
+  z-index: 1100;
+  border: 1px solid #00a7bb;
+}
+.dialog .sprite-4 {
+  cursor: pointer;
+}
+.photo-dialog {
+  color: #01fff6;
+  font-size: .6rem;
+  text-align: center;
+}
+.photo-dialog > i {
+  position: absolute;
+  top: -12px;
+  right: .5rem;
+}
+.photo-dialog > .image {
+  max-height: 14rem;
+}
+.photo-dialog > .image img {
+  max-height: 14rem;
+}
+.photo-dialog > .location {
+  position: absolute;
+  top: 1rem;
+  left: 0.3rem;
+  height: .6rem;
+  font-size: .5rem;
+}
+.photo-dialog > .location .content {
+  *zoom: 1;
+  display: inline-block;
+  float: left;
+  line-height: .8rem;
+  background: rgba(78, 85, 94, 0.8);
+  padding: .2rem;
+}
+.photo-dialog > .location .content:after {
+  clear: both ;
+  content: " ";
+  display: block ;
+  font-size: 0 ;
+  height: 0 ;
+  visibility: hidden ;
+}
+.photo-dialog > .location .content i {
+  display: inline-block;
+}
+.photo-dialog > .location .content > span {
+  display: inline-block;
+  max-width: 5rem;
+  height: .8rem;
+  /*
+    *截取文本用省略号追加在后面
+    */
+  overflow: hidden ;
+  white-space: nowrap ;
+  text-overflow: ellipsis ;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis ;
+  -moz-binding: url("ellipsis.xml#ellipsis");
+}
+.photo-dialog > .location .triangel {
+  *zoom: 1;
+  float: left;
+  font-size: 0 ;
+  height: 0 ;
+  display: inline-block;
+  *display: inline ;
+  *zoom: 1 ;
+  line-height: 0 ;
+  margin: 0 5px ;
+  width: 0 ;
+  border-top: 0.65rem solid transparent;
+  border-bottom: 0.65rem solid transparent;
+  border-left: 0.65rem solid rgba(78, 85, 94, 0.8);
+  margin: 0;
+}
+.photo-dialog > .location .triangel:after {
+  clear: both ;
+  content: " ";
+  display: block ;
+  font-size: 0 ;
+  height: 0 ;
+  visibility: hidden ;
+}
+.photo-dialog > .vote {
+  background: #091c32;
+  border-top: 1px solid #00a7bb;
+}
+.photo-dialog > .vote > .name {
+  padding-top: .2rem;
+  color: #fff;
+}
+.photo-dialog > .vote > .zan {
+  font-size: .8rem;
+  font-weight: bold;
+  padding-top: .2rem;
+}
+.photo-dialog > .vote > .zan img {
+  margin-right: .2rem;
+  width: 1rem;
+}
+.photo-dialog > .vote > .count {
+  padding: .2rem 0;
+}
