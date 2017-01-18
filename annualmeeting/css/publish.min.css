@@ -306,17 +306,23 @@ body {
   height: 100%;
   background: #050c1c;
 }
+.wk-toast {
+  border-radius: 15px;
+  background-color: #00b7ce;
+  font-size: 14px;
+  padding: 10px;
+}
 .wrapper {
   position: relative;
   top: 0;
   left: 0;
-  z-index: 100;
   text-align: center;
   color: #fff;
   padding: .5rem;
 }
 .wrapper > .choose-box {
   border: 1px solid #00b7ce;
+  cursor: pointer;
   height: 15rem;
   margin-bottom: 1rem;
 }
@@ -325,6 +331,10 @@ body {
   font-size: 8rem;
   text-align: center;
   line-height: 15rem;
+}
+.wrapper > .choose-box > img {
+  display: none;
+  height: 14.92rem;
 }
 .wrapper > .location-info {
   border-bottom: 1px solid #00b7ce;
@@ -366,7 +376,12 @@ body {
   color: #00b7ce;
 }
 .wrapper > .form > .row label {
+  text-align: left;
   color: #01fff5;
+  display: inline-block;
+  *display: inline ;
+  *zoom: 1 ;
+  width: 25%;
 }
 .wrapper > .form > .button {
   background-color: #febb26;

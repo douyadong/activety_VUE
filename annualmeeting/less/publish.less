@@ -18,16 +18,24 @@ body {
     background: #050c1c;
 }
 
+.wk-toast {
+    border-radius: 15px;
+    background-color: #00b7ce;
+    font-size: 14px;
+    padding: 10px;
+}
+
 .wrapper {
     position: relative;
     top: 0;
     left: 0;
-    z-index: 100;
+    // z-index: 100;
     text-align: center;
     color: #fff;
     padding: .5rem;
     &>.choose-box {
         border: 1px solid @border-color;
+        cursor: pointer;
         height: 15rem;
         margin-bottom: 1rem;
         &>.icon {
@@ -35,6 +43,11 @@ body {
             font-size: 8rem;
             text-align: center;
             line-height: 15rem;
+        }
+
+        &>img{
+            display: none;
+            height: 14.92rem;
         }
     }
     &>.location-info {
@@ -73,7 +86,10 @@ body {
                 color: @border-color;
             }
             label {
+                text-align: left;
                 color: #01fff5;
+                .inline-block();
+                width: 25%;
             }
         }
         &>.button {
@@ -86,22 +102,19 @@ body {
             height: 44px;
             margin-left: 0.5rem;
             .clearfix();
-            &>div{
-                 float: left;
+            &>div {
+                float: left;
             }
-
-            &>.seperator-line{
+            &>.seperator-line {
                 width: 1px;
                 height: 43px;
                 background-color: #eca318;
             }
-
-            &>.left {             
+            &>.left {
                 margin-left: 0.5rem;
                 &>.bulb {
                     width: 8%;
                 }
-
                 &>span {
                     color: #fff;
                     font-size: 1rem;

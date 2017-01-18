@@ -39,7 +39,7 @@ function PublishController() {
 初始化页面
 -----------------------------------------------------------------------------------------------------------*/
 PublishController.prototype.initPage = function () {
-    var classSelf=this;
+    var classSelf = this;
 
     // classSelf.openId = classSelf.getQueryStringByName("openId");
 
@@ -55,6 +55,12 @@ PublishController.prototype.initPage = function () {
     classSelf.latitude = "38.65777"; //经度
 
     classSelf.longitude = "104.08296"; //纬度
+
+    //设置wx.config 的callBack
+    delete window.wxConfigCallback;
+    window.wxConfigCallback = function (data) {
+        $('.wrapper').css('z-index', '100');
+    }
 }
 
 
@@ -81,7 +87,7 @@ PublishController.prototype.getDetails = function () {
         openId: classSelf.openId
     }, {
             process: function (resp) {
-                if (resp && resp.data&&resp.data.length > 0) {
+                if (resp && resp.data && resp.data.length > 0) {
                     $('#txtUserName').val(resp.data[0].userName);
                     $('#txtMobile').val(resp.data[0].userPhone);
                 }
@@ -149,10 +155,7 @@ PublishController.prototype.uploadImage = function () {
         isShowProgressTips: 1, // 默认为1，显示进度提示
         success: function (res) {
             serverId = res.serverId; // 返回图片的服务器端ID
-
-            alert("serverId:" + serverId);
             console.log("serverId:" + serverId)
-
             classSelf.request(classSelf.apiUrl.annualmeeting.addPhoto, {
                 openId: classSelf.openId,
                 latitude: classSelf.latitude,
@@ -184,8 +187,11 @@ PublishController.prototype.bindEvent = function () {
             sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
             sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
             success: function (res) {
-                if(res.localIds&&res.localIds.length>0){
+                if (res.localIds && res.localIds.length > 0) {
                     classSelf.localId = res.localIds[0]; // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
+
+                    $('.choose-box').find('.icon').hide();
+                    $('.choose-box').find('img').attr('src', classSelf.localId).show();
                 }
             }
         });
@@ -193,14 +199,63 @@ PublishController.prototype.bindEvent = function () {
 
     //上传按钮事件绑定
     $('.button').on('click', function () {
+        var _this = $(this);
+
         var txtMobile = $.trim($('#txtMobile').val());
         var txtUserName = $.trim($('#txtUserName').val());
 
-        if (!classSelf.localId) {
-
+        if (_this.hasClass('disabled')) {
+            return;
         }
 
-        classSelf.uploadImage();
+        if (!classSelf.localId) {
+            classSelf.tips("请上传照片");
+            return;
+        }
+
+        if (!txtUserName.length) {
+            classSelf.tips("请输入名字");
+            return;
+        }
+
+        if (!txtMobile.length) {
+            classSelf.tips("请输入手机号");
+            return;
+        }
+        else {
+            if (!/^1[34578]\d{9}$/.test(txtMobile)) {
+                classSelf.tips("请输入合法的手机号");
+                return;
+            }
+        }
+
+        _this.find('.left span').html('上传中...');
+
+        wx.uploadImage({
+            localId: classSelf.localId, // 需要上传的图片的本地ID，由chooseImage接口获得
+            isShowProgressTips: 1, // 默认为1，显示进度提示
+            success: function (res) {
+                serverId = res.serverId; // 返回图片的服务器端ID
+                console.log("serverId:" + serverId)
+                classSelf.request(classSelf.apiUrl.annualmeeting.addPhoto, {
+                    openId: classSelf.openId,
+                    latitude: classSelf.latitude,
+                    longitude: classSelf.longitude,
+                    country: classSelf.country,
+                    city: classSelf.city,
+                    userName: txtUserName,
+                    userPhone: txtMobile,
+                    media_id: serverId
+                }, {
+                        process: function (resp) {
+                            window.location = "/success.php";
+                        },
+                        onExceptionInterface: function () {
+                            _this.removeClass('disabled').find('.left span').html('上传照片点亮城市');
+                        }
+                    })
+            }
+        });
     })
 
     $('body').delegate('#mask-container', 'click', function (event) {
@@ -213,7 +268,7 @@ PublishController.prototype.bindEvent = function () {
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
  根据QueryString参数名称获取值
  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-PublishController.prototype.getQueryStringByName = function(name) {
+PublishController.prototype.getQueryStringByName = function (name) {
     var result = location.search.match(new RegExp("[\?\&]" + name + "=([^\&]+)", "i"));
     if (result == null || result.length < 1) {
         return "";
