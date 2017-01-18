@@ -44,30 +44,36 @@ IndexController.prototype.initPage = function() {
             $('.lighted').find('span.count').text(res.data);
         }
     });
-    //最热
+    //热门
     classSelf.request(classSelf.apiUrl.annualmeeting.getHotPhotos + '?openId=' + classSelf.openId, {}, {
         // apiDataType: "json",
-        process: function(data) {
-            $.each(data.data, function(index, el) {
-                var tmp = classSelf.createListItem(el);
-                if (tmp && tmp.length) {
-                    $(".hot").append(tmp);
-                }
-            });
+        process: function(res) {
+            $('.hot').append('<p class="title">热门</p>');
+            if (res.data.length) {
+                $.each(res.data, function(index, el) {
+                    var tmp = classSelf.createListItem(el);
+                    if (tmp && tmp.length) {
+                        $(".hot").append(tmp);
+                    }
+                });
+            }
         }
     });
 
     //最新
     classSelf.request(classSelf.apiUrl.annualmeeting.getNewPhotos + '?pageIndex=' + classSelf.pageIndex + '&pageSize=' + classSelf.pageSize + '&openId=' + classSelf.openId, {}, {
         // apiDataType: "json",
-        process: function(data) {
-            $.each(data.data, function(index, el) {
-                classSelf.pageIndex += 1;
-                var tmp = classSelf.createListItem(el);
-                if (tmp && tmp.length) {
-                    $(".new").append(tmp);
-                }
-            });
+        process: function(res) {
+            $('.new').append('<p class="title">最新</p>');
+            if (res.data.length) {
+                $.each(data.data, function(index, el) {
+                    classSelf.pageIndex += 1;
+                    var tmp = classSelf.createListItem(el);
+                    if (tmp && tmp.length) {
+                        $(".new").append('<p class="title">最新</p>' + tmp);
+                    }
+                });
+            }
         }
     })
 }
@@ -200,9 +206,16 @@ IndexController.prototype.bindEvent = function() {
         $('#mask-container').remove();
     });
 
-    $('.operation').on('click', function(event) {
+    $('.operation').on('click','.add', function(event) {
         event.preventDefault();
         /* Act on the event */
+        window.location.href = 'publish.html?openId=' + classSelf.openId;
+    });
+
+    $('.operation').on('click','.my', function(event) {
+        event.preventDefault();
+        /* Act on the event */
+        window.location.href = 'success.html?openId=' + classSelf.openId;
     });
 
     $('body').delegate('#mask-container', 'click', function(event) {
