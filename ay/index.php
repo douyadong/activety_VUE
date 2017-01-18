@@ -123,7 +123,7 @@
 		   			</div>
 		   		</div> -->
 		   </div>
-		   <div class="new">
+		   <div class="new" pageindex="0" pagesize="10">
 		   		<!-- <p class="title">最新</p> -->
 		   		<!-- <div class="image">
 		   			<img src="http://imgwater.oss.aliyuncs.com/45d675a655924322b45a045212035700.ML" alt="">

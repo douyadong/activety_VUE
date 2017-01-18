@@ -393,7 +393,6 @@ body {
   *display: inline ;
   *zoom: 1 ;
   margin-top: 1rem;
-  line-height: 42px;
   height: 44px;
   margin-left: 0.5rem;
   *zoom: 1;
@@ -408,11 +407,13 @@ body {
 }
 .wrapper > .form > .button > div {
   float: left;
+  line-height: 40px;
 }
 .wrapper > .form > .button > .seperator-line {
   width: 1px;
   height: 43px;
   background-color: #eca318;
+  margin-left: 0.5rem;
 }
 .wrapper > .form > .button > .left {
   margin-left: 0.5rem;
