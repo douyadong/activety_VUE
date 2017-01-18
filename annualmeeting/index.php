@@ -49,7 +49,9 @@
 		   		<img class="planet" src="<?php echo $confs["module_img_path"]; ?>/1-min.png" alt="planet">	
 		   </div>
 		    <div class="rule">
-		    	<img src="<?php echo $confs["module_img_path"]; ?>/award.png" alt="planet">	
+			    <div class="image">
+			    	<img src="<?php echo $confs["module_img_path"]; ?>/award.png" alt="award">	
+			    </div>
 		    	<p class="title">活动规则</p>
 				<p class="time">活动时间：即日起至2017年2月20日</p>
 				<p class="requirement">活动要求：身着悟空衫（冬装或者夏装均可），与当地城市的地标性建筑或景点或者WP门店合影并上传；成功后还可将页面分享至亲朋好友为你点赞。<span>（没人最多上传5张照片）</span></p>
@@ -199,18 +201,22 @@
 				<span>我的图片</span>
 			</div>
 		</div>
-		<div class="photo-dialog">
-			<i class="close sprite sprite-4"></i>
+		<div class="dialog photo-dialog">
+			<!-- <i class="close sprite sprite-4"></i>
 			<div class="image">
 				<img src="http://imgwater.oss.aliyuncs.com/45d675a655924322b45a045212035700.ML" alt="">
 			</div>
+			<div class="location">
+	   			<span class="content"><i class="sprite sprite-15"></i><span>中国.上海中国.上海中国.上海</span></span>
+				<i class="triangel"></i>
+   			</div>
 			<div class="vote">
 				<p class="name">张三</p>
 				<p class="zan"><img src="<?php echo $confs["module_img_path"]; ?>/heart1.png" alt="heart">点击为TA投票</p>
 				<p class="count">目前票数<span>147</span>	</p>
-			</div>
+			</div> -->
 		</div>
-		<div class="award-dialog">
+		<div class="dialog award-dialog">
 			<p class="title">活动奖品</p>
 			<i class="sprite sprite-4"></i>
 			<div>
