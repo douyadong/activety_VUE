@@ -414,6 +414,7 @@ body {
 .wrapper > .new > .title {
   font-size: .9rem;
   text-align: left;
+  color: #2cfef6;
 }
 .wrapper > .hot > div:nth-child(2n+1),
 .wrapper > .new > div:nth-child(2n+1) {
