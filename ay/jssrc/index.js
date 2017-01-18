@@ -8,8 +8,6 @@ function IndexController() {
      继承于Controller基类
      -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
     Controller.call(this);
-    this.pageIndex = 0;
-    this.pageSize = 10;
     /*-----------------------------------------------------------------------------------------------------------
     初始化页面
     -----------------------------------------------------------------------------------------------------------*/
@@ -34,8 +32,20 @@ function IndexController() {
 -----------------------------------------------------------------------------------------------------------*/
 IndexController.prototype.initPage = function() {
     var classSelf = this;
+    classSelf.pageIndex = 0;
+    classSelf.pageSize = 10;
+    // classSelf.openId = classSelf.getQueryStringByName("openId");
+    classSelf.openId = "oYaCYs-15kCMP529S81Yu0JsTLVg";
+
+    //点亮城市
+    classSelf.request(classSelf.apiUrl.annualmeeting.getCityCount, {}, {
+        // apiDataType: "json",
+        process: function(res) {
+            $('.lighted').find('span.count').text(res.data);
+        }
+    });
     //最热
-    classSelf.request(classSelf.apiUrl.annualmeeting.getHotPhotos + '?openId=' + 'oYaCYs-15kCMP529S81Yu0JsTLVg', {}, {
+    classSelf.request(classSelf.apiUrl.annualmeeting.getHotPhotos + '?openId=' + classSelf.openId, {}, {
         // apiDataType: "json",
         process: function(data) {
             $.each(data.data, function(index, el) {
@@ -48,7 +58,7 @@ IndexController.prototype.initPage = function() {
     });
 
     //最新
-    classSelf.request(classSelf.apiUrl.annualmeeting.getNewPhotos + '?pageIndex=' + classSelf.pageIndex + '&pageSize=' + classSelf.pageSize + '&openId=' + 'oYaCYs-15kCMP529S81Yu0JsTLVg', {}, {
+    classSelf.request(classSelf.apiUrl.annualmeeting.getNewPhotos + '?pageIndex=' + classSelf.pageIndex + '&pageSize=' + classSelf.pageSize + '&openId=' + classSelf.openId, {}, {
         // apiDataType: "json",
         process: function(data) {
             $.each(data.data, function(index, el) {
@@ -81,8 +91,8 @@ IndexController.prototype.initStar = function() {
 IndexController.prototype.initPullload = function() {
     var classSelf = this;
     $(".new").pullload({
-        apiUrl: classSelf.apiUrl.annualmeeting.getNewPhotos + "?pageIndex=" + classSelf.pageIndex + "&pageSize=" + classSelf.pageSize + '&openId=' + 'oYaCYs-15kCMP529S81Yu0JsTLVg',
-        crossDoman: "jsonp",
+        apiUrl: classSelf.apiUrl.annualmeeting.getNewPhotos + "?pageIndex=" + classSelf.pageIndex + "&pageSize=" + classSelf.pageSize + '&openId=' + classSelf.openId,
+        crossDomain: "jsonp",
         threshold: 50,
         callback: function(data) {
             $.each(data.data, function(index, el) {
@@ -114,8 +124,8 @@ IndexController.prototype.createListItem = function(el) {
     arr.push('<img src="' + classSelf.staticDomain + '/ay/images/heart1.png" alt="heart">');
     arr.push('</div>');
     arr.push('<div class="right">');
-    arr.push('<span class="count">147</span>');
-    arr.push('<span class="name">测试测试</span>');
+    arr.push('<span class="count">' + el.thumbs + '</span>');
+    arr.push('<span class="name">' + el.userName + '</span>');
     arr.push('</div>');
     arr.push('</div>');
     arr.push('</div>');
@@ -139,8 +149,8 @@ IndexController.prototype.createPhotoContent = function(el) {
     arr.push('</div>');
     arr.push('<div class="vote" data-id=' + el.id + ' data-isvote=' + el.isVote + ' data-info=' + JSON.stringify(el) + '>');
     arr.push('<p class="name">' + el.userName + '</p>');
-    arr.push('<p class="zan">')
-        //0可以投票给，1不可以投票
+    arr.push('<p class="zan">');
+    //0可以投票给，1不可以投票
     if (el.isVote) {
         arr.push('<img src="' + classSelf.staticDomain + '/ay/images/heart1.png" alt="heart">');
     } else {
@@ -221,21 +231,29 @@ IndexController.prototype.bindEvent = function() {
         var id = parseInt(_.attr('data-id'));
         var requestUrl = '';
         var data = {
-            openId: "oYaCYs-15kCMP529S81Yu0JsTLVg",
+            openId: classSelf.openId,
             photoId: id
         };
         var params = {
             process: function(res) {
                 if (isVote) {
-                    _.attr('data-isvote',0);
+                    //取消点赞
+                    _.attr('data-isvote', 0);
                     photoInfo.isVote = 0;
+                    photoInfo.thumbs = parseInt(photoInfo.thumbs) - 1;
                     _.find('img').attr('src', classSelf.staticDomain + '/ay/images/heart2.png');
+                    _.find('p.count').text('目前票数 ' + photoInfo.thumbs);
                 } else {
-                    _.attr('data-isvote',1);
+                    //点赞
+                    _.attr('data-isvote', 1);
                     photoInfo.isVote = 1;
+                    photoInfo.thumbs = parseInt(photoInfo.thumbs) + 1;
                     _.find('img').attr('src', classSelf.staticDomain + '/ay/images/heart1.png');
+                    _.find('p.count').text('目前票数 ' + photoInfo.thumbs);
                 }
+                _.attr('data-info', JSON.stringify(photoInfo));
                 $('.hot,.new').find('.image[data-id="' + id + '"]').attr('data-info', JSON.stringify(photoInfo));
+                $('.hot,.new').find('.image[data-id="' + id + '"]').find('.count').text(photoInfo.thumbs);
             },
             onExceptionInterface: function(res) {
                 classSelf.tips(res.message);

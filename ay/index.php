@@ -45,7 +45,7 @@
 		   </div>
 		   <div class="lighted">
 		   		<img src="<?php echo $confs["module_img_path"]; ?>/bulb.png" alt="bulb">	
-		   		已点亮<span class="count">14</span>个城市
+		   		已点亮<span class="count"></span>个城市
 		   		<img class="planet" src="<?php echo $confs["module_img_path"]; ?>/1-min.png" alt="planet">	
 		   </div>
 		    <div class="rule">
