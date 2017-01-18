@@ -195,7 +195,8 @@ PublishController.prototype.bindEvent = function () {
             }
         }
 
-        _this.find('.left span').html('上传中...');
+        _this.hide();
+        $('.uploading').show();
 
         wx.uploadImage({
             localId: classSelf.localId, // 需要上传的图片的本地ID，由chooseImage接口获得
@@ -217,7 +218,8 @@ PublishController.prototype.bindEvent = function () {
                             window.location = "/ay/success.html?openId=" + classSelf.openId;
                         },
                         onExceptionInterface: function () {
-                            _this.removeClass('disabled').find('.left span').html('上传照片点亮城市');
+                            _this.removeClass('disabled').show();
+                            $('.uploading').hide();
                         }
                     })
             }

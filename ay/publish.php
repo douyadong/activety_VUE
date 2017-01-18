@@ -60,6 +60,12 @@
                          <img class="right_arrows" src="images/right_arrows.png" alt="arrows">
                      </div> 
                 </div>
+
+                <div class="button uploading">
+                     <div class="left">                         
+                          <span>努力上传中...</span>
+                     </div>                    
+                </div>
             </div>
 		</div>
 

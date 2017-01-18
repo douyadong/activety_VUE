@@ -100,7 +100,7 @@ IndexController.prototype.initPullload = function () {
     $(".new").pullload({
         apiUrl: classSelf.apiUrl.annualmeeting.getNewPhotos + "?openId=" + classSelf.openId,
         crossDomain: "jsonp",
-        threshold: 20,
+        threshold: 0,
         callback: function (data) {
             classSelf.pageIndex += 1;
             $('.new').attr("pageindex", classSelf.pageIndex);

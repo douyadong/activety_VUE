@@ -366,7 +366,7 @@ body {
 .wrapper > .list-box > .list {
   text-align: center;
 }
-.wrapper > .list-box > .list > div:nth-child(2n+1) {
+.wrapper > .list-box > .list > div:nth-child(2n) {
   margin-left: 0.2rem;
 }
 .wrapper > .list-box > .list > .image {

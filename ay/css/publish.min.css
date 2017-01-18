@@ -243,3 +243,7 @@ body {
 .wrapper > .form > .button > .right > .right_arrows {
   width: 60%;
 }
+.wrapper > .form > .button.uploading {
+  display: none;
+  padding-right: 0.5rem;
+}
