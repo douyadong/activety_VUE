@@ -49,11 +49,11 @@
             </div>
 
             <div class="list-box">
-                <div class="title">
+                <!--<div class="title">
                     其他作品征集
-                </div>
-                <a class="link_more" href="/ay/index.php">查看更多</a>
-                <div class="list">
+                </div>-->
+                <!--<a class="link_more" href="/ay/index.php">查看更多</a>-->
+                <!--<div class="list">
                     <div class="image">
                         <img src="http://imgwater.oss.aliyuncs.com/45d675a655924322b45a045212035700.ML" alt="">
                         <div class="location">
@@ -86,7 +86,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>-->
             </div>
 
 		</div>

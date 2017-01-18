@@ -34,7 +34,7 @@
             </div>
 
             <div class="location-info">
-                <i class="sprite sprite-34"></i>              
+                <img class="icon" src="images/34-min.png" alt="icon">
                 <span class="country">中国</span>
                 <span class="city">上海</span>
             </div>

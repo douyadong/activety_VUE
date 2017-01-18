@@ -34,7 +34,11 @@
                 取得容器内最后一个元素和发生加载滚动距离需要达到的数值
                 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
                 var $lastEl = $(self).children().last();
-                var offset = $lastEl.height() + $lastEl.offset().top + opts.threshold;
+                var $secondLastEl = $(self).children().last().prev();
+                var lastOffset = $lastEl.height() + $lastEl.offset().top + opts.threshold;
+                var secondLastOffset = $secondLastEl.height() + $secondLastEl.offset().top + opts.threshold;
+
+                var offset = lastOffset > secondLastOffset ? lastOffset : secondLastOffset;
 
                 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
                 满足条件就触发请求
@@ -59,8 +63,8 @@
         -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
         var requestParams = {};
         // requestParams[opts.requestLoadedKey] = $(container).children().size();
-        requestParams[opts.pageIndexKey]=$(container).attr(opts.pageIndexKey);
-        requestParams[opts.pageSizeKey]=$(container).attr(opts.pageSizeKey);
+        requestParams[opts.pageIndexKey] = $(container).attr(opts.pageIndexKey);
+        requestParams[opts.pageSizeKey] = $(container).attr(opts.pageSizeKey);
 
         /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
         一旦请求开始，状态条就要开启

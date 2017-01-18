@@ -36,9 +36,30 @@ PublishSuccessController.prototype.initPage = function () {
 
     classSelf.openId = "onco6txFeeYY_Y1UxYGbbl9Ch_tI";
 
-    var link_moreUrl = $('.link_more').attr('href') + "?openId=" + classSelf.openId;
+    //热门
+    classSelf.request(classSelf.apiUrl.annualmeeting.getHotPhotos + '?openId=' + classSelf.openId, {}, {
+        // apiDataType: "json",
+        process: function (res) {
 
-    $('.link_more').attr('href', link_moreUrl);
+            if (res.data.length) {
+                $('.list-box').append('<div class="title">其他作品征集</div>');
+                $('.list-box').append('<a class="link_more">查看更多</a>');
+
+                $('.list-box').find('.link_more').attr('href', "/ay/index.php?openId" + classSelf.openId);
+
+                $('.list-box').append('<div class="list"></div>');
+
+                $.each(res.data, function (index, el) {
+                    if (index < 2) {
+                        var tmp = classSelf.createListItem(el);
+                        if (tmp && tmp.length) {
+                            $('.list-box').find('.list').append(tmp);
+                        }
+                    }
+                });
+            }
+        }
+    });
 }
 
 /*-----------------------------------------------------------------------------------------------------------
@@ -134,6 +155,31 @@ PublishSuccessController.prototype.createMask = function () {
     $(document.body).append(mask);
 };
 
+/*-----------------------------------------------------------------------------------------------------------
+创建元素
+-----------------------------------------------------------------------------------------------------------*/
+PublishSuccessController.prototype.createListItem = function (el) {
+    var classSelf = this;
+    var arr = [];
+    if (!el) return arr;
+    arr.push('<div class="image" data-id=' + el.id + ' data-info=' + JSON.stringify(el) + '>');
+    arr.push('<img src="' + el.thumbnailUrl + '" alt="">');
+    arr.push('<div class="location">');
+    arr.push('<span class="content"><i class="sprite sprite-15"></i><span>' + el.country + '.' + el.city + '</span></span>');
+    arr.push('<i class="triangel"></i>');
+    arr.push('</div>');
+    arr.push('<div class="zan">');
+    arr.push('<div class="left">');
+    arr.push('<img src="' + classSelf.staticDomain + '/ay/images/heart1.png" alt="heart">');
+    arr.push('</div>');
+    arr.push('<div class="right">');
+    arr.push('<span class="count">' + el.thumbs + '</span>');
+    arr.push('<span class="name">' + el.userName + '</span>');
+    arr.push('</div>');
+    arr.push('</div>');
+    arr.push('</div>');
+    return arr.join('');
+}
 
 /*-----------------------------------------------------------------------------------------------------------
 绑定事件
@@ -188,7 +234,7 @@ PublishSuccessController.prototype.bindEvent = function () {
                     photoInfo.thumbs = photoInfo.thumbs + 1;
                     _.find('img').attr('src', classSelf.staticDomain + '/ay/images/heart1.png');
                 }
-                _.attr('data-info',JSON.stringify(photoInfo));
+                _.attr('data-info', JSON.stringify(photoInfo));
                 $('.swiper-wrapper').find('img[data-id="' + id + '"]').attr('data-info', JSON.stringify(photoInfo));
             },
             onExceptionInterface: function (res) {

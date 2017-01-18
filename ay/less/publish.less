@@ -6,7 +6,7 @@
 
 @import "../../public/less/mixins";
 @import "rem";
-@import "sprite.less";
+
 @border-color: #00b7ce;
 html {
     height: 100%;
@@ -55,16 +55,22 @@ body {
         text-align: left;
         padding: 0.4rem 1.1rem;
         position: relative;
-        &>.sprite-34 {
-            position: absolute;
-            left: 0;
-            top: 0.3rem;
-            .inline-block();
+
+        &>.icon{
+            width: 6%;
+            margin-left: -1rem;
         }
+       
         &>span {
             visibility: hidden;
             color: #fff;
             font-size: 0.7rem;
+            position: absolute;
+            top: 1rem;
+            left:1.4rem;
+            &.city{
+                left:3rem;
+            }
         }
     }
     &>.form {
