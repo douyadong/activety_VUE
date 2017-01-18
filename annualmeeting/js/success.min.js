@@ -35,6 +35,7 @@ function PublishSuccessController() {
 初始化页面
 -----------------------------------------------------------------------------------------------------------*/
 PublishSuccessController.prototype.initPage = function () {
+    var classSelf=this;
 
     this.openId = "";
 }
@@ -70,9 +71,6 @@ PublishSuccessController.prototype.getDetails = function () {
             }
         })
 }
-
-
-
 
 //创建阴影层
 PublishSuccessController.prototype.createMask = function () {

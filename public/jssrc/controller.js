@@ -168,6 +168,61 @@ function Controller() {
         this.allowed = true;
     }
 
+    /*-----------------------------------------------------------------------------------------------------------
+    tips 方法
+    -----------------------------------------------------------------------------------------------------------*/
+    this.tips = function (msg, callback, time) {
+        var classSelf = this;
+
+        var errElm = $('.wk-toast');
+        var mask = $("<div id='mask-container'></div>");
+
+        var body = document.body;
+        var html = document.documentElement;
+
+        var sHeight = Math.max(body.scrollHeight, body.offsetHeight,
+            html.clientHeight, html.scrollHeight, html.offsetHeight);
+        var sWidth = document.documentElement.scrollWidth;
+
+
+        if (mask[0]) {
+            mask.remove();
+        }
+
+        if (errElm[0]) {
+            errElm.remove();
+        }
+
+        $(mask).css({
+            'background-color': 'rgba(0,0,0,0.5)',
+            'position': 'fixed',
+            'left': 0,
+            'top': 0,
+            'height': sHeight + 'px',
+            'width': sWidth + 'px',
+            'z-index': '999',
+            'cursor': 'pointer'
+        });
+
+        $(mask).on("click", function () {
+            var _this = $(this);
+            _this.remove();
+            errElm.removeClass('show');
+            callback && callback();
+        });
+
+        $(document.body).append(mask);
+
+        errElm = $('<div class="wk-toast"></div>').appendTo('body');
+        errElm.html(msg).addClass('show');
+
+        setTimeout(function () { // 2400后自动消失，将toastStatus标记置为true,并且执行callback函数
+            errElm.removeClass('show');
+            $(mask).remove();
+            callback && callback();
+        }, time || 2000);
+    }
+
     //延迟加载图片
     $(function () {
         $(".lazy").lazyload({

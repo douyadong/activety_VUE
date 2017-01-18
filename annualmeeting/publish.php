@@ -30,6 +30,7 @@
     	<div class="wrapper">
             <div class="choose-box">
                 <div class="icon">+</div>
+                <img src="" alt="img">
             </div>
 
             <div class="location-info">
@@ -54,7 +55,6 @@
                           <span>上传照片点亮城市</span>
                      </div>
                      <div class="seperator-line">
-
                      </div>
                      <div class="right">
                          <img class="right_arrows" src="images/right_arrows.png" alt="arrows">
