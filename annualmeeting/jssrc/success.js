@@ -15,11 +15,6 @@ function PublishSuccessController() {
     this.initPage();
 
     /*-----------------------------------------------------------------------------------------------------------
-    初始化Swiper
-    -----------------------------------------------------------------------------------------------------------*/
-    this.initSwiper();
-
-    /*-----------------------------------------------------------------------------------------------------------
     获取有发布过照片的用户显示最近一次发布的姓名和联系电话
     -----------------------------------------------------------------------------------------------------------*/
     this.getDetails();
@@ -35,9 +30,15 @@ function PublishSuccessController() {
 初始化页面
 -----------------------------------------------------------------------------------------------------------*/
 PublishSuccessController.prototype.initPage = function () {
-    var classSelf=this;
+    var classSelf = this;
 
-    this.openId = "";
+    // classSelf.openId = classSelf.getQueryStringByName("openId");
+
+    classSelf.openId = "onco6txFeeYY_Y1UxYGbbl9Ch_tI";
+
+    var link_moreUrl=$('.link_more').attr('href')+"?openId="+classSelf.openId;
+
+    $('.link_more').attr('href',link_moreUrl);
 }
 
 /*-----------------------------------------------------------------------------------------------------------

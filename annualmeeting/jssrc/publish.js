@@ -123,7 +123,7 @@ PublishController.prototype.getLocation = function () {
                 dataType: 'jsonp',
                 success: function (resp) {
                     classSelf.country = resp.result.addressComponent.country;
-                    classSelf.city = resp.result.addressComponent.city;
+                    classSelf.city = resp.result.addressComponent.city.replace('市', '');
 
                     $('.location-info').find('.country').html(resp.result.addressComponent.country).css('visibility', 'visible');
                     $('.location-info').find('.city').html(resp.result.addressComponent.city.replace('市', '')).css('visibility', 'visible');
@@ -265,16 +265,7 @@ PublishController.prototype.bindEvent = function () {
 }
 
 
-/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
- 根据QueryString参数名称获取值
- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-PublishController.prototype.getQueryStringByName = function (name) {
-    var result = location.search.match(new RegExp("[\?\&]" + name + "=([^\&]+)", "i"));
-    if (result == null || result.length < 1) {
-        return "";
-    }
-    return result[1];
-};
+
 
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 类的初始化
