@@ -141,40 +141,6 @@ PublishController.prototype.getLocation = function () {
 }
 
 /*-----------------------------------------------------------------------------------------------------------
-上传图片
------------------------------------------------------------------------------------------------------------*/
-PublishController.prototype.uploadImage = function () {
-    var classSelf = this;
-    var serverId;
-
-    var txtMobile = $.trim($('#txtMobile').val());
-    var txtUserName = $.trim($('#txtUserName').val());
-
-    wx.uploadImage({
-        localId: classSelf.localId, // 需要上传的图片的本地ID，由chooseImage接口获得
-        isShowProgressTips: 1, // 默认为1，显示进度提示
-        success: function (res) {
-            serverId = res.serverId; // 返回图片的服务器端ID
-            console.log("serverId:" + serverId)
-            classSelf.request(classSelf.apiUrl.annualmeeting.addPhoto, {
-                openId: classSelf.openId,
-                latitude: classSelf.latitude,
-                longitude: classSelf.longitude,
-                country: classSelf.country,
-                city: classSelf.city,
-                userName: txtUserName,
-                userPhone: txtMobile,
-                media_id: serverId
-            }, {
-                    process: function (resp) {
-                        alert("上传成功！")
-                    }
-                })
-        }
-    });
-}
-
-/*-----------------------------------------------------------------------------------------------------------
 绑定事件
 -----------------------------------------------------------------------------------------------------------*/
 PublishController.prototype.bindEvent = function () {
@@ -248,7 +214,7 @@ PublishController.prototype.bindEvent = function () {
                     media_id: serverId
                 }, {
                         process: function (resp) {
-                            window.location = "/success.php";
+                            window.location = "/ay/success.html?openId=" + classSelf.openId;
                         },
                         onExceptionInterface: function () {
                             _this.removeClass('disabled').find('.left span').html('上传照片点亮城市');

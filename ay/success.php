@@ -40,15 +40,7 @@
                     <i class="sprite sprite-27"></i>
                     <div  class="swiper-container">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="http://usr.im/300x150?bg=657623&text=adad" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="http://usr.im/300x150?bg=657623&text=adad" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="http://usr.im/300x150?bg=657623&text=adad" alt="">
-                            </div>
+                            
                         </div>
                         <!-- 如果需要分页器 -->
                         <div class="swiper-pagination"></div>
@@ -60,7 +52,7 @@
                 <div class="title">
                     其他作品征集
                 </div>
-                <a class="link_more" href="/ay/index">查看更多</a>
+                <a class="link_more" href="/ay/index.php">查看更多</a>
                 <div class="list">
                     <div class="image">
                         <img src="http://imgwater.oss.aliyuncs.com/45d675a655924322b45a045212035700.ML" alt="">
@@ -98,6 +90,8 @@
             </div>
 
 		</div>
+        <div class="dialog photo-dialog">
+        </div>
 
 	<!--wap-->
 	<script src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/config.js"></script>
@@ -121,8 +115,7 @@
 	<input type="hidden" id="wechatTitle" value="<?php echo $config["wechat_title"]?>"/>
 	<input type="hidden" id="wechatContent" value="<?php echo $config["wechat_content"]?>"/>
 	<input type="hidden" id="wechatImgUrl" value="<?php echo $confs["module_img_path"]; ?>/wechat_shared.jpg"/> 
-    <!--百度地图脚本-->
-    <script src="http://api.map.baidu.com/api?v=2.0&amp;ak=qNYWrlPhhs31jXqbHLMnKWrI"></script>
+  
 	<!--这里是微信分享的脚本-->        
 	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 	<script src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/public/js/wechat-share.min.js"></script>

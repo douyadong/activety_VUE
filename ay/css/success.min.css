@@ -321,6 +321,7 @@ body {
   color: #01fff6;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 .wrapper > .details {
   position: relative;
@@ -329,6 +330,7 @@ body {
   margin-top: 0.5rem;
 }
 .wrapper > .details > .img-box {
+  display: none;
   position: absolute;
   border: 1px solid #01fff6;
   width: 9rem;
@@ -351,13 +353,14 @@ body {
 }
 .wrapper > .list-box > .title {
   color: #01fff6;
+  font-weight: 600;
 }
 .wrapper > .list-box > .link_more {
   position: absolute;
   font-size: 0.7rem;
   color: #fff;
   right: 0;
-  top: 7px;
+  top: 10px;
   text-decoration: underline;
 }
 .wrapper > .list-box > .list {
@@ -478,9 +481,9 @@ body {
   line-height: 0 ;
   margin: 0 5px ;
   width: 0 ;
-  border-top: 0.65rem solid transparent;
-  border-bottom: 0.65rem solid transparent;
-  border-left: 0.65rem solid rgba(78, 85, 94, 0.8);
+  border-top: 0.6rem solid transparent;
+  border-bottom: 0.6rem solid transparent;
+  border-left: 0.6rem solid rgba(78, 85, 94, 0.8);
   margin: 0;
 }
 .wrapper > .list-box > .list > .image > .location .triangel:after {
@@ -506,4 +509,116 @@ body {
 }
 .wrapper .swiper-pagination {
   bottom: 5px;
+}
+.dialog {
+  display: none;
+  width: 90%;
+  margin-left: 5%;
+  position: fixed;
+  top: 20%;
+  z-index: 1100;
+  border: 1px solid #00a7bb;
+}
+.dialog .sprite-4 {
+  cursor: pointer;
+}
+.photo-dialog {
+  color: #01fff6;
+  font-size: .6rem;
+  text-align: center;
+}
+.photo-dialog > i {
+  position: absolute;
+  top: -12px;
+  right: .5rem;
+}
+.photo-dialog > .image {
+  max-height: 14rem;
+}
+.photo-dialog > .image img {
+  max-height: 14rem;
+}
+.photo-dialog > .location {
+  position: absolute;
+  top: 1rem;
+  left: 0.3rem;
+  height: .6rem;
+  font-size: .5rem;
+}
+.photo-dialog > .location .content {
+  *zoom: 1;
+  display: inline-block;
+  float: left;
+  line-height: .8rem;
+  background: rgba(78, 85, 94, 0.8);
+  padding: .2rem;
+}
+.photo-dialog > .location .content:after {
+  clear: both ;
+  content: " ";
+  display: block ;
+  font-size: 0 ;
+  height: 0 ;
+  visibility: hidden ;
+}
+.photo-dialog > .location .content i {
+  display: inline-block;
+}
+.photo-dialog > .location .content > span {
+  display: inline-block;
+  max-width: 5rem;
+  height: .8rem;
+  /*
+    *截取文本用省略号追加在后面
+    */
+  overflow: hidden ;
+  white-space: nowrap ;
+  text-overflow: ellipsis ;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis ;
+  -moz-binding: url("ellipsis.xml#ellipsis");
+}
+.photo-dialog > .location .triangel {
+  *zoom: 1;
+  float: left;
+  font-size: 0 ;
+  height: 0 ;
+  display: inline-block;
+  *display: inline ;
+  *zoom: 1 ;
+  line-height: 0 ;
+  margin: 0 5px ;
+  width: 0 ;
+  border-top: 0.65rem solid transparent;
+  border-bottom: 0.65rem solid transparent;
+  border-left: 0.65rem solid rgba(78, 85, 94, 0.8);
+  margin: 0;
+}
+.photo-dialog > .location .triangel:after {
+  clear: both ;
+  content: " ";
+  display: block ;
+  font-size: 0 ;
+  height: 0 ;
+  visibility: hidden ;
+}
+.photo-dialog > .vote {
+  background: #091c32;
+  border-top: 1px solid #00a7bb;
+}
+.photo-dialog > .vote > .name {
+  padding-top: .2rem;
+  color: #fff;
+}
+.photo-dialog > .vote > .zan {
+  font-size: .8rem;
+  font-weight: bold;
+  padding-top: .2rem;
+}
+.photo-dialog > .vote > .zan img {
+  margin-right: .2rem;
+  width: 1rem;
+}
+.photo-dialog > .vote > .count {
+  padding: .2rem 0;
 }

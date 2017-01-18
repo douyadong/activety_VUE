@@ -31,6 +31,7 @@ body {
         color: #01fff6;
         margin-top: 1.5rem;
         margin-bottom: 0.5rem;
+        font-weight: 600;
     }
     &>.details {
         position: relative;
@@ -38,6 +39,7 @@ body {
             margin-top: 0.5rem;
         }
         &>.img-box {
+            display: none;
             position: absolute;
             border: 1px solid #01fff6;
             width: 9rem;
@@ -58,19 +60,18 @@ body {
     }
     &>.list-box {
         position: relative;
-        &>.title{
+        &>.title {
             color: #01fff6;
+            font-weight: 600;
         }
-
-        &>.link_more{
+        &>.link_more {
             position: absolute;
             font-size: 0.7rem;
             color: #fff;
             right: 0;
-            top:7px;
+            top: 10px;
             text-decoration: underline;
         }
-
         &>.list {
             text-align: center;
             &>div:nth-child(2n+1) {
@@ -147,7 +148,7 @@ body {
                         .clearfix();
                         display: inline-block;
                         float: left;
-                        .triangle-next(.65rem, rgba(78, 85, 94, 0.8));
+                        .triangle-next(.6rem, rgba(78, 85, 94, 0.8));
                         margin: 0;
                     }
                 }
@@ -175,5 +176,86 @@ body {
     }
     .swiper-pagination {
         bottom: 5px;
+    }
+}
+
+.dialog {
+    display: none;
+    width: 90%;
+    margin-left: 5%;
+    position: fixed;
+    top: 20%;
+    z-index: 1100;
+    border: 1px solid #00a7bb;
+    .sprite-4 {
+        cursor: pointer;
+    }
+}
+
+.photo-dialog {
+    color: #01fff6;
+    font-size: .6rem;
+    text-align: center;
+    &>i {
+        position: absolute;
+        top: -12px;
+        right: .5rem;
+    }
+    &>.image {
+        max-height: 14rem;
+        img {
+            max-height: 14rem;
+        }
+    }
+    &>.location {
+        position: absolute;
+        top: 1rem;
+        left: 0.3rem;
+        height: .6rem;
+        font-size: .5rem;
+        .content {
+            .clearfix();
+            display: inline-block;
+            float: left;
+            line-height: .8rem;
+            background: rgba(78, 85, 94, 0.8);
+            padding: .2rem;
+            i {
+                display: inline-block;
+            }
+            &>span {
+                display: inline-block;
+                max-width: 5rem;
+                height: .8rem;
+                .text-ellipsis()
+            }
+        }
+        .triangel {
+            .clearfix();
+            display: inline-block;
+            float: left;
+            .triangle-next(.65rem, rgba(78, 85, 94, 0.8));
+            margin: 0;
+        }
+    }
+    &>.vote {
+        background: #091c32;
+        border-top: 1px solid #00a7bb;
+        &>.name {
+            padding-top: .2rem;
+            color: #fff;
+        }
+        &>.zan {
+            font-size: .8rem;
+            font-weight: bold;
+            padding-top: .2rem;
+            img {
+                margin-right: .2rem;
+                width: 1rem;
+            }
+        }
+        &>.count {
+            padding: .2rem 0;
+        }
     }
 }
