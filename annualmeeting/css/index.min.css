@@ -406,7 +406,7 @@ body {
 .wrapper > .hot,
 .wrapper > .new {
   padding-top: .5rem;
-  text-align: center;
+  text-align: left;
 }
 .wrapper > .hot > .title,
 .wrapper > .new > .title {
@@ -488,7 +488,7 @@ body {
 .wrapper > .hot > .image > .location,
 .wrapper > .new > .image > .location {
   position: absolute;
-  top: 1.4rem;
+  top: 1rem;
   left: 0.3rem;
   height: .6rem;
   font-size: .5rem;
@@ -514,7 +514,6 @@ body {
 .wrapper > .hot > .image > .location .content i,
 .wrapper > .new > .image > .location .content i {
   display: inline-block;
-  margin-right: .2rem;
 }
 .wrapper > .hot > .image > .location .content > span,
 .wrapper > .new > .image > .location .content > span {
@@ -566,6 +565,42 @@ body {
   top: 20%;
   z-index: 1100;
   border: 1px solid #00a7bb;
+}
+.photo-dialog {
+  color: #01fff6;
+  font-size: .6rem;
+  text-align: center;
+}
+.photo-dialog > i {
+  position: absolute;
+  top: -12px;
+  right: .5rem;
+}
+.photo-dialog > .image {
+  max-height: 14rem;
+}
+.photo-dialog > .image img {
+  max-height: 14rem;
+}
+.photo-dialog > .vote {
+  background: #091c32;
+  border-top: 1px solid #00a7bb;
+}
+.photo-dialog > .vote > .name {
+  padding-top: .2rem;
+  color: #fff;
+}
+.photo-dialog > .vote > .zan {
+  font-size: .8rem;
+  font-weight: bold;
+  padding-top: .2rem;
+}
+.photo-dialog > .vote > .zan img {
+  margin-right: .2rem;
+  width: 1rem;
+}
+.photo-dialog > .vote > .count {
+  padding: .2rem 0;
 }
 .award-dialog {
   padding: .5rem;
@@ -634,4 +669,7 @@ body {
   color: #fff;
   font-size: .4rem;
   display: block;
+}
+.data-status {
+  display: none;
 }

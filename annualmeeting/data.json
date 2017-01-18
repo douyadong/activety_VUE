@@ -1,0 +1,113 @@
+{
+    "status": 1,
+    "message": "操作成功",
+    "data": [{
+        "id": 1,
+        "openId": "oYaCYs-15kCMP529S81Yu0JsTLVg",
+        "userName": "周伟",
+        "userPhone": "18973716781",
+        "thumbnailUrl": "https://imgwater-test.oss.aliyuncs.com/afa958389f3f4cafa33af81cee1c1d70.AL",
+        "imgUrl": "https://imgpri-test.oss.aliyuncs.com/afa958389f3f4cafa33af81cee1c1d70?Expires=1484654247&OSSAccessKeyId=1CRqgHNJuy4lL6Wj&Signature=XCmTPQ0X6ytRhwMETs/9Wo9j2j0%3D",
+        "longitude": "104.08296",
+        "latitude": "38.65777",
+        "country": "中国",
+        "city": "上海",
+        "thumbs": 0
+    },{
+        "id": 1,
+        "openId": "oYaCYs-15kCMP529S81Yu0JsTLVg",
+        "userName": "周伟",
+        "userPhone": "18973716781",
+        "thumbnailUrl": "https://imgwater-test.oss.aliyuncs.com/afa958389f3f4cafa33af81cee1c1d70.AL",
+        "imgUrl": "https://imgpri-test.oss.aliyuncs.com/afa958389f3f4cafa33af81cee1c1d70?Expires=1484654247&OSSAccessKeyId=1CRqgHNJuy4lL6Wj&Signature=XCmTPQ0X6ytRhwMETs/9Wo9j2j0%3D",
+        "longitude": "104.08296",
+        "latitude": "38.65777",
+        "country": "中国",
+        "city": "上海",
+        "thumbs": 0
+    },{
+        "id": 1,
+        "openId": "oYaCYs-15kCMP529S81Yu0JsTLVg",
+        "userName": "周伟",
+        "userPhone": "18973716781",
+        "thumbnailUrl": "https://imgwater-test.oss.aliyuncs.com/afa958389f3f4cafa33af81cee1c1d70.AL",
+        "imgUrl": "https://imgpri-test.oss.aliyuncs.com/afa958389f3f4cafa33af81cee1c1d70?Expires=1484654247&OSSAccessKeyId=1CRqgHNJuy4lL6Wj&Signature=XCmTPQ0X6ytRhwMETs/9Wo9j2j0%3D",
+        "longitude": "104.08296",
+        "latitude": "38.65777",
+        "country": "中国",
+        "city": "上海",
+        "thumbs": 0
+    },{
+        "id": 1,
+        "openId": "oYaCYs-15kCMP529S81Yu0JsTLVg",
+        "userName": "周伟",
+        "userPhone": "18973716781",
+        "thumbnailUrl": "https://imgwater-test.oss.aliyuncs.com/afa958389f3f4cafa33af81cee1c1d70.AL",
+        "imgUrl": "https://imgpri-test.oss.aliyuncs.com/afa958389f3f4cafa33af81cee1c1d70?Expires=1484654247&OSSAccessKeyId=1CRqgHNJuy4lL6Wj&Signature=XCmTPQ0X6ytRhwMETs/9Wo9j2j0%3D",
+        "longitude": "104.08296",
+        "latitude": "38.65777",
+        "country": "中国",
+        "city": "上海",
+        "thumbs": 0
+    },{
+        "id": 1,
+        "openId": "oYaCYs-15kCMP529S81Yu0JsTLVg",
+        "userName": "周伟",
+        "userPhone": "18973716781",
+        "thumbnailUrl": "https://imgwater-test.oss.aliyuncs.com/afa958389f3f4cafa33af81cee1c1d70.AL",
+        "imgUrl": "https://imgpri-test.oss.aliyuncs.com/afa958389f3f4cafa33af81cee1c1d70?Expires=1484654247&OSSAccessKeyId=1CRqgHNJuy4lL6Wj&Signature=XCmTPQ0X6ytRhwMETs/9Wo9j2j0%3D",
+        "longitude": "104.08296",
+        "latitude": "38.65777",
+        "country": "中国",
+        "city": "上海",
+        "thumbs": 0
+    },{
+        "id": 1,
+        "openId": "oYaCYs-15kCMP529S81Yu0JsTLVg",
+        "userName": "周伟",
+        "userPhone": "18973716781",
+        "thumbnailUrl": "https://imgwater-test.oss.aliyuncs.com/afa958389f3f4cafa33af81cee1c1d70.AL",
+        "imgUrl": "https://imgpri-test.oss.aliyuncs.com/afa958389f3f4cafa33af81cee1c1d70?Expires=1484654247&OSSAccessKeyId=1CRqgHNJuy4lL6Wj&Signature=XCmTPQ0X6ytRhwMETs/9Wo9j2j0%3D",
+        "longitude": "104.08296",
+        "latitude": "38.65777",
+        "country": "中国",
+        "city": "上海",
+        "thumbs": 0
+    },{
+        "id": 1,
+        "openId": "oYaCYs-15kCMP529S81Yu0JsTLVg",
+        "userName": "周伟",
+        "userPhone": "18973716781",
+        "thumbnailUrl": "https://imgwater-test.oss.aliyuncs.com/afa958389f3f4cafa33af81cee1c1d70.AL",
+        "imgUrl": "https://imgpri-test.oss.aliyuncs.com/afa958389f3f4cafa33af81cee1c1d70?Expires=1484654247&OSSAccessKeyId=1CRqgHNJuy4lL6Wj&Signature=XCmTPQ0X6ytRhwMETs/9Wo9j2j0%3D",
+        "longitude": "104.08296",
+        "latitude": "38.65777",
+        "country": "中国",
+        "city": "上海",
+        "thumbs": 0
+    },{
+        "id": 1,
+        "openId": "oYaCYs-15kCMP529S81Yu0JsTLVg",
+        "userName": "周伟",
+        "userPhone": "18973716781",
+        "thumbnailUrl": "https://imgwater-test.oss.aliyuncs.com/afa958389f3f4cafa33af81cee1c1d70.AL",
+        "imgUrl": "https://imgpri-test.oss.aliyuncs.com/afa958389f3f4cafa33af81cee1c1d70?Expires=1484654247&OSSAccessKeyId=1CRqgHNJuy4lL6Wj&Signature=XCmTPQ0X6ytRhwMETs/9Wo9j2j0%3D",
+        "longitude": "104.08296",
+        "latitude": "38.65777",
+        "country": "中国",
+        "city": "上海",
+        "thumbs": 0
+    },{
+        "id": 1,
+        "openId": "oYaCYs-15kCMP529S81Yu0JsTLVg",
+        "userName": "周伟",
+        "userPhone": "18973716781",
+        "thumbnailUrl": "https://imgwater-test.oss.aliyuncs.com/afa958389f3f4cafa33af81cee1c1d70.AL",
+        "imgUrl": "https://imgpri-test.oss.aliyuncs.com/afa958389f3f4cafa33af81cee1c1d70?Expires=1484654247&OSSAccessKeyId=1CRqgHNJuy4lL6Wj&Signature=XCmTPQ0X6ytRhwMETs/9Wo9j2j0%3D",
+        "longitude": "104.08296",
+        "latitude": "38.65777",
+        "country": "中国",
+        "city": "上海",
+        "thumbs": 0
+    }]
+}

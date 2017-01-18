@@ -118,11 +118,11 @@ body {
     &>.hot,
     &>.new {
         padding-top: .5rem;
+        text-align:left;
         &>.title {
             font-size: .9rem;
             text-align: left;
         }
-        text-align: center;
         &>div:nth-child(2n+1) {
             margin-left: 0.2rem;
         }
@@ -171,7 +171,7 @@ body {
             }
             &>.location {
                 position: absolute;
-                top: 1.4rem;
+                top: 1rem;
                 left: 0.3rem;
                 height: .6rem;
                 font-size: .5rem;
@@ -184,7 +184,6 @@ body {
                     padding: .2rem;
                     i {
                         display: inline-block;
-                        margin-right: .2rem;
                     }
                     &>span {
                         display: inline-block;
@@ -216,9 +215,46 @@ body {
     border: 1px solid #00a7bb;
 }
 
+.photo-dialog {
+    color: #01fff6;
+    font-size: .6rem;
+    text-align: center;
+    &>i {
+        position: absolute;
+        top: -12px;
+        right: .5rem;
+    }
+    &>.image {
+        max-height: 14rem;
+        img {
+            max-height: 14rem;
+        }
+    }
+    &>.vote {
+        background: #091c32;
+        border-top: 1px solid #00a7bb;
+        &>.name {
+            padding-top: .2rem;
+            color: #fff;
+        }
+        &>.zan {
+            font-size: .8rem;
+            font-weight: bold;
+            padding-top: .2rem;
+            img {
+                margin-right: .2rem;
+                width: 1rem;
+            }
+        }
+        &>.count {
+            padding: .2rem 0;
+        }
+    }
+}
+
 .award-dialog {
     padding: .5rem;
-    background:rgba(9,21,51,0.8);
+    background: rgba(9, 21, 51, 0.8);
     &>.title {
         position: absolute;
         font-size: .9rem;
@@ -240,9 +276,9 @@ body {
             margin-left: 2rem;
         }
         .company {
-           img{
-           	width:40%
-           }
+            img {
+                width: 40%
+            }
         }
         display: inline-block;
         width: 45%;
@@ -251,11 +287,11 @@ body {
         line-height:.8rem;
         color: #00a7bb;
     }
-    &>div:nth-child(2n){
-    	margin-left:.5rem;
+    &>div:nth-child(2n) {
+        margin-left: .5rem;
     }
     span {
-    	padding-top:.5rem;
+        padding-top: .5rem;
         display: block;
         width: 100%;
         text-align: center;
@@ -284,4 +320,8 @@ body {
         font-size: .4rem;
         display: block;
     }
+}
+
+.data-status {
+    display: none;
 }

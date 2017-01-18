@@ -56,7 +56,7 @@
 		   </div>
 		   <div class="hot">
 		   		<p class="title">热门</p>
-		   		<div class="image">
+		   		<!-- <div class="image">
 		   			<img src="http://imgwater.oss.aliyuncs.com/45d675a655924322b45a045212035700.ML" alt="">
 		   			<div class="location">
 			   			<span class="content"><i class="sprite sprite-15"></i><span>中国.上海中国.上海中国.上海</span></span>
@@ -64,7 +64,7 @@
 		   			</div>
 		   			<div class="zan">
 		   				<div class="left">
-		   					<img src="<?php echo $confs["module_img_path"]; ?>/heart1.png" alt="planet">	
+		   					<img src="<?php echo $confs["module_img_path"]; ?>/heart1.png" alt="heart">	
 		   				</div>
 		   				<div class="right">
 		   					<span class="count">147</span>
@@ -80,7 +80,7 @@
 		   			</div>
 		   			<div class="zan">
 		   				<div class="left">
-		   					<img src="<?php echo $confs["module_img_path"]; ?>/heart1.png" alt="planet">	
+		   					<img src="<?php echo $confs["module_img_path"]; ?>/heart1.png" alt="heart">	
 		   				</div>
 		   				<div class="right">
 		   					<span class="count">147</span>
@@ -96,7 +96,7 @@
 		   			</div>
 		   			<div class="zan">
 		   				<div class="left">
-		   					<img src="<?php echo $confs["module_img_path"]; ?>/heart1.png" alt="planet">	
+		   					<img src="<?php echo $confs["module_img_path"]; ?>/heart1.png" alt="heart">	
 		   				</div>
 		   				<div class="right">
 		   					<span class="count">147</span>
@@ -112,18 +112,18 @@
 		   			</div>
 		   			<div class="zan">
 		   				<div class="left">
-		   					<img src="<?php echo $confs["module_img_path"]; ?>/heart1.png" alt="planet">	
+		   					<img src="<?php echo $confs["module_img_path"]; ?>/heart1.png" alt="heart">	
 		   				</div>
 		   				<div class="right">
 		   					<span class="count">147</span>
 		   					<span class="name">测试测试</span>
 		   				</div>
 		   			</div>
-		   		</div>
+		   		</div> -->
 		   </div>
 		   <div class="new">
 		   		<p class="title">最新</p>
-		   		<div class="image">
+		   		<!-- <div class="image">
 		   			<img src="http://imgwater.oss.aliyuncs.com/45d675a655924322b45a045212035700.ML" alt="">
 		   			<div class="location">
 			   			<span class="content"><i class="sprite sprite-15"></i><span>中国.上海中国.上海中国.上海</span></span>
@@ -131,7 +131,7 @@
 		   			</div>
 		   			<div class="zan">
 		   				<div class="left">
-		   					<img src="<?php echo $confs["module_img_path"]; ?>/heart1.png" alt="planet">	
+		   					<img src="<?php echo $confs["module_img_path"]; ?>/heart1.png" alt="heart">	
 		   				</div>
 		   				<div class="right">
 		   					<span class="count">147</span>
@@ -147,7 +147,7 @@
 		   			</div>
 		   			<div class="zan">
 		   				<div class="left">
-		   					<img src="<?php echo $confs["module_img_path"]; ?>/heart1.png" alt="planet">	
+		   					<img src="<?php echo $confs["module_img_path"]; ?>/heart1.png" alt="heart">	
 		   				</div>
 		   				<div class="right">
 		   					<span class="count">147</span>
@@ -163,7 +163,7 @@
 		   			</div>
 		   			<div class="zan">
 		   				<div class="left">
-		   					<img src="<?php echo $confs["module_img_path"]; ?>/heart1.png" alt="planet">	
+		   					<img src="<?php echo $confs["module_img_path"]; ?>/heart1.png" alt="heart">	
 		   				</div>
 		   				<div class="right">
 		   					<span class="count">147</span>
@@ -179,14 +179,14 @@
 		   			</div>
 		   			<div class="zan">
 		   				<div class="left">
-		   					<img src="<?php echo $confs["module_img_path"]; ?>/heart1.png" alt="planet">	
+		   					<img src="<?php echo $confs["module_img_path"]; ?>/heart1.png" alt="heart">	
 		   				</div>
 		   				<div class="right">
 		   					<span class="count">147</span>
 		   					<span class="name">测试测试</span>
 		   				</div>
 		   			</div>
-		   		</div>
+		   		</div> -->
 		   </div>
 		</div>
 		<div class="operation">
@@ -200,7 +200,15 @@
 			</div>
 		</div>
 		<div class="photo-dialog">
-			
+			<i class="close sprite sprite-4"></i>
+			<div class="image">
+				<img src="http://imgwater.oss.aliyuncs.com/45d675a655924322b45a045212035700.ML" alt="">
+			</div>
+			<div class="vote">
+				<p class="name">张三</p>
+				<p class="zan"><img src="<?php echo $confs["module_img_path"]; ?>/heart1.png" alt="heart">点击为TA投票</p>
+				<p class="count">目前票数<span>147</span>	</p>
+			</div>
 		</div>
 		<div class="award-dialog">
 			<p class="title">活动奖品</p>
@@ -237,8 +245,8 @@
 	<script src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/config.js"></script>
 	<!--app.min.js-->
 	<script src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/public/js/app.min.js"></script>
-	
 	<script src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/public/js/wap.min.js"></script>
+	<script src="<?php echo "$CURRENT_STATIC_DOMAIN/" . $router["activity_name"] . "/js/jquery.pullload.min.js" ?>"></script>
 	<script src="<?php echo "$CURRENT_STATIC_DOMAIN/" . $router["activity_name"] . "/js/jquery-starfield.min.js" ?>"></script>
 	<?php
 	    if($config["match_javascripts"]) {//匹配路由脚本
