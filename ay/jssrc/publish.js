@@ -204,7 +204,7 @@ PublishController.prototype.bindEvent = function () {
         }
 
         _this.hide();
-        $('.uploading').css('display','inline-block');
+        $('.uploading').css('display', 'inline-block');
 
         wx.uploadImage({
             localId: classSelf.localId, // 需要上传的图片的本地ID，由chooseImage接口获得
@@ -227,6 +227,11 @@ PublishController.prototype.bindEvent = function () {
                         },
                         onExceptionInterface: function (resp) {
                             classSelf.tips(resp.message);
+                            _this.removeClass('disabled').show();
+                            $('.uploading').hide();
+                        },
+                        onErrorInterface: function () {
+                            classSelf.tips("网络异常，请稍后尝试!");
                             _this.removeClass('disabled').show();
                             $('.uploading').hide();
                         }

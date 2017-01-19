@@ -118,6 +118,8 @@ function Controller() {
         var loadingTips = (params === null || params.loadingTips === null || params.loadingTips === undefined) ? "正在加载数据，请稍等..." : params.loadingTips;
         var apiDataType = (params === null || params.apiDataType === null || params.apiDataType === undefined) ? this.apiDataType : params.apiDataType;
         var onExceptionInterface = (params === null || params.onExceptionInterface === null || params.onExceptionInterface === undefined) ? null : params.onExceptionInterface;
+        var onErrorInterface = (params === null || params.onErrorInterface === null || params.onErrorInterface === undefined) ? null : params.onErrorInterface;
+
         if (this.showLoadingTips) this.tips(loadingTips);
         try {
 
@@ -128,6 +130,7 @@ function Controller() {
                 dataType: apiDataType,
                 // jsonpCallback: "callback", //这个配置是在没有真正后端接口前端用自己的 json文件模拟接口的时候为了保持callback参数值一致所做的设置
                 error: function (e) {
+                    if (onExceptionInterface) onExceptionInterface(e);
                     //子类提供
                     classSelf.showLog('网络异常');
                 },
