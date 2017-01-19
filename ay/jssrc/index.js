@@ -26,7 +26,7 @@ function IndexController() {
 /*-----------------------------------------------------------------------------------------------------------
 初始化页面
 -----------------------------------------------------------------------------------------------------------*/
-IndexController.prototype.initPage = function () {
+IndexController.prototype.initPage = function() {
     var classSelf = this;
     classSelf.pageIndex = parseInt($('.new').attr('pageindex'));
     classSelf.pageSize = parseInt($('.new').attr('pagesize'));
@@ -37,17 +37,18 @@ IndexController.prototype.initPage = function () {
     //点亮城市
     classSelf.request(classSelf.apiUrl.annualmeeting.getCityCount, {}, {
         // apiDataType: "json",
-        process: function (res) {
+        process: function(res) {
             $('.lighted').find('span.count').text(res.data);
         }
     });
+
     //热门
     classSelf.request(classSelf.apiUrl.annualmeeting.getHotPhotos + '?openId=' + classSelf.openId, {}, {
         // apiDataType: "json",
-        process: function (res) {
-            $('.hot').append('<p class="title">热门</p>');
+        process: function(res) {
             if (res.data.length) {
-                $.each(res.data, function (index, el) {
+                $('.hot').append('<p class="title">热门照片</p>');
+                $.each(res.data, function(index, el) {
                     var tmp = classSelf.createListItem(el);
                     if (tmp && tmp.length) {
                         $(".hot").append(tmp);
@@ -61,12 +62,12 @@ IndexController.prototype.initPage = function () {
     //最新
     classSelf.request(classSelf.apiUrl.annualmeeting.getNewPhotos + '?pageIndex=' + classSelf.pageIndex + '&pageSize=' + classSelf.pageSize + '&openId=' + classSelf.openId, {}, {
         // apiDataType: "json",
-        process: function (res) {
-            $('.new').append('<p class="title">最新</p>');
+        process: function(res) {
             if (res.data.length) {
+                $('.new').append('<p class="title">最新发布</p>');
                 classSelf.pageIndex += 1;
                 $('.new').attr("pageindex", classSelf.pageIndex);
-                $.each(res.data, function (index, el) {
+                $.each(res.data, function(index, el) {
                     var tmp = classSelf.createListItem(el);
                     if (tmp && tmp.length) {
                         $(".new").append(tmp);
@@ -82,7 +83,7 @@ IndexController.prototype.initPage = function () {
 /*-----------------------------------------------------------------------------------------------------------
     初始化星空背景
 -----------------------------------------------------------------------------------------------------------*/
-IndexController.prototype.initStar = function () {
+IndexController.prototype.initStar = function() {
     if ($('#star').length) $('#star').remove();
     $('body').append('<div id="star"></div>');
     $('#star').height($(document).height()).starfield({
@@ -95,16 +96,16 @@ IndexController.prototype.initStar = function () {
 /*-----------------------------------------------------------------------------------------------------------
 下拉刷新
 -----------------------------------------------------------------------------------------------------------*/
-IndexController.prototype.initPullload = function () {
+IndexController.prototype.initPullload = function() {
     var classSelf = this;
     $(".new").pullload({
         apiUrl: classSelf.apiUrl.annualmeeting.getNewPhotos + "?openId=" + classSelf.openId,
         crossDomain: "jsonp",
         threshold: 0,
-        callback: function (data) {
+        callback: function(data) {
             classSelf.pageIndex += 1;
             $('.new').attr("pageindex", classSelf.pageIndex);
-            $.each(data.data, function (index, el) {
+            $.each(data.data, function(index, el) {
                 var tmp = classSelf.createListItem(el);
                 if (tmp && tmp.length) {
                     $(".new").append(tmp);
@@ -118,7 +119,7 @@ IndexController.prototype.initPullload = function () {
 /*-----------------------------------------------------------------------------------------------------------
 创建元素
 -----------------------------------------------------------------------------------------------------------*/
-IndexController.prototype.createListItem = function (el) {
+IndexController.prototype.createListItem = function(el) {
     var classSelf = this;
     var arr = [];
     if (!el) return arr;
@@ -144,7 +145,7 @@ IndexController.prototype.createListItem = function (el) {
 /*-----------------------------------------------------------------------------------------------------------
 创建照片弹出内容
 -----------------------------------------------------------------------------------------------------------*/
-IndexController.prototype.createPhotoContent = function (el) {
+IndexController.prototype.createPhotoContent = function(el) {
     var classSelf = this;
     var arr = [];
     if (!el) return arr;
@@ -172,7 +173,7 @@ IndexController.prototype.createPhotoContent = function (el) {
 }
 
 //创建阴影层
-IndexController.prototype.createMask = function () {
+IndexController.prototype.createMask = function() {
     //获取页面高度和宽度
     var sHeight = document.documentElement.scrollHeight,
         sWidth = document.documentElement.scrollWidth,
@@ -192,41 +193,51 @@ IndexController.prototype.createMask = function () {
     $(document.body).append(mask);
 };
 
-IndexController.prototype.bindEvent = function () {
+IndexController.prototype.bindEvent = function() {
     var classSelf = this;
 
-    $('.rule').on('click', '.image', function (event) {
+    $('.rule').on('click', '.image', function(event) {
         event.preventDefault();
         /* Act on the event */
         classSelf.createMask();
         $('.award-dialog').fadeIn();
     });
 
-    $('.dialog').on('click', '.sprite-4', function (event) {
+    $('.dialog').on('click', '.sprite-4', function(event) {
         event.preventDefault();
         /* Act on the event */
         $('.dialog').hide();
         $('#mask-container').remove();
     });
 
-    $('.operation').on('click', '.add', function (event) {
+    $('.operation').on('click', '.add', function(event) {
         event.preventDefault();
         /* Act on the event */
         window.location.href = 'publish.html?openId=' + classSelf.openId;
     });
 
-    $('.operation').on('click', '.my', function (event) {
+    $('.operation').on('click', '.my', function(event) {
         event.preventDefault();
         /* Act on the event */
-        window.location.href = 'success.html?openId=' + classSelf.openId;
+        classSelf.request(classSelf.apiUrl.annualmeeting.getPhotoInfoByOpenId, {
+            openId: classSelf.openId
+        }, {
+            process: function(resp) {
+                if (resp && resp.data && resp.data.length > 0) {
+                    window.location.href = 'success.html?openId=' + classSelf.openId;
+                } else {
+                    classSelf.tips("您还没有上传照片");
+                }
+            }
+        })
     });
 
-    $('body').delegate('#mask-container', 'click', function (event) {
+    $('body').delegate('#mask-container', 'click', function(event) {
         $('.dialog').hide();
         $('#mask-container').remove();
     });
 
-    $('.hot,.new').on('click', '.image', function (event) {
+    $('.hot,.new').on('click', '.image', function(event) {
         event.preventDefault();
         /* Act on the event */
         var photoInfo = $(this).attr('data-info');
@@ -238,7 +249,7 @@ IndexController.prototype.bindEvent = function () {
         }
     });
 
-    $('.photo-dialog').on('click', '.vote', function (event) {
+    $('.photo-dialog').on('click', '.vote', function(event) {
         event.preventDefault();
         /* Act on the event */
         var _ = $(this);
@@ -251,7 +262,7 @@ IndexController.prototype.bindEvent = function () {
             photoId: id
         };
         var params = {
-            process: function (res) {
+            process: function(res) {
                 if (isVote) {
                     //取消点赞
                     _.attr('data-isvote', 0);
@@ -271,7 +282,7 @@ IndexController.prototype.bindEvent = function () {
                 $('.hot,.new').find('.image[data-id="' + id + '"]').attr('data-info', JSON.stringify(photoInfo));
                 $('.hot,.new').find('.image[data-id="' + id + '"]').find('.count').text(photoInfo.thumbs);
             },
-            onExceptionInterface: function (res) {
+            onExceptionInterface: function(res) {
                 classSelf.tips(res.message);
             }
         };
@@ -289,6 +300,6 @@ IndexController.prototype.bindEvent = function () {
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 类的初始化
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-$(document).ready(function () {
+$(document).ready(function() {
     new IndexController();
 });

@@ -364,6 +364,7 @@ body {
   text-decoration: underline;
 }
 .wrapper > .list-box > .list {
+  margin-top: .5rem;
   text-align: center;
 }
 .wrapper > .list-box > .list > div:nth-child(2n) {
@@ -373,7 +374,7 @@ body {
   position: relative;
   display: inline-block;
   width: 48%;
-  padding-top: .5rem;
+  border: 1px solid #00a7bb;
 }
 .wrapper > .list-box > .list > .image > img {
   display: block;
@@ -431,10 +432,10 @@ body {
 }
 .wrapper > .list-box > .list > .image > .location {
   position: absolute;
-  top: 1rem;
+  top: .5rem;
   left: 0.3rem;
-  height: .6rem;
-  font-size: .5rem;
+  height: .5rem;
+  font-size: .4rem;
 }
 .wrapper > .list-box > .list > .image > .location .content {
   *zoom: 1;
@@ -458,7 +459,7 @@ body {
 }
 .wrapper > .list-box > .list > .image > .location .content > span {
   display: inline-block;
-  width: 3rem;
+  max-width: 3rem;
   height: .8rem;
   /*
     *截取文本用省略号追加在后面
@@ -542,8 +543,8 @@ body {
   position: absolute;
   top: 1rem;
   left: 0.3rem;
-  height: .6rem;
-  font-size: .5rem;
+  height: .5rem;
+  font-size: .4rem;
 }
 .photo-dialog > .location .content {
   *zoom: 1;
@@ -562,11 +563,12 @@ body {
   visibility: hidden ;
 }
 .photo-dialog > .location .content i {
+  margin-right: .2rem;
   display: inline-block;
 }
 .photo-dialog > .location .content > span {
   display: inline-block;
-  max-width: 5rem;
+  max-width: 3rem;
   height: .8rem;
   /*
     *截取文本用省略号追加在后面
@@ -589,9 +591,9 @@ body {
   line-height: 0 ;
   margin: 0 5px ;
   width: 0 ;
-  border-top: 0.65rem solid transparent;
-  border-bottom: 0.65rem solid transparent;
-  border-left: 0.65rem solid rgba(78, 85, 94, 0.8);
+  border-top: 0.6rem solid transparent;
+  border-bottom: 0.6rem solid transparent;
+  border-left: 0.6rem solid rgba(78, 85, 94, 0.8);
   margin: 0;
 }
 .photo-dialog > .location .triangel:after {
