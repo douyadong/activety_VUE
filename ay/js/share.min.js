@@ -34,8 +34,9 @@ ShareController.prototype.initPage = function() {
     var classSelf = this;
 
     classSelf.openId = classSelf.getQueryStringByName("openId");
-
     // classSelf.openId = "onco6txFeeYY_Y1UxYGbbl9Ch_tI";
+
+    classSelf.shareOpenId=classSelf.getQueryStringByName("shareOpenId");
 
     var link_moreUrl = $('.link_more').attr('href') + "?openId=" + classSelf.openId;
 
@@ -79,7 +80,7 @@ ShareController.prototype.getDetails = function() {
     var $swiperItem;
 
     classSelf.request(classSelf.apiUrl.annualmeeting.getPhotoInfoByOpenId, {
-        openId: classSelf.openId
+        openId: classSelf.shareOpenId
     }, {
         process: function(resp) {
             if (resp && resp.data && resp.data.length > 0) {

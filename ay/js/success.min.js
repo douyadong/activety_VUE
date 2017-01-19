@@ -29,17 +29,19 @@ function PublishSuccessController() {
 /*-----------------------------------------------------------------------------------------------------------
 初始化页面
 -----------------------------------------------------------------------------------------------------------*/
-PublishSuccessController.prototype.initPage = function() {
+PublishSuccessController.prototype.initPage = function () {
     var classSelf = this;
 
     classSelf.openId = classSelf.getQueryStringByName("openId");
-
     // classSelf.openId = "onco6txFeeYY_Y1UxYGbbl9Ch_tI";
+
+    //分享页地址
+    $('#wechatLinkUrl').val(classSelf.redirectUrl.annualmeeting.share + "?shareOpenId=" + classSelf.openId);
 
     //热门
     classSelf.request(classSelf.apiUrl.annualmeeting.getHotPhotos + '?openId=' + classSelf.openId, {}, {
         // apiDataType: "json",
-        process: function(res) {
+        process: function (res) {
 
             if (res.data.length) {
                 $('.list-box').append('<div class="title">其他作品征集</div>');
@@ -49,7 +51,7 @@ PublishSuccessController.prototype.initPage = function() {
 
                 $('.list-box').append('<div class="list"></div>');
 
-                $.each(res.data, function(index, el) {
+                $.each(res.data, function (index, el) {
                     if (index < 2) {
                         var tmp = classSelf.createListItem(el);
                         if (tmp && tmp.length) {
@@ -65,7 +67,7 @@ PublishSuccessController.prototype.initPage = function() {
 /*-----------------------------------------------------------------------------------------------------------
 initSwiper
 -----------------------------------------------------------------------------------------------------------*/
-PublishSuccessController.prototype.initSwiper = function() {
+PublishSuccessController.prototype.initSwiper = function () {
     var classSelf = this;
 
     var mySwiper = new Swiper('.swiper-container', {
@@ -79,7 +81,7 @@ PublishSuccessController.prototype.initSwiper = function() {
 /*-----------------------------------------------------------------------------------------------------------
 获取有发布过照片相关信息
 -----------------------------------------------------------------------------------------------------------*/
-PublishSuccessController.prototype.getDetails = function() {
+PublishSuccessController.prototype.getDetails = function () {
     var classSelf = this;
 
     var $swiperContainer = $('.swiper-wrapper');
@@ -88,26 +90,26 @@ PublishSuccessController.prototype.getDetails = function() {
     classSelf.request(classSelf.apiUrl.annualmeeting.getPhotoInfoByOpenId, {
         openId: classSelf.openId
     }, {
-        process: function(resp) {
-            if (resp && resp.data && resp.data.length > 0) {
-                $.each(resp.data, function(i, oData) {
-                    $swiperItem = $('<div class="swiper-slide"></div>');
-                    $swiperItem.append('<img src="' + oData.thumbnailUrl + '" alt="' + oData.userName + '">');
-                    $swiperItem.find('img').attr('data-info', JSON.stringify(oData)).attr('data-id', oData.id);
-                    $swiperContainer.append($swiperItem);
-                })
+            process: function (resp) {
+                if (resp && resp.data && resp.data.length > 0) {
+                    $.each(resp.data, function (i, oData) {
+                        $swiperItem = $('<div class="swiper-slide"></div>');
+                        $swiperItem.append('<img src="' + oData.thumbnailUrl + '" alt="' + oData.userName + '">');
+                        $swiperItem.find('img').attr('data-info', JSON.stringify(oData)).attr('data-id', oData.id);
+                        $swiperContainer.append($swiperItem);
+                    })
 
-                $('.img-box').show();
-                classSelf.initSwiper();
+                    $('.img-box').show();
+                    classSelf.initSwiper();
+                }
             }
-        }
-    })
+        })
 }
 
 /*-----------------------------------------------------------------------------------------------------------
 创建照片弹出内容
 -----------------------------------------------------------------------------------------------------------*/
-PublishSuccessController.prototype.createPhotoContent = function(el) {
+PublishSuccessController.prototype.createPhotoContent = function (el) {
     var classSelf = this;
     var arr = [];
     if (!el) return arr;
@@ -136,7 +138,7 @@ PublishSuccessController.prototype.createPhotoContent = function(el) {
 }
 
 //创建阴影层
-PublishSuccessController.prototype.createMask = function() {
+PublishSuccessController.prototype.createMask = function () {
     //获取页面高度和宽度
     var sHeight = document.documentElement.scrollHeight,
         sWidth = document.documentElement.scrollWidth,
@@ -159,7 +161,7 @@ PublishSuccessController.prototype.createMask = function() {
 /*-----------------------------------------------------------------------------------------------------------
 创建元素
 -----------------------------------------------------------------------------------------------------------*/
-PublishSuccessController.prototype.createListItem = function(el) {
+PublishSuccessController.prototype.createListItem = function (el) {
     var classSelf = this;
     var arr = [];
     if (!el) return arr;
@@ -185,11 +187,11 @@ PublishSuccessController.prototype.createListItem = function(el) {
 /*-----------------------------------------------------------------------------------------------------------
 绑定事件
 -----------------------------------------------------------------------------------------------------------*/
-PublishSuccessController.prototype.bindEvent = function() {
+PublishSuccessController.prototype.bindEvent = function () {
     var classSelf = this;
 
     //弹窗右上角叉叉的事件绑定
-    $('.dialog').on('click', '.sprite-4', function(event) {
+    $('.dialog').on('click', '.sprite-4', function (event) {
         event.preventDefault();
         /* Act on the event */
         $('.dialog').hide();
@@ -197,7 +199,7 @@ PublishSuccessController.prototype.bindEvent = function() {
     });
 
 
-    $('.swiper-wrapper').on('click', '.swiper-slide img', function(event) {
+    $('.swiper-wrapper').on('click', '.swiper-slide img', function (event) {
         event.preventDefault();
         /* Act on the event */
         var photoInfo = $(this).attr('data-info');
@@ -209,17 +211,17 @@ PublishSuccessController.prototype.bindEvent = function() {
         }
     });
 
-    $('.list-box').on('click', '.image', function(event) {
+    $('.list-box').on('click', '.image', function (event) {
         event.preventDefault();
         /* Act on the event */
-        var openId = $(this).attr('data-openid');
-        if (openId) {
-            window.location.href = 'share.html?openId=' + openId;
+        var shareOpenId = $(this).attr('data-openid');
+        if (shareOpenId) {
+            window.location.href = classSelf.redirectUrl.annualmeeting.share + "?shareOpenId=" + shareOpenId;
         }
     });
 
     //点赞和取消点赞的事件绑定
-    $('.photo-dialog').on('click', '.vote', function(event) {
+    $('.photo-dialog').on('click', '.vote', function (event) {
         event.preventDefault();
         /* Act on the event */
         var _ = $(this);
@@ -232,7 +234,7 @@ PublishSuccessController.prototype.bindEvent = function() {
             photoId: id
         };
         var params = {
-            process: function(res) {
+            process: function (res) {
                 if (isVote) {
                     _.attr('data-isvote', 0);
                     photoInfo.isVote = 0;
@@ -251,7 +253,7 @@ PublishSuccessController.prototype.bindEvent = function() {
                 _.attr('data-info', JSON.stringify(photoInfo));
                 $('.swiper-wrapper').find('img[data-id="' + id + '"]').attr('data-info', JSON.stringify(photoInfo));
             },
-            onExceptionInterface: function(res) {
+            onExceptionInterface: function (res) {
                 classSelf.tips(res.message);
             }
         };
@@ -264,7 +266,7 @@ PublishSuccessController.prototype.bindEvent = function() {
         classSelf.request(requestUrl, data, params)
     });
 
-    $('body').delegate('#mask-container', 'click', function(event) {
+    $('body').delegate('#mask-container', 'click', function (event) {
         $('.dialog').hide();
         $('#mask-container').remove();
     });
@@ -275,6 +277,6 @@ PublishSuccessController.prototype.bindEvent = function() {
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 类的初始化
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-$(document).ready(function() {
+$(document).ready(function () {
     new PublishSuccessController();
 });

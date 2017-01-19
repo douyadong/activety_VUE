@@ -84,7 +84,10 @@ function Controller() {
             "detail": this.staticDomain + '/olympic/detail.php'
         },
         "annualmeeting": {
-            "index": this.wechatPrefix + "ay/index.html"
+            "index": this.wechatPrefix + "ay/index.html",
+            "publish": this.wechatPrefix + "ay/publish.html",
+            "success": this.wechatPrefix + "ay/success.html",
+            "share": this.wechatPrefix + "ay/share.html"
         }
     }
 

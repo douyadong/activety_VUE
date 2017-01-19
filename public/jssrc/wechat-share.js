@@ -56,7 +56,7 @@ function WechatShareController() {
 
             },
             success: function (res) { 
-                alert("wx_onMenuShareTimeline success " + linkUrl);
+                console.log("wx_onMenuShareTimeline success " + linkUrl);
             },
             cancel: function (res) {
             },
@@ -78,7 +78,7 @@ function WechatShareController() {
             dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
             success: function () {
                 // 用户确认分享后执行的回调函数
-                alert("wx_onMenuShareAppMessage success " + linkUrl);
+                console.log("wx_onMenuShareAppMessage success " + linkUrl);
             },
             cancel: function () {
                 // 用户取消分享后执行的回调函数
@@ -121,6 +121,7 @@ function WechatShareController() {
     -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
     this.onload = function () {
         var classSelf = this;
+
         /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
         请求完成之后执行ready方法
         -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -129,6 +130,7 @@ function WechatShareController() {
             classSelf.wx_onMenuShareTimeline(classSelf.title, classSelf.linkUrl, classSelf.imgUrl); //  监听“分享到朋友圈
             classSelf.wx_onMenuShareAppMessage(classSelf.title, classSelf.linkUrl, classSelf.content, classSelf.imgUrl); //  监听“发送给朋友”按钮点击
         });
+        
         /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
         发送请求
         -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/

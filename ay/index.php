@@ -123,10 +123,11 @@
 	<input type="hidden" id="wechatTitle" value="<?php echo $config["wechat_title"]?>"/>
 	<input type="hidden" id="wechatContent" value="<?php echo $config["wechat_content"]?>"/>
 	<input type="hidden" id="wechatImgUrl" value="<?php echo $confs["module_img_path"]; ?>/wechat_shared.jpg"/> 
+	<input type="hidden" id="wechatLinkUrl" value=""/> 
 
 	<!--这里是微信分享的脚本-->        
 	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
-	<script src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/public/js/wechat-share.min.js"></script> 
+	<script src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/ay/js/wechat-share.min.js"></script> 
 	
 	<!--GA-h5-->
 <!--     <script>

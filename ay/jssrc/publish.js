@@ -42,8 +42,9 @@ PublishController.prototype.initPage = function () {
     var classSelf = this;
 
     classSelf.openId = classSelf.getQueryStringByName("openId");
-
     // classSelf.openId = "onco6txFeeYY_Y1UxYGbbl9Ch_tI";
+
+    $('#wechatLinkUrl').val(classSelf.redirectUrl.annualmeeting.index);
 
     //微信选择本地图片返回的选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
     classSelf.localIds = null;
@@ -56,11 +57,14 @@ PublishController.prototype.initPage = function () {
 
     classSelf.longitude = "104.08296"; //纬度
 
-    //设置wx.config 的callBack
-    delete window.wxConfigCallback;
-    window.wxConfigCallback = function (data) {
-        $('.wrapper').css('z-index', '100');
-    }
+
+    var weChatShareController = new WechatShareController({
+        wxConfigCallback: function (data) {
+            $('.wrapper').css('z-index', '100');
+        },
+        canShareTimeline: false,
+        canShareAppMessage: false
+    });
 }
 
 
