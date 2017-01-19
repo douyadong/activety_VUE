@@ -217,9 +217,9 @@ PublishController.prototype.bindEvent = function () {
                         process: function (resp) {
                             window.location = "/ay/success.html?openId=" + classSelf.openId;
                         },
-                        onExceptionInterface: function () {
+                        onExceptionInterface: function (resp) {
                             _this.removeClass('disabled').show();
-                            $('.uploading').hide();
+                            $('.uploading').hide(resp.message);
                         }
                     })
             }

@@ -179,7 +179,7 @@ ShareController.prototype.bindEvent = function() {
     });
 
     $('.button').on('click', function() {
-        window.location.href = 'index.html?openId=' + classSelf.openId;
+        window.location.href = classSelf.redirectUrl.annualmeeting.index;
     });
 
     //点赞和取消点赞的事件绑定
