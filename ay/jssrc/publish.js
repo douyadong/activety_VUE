@@ -171,6 +171,8 @@ PublishController.prototype.bindEvent = function () {
 
         var txtMobile = $.trim($('#txtMobile').val());
         var txtUserName = $.trim($('#txtUserName').val());
+        var originalLocalId = _this.attr('data-original-localid');
+        var isNeedCallWxUpload = true;
 
         if (_this.hasClass('disabled')) {
             return;
@@ -203,41 +205,79 @@ PublishController.prototype.bindEvent = function () {
             }
         }
 
+        if (originalLocalId) {
+            if (classSelf.localId = originalLocalId) {
+                isNeedCallWxUpload = false;
+            }
+        }
+
+        //记录
+        _this.attr('data-original-localid', classSelf.localId);
+
         _this.hide().addClass("disabled");
         $('.uploading').css('display', 'inline-block');
 
-        wx.uploadImage({
-            localId: classSelf.localId, // 需要上传的图片的本地ID，由chooseImage接口获得
-            isShowProgressTips: 1, // 默认为1，显示进度提示
-            success: function (res) {
-                serverId = res.serverId; // 返回图片的服务器端ID
-                console.log("serverId:" + serverId)
-                classSelf.request(classSelf.apiUrl.annualmeeting.addPhoto, {
-                    openId: classSelf.openId,
-                    latitude: classSelf.latitude,
-                    longitude: classSelf.longitude,
-                    country: classSelf.country,
-                    city: classSelf.city,
-                    userName: txtUserName,
-                    userPhone: txtMobile,
-                    media_id: serverId
-                }, {
-                        process: function (resp) {
-                            window.location = "/ay/success.html?openId=" + classSelf.openId;
-                        },
-                        onExceptionInterface: function (resp) {
-                            classSelf.tips(resp.message);
-                            _this.removeClass('disabled').show();
-                            $('.uploading').hide();
-                        },
-                        onErrorInterface: function () {
-                            classSelf.tips("网络异常，请稍后尝试!");
-                            _this.removeClass('disabled').show();
-                            $('.uploading').hide();
-                        }
-                    })
-            }
-        });
+        if (isNeedCallWxUpload) {
+            wx.uploadImage({
+                localId: classSelf.localId, // 需要上传的图片的本地ID，由chooseImage接口获得
+                isShowProgressTips: 1, // 默认为1，显示进度提示
+                success: function (res) {
+                    serverId = res.serverId; // 返回图片的服务器端ID
+                    classSelf.serverId = serverId;
+
+                    classSelf.request(classSelf.apiUrl.annualmeeting.addPhoto, {
+                        openId: classSelf.openId,
+                        latitude: classSelf.latitude,
+                        longitude: classSelf.longitude,
+                        country: classSelf.country,
+                        city: classSelf.city,
+                        userName: txtUserName,
+                        userPhone: txtMobile,
+                        media_id: serverId
+                    }, {
+                            process: function (resp) {
+                                window.location = "/ay/success.html?openId=" + classSelf.openId;
+                            },
+                            onExceptionInterface: function (resp) {
+                                classSelf.tips(resp.message);
+                                _this.removeClass('disabled').show();
+                                $('.uploading').hide();
+                            },
+                            onErrorInterface: function () {
+                                classSelf.tips("网络异常，请稍后尝试!");
+                                _this.removeClass('disabled').show();
+                                $('.uploading').hide();
+                            }
+                        });
+                }
+            });
+        }
+        else {
+            classSelf.request(classSelf.apiUrl.annualmeeting.addPhoto, {
+                openId: classSelf.openId,
+                latitude: classSelf.latitude,
+                longitude: classSelf.longitude,
+                country: classSelf.country,
+                city: classSelf.city,
+                userName: txtUserName,
+                userPhone: txtMobile,
+                media_id: classSelf.serverId
+            }, {
+                    process: function (resp) {
+                        window.location = "/ay/success.html?openId=" + classSelf.openId;
+                    },
+                    onExceptionInterface: function (resp) {
+                        classSelf.tips(resp.message);
+                        _this.removeClass('disabled').show();
+                        $('.uploading').hide();
+                    },
+                    onErrorInterface: function () {
+                        classSelf.tips("网络异常，请稍后尝试!");
+                        _this.removeClass('disabled').show();
+                        $('.uploading').hide();
+                    }
+                });
+        }
     })
 
     $('body').delegate('#mask-container', 'click', function (event) {
