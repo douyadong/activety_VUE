@@ -8,7 +8,7 @@ function Controller() {
     /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
     静态资源域名序列随机化，为什么要定义在上面，因为在后面定义的话前面用这个方法取不到
     -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-    this.randomDomainSn = function() {
+    this.randomDomainSn = function () {
         var sn = Math.floor(Math.random() * 10 + 1).toString();
         if (sn.length < 2) sn = "0" + sn;
         return sn;
@@ -40,6 +40,15 @@ function Controller() {
     else if (this.environment === "beta") this.apiPrefix = "//wechat-beta.wkzf.com/";
     else if (this.environment === "sim") this.apiPrefix = "//wechat.sim.wkzf/";
     else if (this.environment === "prod") this.apiPrefix = "//wechat.wkzf.com/";
+
+    /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    服务端微信跳转地址，域名配置    
+    -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+    this.wechatPrefix = "//wechat-dev.yfyk365.com/";
+    if (this.environment === "test") this.wechatPrefix = "//wechat-test.yfyk365.com/";
+    else if (this.environment === "sim") this.wechatPrefix = "//wechat-sim.yfyk365.com/";
+    else if (this.environment === "prod") this.wechatPrefix = "//wechat.wkzf.com/";
+
     /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
     系统各个模块API地址
     -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -73,6 +82,9 @@ function Controller() {
     this.redirectUrl = {
         "olympics": {
             "detail": this.staticDomain + '/olympic/detail.php'
+        },
+        "annualmeeting": {
+            "index": this.wechatPrefix + "ay/index.html"
         }
     }
 
@@ -94,7 +106,7 @@ function Controller() {
         @onExceptionInterface：发生错误的时候的回调接口方法
     }    
     -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-    this.request = function(apiUrl, data, params) {
+    this.request = function (apiUrl, data, params) {
         var classSelf = this;
         var type = (params === null || params.type === null || params.type === undefined) ? "GET" : params.type;
         if (this.environment !== "production") type = "GET"; //只要是jsonp请求，type肯定为GET
@@ -112,11 +124,11 @@ function Controller() {
                 data: data,
                 dataType: apiDataType,
                 // jsonpCallback: "callback", //这个配置是在没有真正后端接口前端用自己的 json文件模拟接口的时候为了保持callback参数值一致所做的设置
-                error: function(e) {
+                error: function (e) {
                     //子类提供
                     classSelf.showLog('网络异常');
                 },
-                success: function(data) {
+                success: function (data) {
                     if (data.status.toString() === "1") {
                         if (process) process(data); //一切没有问题，就处理数据
                     } else {
@@ -141,12 +153,12 @@ function Controller() {
     /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
     计算时间,是否可以重发验证码
     -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-    this.countDown = function() {
+    this.countDown = function () {
         var classSelf = this;
         var timeNum = 60; //计时器为60
         classSelf.allowed = false;
         clearInterval(classSelf.timer);
-        this.timer = setInterval(function() {
+        this.timer = setInterval(function () {
             if (timeNum > 1) { //60s之内，“发送验证码” 按钮，文本为 “过Xs后可重发”
                 $("#sendCodeBtn").addClass('disabled');
                 timeNum--;
@@ -164,7 +176,7 @@ function Controller() {
         }, 1000);
     };
 
-    this.clearCountDown = function() {
+    this.clearCountDown = function () {
         clearInterval(this.timer);
         this.allowed = true;
     }
@@ -172,7 +184,7 @@ function Controller() {
     /*-----------------------------------------------------------------------------------------------------------
     tips 方法
     -----------------------------------------------------------------------------------------------------------*/
-    this.tips = function(msg, callback, time) {
+    this.tips = function (msg, callback, time) {
         var classSelf = this;
 
         var errElm = $('.wk-toast');
@@ -205,7 +217,7 @@ function Controller() {
             'cursor': 'pointer'
         });
 
-        $(mask).on("click", function() {
+        $(mask).on("click", function () {
             var _this = $(this);
             _this.remove();
             errElm.removeClass('show');
@@ -217,7 +229,7 @@ function Controller() {
         errElm = $('<div class="wk-toast"></div>').appendTo('body');
         errElm.html(msg).addClass('show');
 
-        setTimeout(function() { // 2400后自动消失，将toastStatus标记置为true,并且执行callback函数
+        setTimeout(function () { // 2400后自动消失，将toastStatus标记置为true,并且执行callback函数
             errElm.removeClass('show');
             $(mask).remove();
             callback && callback();
@@ -227,7 +239,7 @@ function Controller() {
     /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
     根据QueryString参数名称获取值
     -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-    this.getQueryStringByName = function(name) {
+    this.getQueryStringByName = function (name) {
         var result = location.search.match(new RegExp("[\?\&]" + name + "=([^\&]+)", "i"));
         if (result == null || result.length < 1) {
             return "";
@@ -236,7 +248,7 @@ function Controller() {
     };
 
     //延迟加载图片
-    $(function() {
+    $(function () {
         $(".lazy").lazyload({
             threshold: 200,
             ignoreInvisible: false
@@ -244,7 +256,7 @@ function Controller() {
     });
 
     //关闭成功提示框
-    $("#closeSuccess").click(function() {
+    $("#closeSuccess").click(function () {
         $("#Success").hide();
         $("html,body").css({
             'overflow': '',

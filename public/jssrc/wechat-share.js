@@ -108,6 +108,8 @@ function WechatShareController() {
                     jsApiList: ['onMenuShareAppMessage', 'onMenuShareTimeline', 'chooseImage', 'uploadImage', 'previewImage'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
                 });
 
+                console.log('wx.config')
+
                 //兼容方案，暴露config 完成之后的callback
                 window.wxConfigCallback && window.wxConfigCallback(data);
             }
@@ -123,6 +125,7 @@ function WechatShareController() {
         请求完成之后执行ready方法
         -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
         wx.ready(function () {
+            console.log('wx.ready')
             wx.showOptionMenu();
             classSelf.wx_onMenuShareTimeline(classSelf.title, classSelf.linkUrl, classSelf.imgUrl); //  监听“分享到朋友圈
             classSelf.wx_onMenuShareAppMessage(classSelf.title, classSelf.linkUrl, classSelf.content, classSelf.imgUrl); //  监听“发送给朋友”按钮点击
