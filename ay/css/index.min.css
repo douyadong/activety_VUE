@@ -568,7 +568,7 @@ body {
   width: 90%;
   margin-left: 5%;
   position: fixed;
-  top: 15%;
+  top: 10%;
   z-index: 1100;
   border: 1px solid #00a7bb;
 }
@@ -586,10 +586,10 @@ body {
   right: .5rem;
 }
 .photo-dialog > .image {
-  max-height: 14rem;
+  max-height: 20rem;
 }
 .photo-dialog > .image img {
-  max-height: 14rem;
+  max-height: 20rem;
 }
 .photo-dialog > .location {
   position: absolute;
@@ -679,6 +679,7 @@ body {
   padding: .2rem 0;
 }
 .award-dialog {
+  top: 15%;
   padding: .5rem;
   background: rgba(9, 21, 51, 0.8);
 }
