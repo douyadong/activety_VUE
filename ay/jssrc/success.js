@@ -45,7 +45,7 @@ PublishSuccessController.prototype.initPage = function () {
         process: function (res) {
 
             if (res.data.length) {
-                $('.list-box').append('<div class="title">其他作品征集</div>');
+                $('.list-box').append('<div class="title">其他征集作品</div>');
                 $('.list-box').append('<a class="link_more">查看更多</a>');
 
                 $('.list-box').find('.link_more').attr('href', "/ay/index.php?openId=" + classSelf.openId);
