@@ -183,7 +183,7 @@ IndexController.prototype.createPhotoContent = function(el) {
     //0可以投票给，1不可以投票
     if (el.isVote) {
         arr.push('<img src="' + classSelf.staticDomain + '/ay/images/heart1.png" alt="heart">');
-        arr.push('<span>投票成功</span></p>');
+        arr.push('<span>恭喜你投票成功</span></p>');
     } else {
         arr.push('<img src="' + classSelf.staticDomain + '/ay/images/heart2.png" alt="heart">');
         arr.push('<span>点击为TA投票</span></p>');
@@ -299,7 +299,7 @@ IndexController.prototype.bindEvent = function() {
                     photoInfo.thumbs = parseInt(photoInfo.thumbs) + 1;
                     _.find('img').attr('src', classSelf.staticDomain + '/ay/images/heart1.png');
                     _.find('p.count').text('目前票数 ' + photoInfo.thumbs);
-                    _.find('.zan span').text("投票成功");
+                    _.find('.zan span').text("恭喜你投票成功");
                 }
                 _.attr('data-info', JSON.stringify(photoInfo));
                 $('.hot,.new').find('.image[data-id="' + id + '"]').attr('data-info', JSON.stringify(photoInfo));
