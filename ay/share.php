@@ -79,15 +79,7 @@
 	<script src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/public/js/wap.min.js"></script>
 	<script src="<?php echo "$CURRENT_STATIC_DOMAIN/" . $router["activity_name"] . "/js/jquery-starfield.min.js" ?>"></script>
 
-    <script src="http://cdn01.wkzf.com/fe_public_library/wkzf/js/util/swiper/dist/js/swiper.min.js"></script>
-
-	<?php
-	    if($config["match_javascripts"]) {//匹配路由脚本
-	?>
-	<script src="<?php echo "$CURRENT_STATIC_DOMAIN/" . $router["activity_name"] . "/js/" . $router['page_type'] . ".min.js" ?>"></script>
-	<?php 
-	    }
-	?>       
+    <script src="http://cdn01.wkzf.com/fe_public_library/wkzf/js/util/swiper/dist/js/swiper.min.js"></script>    
 
 	<!--微信分享-->
 	<input type="hidden" id="wechatTitle" value="<?php echo $config["wechat_title"]?>"/>
@@ -97,6 +89,15 @@
 	<!--这里是微信分享的脚本-->        
 	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 	<script src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/ay/js/wechat-share.min.js"></script>
+
+    <?php
+	    if($config["match_javascripts"]) {//匹配路由脚本
+	?>
+	<script src="<?php echo "$CURRENT_STATIC_DOMAIN/" . $router["activity_name"] . "/js/" . $router['page_type'] . ".min.js" ?>"></script>
+	<?php 
+	    }
+	?>   
+
 	</body>
 	</html>
 		<?php

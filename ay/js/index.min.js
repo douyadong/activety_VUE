@@ -37,7 +37,9 @@ IndexController.prototype.initPage = function() {
     classSelf.openId = classSelf.getQueryStringByName("openId");
     // classSelf.openId = "oYaCYs-15kCMP529S81Yu0JsTLVg";
 
-    $('#wechatLinkUrl').val(classSelf.redirectUrl.annualmeeting.index);
+    var weChatShareController = new WechatShareController({
+        linkUrl:classSelf.redirectUrl.annualmeeting.index
+    });
 
     //点亮城市
     classSelf.request(classSelf.apiUrl.annualmeeting.getCityCount, {}, {

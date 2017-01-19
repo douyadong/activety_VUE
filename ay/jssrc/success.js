@@ -35,8 +35,9 @@ PublishSuccessController.prototype.initPage = function () {
     classSelf.openId = classSelf.getQueryStringByName("openId");
     // classSelf.openId = "onco6txFeeYY_Y1UxYGbbl9Ch_tI";
 
-    //分享页地址
-    $('#wechatLinkUrl').val(classSelf.redirectUrl.annualmeeting.share + "?shareOpenId=" + classSelf.openId);
+    var weChatShareController = new WechatShareController({
+        linkUrl: classSelf.redirectUrl.annualmeeting.share + "?shareOpenId=" + classSelf.openId
+    });
 
     //热门
     classSelf.request(classSelf.apiUrl.annualmeeting.getHotPhotos + '?openId=' + classSelf.openId, {}, {

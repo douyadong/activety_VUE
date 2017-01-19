@@ -44,8 +44,6 @@ PublishController.prototype.initPage = function () {
     classSelf.openId = classSelf.getQueryStringByName("openId");
     // classSelf.openId = "onco6txFeeYY_Y1UxYGbbl9Ch_tI";
 
-    $('#wechatLinkUrl').val(classSelf.redirectUrl.annualmeeting.index);
-
     //微信选择本地图片返回的选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
     classSelf.localIds = null;
 

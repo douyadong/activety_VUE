@@ -30,23 +30,28 @@ function ShareController() {
 /*-----------------------------------------------------------------------------------------------------------
 初始化页面
 -----------------------------------------------------------------------------------------------------------*/
-ShareController.prototype.initPage = function() {
+ShareController.prototype.initPage = function () {
     var classSelf = this;
 
     classSelf.openId = classSelf.getQueryStringByName("openId");
     // classSelf.openId = "onco6txFeeYY_Y1UxYGbbl9Ch_tI";
 
-    classSelf.shareOpenId=classSelf.getQueryStringByName("shareOpenId");
+    classSelf.shareOpenId = classSelf.getQueryStringByName("shareOpenId");
 
     var link_moreUrl = $('.link_more').attr('href') + "?openId=" + classSelf.openId;
 
     $('.link_more').attr('href', link_moreUrl);
+
+    var weChatShareController = new WechatShareController({
+        canShareTimeline: false,
+        canShareAppMessage: false
+    });
 }
 
 /*-----------------------------------------------------------------------------------------------------------
     初始化星空背景
 -----------------------------------------------------------------------------------------------------------*/
-ShareController.prototype.initStar = function() {
+ShareController.prototype.initStar = function () {
     if ($('#star').length) $('#star').remove();
     $('body').append('<div id="star"></div>');
     $('#star').height($(document).height()).starfield({
@@ -59,7 +64,7 @@ ShareController.prototype.initStar = function() {
 /*-----------------------------------------------------------------------------------------------------------
 initSwiper
 -----------------------------------------------------------------------------------------------------------*/
-ShareController.prototype.initSwiper = function() {
+ShareController.prototype.initSwiper = function () {
     var classSelf = this;
 
     var mySwiper = new Swiper('.swiper-container', {
@@ -73,7 +78,7 @@ ShareController.prototype.initSwiper = function() {
 /*-----------------------------------------------------------------------------------------------------------
 获取有发布过照片相关信息
 -----------------------------------------------------------------------------------------------------------*/
-ShareController.prototype.getDetails = function() {
+ShareController.prototype.getDetails = function () {
     var classSelf = this;
 
     var $swiperContainer = $('.swiper-wrapper');
@@ -82,27 +87,27 @@ ShareController.prototype.getDetails = function() {
     classSelf.request(classSelf.apiUrl.annualmeeting.getPhotoInfoByOpenId, {
         openId: classSelf.shareOpenId
     }, {
-        process: function(resp) {
-            if (resp && resp.data && resp.data.length > 0) {
-                $.each(resp.data, function(i, oData) {
-                    $swiperItem = $('<div class="swiper-slide"></div>');
-                    $swiperItem.append('<img src="' + oData.thumbnailUrl + '" alt="' + oData.userName + '">');
-                    $swiperItem.find('img').attr('data-info', JSON.stringify(oData)).attr('data-id', oData.id);
-                    $swiperContainer.append($swiperItem);
-                })
+            process: function (resp) {
+                if (resp && resp.data && resp.data.length > 0) {
+                    $.each(resp.data, function (i, oData) {
+                        $swiperItem = $('<div class="swiper-slide"></div>');
+                        $swiperItem.append('<img src="' + oData.thumbnailUrl + '" alt="' + oData.userName + '">');
+                        $swiperItem.find('img').attr('data-info', JSON.stringify(oData)).attr('data-id', oData.id);
+                        $swiperContainer.append($swiperItem);
+                    })
 
-                $('.img-box').show();
-                classSelf.initSwiper();
-                classSelf.initStar();
+                    $('.img-box').show();
+                    classSelf.initSwiper();
+                    classSelf.initStar();
+                }
             }
-        }
-    })
+        })
 }
 
 /*-----------------------------------------------------------------------------------------------------------
 创建照片弹出内容
 -----------------------------------------------------------------------------------------------------------*/
-ShareController.prototype.createPhotoContent = function(el) {
+ShareController.prototype.createPhotoContent = function (el) {
     var classSelf = this;
     var arr = [];
     if (!el) return arr;
@@ -131,7 +136,7 @@ ShareController.prototype.createPhotoContent = function(el) {
 }
 
 //创建阴影层
-ShareController.prototype.createMask = function() {
+ShareController.prototype.createMask = function () {
     //获取页面高度和宽度
     var sHeight = document.documentElement.scrollHeight,
         sWidth = document.documentElement.scrollWidth,
@@ -155,11 +160,11 @@ ShareController.prototype.createMask = function() {
 /*-----------------------------------------------------------------------------------------------------------
 绑定事件
 -----------------------------------------------------------------------------------------------------------*/
-ShareController.prototype.bindEvent = function() {
+ShareController.prototype.bindEvent = function () {
     var classSelf = this;
 
     //弹窗右上角叉叉的事件绑定
-    $('.dialog').on('click', '.sprite-4', function(event) {
+    $('.dialog').on('click', '.sprite-4', function (event) {
         event.preventDefault();
         /* Act on the event */
         $('.dialog').hide();
@@ -167,7 +172,7 @@ ShareController.prototype.bindEvent = function() {
     });
 
 
-    $('.swiper-wrapper').on('click', '.swiper-slide img', function(event) {
+    $('.swiper-wrapper').on('click', '.swiper-slide img', function (event) {
         event.preventDefault();
         /* Act on the event */
         var photoInfo = $(this).attr('data-info');
@@ -179,12 +184,12 @@ ShareController.prototype.bindEvent = function() {
         }
     });
 
-    $('.button').on('click', function() {
+    $('.button').on('click', function () {
         window.location.href = classSelf.redirectUrl.annualmeeting.index;
     });
 
     //点赞和取消点赞的事件绑定
-    $('.photo-dialog').on('click', '.vote', function(event) {
+    $('.photo-dialog').on('click', '.vote', function (event) {
         event.preventDefault();
         /* Act on the event */
         var _ = $(this);
@@ -197,7 +202,7 @@ ShareController.prototype.bindEvent = function() {
             photoId: id
         };
         var params = {
-            process: function(res) {
+            process: function (res) {
                 if (isVote) {
                     _.attr('data-isvote', 0);
                     photoInfo.isVote = 0;
@@ -216,7 +221,7 @@ ShareController.prototype.bindEvent = function() {
                 _.attr('data-info', JSON.stringify(photoInfo));
                 $('.swiper-wrapper').find('img[data-id="' + id + '"]').attr('data-info', JSON.stringify(photoInfo));
             },
-            onExceptionInterface: function(res) {
+            onExceptionInterface: function (res) {
                 classSelf.tips(res.message);
             }
         };
@@ -229,7 +234,7 @@ ShareController.prototype.bindEvent = function() {
         classSelf.request(requestUrl, data, params)
     });
 
-    $('body').delegate('#mask-container', 'click', function(event) {
+    $('body').delegate('#mask-container', 'click', function (event) {
         $('.dialog').hide();
         $('#mask-container').remove();
     });
@@ -240,6 +245,6 @@ ShareController.prototype.bindEvent = function() {
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 类的初始化
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-$(document).ready(function() {
+$(document).ready(function () {
     new ShareController();
 });

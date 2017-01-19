@@ -110,14 +110,7 @@
 	<script src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/public/js/app.min.js"></script>
 	<script src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/public/js/wap.min.js"></script>
 	<script src="<?php echo "$CURRENT_STATIC_DOMAIN/" . $router["activity_name"] . "/js/jquery.pullload.min.js" ?>"></script>
-	<script src="<?php echo "$CURRENT_STATIC_DOMAIN/" . $router["activity_name"] . "/js/jquery-starfield.min.js" ?>"></script>
-	<?php
-	    if($config["match_javascripts"]) {//匹配路由脚本
-	?>
-	<script src="<?php echo "$CURRENT_STATIC_DOMAIN/" . $router["activity_name"] . "/js/" . $router['page_type'] . ".min.js" ?>"></script>
-	<?php 
-	    }
-	?>       
+	<script src="<?php echo "$CURRENT_STATIC_DOMAIN/" . $router["activity_name"] . "/js/jquery-starfield.min.js" ?>"></script>    
 
 	<!--微信分享-->
 	<input type="hidden" id="wechatTitle" value="<?php echo $config["wechat_title"]?>"/>
@@ -128,26 +121,15 @@
 	<!--这里是微信分享的脚本-->        
 	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 	<script src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/ay/js/wechat-share.min.js"></script> 
-	
-	<!--GA-h5-->
-<!--     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-68700668-2', 'auto');
-      ga('send', 'pageview');
-    </script> -->
-    <!--统计H5-->
-    <!-- <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?691114119912df4f51b1435e553b4a79";
-      var s = document.getElementsByTagName("script")[0]; 
-      s.parentNode.insertBefore(hm, s);
-    })();
-    </script> -->
+
+	<?php
+	    if($config["match_javascripts"]) {//匹配路由脚本
+	?>
+	<script src="<?php echo "$CURRENT_STATIC_DOMAIN/" . $router["activity_name"] . "/js/" . $router['page_type'] . ".min.js" ?>"></script>
+	<?php 
+	    }
+	?>   
+
 
 	</body>
 	</html>

@@ -49,44 +49,7 @@
             </div>
 
             <div class="list-box">
-                <!--<div class="title">
-                    其他作品征集
-                </div>-->
-                <!--<a class="link_more" href="/ay/index.php">查看更多</a>-->
-                <!--<div class="list">
-                    <div class="image">
-                        <img src="http://imgwater.oss.aliyuncs.com/45d675a655924322b45a045212035700.ML" alt="">
-                        <div class="location">
-                            <span class="content"><i class="sprite sprite-15"></i><span>中国.上海中国.上海中国.上海</span></span>
-                            <i class="triangel"></i>
-                        </div>
-                        <div class="zan">
-                            <div class="left">
-                                <img src="<?php echo $confs["module_img_path"]; ?>/heart1.png" alt="planet">	
-                            </div>
-                            <div class="right">
-                                <span class="count">147</span>
-                                <span class="name">测试测试</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="image">
-                        <img src="http://imgwater.oss.aliyuncs.com/45d675a655924322b45a045212035700.ML" alt="">
-                        <div class="location">
-                            <span class="content"><i class="sprite sprite-15"></i><span>中国.上海中国.上海中国.上海</span></span>
-                            <i class="triangel"></i>
-                        </div>
-                        <div class="zan">
-                            <div class="left">
-                                <img src="<?php echo $confs["module_img_path"]; ?>/heart1.png" alt="planet">	
-                            </div>
-                            <div class="right">
-                                <span class="count">147</span>
-                                <span class="name">测试测试</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>-->
+              
             </div>
 
 		</div>
@@ -102,14 +65,7 @@
 	<script src="<?php echo "$CURRENT_STATIC_DOMAIN/" . $router["activity_name"] . "/js/jquery-starfield.min.js" ?>"></script>
 
     <script src="http://cdn01.wkzf.com/fe_public_library/wkzf/js/util/swiper/dist/js/swiper.min.js"></script>
-
-	<?php
-	    if($config["match_javascripts"]) {//匹配路由脚本
-	?>
-	<script src="<?php echo "$CURRENT_STATIC_DOMAIN/" . $router["activity_name"] . "/js/" . $router['page_type'] . ".min.js" ?>"></script>
-	<?php 
-	    }
-	?>       
+     
 
 	<!--微信分享-->
 	<input type="hidden" id="wechatTitle" value="<?php echo $config["wechat_title"]?>"/>
@@ -119,6 +75,14 @@
 	<!--这里是微信分享的脚本-->        
 	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 	<script src="<?php echo $CURRENT_STATIC_DOMAIN ; ?>/public/js/wechat-share.min.js"></script>
+
+    <?php
+	    if($config["match_javascripts"]) {//匹配路由脚本
+	?>
+	<script src="<?php echo "$CURRENT_STATIC_DOMAIN/" . $router["activity_name"] . "/js/" . $router['page_type'] . ".min.js" ?>"></script>
+	<?php 
+	    }
+	?>  
 	</body>
 	</html>
 		<?php
