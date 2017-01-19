@@ -364,7 +364,6 @@ body {
   text-decoration: underline;
 }
 .wrapper > .list-box > .list {
-  margin-top: .5rem;
   text-align: center;
 }
 .wrapper > .list-box > .list > div:nth-child(2n) {
@@ -375,6 +374,7 @@ body {
   display: inline-block;
   width: 48%;
   border: 1px solid #00a7bb;
+  margin-top: .5rem;
 }
 .wrapper > .list-box > .list > .image > img {
   display: block;
