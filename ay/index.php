@@ -53,7 +53,7 @@
 			    	<img src="<?php echo $confs["module_img_path"]; ?>/award.png" alt="award">	
 			    </div>
 		    	<p class="title">活动规则</p>
-				<p class="time">活动时间：即日起至2017年2月20日</p>
+				<p class="time">活动时间：即日起至2017年2月10日</p>
 				<p class="requirement">活动要求：身着悟空衫（冬装或者夏装均可），与当地城市的地标性建筑或景点或者WP门店合影并上传；成功后还可将页面分享至亲朋好友为你点赞。<span>（每人最多上传5张照片）</span></p>
 		   </div>
 		   <div class="hot">
