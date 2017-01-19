@@ -605,6 +605,7 @@ body {
   line-height: .8rem;
   background: rgba(78, 85, 94, 0.8);
   padding: .2rem;
+  color: #fff;
 }
 .photo-dialog > .location .content:after {
   clear: both ;
