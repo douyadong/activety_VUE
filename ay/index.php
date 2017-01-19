@@ -68,7 +68,7 @@
 			</div>
 			<div class="my">
 				<span class="sprite sprite-21"></span>
-				<span>我的图片</span>
+				<span>我的照片</span>
 			</div>
 		</div>
 		<div class="dialog photo-dialog">
