@@ -616,6 +616,7 @@ body {
   font-size: .8rem;
   font-weight: bold;
   padding-top: .2rem;
+  margin-left: -1rem;
 }
 .photo-dialog > .vote > .zan img {
   margin-right: .2rem;

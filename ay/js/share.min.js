@@ -115,14 +115,15 @@ ShareController.prototype.createPhotoContent = function(el) {
     arr.push('</div>');
     arr.push('<div class="vote" data-id=' + el.id + ' data-isvote=' + el.isVote + ' data-info=' + JSON.stringify(el) + '>');
     arr.push('<p class="name">' + el.userName + '</p>');
-    arr.push('<p class="zan">')
-        //0可以投票给，1不可以投票
+    arr.push('<p class="zan">');
+    //0可以投票给，1不可以投票
     if (el.isVote) {
         arr.push('<img src="' + classSelf.staticDomain + '/ay/images/heart1.png" alt="heart">');
+        arr.push('<span>投票成功</span></p>');
     } else {
         arr.push('<img src="' + classSelf.staticDomain + '/ay/images/heart2.png" alt="heart">');
+        arr.push('<span>点击为TA投票</span></p>');
     }
-    arr.push('点击为TA投票</p>');
     arr.push('<p class="count">目前票数 ' + el.thumbs + '</p>');
     arr.push('</div>');
     $('.photo-dialog').empty().append(arr.join(''));
@@ -177,7 +178,6 @@ ShareController.prototype.bindEvent = function() {
         }
     });
 
-    //上传按钮事件绑定
     $('.button').on('click', function() {
         window.location.href = 'index.html?openId=' + classSelf.openId;
     });
@@ -202,11 +202,15 @@ ShareController.prototype.bindEvent = function() {
                     photoInfo.isVote = 0;
                     photoInfo.thumbs = photoInfo.thumbs - 1;
                     _.find('img').attr('src', classSelf.staticDomain + '/ay/images/heart2.png');
+                    _.find('p.count').text('目前票数 ' + photoInfo.thumbs);
+                    _.find('.zan span').text("点击为TA投票");
                 } else {
                     _.attr('data-isvote', 1);
                     photoInfo.isVote = 1;
                     photoInfo.thumbs = photoInfo.thumbs + 1;
                     _.find('img').attr('src', classSelf.staticDomain + '/ay/images/heart1.png');
+                    _.find('p.count').text('目前票数 ' + photoInfo.thumbs);
+                    _.find('.zan span').text("投票成功");
                 }
                 _.attr('data-info', JSON.stringify(photoInfo));
                 $('.swiper-wrapper').find('img[data-id="' + id + '"]').attr('data-info', JSON.stringify(photoInfo));
