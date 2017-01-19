@@ -185,6 +185,12 @@ PublishController.prototype.bindEvent = function () {
             classSelf.tips("请输入名字");
             return;
         }
+        else {
+            if (txtUserName.length > 20) {
+                classSelf.tips("名字不能超过20个字");
+                return;
+            }
+        }
 
         if (!txtMobile.length) {
             classSelf.tips("请输入手机号");
@@ -198,7 +204,7 @@ PublishController.prototype.bindEvent = function () {
         }
 
         _this.hide();
-        $('.uploading').show();
+        $('.uploading').css('display','inline-block');
 
         wx.uploadImage({
             localId: classSelf.localId, // 需要上传的图片的本地ID，由chooseImage接口获得
@@ -220,8 +226,9 @@ PublishController.prototype.bindEvent = function () {
                             window.location = "/ay/success.html?openId=" + classSelf.openId;
                         },
                         onExceptionInterface: function (resp) {
+                            classSelf.tips(resp.message);
                             _this.removeClass('disabled').show();
-                            $('.uploading').hide(resp.message);
+                            $('.uploading').hide();
                         }
                     })
             }
