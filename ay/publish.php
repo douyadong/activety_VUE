@@ -61,11 +61,7 @@
                      </div> 
                 </div>
 
-                <div class="button uploading">
-                     <div class="left">                         
-                          <span>努力上传中...</span>
-                     </div>                    
-                </div>
+                <a class="uploading">努力上传中...</a>
             </div>
 		</div>
 

@@ -203,7 +203,7 @@ PublishController.prototype.bindEvent = function () {
             }
         }
 
-        _this.hide();
+        _this.hide().addClass("disabled");
         $('.uploading').css('display', 'inline-block');
 
         wx.uploadImage({
@@ -245,9 +245,6 @@ PublishController.prototype.bindEvent = function () {
         $('#mask-container').remove();
     });
 }
-
-
-
 
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 类的初始化

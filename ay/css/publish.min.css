@@ -243,9 +243,20 @@ body {
 .wrapper > .form > .button > .right > .right_arrows {
   width: 60%;
 }
-.wrapper > .form > .button.uploading {
+.wrapper > .form > .uploading {
   display: none;
   margin-left: 1.8rem;
-  padding-right: 0.4rem;
-  width: 7rem;
+  height: 44px;
+  line-height: 44px;
+  padding: 0 2rem;
+  background-color: #febb26;
+  text-align: center;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #eca318;
+  color: #fff;
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-left: -0.3rem;
 }
