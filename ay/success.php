@@ -30,7 +30,7 @@
     <body>
     	<div class="wrapper">
             <!--<img class="arrow" src="images/19-min.png" alt="img">-->
-            <i class="sprite sprite-19"></i>    
+            <!--<i class="sprite sprite-19"></i>    -->
             <div class="title">恭喜你上传成功</div>
 
             <div class="details">

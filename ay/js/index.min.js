@@ -239,7 +239,16 @@ IndexController.prototype.bindEvent = function () {
     });
 
     $('.operation').on('click', '.my', function (event) {
+        var _this = $(this);
+
         event.preventDefault();
+
+        if (_this.hasClass("disabled")) {
+            return;
+        }
+
+        _this.addClass("disabled");
+
         /* Act on the event */
         classSelf.request(classSelf.apiUrl.annualmeeting.getPhotoInfoByOpenId, {
             openId: classSelf.openId
@@ -250,6 +259,12 @@ IndexController.prototype.bindEvent = function () {
                     } else {
                         classSelf.tips("您还没有上传照片");
                     }
+                },
+                onExceptionInterface: function () {
+                    _this.removeClass("disabled");
+                },
+                onErrorInterface: function () {
+                    _this.removeClass("disabled");
                 }
             })
     });

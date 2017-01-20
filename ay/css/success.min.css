@@ -311,6 +311,7 @@ body {
   color: #fff;
   padding: .5rem;
   position: relative;
+  z-index: 100;
 }
 .wrapper > .sprite-19 {
   position: absolute;
@@ -319,7 +320,7 @@ body {
 }
 .wrapper > .title {
   color: #01fff6;
-  margin-top: 1.5rem;
+  margin-top: .5rem;
   margin-bottom: 0.5rem;
   font-weight: 600;
 }

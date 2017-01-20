@@ -15,6 +15,11 @@ function PublishSuccessController() {
     this.initPage();
 
     /*-----------------------------------------------------------------------------------------------------------
+    初始化星空背景
+    -----------------------------------------------------------------------------------------------------------*/
+    this.initStar();
+
+    /*-----------------------------------------------------------------------------------------------------------
     获取有发布过照片的用户显示最近一次发布的姓名和联系电话
     -----------------------------------------------------------------------------------------------------------*/
     this.getDetails();
@@ -66,6 +71,19 @@ PublishSuccessController.prototype.initPage = function () {
 }
 
 /*-----------------------------------------------------------------------------------------------------------
+初始化星空背景
+-----------------------------------------------------------------------------------------------------------*/
+PublishSuccessController.prototype.initStar = function () {
+    if ($('#star').length) $('#star').remove();
+    $('body').append('<div id="star"></div>');
+    $('#star').height($(document).height()).starfield({
+        starDensity: 1.0,
+        mouseScale: 1.0,
+        seedMovement: false,
+    }).height(0);
+}
+
+/*-----------------------------------------------------------------------------------------------------------
 initSwiper
 -----------------------------------------------------------------------------------------------------------*/
 PublishSuccessController.prototype.initSwiper = function () {
@@ -95,7 +113,7 @@ PublishSuccessController.prototype.getDetails = function () {
                 if (resp && resp.data && resp.data.length > 0) {
                     $.each(resp.data, function (i, oData) {
                         $swiperItem = $('<div class="swiper-slide"></div>');
-                        $swiperItem.append('<img src="' + oData.thumbnailUrl + '" alt="' + oData.userName + '">');
+                        $swiperItem.append('<img src="' + oData.imgUrl + '" alt="' + oData.userName + '">');
                         $swiperItem.find('img').attr('data-info', JSON.stringify(oData)).attr('data-id', oData.id);
                         $swiperContainer.append($swiperItem);
                     })
