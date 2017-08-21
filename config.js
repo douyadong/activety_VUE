@@ -1,1 +1,0 @@
-var STAGE_ENVIRONENT = 'dev';
