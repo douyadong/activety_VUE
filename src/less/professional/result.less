@@ -1,0 +1,68 @@
+/*++----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. 项目名称：凡事云webApp
+2. 文件名：src -> less -> professional -> result.less
+3. 作者：zhaohuagang
+4. 备注：测试您的专业度 -> 结果 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------++*/
+@import "../variables.less" ;
+ @import "../mixins.less" ;
+ .professional-result {     
+     background-image : url(../../assets/professional/result-bg.jpg) ;
+     background-size : 100% auto ;
+     background-repeat : no-repeat ;
+     height : 100% ; 
+     padding : 8rem 0 3rem 0 ;
+     header {
+         background-image : url(../../assets/professional/caption-bg-result.png) ;
+         background-size : 100% auto ; 
+         background-repeat : no-repeat ;
+         margin : 0 .8rem ;
+         min-height : 20rem ;
+         p {
+             border-bottom : 2px dashed #000 ; 
+             font-size : 2.2rem ;
+             line-height : 2.8rem ;
+             margin : 0 1.5rem ;
+             padding : 2.5rem 0 1.5rem 0 ;
+             text-align : center ;
+             &:last-child {
+                 border : none ;
+                 padding : 1.5rem 0 2.5rem 0 ;
+             }
+             .points {
+                 color : #ff3939 ;
+             }
+         }
+     } 
+     ul {
+         margin : 3rem 1rem ;
+         li {
+             border : 1px solid #4e4e4e ;
+             .border-radius(12px) ;
+             box-shadow : 0 -5px 1px 1px rgba( 0 , 0 , 0 , .08 ) inset ;
+             background-color : #fff ;
+             font-size : 1.7rem ;             
+             line-height : 2rem ;
+             margin : 1rem .5rem 0 .5rem ;
+             padding : .5rem .5rem 1rem .5rem ;             
+             text-align : center ;
+             a {
+                 color : @default-font-color ;
+             }
+         }
+     }
+     .mask {
+         background-color : rgba( 0 , 0 , 0 , .35 ) ;
+         .clearfix() ;
+         height : 100% ;
+         left : 0 ; 
+         position : fixed ;
+         top : 0 ;
+         width : 100% ;
+         .guide {
+             float : right ;
+             padding : 0 1rem ;
+             width : 70% ;
+         }
+     }
+}

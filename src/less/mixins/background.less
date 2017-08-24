@@ -1,0 +1,15 @@
+/*++----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. 项目名称：凡事云webApp
+2. 文件名：src -> less -> mixins -> background.less
+3. 作者：zhaohuagang
+4. 备注：渐变及透明背景定义的mixins
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------++*/
+.v-gradient( @startColor : #FFFFFF , @endColor : #FFFFFF ) {
+  background : -webkit-gradient( linear ,  0 0 ,  0 bottom , from( @startColor ) , to( @endColor )) ;
+}
+
+.transparent() {
+    background-color : transparent ;
+    border : 1px solid transparent ;
+    outline : none ;
+}
