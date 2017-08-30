@@ -8,8 +8,8 @@
             <p><span>您的分数为</span> <span class="points">{{ points }} 分</span></p>
         </header>
         <ul>
-            <li><router-link to="/professional">返回重新测试</router-link></li>
-            <li @click="() => { guideStatus = 1 ; }">分享给你的朋友一起测试</li>
+            <li><router-link to="/professional" :data-bigdata="getUvParamsString({ eventName : 2074001 })" class="bigdata-btn">返回重新测试</router-link></li>
+            <li @click="() => { guideStatus = 1 ; }" :data-bigdata="getUvParamsString({ eventName : 2074002 })" class="bigdata-btn">分享给你的朋友一起测试</li>
         </ul>
         <transition  name="slide-fade">
             <div class="mask" v-if="guideStatus">
@@ -28,7 +28,27 @@
                 "points" : 0 ,
                 "guideStatus" : 0  //"请点击右上角分享按钮进行测试分享"这句提示的显示状态
             }
-        } ,        
+        } , 
+        methods : {
+            //获取埋点参数方法
+            getUvParamsString : function(eventName) {                           
+                return encodeURIComponent(JSON.stringify({ 
+                    eventName : eventName , 
+                    eventParam : {} ,
+                    type : 2
+                })) ;
+            }
+        } ,
+        created() {
+            //页面pv埋点
+            this.$bigData({
+                pageName : 2074 ,
+                pageParam : {
+                    "result_score" : this.$route.query.points
+                } ,
+                type : 1
+            }) ;
+        } ,      
         mounted() {
             document.title = "测试你的专业度！全国优秀的经纪人都在做！" ;
             this.points = parseInt( this.$route.query.points , 10 ) ;

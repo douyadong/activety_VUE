@@ -8,29 +8,14 @@ export default {
     "timeout": 60 * 1000 ,  //超时请求时间，单位：毫秒
     "successStatusCode" : 1 ,    
     "prefix" : {
-        "dev" : "" ,
-        "test" : "" ,
-        "sim" : "" ,
-        "prod" : ""
+        "dev" : "//10.0.18.78:8107" ,
+        "test" : "//m.test.wkzf" ,
+        "sim" : "//m.sim.wkzf" ,
+        "prod" : "//m.wkzf.com"
     } ,
     "suffix" : { //后缀代表接口去掉prefix的部分，这里可以是无限级的树状结构，根据自己的需要
-        "commons" : {
-            
-        } ,
-        "members" : {
-            
-        } ,
-        "friends" : {
-                  
-        } ,
-        "documents" : {
-            
-        } ,
-        "affairs" : {
-            
-        } ,
-        "trends" : {
-
+        "common" : {
+            "bigData":"buriedPoint/sendData.rest",
         }
     }
 } ;

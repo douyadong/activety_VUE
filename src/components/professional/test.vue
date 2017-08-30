@@ -40,9 +40,15 @@
                     }
                 } , 200) ;               
             }
-        } ,
+        } ,       
         mounted() {
-            document.title = "测试你的专业度！全国优秀的经纪人都在做！" ;
+            document.title = "测试你的专业度！全国优秀的经纪人都在做！" ;             
+             //页面pv埋点             
+            this.$bigData({
+                pageName : 2073 ,
+                pageParam : {} ,
+                type : 1
+            }) ;            
         } ,
         components : {
             faq

@@ -8,8 +8,8 @@ import Vue from "vue" ;
 import VueResource from "vue-resource" ;  //请求后端接口用的插件
 import App from "./App" ;
 import router from "./router" ;
-import WechatShare from "@/plugins/wechatShare";
-import BigData from "@/plugins/bigData";
+import WechatShare from "@/plugins/wechatShare" ;
+import BigData from "@/plugins/bigData" ;
 /*++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 vue插件使用
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------++*/
