@@ -78,6 +78,7 @@
 <script>
     import $ from 'jquery';
     import "@/libraries/jquery.tips.js";
+    import data from "../../../mock/houseResource.json";
     export default{
         name:"fallGround",
         data(){
@@ -89,14 +90,16 @@
                     "iconLeft":0,//移动小屋初始定位left值
                     "summaryStyle" : 1.4, //滑动对象的样式
                     "juli":0,//记录touchstart时的summaryStyle
-                    "modal":false//提交数据的时候加载动画遮罩层是否显示
+                    "modal":false,//提交数据的时候加载动画遮罩层是否显示
+                    "pagea":true//组件A是否渲染
                 },
                 info:{
                     "price":"150~300",//房屋价格
                     "houseType":[],//选中的房源类型数组
                     "houseLocation":[],//选中的房源位置类型数组
                     "otherNeed":[]//选中的其它房源需求
-                }
+                },
+                data:data
             }
         },
         mounted(){
@@ -195,7 +198,10 @@
                 if(this.info.houseLocation.length==0){
                     $.tips("第3题还没填写，填写后我们才能更精确捕捉您所需的房源",2)
                     return;
-                }
+                };
+                console.log(this.data)
+                this.$emit('aa',this.data);
+                console.log(this.data);
                 this.pageStates.modal=true;//遮罩层显示;
             }
         }

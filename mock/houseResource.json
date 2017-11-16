@@ -1,0 +1,74 @@
+{
+  "message": "成功",
+  "status": 1,
+  "data": {
+    "rentHouseList": [
+      {
+        "firstImageUrl": "https://imgwater-test.oss.aliyuncs.com/6af6e136ce64436598f5e016bc9378f3.ML",
+        "districtAndTownName": "东城安定门",
+        "spaceArea": "100.00",
+        "houseTypeStr": "3室3厅2卫",
+        "rentPriceStr": "1000",
+        "houseTitle": "无法范文芳标古北路1000号",
+        "houseTag": {
+          "isSubwayHouse": 1,
+          "isPriceDown": 1,
+          "isNewHouse": 1,
+          "isHardcover": 0,
+          "isSouth": 0
+        },
+        "encryptHouseId": "50f26c9331454884"
+      },
+      {
+        "firstImageUrl": "https://imgwater-test.oss.aliyuncs.com/6af6e136ce64436598f5e016bc9378f3.ML",
+        "districtAndTownName": "长宁区古北区",
+        "spaceArea": "52.00",
+        "houseTypeStr": "0室0厅1卫",
+        "rentPriceStr": "1852",
+        "houseTitle": "金龙公寓",
+        "houseTag": {
+          "isSubwayHouse": 1,
+          "isPriceDown": 0,
+          "isNewHouse": 0,
+          "isHardcover": 0,
+          "isSouth": 0
+        },
+        "encryptHouseId": "48610fea4d42a03a"
+      },
+      {
+        "firstImageUrl": "https://imgwater-test.oss.aliyuncs.com/6af6e136ce64436598f5e016bc9378f3.ML",
+        "districtAndTownName": "松江区泗泾",
+        "spaceArea": "89.00",
+        "houseTypeStr": "1室0厅0卫",
+        "rentPriceStr": "2400",
+        "houseTitle": "金港花园",
+        "houseTag": {
+          "isSubwayHouse": 1,
+          "isPriceDown": 1,
+          "isNewHouse": 0,
+          "isHardcover": 0,
+          "isSouth": 1
+        },
+        "encryptHouseId": "5581739bb4165ea1"
+      },
+      {
+        "firstImageUrl": "https://imgwater-test.oss.aliyuncs.com/6af6e136ce64436598f5e016bc9378f3.ML",
+        "districtAndTownName": "松江区泗泾",
+        "spaceArea": "69.00",
+        "houseTypeStr": "1室1厅0卫",
+        "rentPriceStr": "2544",
+        "houseTitle": "金港花园",
+        "houseTag": {
+          "isSubwayHouse": 1,
+          "isPriceDown": 0,
+          "isNewHouse": 0,
+          "isHardcover": 0,
+          "isSouth": 0
+        },
+        "encryptHouseId": "4e41529f6c3075d3"
+      }
+     
+    ],
+    "total": 22
+  }
+}
