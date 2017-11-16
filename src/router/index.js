@@ -11,7 +11,8 @@ import Router from "vue-router" ;
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------++*/
 import professionalTest from "@/components/professional/test" ;
 import professionalResult from "@/components/professional/result" ;
-import downDetail from "@/components/down/detail"
+import downPurchase from "@/components/down/purchase";
+import downHouseResource from "@/components/down/houseResource"
 /*++----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 使用路由插件
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------++*/
@@ -48,9 +49,14 @@ export default new Router({
             component : professionalResult
         } ,
         {
-            path:"/down/detail",
-            name:"downDetail",
-            component:downDetail
+            path:"/down/purchase",
+            name:"downPurchase",
+            component:downPurchase
+        },
+        {
+            path:"/down/houseResource",
+            name:"downHouseResource",
+            component:downHouseResource
         }
     ]
 }) ;
