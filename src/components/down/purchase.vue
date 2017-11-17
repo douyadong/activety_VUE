@@ -1,7 +1,7 @@
 <template>
     <div class="fall-ground">
         <div class="question-img">
-            <img src="../../assets/fallGround/head.png" alt="">
+            <img src="../../assets/fall/head.png" alt="">
         </div>
         <!--购房选项-->
         <div class="options">
@@ -20,7 +20,7 @@
                     </ul>
                     <div class="icon-house" @touchstart="touchStart" @touchmove="touchMove"  @touchend="touchEnd" 
                     :style="'transform:translateX('+pageStates.summaryStyle+'rem)'">
-                        <img src="../../assets/fallGround/iconhouse.png" alt="">
+                        <img src="../../assets/fall/iconhouse.png" alt="">
                     </div>
                 </div>
                 <div class="unit">单位：万</div>

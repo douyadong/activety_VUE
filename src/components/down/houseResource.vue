@@ -67,7 +67,7 @@
             let that=this;
             setTimeout(function(){
                 that.modal=false;
-            },2000)
+            },8000)
         },
         methods:{
              //获取用户点击埋点参数方法
